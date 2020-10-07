@@ -2,7 +2,7 @@ package com.shopping_point.user_shopping_point.utils;
 
 public class Constant {
 
-    public static String LOCALHOST = "https://192.168.1.4:3000/";
+    public static String LOCALHOST = "https://still-taiga-80195.herokuapp.com/";
 
     // Constant Variables
     public static String PRODUCT = "product";
