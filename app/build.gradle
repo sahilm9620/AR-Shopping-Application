@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.marwaeltayeb.souq"
+        applicationId "com.shopping_point.user_shopping_point"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1

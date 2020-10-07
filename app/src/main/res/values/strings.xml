@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Souq</string>
+    <string name="app_name">Shopping Point</string>
     <string name="splash">Splash screen</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
@@ -13,7 +13,7 @@
     <string name="forget_password">Forget password</string>
     <string name="sign_in">Sign in</string>
     <string name="new_customer_create_your_account">New Customer? <font color='#008CFF'>Create Your Account</font></string>
-    <string name="_2020_souq">2020 Souq by Marwa Eltayeb. All Rights Reserved</string>
+    <string name="_2020_souq"></string>
     <string name="eight_characters">Passwords must be at least 8 characters</string>
     <string name="create_your_account">Create your account</string>
     <string name="sign_in_already_a_customer">Sign-in. Already a customer?</string>
@@ -168,7 +168,7 @@
     <string name="orders">Orders</string>
     <string name="order_n">ORDER N:</string>
     <string name="shipping">Shipping</string>
-    <string name="user_address">23 Mohamed Ali St, Sidi Bishr</string>
+    <string name="user_address">meowww</string>
     <string name="dummy_phone">01034238328</string>
     <string name="items_in_your_order">ITEMS IN YOUR ORDER</string>
     <string name="item">Your Item has been %1$s</string>

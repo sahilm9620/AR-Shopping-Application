@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.marwaeltayeb.souq">
+    package="com.shopping_point.user_shopping_point">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -18,7 +18,7 @@
         android:usesCleartextTraffic="true">
 
         <activity
-            android:name=".view.SplashActivity"
+            android:name="com.shopping_point.user_shopping_point.view.SplashActivity"
             android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,147 +33,147 @@
         </activity>
 
         <activity
-            android:name=".view.ProductActivity"
+            android:name="com.shopping_point.user_shopping_point.view.ProductActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name=".view.LoginActivity" />
+        <activity android:name="com.shopping_point.user_shopping_point.view.LoginActivity" />
 
         <activity
-            android:name=".view.SignUpActivity"
+            android:name="com.shopping_point.user_shopping_point.view.SignUpActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".view.DetailsActivity"
+            android:name="com.shopping_point.user_shopping_point.view.DetailsActivity"
             android:launchMode="singleTop"
-            android:parentActivityName=".view.AllMobilesActivity">
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.AllMobilesActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.AllMobilesActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.AllMobilesActivity" />
         </activity>
         <activity
-            android:name=".view.AllLaptopsActivity"
+            android:name="com.shopping_point.user_shopping_point.view.AllLaptopsActivity"
             android:label="@string/all_laptops"
-            android:parentActivityName=".view.ProductActivity">
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.ProductActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.ProductActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
         <activity
-            android:name=".view.AllMobilesActivity"
+            android:name="com.shopping_point.user_shopping_point.view.AllMobilesActivity"
             android:label="@string/all_mobiles"
-            android:parentActivityName=".view.ProductActivity">
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.ProductActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.ProductActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
         <activity
-            android:name=".view.CartActivity"
+            android:name="com.shopping_point.user_shopping_point.view.CartActivity"
             android:label="@string/cart"
-            android:parentActivityName=".view.ProductActivity">
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.ProductActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.ProductActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
         <activity
-            android:name=".view.WishListActivity"
+            android:name="com.shopping_point.user_shopping_point.view.WishListActivity"
             android:label="@string/my_wishList"
-            android:parentActivityName=".view.ProductActivity">
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.ProductActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.ProductActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
         <activity
-            android:name=".view.AccountActivity"
+            android:name="com.shopping_point.user_shopping_point.view.AccountActivity"
             android:label="@string/my_account"
-            android:parentActivityName=".view.ProductActivity"
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.ProductActivity"
             android:theme="@style/AccountTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.ProductActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
         <activity
-            android:name=".view.AddProductActivity"
+            android:name="com.shopping_point.user_shopping_point.view.AddProductActivity"
             android:label="@string/add_product"
-            android:parentActivityName=".view.ProductActivity">
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.ProductActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.ProductActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
         <activity
-            android:name=".view.HelpActivity"
+            android:name="com.shopping_point.user_shopping_point.view.HelpActivity"
             android:label="@string/help_center"
-            android:parentActivityName=".view.ProductActivity">
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.ProductActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.ProductActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
         <activity
-            android:name=".view.AllReviewsActivity"
+            android:name="com.shopping_point.user_shopping_point.view.AllReviewsActivity"
             android:label="@string/reviews"
-            android:parentActivityName=".view.DetailsActivity">
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.DetailsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.DetailsActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.DetailsActivity" />
         </activity>
         <activity
-            android:name=".view.WriteReviewActivity"
+            android:name="com.shopping_point.user_shopping_point.view.WriteReviewActivity"
             android:label="@string/write_review"
-            android:parentActivityName=".view.DetailsActivity">
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.DetailsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.DetailsActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.DetailsActivity" />
         </activity>
         <activity
-            android:name=".view.PasswordActivity"
+            android:name="com.shopping_point.user_shopping_point.view.PasswordActivity"
             android:label="@string/change_password"
-            android:parentActivityName=".view.AccountActivity">
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.AccountActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.AccountActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.AccountActivity" />
         </activity>
         <activity
-            android:name=".view.CategoryActivity"
-            android:parentActivityName=".view.ProductActivity">
+            android:name="com.shopping_point.user_shopping_point.view.CategoryActivity"
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.ProductActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.ProductActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
         <activity
-            android:name=".view.PasswordAssistantActivity"
+            android:name="com.shopping_point.user_shopping_point.view.PasswordAssistantActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".view.AuthenticationActivity"
+            android:name="com.shopping_point.user_shopping_point.view.AuthenticationActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".view.NewsFeedActivity"
+            android:name="com.shopping_point.user_shopping_point.view.NewsFeedActivity"
             android:label="@string/news_feed"
-            android:parentActivityName=".view.ProductActivity">
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.ProductActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.ProductActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
-        <activity android:name=".view.ShippingAddressActivity" />
-        <activity android:name=".view.OrderProductActivity" />
+        <activity android:name="com.shopping_point.user_shopping_point.view.ShippingAddressActivity" />
+        <activity android:name="com.shopping_point.user_shopping_point.view.OrderProductActivity" />
         <activity
-            android:name=".view.OrdersActivity"
+            android:name="com.shopping_point.user_shopping_point.view.OrdersActivity"
             android:label="@string/orders"
-            android:parentActivityName=".view.ProductActivity">
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.ProductActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.ProductActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
         <activity
-            android:name=".view.StatusActivity"
+            android:name="com.shopping_point.user_shopping_point.view.StatusActivity"
             android:label="@string/status"
-            android:parentActivityName=".view.OrdersActivity">
+            android:parentActivityName="com.shopping_point.user_shopping_point.view.OrdersActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".view.OrdersActivity" />
+                android:value="com.shopping_point.user_shopping_point.view.OrdersActivity" />
         </activity>
 
-        <activity android:name=".view.SearchActivity" android:theme="@style/noAnimTheme" />
-        <activity android:name=".view.ResultActivity"/>
+        <activity android:name="com.shopping_point.user_shopping_point.view.SearchActivity" android:theme="@style/noAnimTheme" />
+        <activity android:name="com.shopping_point.user_shopping_point.view.ResultActivity"/>
 
-        <receiver android:name=".receiver.NetworkChangeReceiver" />
+        <receiver android:name="com.shopping_point.user_shopping_point.receiver.NetworkChangeReceiver" />
     </application>
 
 </manifest>

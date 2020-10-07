@@ -12,8 +12,8 @@
 
         <intent
             android:action="android.intent.action.View"
-            android:targetPackage="com.marwaeltayeb.souq"
-            android:targetClass="com.marwaeltayeb.souq.view.WishListActivity" />
+            android:targetPackage="com.shopping_point.user_shopping_point"
+            android:targetClass="com.shopping_point.user_shopping_point.view.WishListActivity" />
     </shortcut>
 
     <shortcut
@@ -26,7 +26,7 @@
 
         <intent
             android:action="android.intent.action.View"
-            android:targetPackage="com.marwaeltayeb.souq"
-            android:targetClass="com.marwaeltayeb.souq.view.SearchActivity" />
+            android:targetPackage="com.shopping_point.user_shopping_point"
+            android:targetClass="com.shopping_point.user_shopping_point.view.SearchActivity" />
     </shortcut>
 </shortcut>
