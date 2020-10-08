@@ -4,6 +4,7 @@ import android.app.Application;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.shopping_point.user_shopping_point.model.RegisterApiResponse;
 import com.shopping_point.user_shopping_point.model.User;
@@ -28,7 +29,10 @@ public class RegisterRepository {
         RetrofitClient.getInstance().getApi().createUser(user).enqueue(new Callback<RegisterApiResponse>() {
             @Override
             public void onResponse(retrofit2.Call<RegisterApiResponse> call, Response<RegisterApiResponse> response) {
-                Log.d(TAG, "onResponse: Succeeded");
+
+                Toast.makeText(application, response.message(), Toast.LENGTH_SHORT).show();
+
+                Log.d(TAG, "onResponse: Succeeded" + response.body().getMessage());
 
                 RegisterApiResponse registerApiResponse = response.body();
 

@@ -38,7 +38,7 @@ import retrofit2.http.Query;
 
 public interface Api {
 
-    @POST("users/register")
+    @POST("users/register.php")
     Call<RegisterApiResponse> createUser(@Body User user);
 
     @GET("users/login")
