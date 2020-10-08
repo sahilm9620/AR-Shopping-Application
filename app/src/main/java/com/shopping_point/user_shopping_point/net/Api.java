@@ -41,7 +41,7 @@ public interface Api {
     @POST("users/register.php")
     Call<RegisterApiResponse> createUser(@Body User user);
 
-    @GET("users/login")
+    @GET("users/login.php")
     Call<LoginApiResponse> logInUser(@Query("email") String email, @Query("password") String password);
 
     @DELETE("users/{userId}")
