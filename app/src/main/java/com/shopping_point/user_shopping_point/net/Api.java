@@ -51,7 +51,7 @@ public interface Api {
     @PUT("users/upload")
     Call<ResponseBody> uploadPhoto(@Part MultipartBody.Part userPhoto, @Part("id") RequestBody userId);
 
-    @PUT("users/info")
+    @PUT("users/info.php")
     Call<ResponseBody> updatePassword(@Query("password") String password, @Query("id") int userId);
 
     @Multipart
@@ -61,7 +61,7 @@ public interface Api {
     @GET("users/getImage")
     Call<Image> getUserImage(@Query("id") int userId);
 
-    @GET("users/otp")
+    @GET("users/otp.php")
     Call<Otp> getOtp(@Query("email") String email);
 
     @GET("products/getproducts.php")

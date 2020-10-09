@@ -88,7 +88,7 @@
     <string name="required_data">No null values are accepted</string>
     <string name="hi_how_can_we_help">Hi! How Can We Help?</string>
     <string name="inquiryOne">I was charged extra shipping charges</string>
-    <string name="answerOne">Souq does not charge customers any extra shipping charges. All applicable charges are mentioned in the invoice. Please make sure to check the item price plus the shipping charges at the checkout page before completing your purchase.\n\nIf the courier representative demands or has charged you more than the amount mentioned on your order invoice, please contact Customer Service immediately for assistance.</string>
+    <string name="answerOne">Shopping point does not charge customers any extra shipping charges. All applicable charges are mentioned in the invoice. Please make sure to check the item price plus the shipping charges at the checkout page before completing your purchase.\n\nIf the courier representative demands or has charged you more than the amount mentioned on your order invoice, please contact Customer Service immediately for assistance.</string>
     <string name="inquiryTwo">Where is My Order?</string>
     <string name="answerTwo">Your order will be delivered by the expected date specified on your order. The expected delivery date is the date on or before which you can reasonably expect the item to arrive at your preferred shipping address.\n\nYou\'ll see an expected delivery date for each shipment on the order summary, just before you place your order. The expected delivery date will also appear in My Orders section of your account after you\'ve placed your order.</string>
     <string name="inquiryThree">Tracking Your Shipment</string>
