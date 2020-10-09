@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle(getResources().getString(R.string.app_name));
+//        actionBar.setTitle(getResources().getString(R.string.app_name));
 
         binding.buttonLogin.setOnClickListener(this);
         binding.textViewSignUp.setOnClickListener(this);

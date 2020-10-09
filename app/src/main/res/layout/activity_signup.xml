@@ -1,46 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    >
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
+
         tools:context=".view.SignUpActivity">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="@color/colorPrimary"
+                android:padding="@dimen/dimen20dp"
+                android:textColor="@color/white"
                 android:text="@string/app_name"
                 android:textStyle="bold|italic"
-                android:background="@color/lightGray"
+                android:background="@color/blue"
                 android:textSize="@dimen/dimen35sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dimen24dp"
-                android:paddingBottom="@dimen/dimen10dp"
-                android:gravity="center"
+                android:paddingStart="@dimen/dimen24dp"
+                android:paddingEnd="@dimen/dimen24dp"
+                android:layout_marginTop="@dimen/dimen20dp"
+                android:text="@string/sign_up"
                 android:textColor="@color/black"
-                android:text="@string/shop_online"
-                android:textStyle="bold"
-                android:background="@color/lightGray"
-                android:textSize="@dimen/dimen18sp" />
+                android:textSize="@dimen/dimen30sp"
+                android:textStyle="bold" />
 
-            <!-- Name Label -->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="@dimen/dimen24dp"-->
+<!--                android:paddingBottom="@dimen/dimen10dp"-->
+<!--                android:gravity="center"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:text="@string/shop_online"-->
+<!--                android:textStyle="bold"-->
+<!--                android:background="@color/lightGray"-->
+<!--                android:textSize="@dimen/dimen18sp" />-->
+
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen8dp"
+                android:layout_marginTop="@dimen/dimen10dp"
                 android:layout_marginBottom="@dimen/dimen8dp"
                 android:hint="@string/name"
                 android:paddingLeft="@dimen/dimen24dp"
@@ -55,7 +70,7 @@
                     android:padding="@dimen/dimen5dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!--  Email Label -->
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -74,7 +89,7 @@
                     android:padding="@dimen/dimen5dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Password Label -->
+
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -108,10 +123,10 @@
                 android:paddingLeft="@dimen/dimen24dp"
                 android:paddingRight="@dimen/dimen24dp"
                 android:text="@string/eight_characters"
-                android:textColor="@color/black"
-                android:textSize="@dimen/dimen18sp" />
+                android:textColor="#B2000000"
+                 />
 
-            <!-- Signup Button -->
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonSignUp"
                 android:layout_width="match_parent"
@@ -119,9 +134,10 @@
                 android:layout_marginLeft="@dimen/dimen24dp"
                 android:layout_marginRight="@dimen/dimen24dp"
                 android:layout_marginBottom="@dimen/dimen24dp"
-                android:background="@color/yellow"
+                android:background="@drawable/custom_button_border2"
                 android:padding="@dimen/dimen12dp"
                 android:text="@string/create_your_account"
+                android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:textSize="@dimen/dimen18sp" />
 
@@ -132,7 +148,7 @@
                 android:layout_marginBottom="@dimen/dimen24dp"
                 android:gravity="center"
                 android:textSize="@dimen/dimen16sp"
-                tools:text="@string/sign_in_already_a_customer" />
+                android:text="@string/sign_in_already_a_customer" />
         </LinearLayout>
     </ScrollView>
 </layout>

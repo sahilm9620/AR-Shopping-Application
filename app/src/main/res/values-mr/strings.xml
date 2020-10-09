@@ -1,81 +1,137 @@
 <resources>
-    <string name="app_name">Shopping Point</string>
-    <string name="splash">Splash screen</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="name">Name</string>
-    <string name="address">Address</string>
-    <string name="mobile_number">Mobile Number</string>
-    <string name="delete_account">Delete Account</string>
-    <string name="register">Register</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="sign_out">Sign Out</string>
-    <string name="forget_password">Forgot Password?</string>
-    <string name="sign_in">Sign In</string>
-    <string name="new_customer_create_your_account">New Customer? <font color='#008CFF'>Create Your Account</font></string>
+    <string name="app_name">शॉपिंग पॉईंट</string>
+    <string name="splash">
+स्प्लॅश स्क्रीन</string>
+    <string name="email">
+ईमेल</string>
+    <string name="password">
+संकेतशब्द</string>
+    <string name="name">नाव</string>
+    <string name="address">
+पत्ता</string>
+    <string name="mobile_number">
+मोबाइल नंबर</string>
+    <string name="delete_account">खाते हटवा</string>
+    <string name="register">
+नोंदणी करा</string>
+    <string name="sign_up">
+साइन अप करा</string>
+    <string name="sign_out">
+साइन आउट</string>
+    <string name="forget_password">संकेतशब्द विसरलात?</string>
+    <string name="sign_in">
+साइन इन</string>
+    <string name="new_customer_create_your_account">
+नवीन ग्राहक? <font color='#008CFF'>आपले खाते तयार करा</font></string>
     <string name="_2020_souq" />
     <string name="eight_characters">Password must be at least 8 characters</string>
-    <string name="create_your_account">Sign up</string>
-    <string name="sign_in_already_a_customer">Already a member?<font color='#008CFF'> Sign-in</font></string>
-<!--    <string name="boldText">Sign-in.</string>-->
-<!--    <string name="normalText">" "Already a customer?</string>-->
-    <string name="enter_at_least_3_characters">Enter at least 3 characters</string>
-    <string name="email_required">Email Required</string>
-    <string name="enter_a_valid_email_address">Enter a valid email address</string>
-    <string name="password_required">Password Required</string>
+    <string name="create_your_account">
+साइन अप करा</string>
+    <string name="sign_in_already_a_customer">
+आधीपासूनच सदस्य आहात?<font color='#008CFF'>
+साइन इन</font></string>
+    <!--    <string name="boldText">Sign-in.</string>-->
+    <!--    <string name="normalText">" "Already a customer?</string>-->
+    <string name="enter_at_least_3_characters">
+कमीतकमी 3 वर्ण प्रविष्ट करा</string>
+    <string name="email_required">
+ईमेल आवश्यक</string>
+    <string name="enter_a_valid_email_address">
+वैध ईमेल पत्ता प्रविष्ट करा</string>
+    <string name="password_required">
+संकेतशब्द आवश्यक</string>
     <string name="password__at_least_8_characters">Password should be at least 8 characters</string>
 
     <!--Server Information-->
-    <string name="see_all">See All</string>
-    <string name="mobile">Mobile</string>
-    <string name="laptop">Laptop</string>
+    <string name="see_all">
+सर्व पाहा</string>
+    <string name="mobile">
+मोबाईल</string>
+    <string name="laptop">
+लॅपटॉप</string>
     <string name="product_image">Product Image</string>
-    <string name="samsung_galaxy_a70">Samsung Galaxy A70</string>
-    <string name="share_product">Share Product</string>
-    <string name="add_to_cart">Add to Cart</string>
-    <string name="add_to_favourite">Add to Favourite</string>
-    <string name="_5399_egp">5399 EGP</string>
+    <string name="samsung_galaxy_a70">
+सॅमसंग गॅलेक्सी ए 70</string>
+    <string name="share_product">
+उत्पादन सामायिक करा</string>
+    <string name="add_to_cart">
+कार्टमध्ये जोडा</string>
+    <string name="add_to_favourite">
+आवडीमध्ये जोडा</string>
+    <string name="_5399_egp">
+5399 ईजीपी</string>
     <string name="name_required">Name Required</string>
-    <string name="all_laptops">All Laptops</string>
-    <string name="all_mobiles">All Mobiles</string>
-    <string name="no_internet_connection">No Internet Connection</string>
-    <string name="free_shipping">FREE Shipping</string>
-    <string name="fulfilled_by_souq">Fulfilled by Shoping Point</string>
-    <string name="search">Search</string>
+    <string name="all_laptops">
+सर्व लॅपटॉप</string>
+    <string name="all_mobiles">
+सर्व मोबाईल</string>
+    <string name="no_internet_connection">
+इंटरनेट कनेक्शन नाही</string>
+    <string name="free_shipping">
+FREE शिपिंग</string>
+    <string name="fulfilled_by_souq">
+शॉपिंग पॉईंटद्वारे पूर्ण</string>
+    <string name="search">
+शोधा</string>
     <string name="search_hint">What are you looking for?</string>
-    <string name="cart">Cart</string>
-    <string name="profile_picture">Profile Picture</string>
-    <string name="marwa_eltayeb_yahoo_com">marwa_eltayeb@yahoo.com</string>
+    <string name="cart">कार्ट</string>
+    <string name="profile_picture">
+परिचय चित्र</string>
+    <string name="marwa_eltayeb_yahoo_com">info@shopingpoint.com</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">
+नेव्हिगेशन ड्रॉवर उघडा</string>
+    <string name="navigation_drawer_close">
+नेव्हिगेशन ड्रॉवर बंद करा</string>
 
     <!--Navigation Menu Titles-->
-    <string name="share">Share</string>
-    <string name="rate">Rate Us</string>
-    <string name="communicate">Communicate</string>
-    <string name="mobiles">Mobiles</string>
-    <string name="laptops">Laptops</string>
-    <string name="babies">Babies</string>
-    <string name="toys">Toys</string>
-    <string name="track_orders">Track Orders</string>
-    <string name="my_account">My Account</string>
+    <string name="share">
+सामायिक करा</string>
+    <string name="rate">
+आम्हाला रेट करा</string>
+    <string name="communicate">
+संवाद</string>
+    <string name="mobiles">
+मोबाईल</string>
+    <string name="laptops">
+लॅपटॉप</string>
+    <string name="babies">
+बाळांना</string>
+    <string name="toys">
+खेळणी</string>
+    <string name="track_orders">
+मागोवा घ्या</string>
+    <string name="my_account">
+माझे खाते</string>
     <string name="news_feed">News Feed</string>
-    <string name="my_wishList">My WishList</string>
-    <string name="marwa_eltayeb">Marwa Eltayeb</string>
-    <string name="take_picture">Take Picture</string>
-    <string name="use_gallery">Use Gallery</string>
-    <string name="choose_profile_picture">Choose profile Picture</string>
-    <string name="my_orders">My orders</string>
-    <string name="my_wishlist">My wishlist</string>
-    <string name="languages">Languages</string>
-    <string name="share_with_friends">Share with friends</string>
-    <string name="rate_us_on_play_store">Rate us on play store</string>
-    <string name="help_center">Help Center</string>
-    <string name="delete_my_account">Delete account</string>
-    <string name="your_wishlist_is_empty">Your Wishlist is empty</string>
-    <string name="an_empty_wishlist_does_not_look_good">An empty wishlist does not look good</string>
-    <string name="add_product">Add Product</string>
+    <string name="my_wishList">
+माझे विशलिस्ट</string>
+    <string name="marwa_eltayeb">शॉपिंग पॉइंट</string>
+    <string name="take_picture">
+छायाचित्र काढा</string>
+    <string name="use_gallery">
+गॅलरी वापरा</string>
+    <string name="choose_profile_picture">
+प्रोफाइल चित्र निवडा</string>
+    <string name="my_orders">
+माझे आदेश</string>
+    <string name="my_wishlist">
+माझे विशलिस्ट</string>
+    <string name="languages">
+भाषा</string>
+    <string name="share_with_friends">
+मित्रांसह सामायिक करा</string>
+    <string name="rate_us_on_play_store">
+प्ले स्टोअरवर आम्हाला रेट करा</string>
+    <string name="help_center">
+मदत केंद्र</string>
+    <string name="delete_my_account">
+खाते हटवा</string>
+    <string name="your_wishlist_is_empty">आपली विशलिस्ट रिक्त आहे</string>
+    <string name="an_empty_wishlist_does_not_look_good">
+रिक्त विशलिस्ट चांगली दिसत नाही</string>
+    <string name="add_product">
+उत्पादन जोडा</string>
 
     <string name="nameOfProduct">Name</string>
     <string name="price">Price</string>

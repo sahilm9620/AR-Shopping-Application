@@ -36,7 +36,8 @@
             android:name="com.shopping_point.user_shopping_point.view.ProductActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <activity android:name="com.shopping_point.user_shopping_point.view.LoginActivity" />
+        <activity android:name="com.shopping_point.user_shopping_point.view.LoginActivity"
+          android:theme="@style/AppTheme.NoActionBar"  />
 
         <activity
             android:name="com.shopping_point.user_shopping_point.view.SignUpActivity"

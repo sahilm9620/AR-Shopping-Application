@@ -18,8 +18,8 @@
     <string name="eight_characters">كلمةالمرور يجب أن تتكون من 8 أحرف على الأقل</string>
     <string name="create_your_account">أنشئ حسابك</string>
     <string name="sign_in_already_a_customer">تسجيل الدخول. هل أنت عميل بالفعل؟</string>
-    <string name="boldText">تسجيل الدخول.</string>
-    <string name="normalText">" " هل أنت عميل بالفعل؟</string>
+<!--    <string name="boldText">تسجيل الدخول.</string>-->
+<!--    <string name="normalText">" " هل أنت عميل بالفعل؟</string>-->
     <string name="enter_at_least_3_characters">أدخل 3 أحرف على الأقل</string>
     <string name="email_required">البريد الإلكتروني مطلوب</string>
     <string name="enter_a_valid_email_address">أدخل عنوان بريد إلكتروني صحيح</string>

@@ -40,7 +40,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         registerViewModel = ViewModelProviders.of(this).get(RegisterViewModel.class);
 
-        setBoldStyle();
+//        setBoldStyle();
     }
 
     @Override
@@ -135,11 +135,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         finish();
     }
 
-    private void setBoldStyle() {
-        String boldText = getString(R.string.boldText);
-        String normalText = getString(R.string.normalText);
-        SpannableString str = new SpannableString(boldText + normalText);
-        str.setSpan(new StyleSpan(Typeface.BOLD), 0, boldText.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        binding.textViewLogin.setText(str);
-    }
+//    private void setBoldStyle() {
+//        String boldText = getString(R.string.boldText);
+//        String normalText = getString(R.string.normalText);
+//        SpannableString str = new SpannableString(  normalText + boldText);
+//        str.setSpan(new StyleSpan(Typeface.BOLD), 0, boldText.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        binding.textViewLogin.setText(str);
+//    }
 }

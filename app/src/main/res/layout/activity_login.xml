@@ -8,8 +8,18 @@
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
         android:orientation="vertical"
-        android:paddingTop="@dimen/dimen24dp"
         tools:context=".view.LoginActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dimen20dp"
+            android:textColor="@color/white"
+            android:text="@string/app_name"
+            android:textStyle="bold|italic"
+            android:background="@color/blue"
+            android:textSize="@dimen/dimen35sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -18,6 +28,7 @@
             android:paddingEnd="@dimen/dimen24dp"
             android:text="@string/sign_in"
             android:textColor="@color/black"
+            android:layout_marginTop="@dimen/dimen20dp"
             android:textSize="@dimen/dimen30sp"
             android:textStyle="bold" />
 
@@ -63,6 +74,16 @@
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/forgetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="@dimen/dimen10dp"
+            android:layout_marginEnd="@dimen/dimen20dp"
+            android:text="@string/forget_password"
+            android:textSize="@dimen/dimen14sp" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonLogin"
             android:layout_width="match_parent"
@@ -71,7 +92,8 @@
             android:layout_marginTop="@dimen/dimen24dp"
             android:layout_marginRight="@dimen/dimen24dp"
             android:layout_marginBottom="@dimen/dimen24dp"
-            android:background="@color/yellow"
+            android:background="@drawable/custom_button_border2"
+            android:textColor="@color/white"
             android:text="@string/sign_in"
             android:textAllCaps="false"
             android:textSize="@dimen/dimen18sp" />
@@ -93,13 +115,7 @@
             android:text="@string/new_customer_create_your_account"
             android:textSize="@dimen/dimen14sp" />
 
-        <TextView
-            android:id="@+id/forgetPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/forget_password"
-            android:textSize="@dimen/dimen14sp" />
+
 
         <TextView
             android:layout_width="match_parent"
