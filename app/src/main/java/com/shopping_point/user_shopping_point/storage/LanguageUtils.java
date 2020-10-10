@@ -16,6 +16,20 @@ public class LanguageUtils {
         editor.putBoolean("language", isEnglishEnabled);
         editor.apply();
     }
+    public static void setHindiState(Context context, boolean isEnglishEnabled){
+        SharedPreferences sharedpreferences = context.getSharedPreferences("language_data", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putBoolean("language", isEnglishEnabled);
+        editor.apply();
+    }
+
+    public static void setMarathiState(Context context, boolean isEnglishEnabled){
+        SharedPreferences sharedpreferences = context.getSharedPreferences("language_data", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putBoolean("language", isEnglishEnabled);
+        editor.apply();
+    }
+
 
     public static boolean getEnglishState(Context context){
         SharedPreferences sharedpreferences = context.getSharedPreferences("language_data", Context.MODE_PRIVATE);
@@ -25,6 +39,13 @@ public class LanguageUtils {
         SharedPreferences sharedpreferences = context.getSharedPreferences("language_data", Context.MODE_PRIVATE);
         return sharedpreferences.getBoolean("language", true);
     }
+
+
+    public static boolean getMarathiState(Context context){
+        SharedPreferences sharedpreferences = context.getSharedPreferences("language_data", Context.MODE_PRIVATE);
+        return sharedpreferences.getBoolean("language", true);
+    }
+
 
     public static void setLocale(Context context,String language){
         Locale locale = new Locale(language);

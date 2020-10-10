@@ -27,7 +27,9 @@ import static com.shopping_point.user_shopping_point.storage.LanguageUtils.getEn
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.getHindiState;
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.loadLocale;
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.setEnglishState;
+import static com.shopping_point.user_shopping_point.storage.LanguageUtils.setHindiState;
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.setLocale;
+import static com.shopping_point.user_shopping_point.storage.LanguageUtils.setMarathiState;
 import static com.shopping_point.user_shopping_point.utils.CommunicateUtils.rateAppOnGooglePlay;
 import static com.shopping_point.user_shopping_point.utils.CommunicateUtils.shareApp;
 
@@ -160,22 +162,19 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
 
         if(getEnglishState(this)){
             english.setEnabled(false);
-            marathi.setEnabled(true);
             english.setAlpha(.5f);
-
+            marathi.setEnabled(true);
             hindi.setEnabled(true);
         }else if(getHindiState(this)){
             hindi.setEnabled(false);
-            marathi.setEnabled(true);
             hindi.setAlpha(.5f);
-
+            marathi.setEnabled(true);
             english.setEnabled(true);
         }else {
             hindi.setEnabled(true);
-            english.setEnabled(false);
+            english.setEnabled(true);
+            marathi.setEnabled(false);
             marathi.setAlpha(.5f);
-
-            marathi.setEnabled(true);
 
         }
 
@@ -211,12 +210,12 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         setLocale(this,"hi");
         recreate();
         Toast.makeText(this, "Hindi", Toast.LENGTH_SHORT).show();
-        setEnglishState(this, false);
+        setHindiState(this, false);
     }
     private void chooseMarathi() {
         setLocale(this,"mr");
         recreate();
         Toast.makeText(this, "Marathi", Toast.LENGTH_SHORT).show();
-        setEnglishState(this, false);
+        setMarathiState(this, false);
     }
 }
