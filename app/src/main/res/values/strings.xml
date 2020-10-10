@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Shopping Point</string>
     <string name="splash">Splash screen</string>
     <string name="email">Email</string>
@@ -178,6 +178,8 @@
     <string name="schedule">schedule</string>
     <string name="clear_all">Clear all</string>
     <string name="what_are_you_looking_for">What are you looking for?</string>
+    <string name="hindi" tools:ignore="MissingTranslation"> Hindi</string>
+    <string name="marathi" tools:ignore="MissingTranslation">Marathi</string>
 
     <string-array name="categories_array">
         <item>Mobile</item>

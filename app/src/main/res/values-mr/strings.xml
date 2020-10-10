@@ -287,6 +287,8 @@ FREE शिपिंग</string>
     <string name="schedule">वेळापत्रक</string>
     <string name="clear_all">सर्व साफ करा</string>
     <string name="what_are_you_looking_for">आपणास काय हवे आहे?</string>
+    <string name="hindi">हिंदी</string>
+    <string name="marathi">मराठी</string>
 
     <string-array name="categories_array">
         <item>मोबाईल</item>

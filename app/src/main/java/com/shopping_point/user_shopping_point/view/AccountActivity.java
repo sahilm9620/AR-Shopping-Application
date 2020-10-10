@@ -153,15 +153,17 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         dialog.setContentView(R.layout.custom_language_dialog);
 
         Button english = dialog.findViewById(R.id.txtEnglish);
-        Button arabic = dialog.findViewById(R.id.txtArabic);
+        Button hindi = dialog.findViewById(R.id.txtHindi);
+        Button marathi = dialog.findViewById(R.id.txtMarathi);
+
 
         if(getEnglishState(this)){
             english.setEnabled(false);
             english.setAlpha(.5f);
-            arabic.setEnabled(true);
+            hindi.setEnabled(true);
         }else {
-            arabic.setEnabled(false);
-            arabic.setAlpha(.5f);
+            hindi.setEnabled(false);
+            hindi.setAlpha(.5f);
             english.setEnabled(true);
         }
 
@@ -171,8 +173,8 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
             dialog.cancel();
         });
 
-        arabic.setOnClickListener(v -> {
-            arabic.setEnabled(true);
+        hindi.setOnClickListener(v -> {
+            hindi.setEnabled(true);
             chooseArabic();
             dialog.cancel();
         });
