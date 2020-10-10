@@ -24,6 +24,7 @@ import com.shopping_point.user_shopping_point.storage.LoginUtils;
 import java.io.IOException;
 
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.getEnglishState;
+import static com.shopping_point.user_shopping_point.storage.LanguageUtils.getHindiState;
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.loadLocale;
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.setEnglishState;
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.setLocale;
@@ -159,12 +160,23 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
 
         if(getEnglishState(this)){
             english.setEnabled(false);
+            marathi.setEnabled(true);
             english.setAlpha(.5f);
+
             hindi.setEnabled(true);
-        }else {
+        }else if(getHindiState(this)){
             hindi.setEnabled(false);
+            marathi.setEnabled(true);
             hindi.setAlpha(.5f);
+
             english.setEnabled(true);
+        }else {
+            hindi.setEnabled(true);
+            english.setEnabled(false);
+            marathi.setAlpha(.5f);
+
+            marathi.setEnabled(true);
+
         }
 
         english.setOnClickListener(v -> {
@@ -175,7 +187,13 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
 
         hindi.setOnClickListener(v -> {
             hindi.setEnabled(true);
-            chooseArabic();
+            chooseHindi();
+            dialog.cancel();
+        });
+
+        marathi.setOnClickListener(v -> {
+            marathi.setEnabled(true);
+            chooseMarathi();
             dialog.cancel();
         });
 
@@ -189,10 +207,16 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         setEnglishState(this, true);
     }
 
-    private void chooseArabic() {
-        setLocale(this,"ar");
+    private void chooseHindi() {
+        setLocale(this,"hi");
         recreate();
-        Toast.makeText(this, "Arabic", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Hindi", Toast.LENGTH_SHORT).show();
+        setEnglishState(this, false);
+    }
+    private void chooseMarathi() {
+        setLocale(this,"mr");
+        recreate();
+        Toast.makeText(this, "Marathi", Toast.LENGTH_SHORT).show();
         setEnglishState(this, false);
     }
 }

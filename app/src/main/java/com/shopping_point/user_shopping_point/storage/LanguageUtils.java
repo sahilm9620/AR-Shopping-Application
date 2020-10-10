@@ -21,6 +21,10 @@ public class LanguageUtils {
         SharedPreferences sharedpreferences = context.getSharedPreferences("language_data", Context.MODE_PRIVATE);
         return sharedpreferences.getBoolean("language", true);
     }
+    public static boolean getHindiState(Context context){
+        SharedPreferences sharedpreferences = context.getSharedPreferences("language_data", Context.MODE_PRIVATE);
+        return sharedpreferences.getBoolean("language", true);
+    }
 
     public static void setLocale(Context context,String language){
         Locale locale = new Locale(language);
