@@ -44,8 +44,8 @@ public interface Api {
     @GET("users/login.php")
     Call<LoginApiResponse> logInUser(@Query("email") String email, @Query("password") String password);
 
-    @GET("users/deleteuser.php/{userId}")
-    Call<ResponseBody> deleteAccount(@Path("userId") int userId);
+    @GET("users/deleteuser.php")
+    Call<ResponseBody> deleteAccount(@Query("userId") int userId);
 
     @Multipart
     @PUT("users/upload")
