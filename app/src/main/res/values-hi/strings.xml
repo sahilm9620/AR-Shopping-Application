@@ -25,7 +25,7 @@
 नए ग्राहक?<font color='#008CFF'>
 अपने खाते बनाएँ</font></string>
     <string name="_2020_souq" />
-    <string name="eight_characters">Password must be at least 8 characters</string>
+    <string name="eight_characters">पासवर्ड कम से कम 8 वर्णों का होना चाहिए</string>
     <string name="create_your_account">
 साइन अप करें</string>
     <string name="sign_in_already_a_customer">
@@ -40,7 +40,7 @@
 मान्य ईमेल पता दर्ज करें</string>
     <string name="password_required">
 पासवर्ड आवश्यक</string>
-    <string name="password__at_least_8_characters">Password should be at least 8 characters</string>
+    <string name="password__at_least_8_characters">पासवर्ड कम से कम 8 अक्षर का होना चाहिए</string>
 
     <!--Server Information-->
     <string name="see_all">
@@ -49,7 +49,7 @@
 मोबाइल</string>
     <string name="laptop">
 लैपटॉप</string>
-    <string name="product_image">Product Image</string>
+    <string name="product_image">उत्पाद का चित्र</string>
     <string name="samsung_galaxy_a70">
 सॅमसंग गॅलेक्सी ए 70</string>
     <string name="share_product">
@@ -60,7 +60,7 @@
 पसंदीदा में जोड़ें</string>
     <string name="_5399_egp">
 5399 ईजीपी</string>
-    <string name="name_required">Name Required</string>
+    <string name="name_required">नाम जरूरी</string>
     <string name="all_laptops">
 सभी लैपटॉप</string>
     <string name="all_mobiles">
@@ -72,10 +72,10 @@ FREE शिपिंग</string>
     <string name="fulfilled_by_souq">शोपिंग पॉइंट से भरा हुआ</string>
     <string name="search">
 खोज</string>
-    <string name="search_hint">What are you looking for?</string>
+    <string name="search_hint">तुम क्या ढूंढ रहे हो?</string>
     <string name="cart">
 कार्ट</string>
-    <string name="profile_picture">Profile Picture</string>
+    <string name="profile_picture">प्रोफ़ाइल फोटो</string>
     <string name="marwa_eltayeb_yahoo_com">info@shopingpoint.com</string>
 
     <string name="navigation_drawer_open">
@@ -102,7 +102,7 @@ FREE शिपिंग</string>
 ट्रैक आदेश</string>
     <string name="my_account">
 मेरा खाता</string>
-    <string name="news_feed">News Feed</string>
+    <string name="news_feed">समाचार फ़ीड</string>
     <string name="my_wishList">
 मेरी इच्छा सूची</string>
     <string name="marwa_eltayeb">शॉपिंग पॉइंट</string>
@@ -143,30 +143,30 @@ FREE शिपिंग</string>
 प्रदायक</string>
     <string name="category">
 वर्ग</string>
-    <string name="image_of_product">Image Of Product</string>
-    <string name="select_image">Select Image</string>
+    <string name="image_of_product">उत्पाद की छवि</string>
+    <string name="select_image">छवि चुने</string>
     <string name="save">
 सहेजें</string>
     <string name="required_data">
 कोई शून्य मान स्वीकार नहीं किया जाता है</string>
-    <string name="hi_how_can_we_help">Hi! How Can We Help?</string>
+    <string name="hi_how_can_we_help">नमस्ते! हम आपकी सहायता किस तरह से कर सकते है?</string>
     <string name="inquiryOne">
 मुझ पर अतिरिक्त शिपिंग शुल्क लगाया गया था</string>
-    <string name="answerOne">Shoping Point does not charge customers any extra shipping charges. All applicable charges are mentioned in the invoice. Please make sure to check the item price plus the shipping charges at the checkout page before completing your purchase.\n\nIf the courier representative demands or has charged you more than the amount mentioned on your order invoice, please contact Customer Service immediately for assistance.</string>
+    <string name="answerOne">शॉपिंग पॉइंट ग्राहकों को कोई अतिरिक्त शिपिंग शुल्क नहीं देता है। सभी लागू शुल्क चालान में उल्लिखित हैं। कृपया अपनी खरीदारी पूरी करने से पहले चेकआउट पृष्ठ पर आइटम की कीमत के साथ-साथ शिपिंग शुल्क की जांच करना सुनिश्चित करें। कूरियर प्रतिनिधि मांगों के बारे में \n \n और यदि आपने अपने आदेश चालान पर उल्लिखित राशि से अधिक शुल्क लिया है, तो सहायता के लिए तुरंत ग्राहक सेवा से संपर्क करें।</string>
     <string name="inquiryTwo">
 मेरा आदेश कहाँ है?</string>
-    <string name="answerTwo">Your order will be delivered by the expected date specified on your order. The expected delivery date is the date on or before which you can reasonably expect the item to arrive at your preferred shipping address.\n\nYou\'ll see an expected delivery date for each shipment on the order summary, just before you place your order. The expected delivery date will also appear in My Orders section of your account after you\'ve placed your order.</string>
+    <string name="answerTwo">आपका ऑर्डर आपके ऑर्डर पर निर्दिष्ट अपेक्षित तारीख तक दिया जाएगा। अपेक्षित डिलीवरी की तारीख वह तिथि है जिस पर या उससे पहले आप अपने पसंदीदा शिपिंग पते पर आइटम के आने की उम्मीद कर सकते हैं। \n \n आप ऑर्डर ऑर्डर पर प्रत्येक शिपमेंट के लिए ऑर्डर डिलीवरी के लिए डिलीवरी की तारीख देखेंगे। । आपके द्वारा अपने आदेश को रखने के तुरंत बाद अपेक्षित डिलीवरी की तारीख आपके खाते के My Orders सेक्शन में भी दिखाई देगी।</string>
     <string name="inquiryThree">
 आपका शिपमेंट पर नज़र रखना</string>
-    <string name="answerThree">Tracking your shipment is very easy on Souq.com. You can use the link sent to you via SMS on your registered mobile phone number or on your registered email address to track where your order currently is. Additionally, you can also login to your souq.com account to track your orders as follows:\n\n1. Log in to Souq.com account using your registered email address and password.\n\n2. Click on your name displayed on the top right-hand corner of the page.\n\n3. Click on My Order from the drop down menu.\n\n4. Locate your order on the screen.\n\n5. Click on Track Shipment against the shipment you want to know the status of.\n\n6. The pop-up screen will show where the order currently is along with a shipment tracking number for your reference.</string>
+    <string name="answerThree">अपने जहाज को शिपिंगपॉइंट.कॉम पर ट्रैक करना बहुत आसान है। आप अपने पंजीकृत मोबाइल फोन नंबर पर एसएमएस के माध्यम से या अपने पंजीकृत ईमेल पते पर एसएमएस का उपयोग करके यह पता कर सकते हैं कि आपका आदेश कहां पंजीकृत है। इसके अतिरिक्त, आप अपने ऑर्डर को ट्रैक करने के लिए अपने Shoppingpoint.com खाते में लॉग इन कर सकते हैं: n n1। अपने पंजीकृत ईमेल पते और पासवर्ड का उपयोग करके अपने Shoppingpoint.com खाते में प्रवेश करें। n \ n 2। पृष्ठ के ऊपरी दाएं कोने में प्रदर्शित आपके नाम पर क्लिक करें। n \ n 3। ड्रॉप डाउन मेनू से माय ऑर्डर पर क्लिक करें। N n4 स्क्रीन पर अपना ऑर्डर खोजें। n \ n5। माल की स्थिति, जिसे आप शिपमेंट की स्थिति जानना चाहते हैं, के खिलाफ ट्रैक शिपमेंट पर क्लिक करें। n \ n6 पॉप-अप स्क्रीन दिखाएगा कि ऑर्डर आपके संदर्भ के लिए वर्तमान में शिपमेंट ट्रैकिंग नंबर के साथ कहां है।</string>
     <string name="inquiryFour">
 आइटम निर्दिष्ट स्थान पर उपलब्ध नहीं था</string>
-    <string name="answerFour">If you have selected the option of Self-Pick Up for your order, then once the item has reached its designated hub or location, you will receive a confirmation SMS on the number provided in the order that the item is ready to be collected. Once the item is at its designated hub or location and the SMS notification is issued, the item will be available for collection for 4 working days. If you experience any problems collecting your item from the designated hub or location, please contact Customer Support for assistance.</string>
+    <string name="answerFour">यदि आपने अपने ऑर्डर के लिए सेल्फ-पिक अप का विकल्प चुना है, तो एक बार आइटम अपने निर्धारित हब या स्थान पर पहुंच गया है, तो आपको ऑर्डर में दिए गए नंबर पर एक पुष्टिकरण एसएमएस मिलेगा कि आइटम एकत्र करने के लिए तैयार है। एक बार आइटम अपने निर्दिष्ट हब या स्थान पर है और एसएमएस अधिसूचना जारी की जाती है, तो आइटम 4 कार्य दिवसों के लिए संग्रह के लिए उपलब्ध होगा। यदि आप निर्दिष्ट हब या स्थान से अपना आइटम एकत्र करने में कोई समस्या अनुभव करते हैं, तो कृपया सहायता के लिए ग्राहक सहायता से संपर्क करें।</string>
     <string name="inquiryFive">
 मुझे एक ही आदेश के लिए कई शिपमेंट क्यों मिले?</string>
-    <string name="answerFive">When you purchase products from different sellers in an order, each seller will have a separate shipment and the product or products from each seller will be delivered to you separately. If you want to have all of the items shipped in one shipment, you will have to place the order for all items from the same seller.</string>
+    <string name="answerFive">जब आप एक क्रम में विभिन्न विक्रेताओं से उत्पाद खरीदते हैं, तो प्रत्येक विक्रेता के पास एक अलग शिपमेंट होगा और प्रत्येक विक्रेता से उत्पाद या उत्पाद आपको अलग से वितरित किए जाएंगे। यदि आप सभी वस्तुओं को एक शिपमेंट में भेजना चाहते हैं, तो आपको एक ही विक्रेता से सभी वस्तुओं के लिए ऑर्डर देना होगा।</string>
     <string name="recently_viewed_items">हाल ही में देखे गए आइटम</string>
-    <string name="all_removed">All Products removed from History</string>
+    <string name="all_removed">इतिहास से हटाए गए सभी उत्पाद</string>
     <string name="reviews">
 समीक्षा</string>
     <string name="write_review">
@@ -178,7 +178,7 @@ FREE शिपिंग</string>
 प्रस्तुत</string>
     <string name="dummyRate">3.0/5</string>
     <string name="highestNumber">/5</string>
-    <string name="change_password">Change Password</string>
+    <string name="change_password">पासवर्ड बदलें</string>
     <string name="current_password">
 वर्तमान पासवर्ड</string>
     <string name="new_password">
@@ -187,82 +187,117 @@ FREE शिपिंग</string>
 पुन: लिखें नया पासवर्ड</string>
     <string name="cancel">
 रद्द करना</string>
-    <string name="save_changes">Save Changes</string>
+    <string name="save_changes">परिवर्तनों को सुरक्षित करें</string>
     <string name="text_length">150</string>
     <string name="password_not_match">
 पासवर्ड मैच नहीं कर रहा है</string>
     <string name="enter_current_password">
 कृपया अपना वर्तमान पासवर्ड दर्ज करें</string>
-    <string name="be_the_first_to_review_this_product">Be the first to review this product</string>
+    <string name="be_the_first_to_review_this_product">इस उत्पाद की समीक्षा करने वाले पहले व्यक्ति बने</string>
     <string name="free_returns">Free रिटर्न</string>
     <string name="cash_on_delivery">
 डिलवरी पर नकदी</string>
-    <string name="cash">Pay for your order in cash at the moment the shipment is delivered to your doorstep.</string>
-    <string name="returnProduct">Changed your mind, you can return your product and get a full refund.</string>
-    <string name="want_to_exit">Do you really want to exit?</string>
-    <string name="ok">OK</string>
-    <string name="create_account">Creating Account...</string>
-    <string name="loading">Loading...</string>
-    <string name="don_t_let_go_your_shopping_habit">Don\'t let go your shopping habit</string>
-    <string name="your_cart_is_empty">Your Cart is empty</string>
-    <string name="no_products_in_this_category">No products in this category</string>
-    <string name="english">English</string>
+    <string name="cash">
+जिस समय शिपमेंट आपके दरवाजे पर पहुंचाया जाता है, उस समय अपने ऑर्डर का भुगतान नकद में करें।</string>
+    <string name="returnProduct">
+अपने दिमाग को बदल दिया, आप अपने उत्पाद को वापस कर सकते हैं और एक पूर्ण वापसी प्राप्त कर सकते हैं।</string>
+    <string name="want_to_exit">क्या आप वास्तव में बाहर निकलना चाहते हैं?</string>
+    <string name="ok">
+ठीक</string>
+    <string name="create_account">खाता बनाना...</string>
+    <string name="loading">
+लोड हो रहा है...</string>
+    <string name="don_t_let_go_your_shopping_habit">
+अपनी खरीदारी की आदत न जाने दें</string>
+    <string name="your_cart_is_empty">
+आपकी गाड़ी खाली है</string>
+    <string name="no_products_in_this_category">
+इस श्रेणी में कोई उत्पाद नहीं</string>
+    <string name="english">
+अंग्रेज़ी</string>
     <string name="arabic">Arabic</string>
-    <string name="choose_language">Choose Language</string>
-    <string name="shop_online">Shop Online</string>
+    <string name="choose_language">
+भाषा चुनें</string>
+    <string name="shop_online">ऑनलाइन खरीदें</string>
 
-    <string name="wishlist">WishList</string>
-    <string name="password_assistance">Password assistance</string>
-    <string name="enter_the_email_address_associated_with_your_account">Enter the email address associated with your account.</string>
-    <string name="proceed">Continue</string>
-    <string name="email_address">Email Address</string>
-    <string name="authentication_required">Authentication Required</string>
-    <string name="enter_otp">Enter OTP</string>
-    <string name="description2">For your security, we need to authenticate your request. We\'ve sent a code from <b>Souq</b> to the email %1$s. Please enter it below.</string>
-    <string name="enter_your_email">Please Enter your correct email</string>
-    <string name="incorrect_code">Incorrect Code</string>
-    <string name="resend_otp">Resend OTP</string>
+    <string name="wishlist">
+विशलिस्ट</string>
+    <string name="password_assistance">
+पासवर्ड सहायता</string>
+    <string name="enter_the_email_address_associated_with_your_account">
+अपने खाते से संबद्ध ईमेल पता दर्ज करें।</string>
+    <string name="proceed">
+जारी रखें</string>
+    <string name="email_address">
+ईमेल पता</string>
+    <string name="authentication_required">
+प्रमाणीकरण आवश्यक</string>
+    <string name="enter_otp">
+OTP दर्ज करें</string>
+    <string name="description2">आपकी सुरक्षा के लिए, हमें आपके अनुरोध को अधिकृत करने की आवश्यकता है। हमने <b>शॉपिंग पॉईंट</b> खरीदारी बिंदु से ईमेल %1$s पर एक कोड भेजा है। कृपया इसे नीचे दर्ज करें।</string>
+    <string name="enter_your_email">
+कृपया अपना सही ईमेल दर्ज करें</string>
+    <string name="incorrect_code">
+गलत कोड</string>
+    <string name="resend_otp">
+ओटीपी पुनः भेजें</string>
     <string name="counter">60</string>
-    <string name="you_have_exceeded_number_of_requests">You have exceeded number of requests.</string>
-    <string name="poster">poster</string>
-    <string name="close">close</string>
-    <string name="buy">Buy</string>
-    <string name="street_address">Street address</string>
-    <string name="city">City</string>
-    <string name="country">Country</string>
-    <string name="phone_number">Phone number</string>
+    <string name="you_have_exceeded_number_of_requests">
+आपने अनुरोधों की संख्या को पार कर लिया है।</string>
+    <string name="poster">
+पोस्टर</string>
+    <string name="close">
+बंद करे</string>
+    <string name="buy">
+खरीदें</string>
+    <string name="street_address">
+गली का पता</string>
+    <string name="city">शहर</string>
+    <string name="country">
+देश</string>
+    <string name="phone_number">
+फ़ोन नंबर</string>
     <string name="zip">ZIP</string>
-    <string name="enter_a_shipping_address">Enter a shipping address</string>
-    <string name="my_order_history">MY ORDER HISTORY</string>
+    <string name="enter_a_shipping_address">
+शिपिंग पता दर्ज करें</string>
+    <string name="my_order_history">मेरा आदेश इतिहास</string>
     <string name="order_number">324432442</string>
     <string name="order_date">23-11-2020</string>
-    <string name="track_order">Track Order</string>
-    <string name="status">Status</string>
-    <string name="add_a_credit_or_debit_card">Add a credit or debit card</string>
-    <string name="name_on_card">Name On Card</string>
-    <string name="card_number">Card Number</string>
-    <string name="add_your_card">Add your card</string>
-    <string name="expiration_date">Expiration Date</string>
-    <string name="drop_down_menu">Drop Down Menu</string>
-    <string name="orders">Orders</string>
-    <string name="order_n">ORDER N:</string>
-    <string name="shipping">Shipping</string>
+    <string name="track_order">ऑर्डर पर नज़र रखें</string>
+    <string name="status">
+6/5000
+स्थिति</string>
+    <string name="add_a_credit_or_debit_card">26/5000
+क्रेडिट या डेबिट कार्ड जोड़ें</string>
+    <string name="name_on_card">कार्ड पर नाम
+</string>
+    <string name="card_number">11/5000
+कार्ड नंबर</string>
+    <string name="add_your_card">
+13/5000
+अपना कार्ड जोड़ें</string>
+    <string name="expiration_date">
+समाप्ति तिथि</string>
+    <string name="drop_down_menu">ड्रॉप डाउन मेनू</string>
+    <string name="orders">आदेश</string>
+    <string name="order_n">आदेश N:</string>
+    <string name="shipping">शिपिंग</string>
     <string name="user_address">meowww</string>
     <string name="dummy_phone">01034238328</string>
-    <string name="items_in_your_order">ITEMS IN YOUR ORDER</string>
-    <string name="item">Your Item has been %1$s</string>
-    <string name="reorder">REORDER</string>
-    <string name="status_bar">STATUS:</string>
-    <string name="recent_searches">Recent Searches</string>
-    <string name="schedule">schedule</string>
-    <string name="clear_all">Clear all</string>
-    <string name="what_are_you_looking_for">What are you looking for?</string>
+    <string name="items_in_your_order">अपने आदेश में आइटम</string>
+    <string name="item">आपका आइटम रहा है %1$s</string>
+    <string name="reorder">पुन: व्यवस्थित</string>
+    <string name="status_bar">स्थिति:</string>
+    <string name="recent_searches">हाल की खोजें</string>
+    <string name="schedule">अनुसूची</string>
+    <string name="clear_all">सभी साफ करें</string>
+    <string name="what_are_you_looking_for">तुम क्या ढूंढ रहे हो?</string>
 
     <string-array name="categories_array">
-        <item>Mobile</item>
-        <item>Laptop</item>
-        <item>Baby</item>
-        <item>Toy</item>
+        <item>मोबाइल</item>
+        <item>लैपटॉप</item>
+        <item>बच्चा</item>
+        <item>खिलौना</item>
     </string-array>
 
 </resources>
