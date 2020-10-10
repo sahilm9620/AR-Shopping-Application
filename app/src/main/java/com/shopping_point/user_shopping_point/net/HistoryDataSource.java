@@ -28,7 +28,7 @@ public class HistoryDataSource extends PageKeyedDataSource<Integer, Product> {
                 .enqueue(new Callback<HistoryApiResponse>() {
                     @Override
                     public void onResponse(Call<HistoryApiResponse> call, Response<HistoryApiResponse> response) {
-                        Log.v("onResponse", "Succeeded " + response.body().getHistoryList().size());
+                       // Log.v("onResponse", "Succeeded " + response.body().getHistoryList().size());
 
                         if (response.body().getHistoryList()== null) {
                             return;

@@ -41,17 +41,17 @@ public interface Api {
     @POST("users/register.php")
     Call<RegisterApiResponse> createUser(@Body User user);
 
-    @GET("users/login")
+    @GET("users/login.php")
     Call<LoginApiResponse> logInUser(@Query("email") String email, @Query("password") String password);
 
-    @DELETE("users/{userId}")
-    Call<ResponseBody> deleteAccount(@Path("userId") int userId);
+    @GET("users/deleteuser.php")
+    Call<ResponseBody> deleteAccount(@Query("userId") int userId);
 
     @Multipart
     @PUT("users/upload")
     Call<ResponseBody> uploadPhoto(@Part MultipartBody.Part userPhoto, @Part("id") RequestBody userId);
 
-    @PUT("users/info")
+    @PUT("users/info.php")
     Call<ResponseBody> updatePassword(@Query("password") String password, @Query("id") int userId);
 
     @Multipart
@@ -61,13 +61,13 @@ public interface Api {
     @GET("users/getImage")
     Call<Image> getUserImage(@Query("id") int userId);
 
-    @GET("users/otp")
+    @GET("users/otp.php")
     Call<Otp> getOtp(@Query("email") String email);
 
-    @GET("products")
+    @GET("products/getproducts.php")
     Call<ProductApiResponse> getProducts(@Query("page") int page);
 
-    @GET("products")
+    @GET("products/getProductsByCategory.php")
     Call<ProductApiResponse> getProductsByCategory(@Query("category") String category, @Query("userId") int userId,@Query("page") int page);
 
     @GET("products/search")
@@ -91,13 +91,13 @@ public interface Api {
     @GET("carts")
     Call<CartApiResponse> getProductsInCart(@Query("userId") int userId);
 
-    @POST("history/add")
+    @POST("history/add.php")
     Call<ResponseBody> addToHistory(@Body History history);
 
-    @DELETE("history/remove")
+    @DELETE("history/remove.php")
     Call<ResponseBody> removeAllFromHistory();
 
-    @GET("history")
+    @GET("history/getProductsInHistory.php")
     Call<HistoryApiResponse> getProductsInHistory(@Query("userId") int userId, @Query("page") int page);
 
     @POST("review/add")

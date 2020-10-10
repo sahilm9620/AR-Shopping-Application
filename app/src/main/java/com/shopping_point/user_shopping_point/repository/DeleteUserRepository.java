@@ -26,7 +26,7 @@ public class DeleteUserRepository{
         RetrofitClient.getInstance().getApi().deleteAccount(userId).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                Log.d(TAG, "onResponse: Succeeded");
+                Log.d(TAG, "onResponse Delete User: Succeeded");
                 ResponseBody responseBody = response.body();
                 if (response.body() != null) {
                     mutableLiveData.setValue(responseBody);
@@ -35,7 +35,7 @@ public class DeleteUserRepository{
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Log.d(TAG, "onFailure: " + t.getMessage());
+                Log.d(TAG, "onFailure Delete User : " + t.getMessage());
             }
         });
 

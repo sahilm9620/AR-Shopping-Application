@@ -4,6 +4,7 @@ import android.app.Application;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.shopping_point.user_shopping_point.net.RetrofitClient;
 
@@ -27,17 +28,18 @@ public class PasswordRepository {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 Log.d("onResponse", "" + response.code());
-
+                Toast.makeText(application, "SUCCESS", Toast.LENGTH_SHORT).show();
                 ResponseBody responseBody = response.body();
 
                 if (response.body() != null) {
                     mutableLiveData.setValue(responseBody);
+                    Toast.makeText(application, " SUCCESS PASSWORD", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Log.d("onFailure", "" + t.getMessage());
+                Log.d("onFailure", " FAILURE PASSWORD" + t.getMessage());
             }
         });
 
