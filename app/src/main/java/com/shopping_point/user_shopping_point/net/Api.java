@@ -51,8 +51,8 @@ public interface Api {
     @PUT("users/upload")
     Call<ResponseBody> uploadPhoto(@Part MultipartBody.Part userPhoto, @Part("id") RequestBody userId);
 
-    @PUT("users/info.php")
-    Call<ResponseBody> updatePassword(@Query("password") String password, @Query("id") int userId);
+    @GET("users/info.php")
+    Call<ResponseBody> updatePassword(@Query("password") String newPassword, @Query("id") int userId);
 
     @Multipart
     @POST("products/insert")

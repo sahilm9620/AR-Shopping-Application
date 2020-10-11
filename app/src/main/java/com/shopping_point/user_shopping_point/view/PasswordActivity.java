@@ -65,27 +65,37 @@ public class PasswordActivity extends AppCompatActivity implements View.OnClickL
         String retypePassword =binding.retypePassword.getText().toString();
 
 
-        if(!currentPassword.equals(oldPassword)){
-            binding.currentPassword.setError(getString(R.string.enter_current_password));
-            binding.currentPassword.requestFocus();
-            return;
-        }
+if(isActivityRunning) {
+    if (!currentPassword.equals(oldPassword)) {
+        Toast.makeText(this, "First block", Toast.LENGTH_SHORT).show();
+        binding.currentPassword.setError(getString(R.string.enter_current_password));
+        binding.currentPassword.requestFocus();
+        return;
+    }
+}
 
         if (!Validation.isValidPassword(newPassword)) {
+            Toast.makeText(this, "second block", Toast.LENGTH_SHORT).show();
+
             binding.newPassword.setError(getString(R.string.password__at_least_8_characters));
             binding.newPassword.requestFocus();
             return;
         }
 
         if (!Validation.isValidPassword(newPassword) || !(retypePassword.equals(newPassword))) {
+            Toast.makeText(this, "third block", Toast.LENGTH_SHORT).show();
+
             binding.retypePassword.setError(getString(R.string.password_not_match));
             binding.retypePassword.requestFocus();
             return;
         }
 
         passwordViewModel.updatePassword(newPassword, userId).observe(this, responseBody -> {
+
+
             try {
-                Toast.makeText(this, "SUCCESS SSSSSSSSS", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "fourth block", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "SUCCESS", Toast.LENGTH_SHORT).show();
                 Toast.makeText(PasswordActivity.this, responseBody.string(), Toast.LENGTH_SHORT).show();
             } catch (IOException e) {
                 e.printStackTrace();

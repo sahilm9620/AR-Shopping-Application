@@ -27,7 +27,7 @@ public class PasswordRepository {
         RetrofitClient.getInstance().getApi().updatePassword(newPassword, userId).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                Log.d("onResponse", "" + response.code());
+                Log.d("onResponse", "password repo" + response.code());
                 Toast.makeText(application, "SUCCESS", Toast.LENGTH_SHORT).show();
                 ResponseBody responseBody = response.body();
 
