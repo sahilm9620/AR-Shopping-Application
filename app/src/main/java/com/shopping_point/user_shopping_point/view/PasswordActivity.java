@@ -47,6 +47,7 @@ public class PasswordActivity extends AppCompatActivity implements View.OnClickL
 
         if(isActivityRunning){
             binding.currentPassword.setVisibility(View.GONE);
+
         }
     }
 
@@ -65,15 +66,17 @@ public class PasswordActivity extends AppCompatActivity implements View.OnClickL
     private void updatePassword() {
 
 
-        String oldPassword = LoginUtils.getInstance(this).getUserInfo().getPassword();
-        String currentPassword = binding.currentPassword.getText().toString();
+
         String newPassword = binding.newPassword.getText().toString();
         String retypePassword =binding.retypePassword.getText().toString();
 
 
-if(isActivityRunning) {
-    isActivityRunning=false;
-    if (!currentPassword.equals(oldPassword)) {
+if(!isActivityRunning) {
+
+    String oldPassword = LoginUtils.getInstance(this).getUserInfo().getPassword().trim();
+    String currentPassword = binding.currentPassword.getText().toString().trim();
+
+    if (!oldPassword.equals(currentPassword)) {
 
         binding.currentPassword.setError(getString(R.string.enter_current_password));
         binding.currentPassword.requestFocus();

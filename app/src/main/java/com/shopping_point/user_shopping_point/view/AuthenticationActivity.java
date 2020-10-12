@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.OtpViewModel;
 import com.shopping_point.user_shopping_point.databinding.ActivityAuthenticationBinding;
@@ -21,7 +23,7 @@ public class AuthenticationActivity extends AppCompatActivity implements View.On
     private OtpViewModel otpViewModel;
    private String email;
     private String correctOtpCode;
-    static boolean isActivityRunning = false;
+   public static boolean isActivityRunning = false;
     private int clickCount = 0;
 
     @Override
@@ -84,12 +86,14 @@ public class AuthenticationActivity extends AppCompatActivity implements View.On
     public void onStart() {
         super.onStart();
         isActivityRunning = true;
+        Toast.makeText(this, "isActivityRunning TRUE", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        isActivityRunning = false;
+       // isActivityRunning = false;
+        Toast.makeText(this, "isActivityRunning FALSE", Toast.LENGTH_SHORT).show();
     }
 
     private void countDownTimer(TextView textView) {
