@@ -104,7 +104,6 @@ public class AuthenticationActivity extends AppCompatActivity implements View.On
                 binding.reSend.setEnabled(true);
                 binding.countDownTimer.setVisibility(View.INVISIBLE);
             }
-
         }.start();
     }
 }

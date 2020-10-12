@@ -5,6 +5,8 @@ import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -30,7 +32,7 @@ public class PasswordActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         loadLocale(this);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_password);
-        Toast.makeText(this, emailEntered, Toast.LENGTH_SHORT).show();
+
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.change_password));
 
@@ -48,7 +50,6 @@ public class PasswordActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.saveChanges:
-                Toast.makeText(this, emailEntered, Toast.LENGTH_SHORT).show();
                 updatePassword();
                 break;
             case R.id.cancel:
@@ -75,7 +76,6 @@ if(isActivityRunning) {
     }
 
 }
-        Toast.makeText(this, emailEntered, Toast.LENGTH_SHORT).show();
         if (!Validation.isValidPassword(newPassword)) {
             binding.newPassword.setError(getString(R.string.password__at_least_8_characters));
             binding.newPassword.requestFocus();
@@ -92,8 +92,7 @@ if(isActivityRunning) {
 
 
             try {
-
-                Toast.makeText(PasswordActivity.this, responseBody.string(), Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "onSucceed: " +responseBody.string());
             } catch (IOException e) {
                 e.printStackTrace();
                 Toast.makeText(this, "ERRORRRR", Toast.LENGTH_SHORT).show();

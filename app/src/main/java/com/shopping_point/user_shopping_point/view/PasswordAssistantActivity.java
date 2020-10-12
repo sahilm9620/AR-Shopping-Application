@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
+
 
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.OtpViewModel;
@@ -28,7 +28,7 @@ public class PasswordAssistantActivity extends AppCompatActivity implements View
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_password_assistant);
-        Toast.makeText(this, emailEntered, Toast.LENGTH_SHORT).show();
+
         otpViewModel = ViewModelProviders.of(this).get(OtpViewModel.class);
 
         binding.proceed.setOnClickListener(this);
