@@ -52,7 +52,7 @@ public interface Api {
     Call<ResponseBody> uploadPhoto(@Part MultipartBody.Part userPhoto, @Part("id") RequestBody userId);
 
     @GET("users/info.php")
-    Call<ResponseBody> updatePassword(@Query("password") String newPassword, @Query("id") int userId);
+    Call<ResponseBody> updatePassword(@Query("password") String newPassword, @Query("email") String email);
 
     @Multipart
     @POST("products/insert")

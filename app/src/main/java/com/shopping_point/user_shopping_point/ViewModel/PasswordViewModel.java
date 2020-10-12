@@ -18,8 +18,8 @@ public class PasswordViewModel extends AndroidViewModel {
         passwordRepository = new PasswordRepository(application);
     }
 
-    public LiveData<ResponseBody> updatePassword(String newPassword, int userId) {
-        return passwordRepository.updatePassword(newPassword,userId);
+    public LiveData<ResponseBody> updatePassword(String newPassword, String email) {
+        return passwordRepository.updatePassword(newPassword,email);
     }
 
 }

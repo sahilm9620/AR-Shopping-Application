@@ -22,13 +22,13 @@ public class PasswordRepository {
         this.application = application;
     }
 
-    public LiveData<ResponseBody> updatePassword(String newPassword, int userId) {
+    public LiveData<ResponseBody> updatePassword(String newPassword, String email) {
         final MutableLiveData<ResponseBody> mutableLiveData = new MutableLiveData<>();
-        RetrofitClient.getInstance().getApi().updatePassword(newPassword, userId).enqueue(new Callback<ResponseBody>() {
+        RetrofitClient.getInstance().getApi().updatePassword(newPassword, email).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                Log.d("onResponse", "password repo" + response.code());
-                Toast.makeText(application, "SUCCESS", Toast.LENGTH_SHORT).show();
+                Log.d("onResponse", "password repo" + response.code() + response.message());
+                Toast.makeText(application, "SUCCESS " + response, Toast.LENGTH_SHORT).show();
                 ResponseBody responseBody = response.body();
 
                 if (response.body() != null) {
@@ -39,12 +39,11 @@ public class PasswordRepository {
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Log.d("onFailure", " FAILURE PASSWORD" + t.getMessage());
+                Log.d("onFailure", " FAILURE PASSWORD " + t.getMessage());
             }
         });
 
         return mutableLiveData;
     }
-
 
 }

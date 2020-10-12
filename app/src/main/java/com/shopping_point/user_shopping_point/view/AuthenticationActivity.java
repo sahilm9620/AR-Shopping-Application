@@ -9,20 +9,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.OtpViewModel;
 import com.shopping_point.user_shopping_point.databinding.ActivityAuthenticationBinding;
-
 import static com.shopping_point.user_shopping_point.utils.Constant.EMAIL;
 import static com.shopping_point.user_shopping_point.utils.Constant.OTP;
-
 public class AuthenticationActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "AuthenticationActivity";
     private ActivityAuthenticationBinding binding;
     private OtpViewModel otpViewModel;
-    private String email;
+   private String email;
     private String correctOtpCode;
     static boolean isActivityRunning = false;
     private int clickCount = 0;
