@@ -2,6 +2,8 @@ package com.shopping_point.user_shopping_point.view;
 
 import androidx.lifecycle.ViewModelProviders;
 import androidx.databinding.DataBindingUtil;
+
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +19,8 @@ import com.shopping_point.user_shopping_point.storage.LoginUtils;
 import com.shopping_point.user_shopping_point.utils.Validation;
 
 import java.io.IOException;
+
+import static androidx.core.content.ContextCompat.startActivity;
 import static com.shopping_point.user_shopping_point.view.PasswordAssistantActivity.emailEntered;
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.loadLocale;
 import static com.shopping_point.user_shopping_point.view.AuthenticationActivity.isActivityRunning;
@@ -93,6 +97,7 @@ if(isActivityRunning) {
 
             try {
                 Log.d(TAG, "onSucceed: " +responseBody.string());
+                startActivity(new Intent(this,LoginActivity.class));
             } catch (IOException e) {
                 e.printStackTrace();
                 Toast.makeText(this, "ERRORRRR", Toast.LENGTH_SHORT).show();
