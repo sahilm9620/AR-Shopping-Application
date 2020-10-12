@@ -72,6 +72,7 @@ public class PasswordActivity extends AppCompatActivity implements View.OnClickL
 
 
 if(isActivityRunning) {
+    isActivityRunning=false;
     if (!currentPassword.equals(oldPassword)) {
 
         binding.currentPassword.setError(getString(R.string.enter_current_password));
