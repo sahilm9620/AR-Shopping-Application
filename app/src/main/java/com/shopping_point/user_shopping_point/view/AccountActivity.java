@@ -211,11 +211,14 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         recreate();
         Toast.makeText(this, "Hindi", Toast.LENGTH_SHORT).show();
         setHindiState(this, false);
+        setEnglishState(this, true);
+
     }
     private void chooseMarathi() {
         setLocale(this,"mr");
         recreate();
         Toast.makeText(this, "Marathi", Toast.LENGTH_SHORT).show();
         setMarathiState(this, false);
+
     }
 }

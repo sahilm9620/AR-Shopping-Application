@@ -16,17 +16,17 @@ public class LanguageUtils {
         editor.putBoolean("language", isEnglishEnabled);
         editor.apply();
     }
-    public static void setHindiState(Context context, boolean isEnglishEnabled){
+    public static void setHindiState(Context context, boolean isHindiEnabled){
         SharedPreferences sharedpreferences = context.getSharedPreferences("language_data", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedpreferences.edit();
-        editor.putBoolean("language", isEnglishEnabled);
+        editor.putBoolean("language", isHindiEnabled);
         editor.apply();
     }
 
-    public static void setMarathiState(Context context, boolean isEnglishEnabled){
+    public static void setMarathiState(Context context, boolean isMarathiEnabled){
         SharedPreferences sharedpreferences = context.getSharedPreferences("language_data", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedpreferences.edit();
-        editor.putBoolean("language", isEnglishEnabled);
+        editor.putBoolean("language", isMarathiEnabled);
         editor.apply();
     }
 
