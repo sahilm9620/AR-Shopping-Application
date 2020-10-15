@@ -9,7 +9,7 @@ public class LoginApiResponse {
     private String message;
     private String password;
     private String token;
-    private boolean isAdmin;
+    private boolean isActive;
 
 
     public LoginApiResponse(int id, String token) {
@@ -51,7 +51,8 @@ public class LoginApiResponse {
         return token;
     }
 
-    public boolean isAdmin() {
-        return isAdmin;
+    public boolean isActive() {
+        return isActive;
     }
+
 }

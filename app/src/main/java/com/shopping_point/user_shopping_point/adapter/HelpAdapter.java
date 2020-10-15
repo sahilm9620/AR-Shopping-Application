@@ -5,7 +5,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.databinding.HelpListItemBinding;
 import com.shopping_point.user_shopping_point.model.Help;
