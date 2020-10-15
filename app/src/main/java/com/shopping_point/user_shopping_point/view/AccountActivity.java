@@ -257,4 +257,9 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         setMarathiState(this, false);
 
     }
+
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }

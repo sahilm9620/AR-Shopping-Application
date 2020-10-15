@@ -47,5 +47,8 @@ public class NewsFeedActivity extends AppCompatActivity {
             newsFeedAdapter.notifyDataSetChanged();
         });
     }
-
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }

@@ -60,4 +60,9 @@ public class OrdersActivity extends AppCompatActivity implements OrderAdapter.Or
         intent.putExtra(ORDER, (order));
         startActivity(intent);
     }
+
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }

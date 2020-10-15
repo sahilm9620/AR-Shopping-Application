@@ -143,4 +143,8 @@ public class CategoryActivity extends AppCompatActivity implements ProductAdapte
         super.onStop();
         unregisterReceiver(mNetworkReceiver);
     }
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }
