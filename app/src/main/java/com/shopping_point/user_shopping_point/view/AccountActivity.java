@@ -15,13 +15,20 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.Priority;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.DeleteUserViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.FromHistoryViewModel;
+import com.shopping_point.user_shopping_point.ViewModel.UserImageViewModel;
 import com.shopping_point.user_shopping_point.databinding.ActivityAccountBinding;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
 
 import java.io.IOException;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.getEnglishState;
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.getHindiState;
@@ -32,6 +39,7 @@ import static com.shopping_point.user_shopping_point.storage.LanguageUtils.setLo
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.setMarathiState;
 import static com.shopping_point.user_shopping_point.utils.CommunicateUtils.rateAppOnGooglePlay;
 import static com.shopping_point.user_shopping_point.utils.CommunicateUtils.shareApp;
+import static com.shopping_point.user_shopping_point.utils.Constant.LOCALHOST;
 
 public class AccountActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -39,7 +47,8 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
     private DeleteUserViewModel deleteUserViewModel;
     private FromHistoryViewModel fromHistoryViewModel;
     public static boolean historyIsDeleted = false;
-
+    private UserImageViewModel userImageViewModel;
+    private CircleImageView circleImageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,12 +60,14 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
 
         deleteUserViewModel = ViewModelProviders.of(this).get(DeleteUserViewModel.class);
         fromHistoryViewModel = ViewModelProviders.of(this).get(FromHistoryViewModel.class);
+        userImageViewModel = ViewModelProviders.of(this).get(UserImageViewModel.class);
 
         binding.nameOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getName());
         binding.emailOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getEmail());
         binding.emailOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getEmail());
-       // binding.profileImage
-
+        getUserImage();
+        View headerContainer = binding.profileImageAccount.getRootView();
+        circleImageView = headerContainer.findViewById(R.id.profile_image_account);
         binding.myOrders.setOnClickListener(this);
         binding.myWishList.setOnClickListener(this);
         binding.languages.setOnClickListener(this);
@@ -65,6 +76,29 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         binding.rateUs.setOnClickListener(this);
         binding.changePassword.setOnClickListener(this);
         binding.deleteAccount.setOnClickListener(this);
+    }
+
+
+
+    private void getUserImage() {
+        userImageViewModel.getUserImage(LoginUtils.getInstance(this).getUserInfo().getId()).observe(this, response -> {
+            if (response != null) {
+                String imageUrl = LOCALHOST + response.getImage().replaceAll("\\\\", "/");
+
+                RequestOptions options = new RequestOptions()
+                        .centerCrop()
+                        .placeholder(R.drawable.profile_picture)
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
+                        .priority(Priority.HIGH)
+                        .dontAnimate()
+                        .dontTransform();
+
+                Glide.with(getApplicationContext())
+                        .load(imageUrl)
+                        .apply(options)
+                        .into(circleImageView);
+            }
+        });
     }
 
     @Override
