@@ -32,6 +32,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="43dp"
                     android:gravity="center"
+                    android:textColor="@color/white"
+                    tools:text="@string/marwa_eltayeb"
                     android:text="Shopping Point" />
 
                 <TextView
@@ -39,6 +41,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="31dp"
                     android:gravity="center"
+                    android:textColor="@color/white"
+                    tools:text="@string/marwa_eltayeb_yahoo_com"
                     android:text="shoppingpoint@gmail.com" />
             </LinearLayout>
 
