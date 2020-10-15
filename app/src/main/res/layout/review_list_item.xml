@@ -33,7 +33,7 @@
                     android:padding="@dimen/dimen10dp"
                     android:textColor="@color/black"
                     android:textSize="@dimen/dimen18sp"
-                    tools:text="@string/marwa_eltayeb" />
+                    tools:text="@string/shopping_point" />
 
                 <TextView
                     android:id="@+id/dateOfReview"

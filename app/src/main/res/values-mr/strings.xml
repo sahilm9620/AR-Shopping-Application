@@ -23,7 +23,7 @@
 साइन इन</string>
     <string name="new_customer_create_your_account">
 नवीन ग्राहक? <font color='#008CFF'>आपले खाते तयार करा</font></string>
-    <string name="_2020_souq" />
+    <string name="_2020_shoppingpoint" />
     <string name="eight_characters">संकेतशब्द किमान 8 वर्णांचा असावा</string>
     <string name="create_your_account">
 साइन अप करा</string>
@@ -73,11 +73,28 @@ FREE शिपिंग</string>
 शॉपिंग पॉईंटद्वारे पूर्ण</string>
     <string name="search">
 शोधा</string>
+    <string name="next" >NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start" >GOT IT</string>
+
+    <string name="slide_1_title" >Hello User</string>
+    <string name="slide_1_desc" >The easiest way to order cloths and wearable products!</string>
+
+    <string name="slide_2_title" >Fast Delivery</string>
+    <string name="slide_2_desc" >Delivering happiness and needs!</string>
+
+    <string name="slide_3_title" >Great Discounts</string>
+    <string name="slide_3_desc" >Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title" >AR based shopping</string>
+    <string name="slide_4_desc">Try out best outfits virtually with AR technology!</string>
+
+
     <string name="search_hint">आपणास काय हवे आहे?</string>
     <string name="cart">कार्ट</string>
     <string name="profile_picture">
 परिचय चित्र</string>
-    <string name="marwa_eltayeb_yahoo_com">info@shopingpoint.com</string>
+    <string name="shoppingpoint.com">info@shopingpoint.com</string>
 
     <string name="navigation_drawer_open">
 नेव्हिगेशन ड्रॉवर उघडा</string>
@@ -106,7 +123,7 @@ FREE शिपिंग</string>
     <string name="news_feed">बातम्या</string>
     <string name="my_wishList">
 माझे विशलिस्ट</string>
-    <string name="marwa_eltayeb">शॉपिंग पॉइंट</string>
+    <string name="shopping_point">शॉपिंग पॉइंट</string>
     <string name="take_picture">
 छायाचित्र काढा</string>
     <string name="use_gallery">

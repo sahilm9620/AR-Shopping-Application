@@ -19,7 +19,7 @@
             android:importantForAutofill="no"
             android:inputType="none"
             android:textColorHint="@color/colorAccent"
-            tools:hint="@string/marwa_eltayeb" />
+            tools:hint="@string/shopping_point" />
 
         <RatingBar
             android:id="@+id/rateProduct"

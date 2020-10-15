@@ -30,12 +30,12 @@
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/white"
-        tools:text="@string/marwa_eltayeb" />
+        tools:text="@string/shopping_point" />
 
     <TextView
         android:id="@+id/emailOfUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        tools:text="@string/marwa_eltayeb_yahoo_com" />
+        tools:text="@string/shoppingpoint.com" />
 </LinearLayout>

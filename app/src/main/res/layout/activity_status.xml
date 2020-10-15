@@ -68,7 +68,7 @@
             android:gravity="start|center"
             android:paddingStart="@dimen/dimen10dp"
             android:paddingEnd="@dimen/dimen10dp"
-            android:text="@string/marwa_eltayeb"
+            android:text="@string/shopping_point"
             android:textColor="@color/vDarkGray"
             android:textSize="@dimen/dimen14sp" />
 

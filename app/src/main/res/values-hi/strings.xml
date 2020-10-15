@@ -24,7 +24,7 @@
     <string name="new_customer_create_your_account">
 नए ग्राहक?<font color='#008CFF'>
 अपने खाते बनाएँ</font></string>
-    <string name="_2020_souq" />
+    <string name="_2020_shoppingpoint" />
     <string name="eight_characters">पासवर्ड कम से कम 8 वर्णों का होना चाहिए</string>
     <string name="create_your_account">
 साइन अप करें</string>
@@ -76,7 +76,7 @@ FREE शिपिंग</string>
     <string name="cart">
 कार्ट</string>
     <string name="profile_picture">प्रोफ़ाइल फोटो</string>
-    <string name="marwa_eltayeb_yahoo_com">info@shopingpoint.com</string>
+    <string name="shoppingpoint.com">info@shopingpoint.com</string>
 
     <string name="navigation_drawer_open">
 नेविगेशन दराज खोलें</string>
@@ -105,7 +105,7 @@ FREE शिपिंग</string>
     <string name="news_feed">समाचार फ़ीड</string>
     <string name="my_wishList">
 मेरी इच्छा सूची</string>
-    <string name="marwa_eltayeb">शॉपिंग पॉइंट</string>
+    <string name="shopping_point">शॉपिंग पॉइंट</string>
     <string name="take_picture">
 तस्वीर ले लो</string>
     <string name="use_gallery">
@@ -187,6 +187,23 @@ FREE शिपिंग</string>
 पुन: लिखें नया पासवर्ड</string>
     <string name="cancel">
 रद्द करना</string>
+    <string name="next" >NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start" >GOT IT</string>
+
+    <string name="slide_1_title" >Hello User</string>
+    <string name="slide_1_desc" >The easiest way to order cloths and wearable products!</string>
+
+    <string name="slide_2_title" >Fast Delivery</string>
+    <string name="slide_2_desc" >Delivering happiness and needs!</string>
+
+    <string name="slide_3_title" >Great Discounts</string>
+    <string name="slide_3_desc" >Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title" >AR based shopping</string>
+    <string name="slide_4_desc">Try out best outfits virtually with AR technology!</string>
+
+
     <string name="save_changes">परिवर्तनों को सुरक्षित करें</string>
     <string name="text_length">150</string>
     <string name="password_not_match">

@@ -13,7 +13,7 @@
     <string name="forget_password">Forgot Password?</string>
     <string name="sign_in">Sign In</string>
     <string name="new_customer_create_your_account">New Customer? <font color='#008CFF'>Create Your Account</font></string>
-    <string name="_2020_souq" />
+    <string name="_2020_shoppingpoint" />
     <string name="eight_characters">Password must be at least 8 characters</string>
     <string name="create_your_account">Sign up</string>
     <string name="sign_in_already_a_customer">Already a member?<font color='#008CFF'> Sign-in</font></string>
@@ -45,7 +45,7 @@
     <string name="search_hint">What are you looking for?</string>
     <string name="cart">Cart</string>
     <string name="profile_picture">Profile Picture</string>
-    <string name="marwa_eltayeb_yahoo_com">info@shopingpoint.com</string>
+    <string name="shoppingpoint.com">info@shopingpoint.com</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -62,7 +62,7 @@
     <string name="my_account">My Account</string>
     <string name="news_feed">News Feed</string>
     <string name="my_wishList">My WishList</string>
-    <string name="marwa_eltayeb">Shopping Point</string>
+    <string name="shopping_point">Shopping Point</string>
     <string name="take_picture">Take Picture</string>
     <string name="use_gallery">Use Gallery</string>
     <string name="choose_profile_picture">Choose profile Picture</string>
@@ -128,7 +128,7 @@
     <string name="your_cart_is_empty">Your Cart is empty</string>
     <string name="no_products_in_this_category">No products in this category</string>
     <string name="english">English</string>
-    <string name="arabic">Arabic</string>
+
     <string name="choose_language">Choose Language</string>
     <string name="shop_online">Shop Online</string>
 
@@ -178,24 +178,24 @@
     <string name="schedule">schedule</string>
     <string name="clear_all">Clear all</string>
     <string name="what_are_you_looking_for">What are you looking for?</string>
-    <string name="hindi" tools:ignore="MissingTranslation"> Hindi</string>
-    <string name="marathi" tools:ignore="MissingTranslation">Marathi</string>
+    <string name="hindi" > Hindi</string>
+    <string name="marathi" >Marathi</string>
 
-    <string name="next" tools:ignore="MissingTranslation">NEXT</string>
-    <string name="skip" tools:ignore="MissingTranslation">SKIP</string>
-    <string name="start" tools:ignore="MissingTranslation">GOT IT</string>
+    <string name="next" >NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start" >GOT IT</string>
 
-    <string name="slide_1_title" tools:ignore="MissingTranslation">Hello User</string>
-    <string name="slide_1_desc" tools:ignore="MissingTranslation">The easiest way to order cloths and wearable products!</string>
+    <string name="slide_1_title" >Hello User</string>
+    <string name="slide_1_desc" >The easiest way to order cloths and wearable products!</string>
 
-    <string name="slide_2_title" tools:ignore="MissingTranslation">Fast Delivery</string>
-    <string name="slide_2_desc" tools:ignore="MissingTranslation">Delivering happiness and needs!</string>
+    <string name="slide_2_title" >Fast Delivery</string>
+    <string name="slide_2_desc" >Delivering happiness and needs!</string>
 
-    <string name="slide_3_title" tools:ignore="MissingTranslation">Great Discounts</string>
-    <string name="slide_3_desc" tools:ignore="MissingTranslation">Best discounts on every single service we offer!</string>
+    <string name="slide_3_title" >Great Discounts</string>
+    <string name="slide_3_desc" >Best discounts on every single service we offer!</string>
 
-    <string name="slide_4_title" tools:ignore="MissingTranslation">AR based shopping</string>
-    <string name="slide_4_desc" tools:ignore="MissingTranslation">Try out best outfits virtually with AR technology!</string>
+    <string name="slide_4_title" >AR based shopping</string>
+    <string name="slide_4_desc">Try out best outfits virtually with AR technology!</string>
 
     <string-array name="categories_array">
         <item>Mobile</item>
