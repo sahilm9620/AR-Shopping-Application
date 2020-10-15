@@ -90,11 +90,15 @@ public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.Pro
 
             // Load the Product image into ImageView
             String imageUrl = LOCALHOST + product.getProductImage().replaceAll("\\\\", "/");
+
+            Toast.makeText(mContext, imageUrl, Toast.LENGTH_SHORT).show();
+
             Glide.with(mContext)
                     .load(imageUrl)
                     .into(holder.binding.imgProductImage);
 
             Log.d("imageUrl", imageUrl);
+
 
             holder.binding.imgShare.setOnClickListener(v -> shareProduct(mContext, productName, imageUrl));
 

@@ -214,7 +214,6 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
                     binding.included.content.historyList.setAdapter(historyAdapter);
                     historyAdapter.submitList(products);
                     historyAdapter.notifyDataSetChanged();
-
                     products.addWeakCallback(null, productCallback);
                 }
             });
@@ -458,8 +457,8 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(cartIntent);
                 return true;
             case R.id.action_addProduct:
-                Intent addProductIntent = new Intent(this, AddProductActivity.class);
-                startActivity(addProductIntent);
+              //  Intent addProductIntent = new Intent(this, AddProductActivity.class);
+              //  startActivity(addProductIntent);
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -472,6 +471,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         binding.included.content.txtSeeAllLaptops.setVisibility(view);
         binding.included.content.txtCash.setVisibility(view);
         binding.included.content.txtReturn.setVisibility(view);
+
     }
 
     @Override

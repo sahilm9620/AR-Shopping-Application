@@ -90,14 +90,6 @@
                 android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
         <activity
-            android:name=".view.AddProductActivity"
-            android:label="@string/add_product"
-            android:parentActivityName=".view.ProductActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
-        </activity>
-        <activity
             android:name=".view.HelpActivity"
             android:label="@string/help_center"
             android:parentActivityName=".view.ProductActivity">

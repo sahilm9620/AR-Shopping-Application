@@ -3,6 +3,7 @@ package com.shopping_point.user_shopping_point.net;
 import androidx.paging.PageKeyedDataSource;
 import androidx.annotation.NonNull;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.shopping_point.user_shopping_point.model.Product;
 import com.shopping_point.user_shopping_point.model.ProductApiResponse;
@@ -43,7 +44,8 @@ public class ProductDataSource extends PageKeyedDataSource<Integer, Product> {
 
                     @Override
                     public void onFailure(Call<ProductApiResponse> call, Throwable t) {
-                        Log.v("onFailure", "Failed to get Products");
+                        Log.v("onFailure : " , "PPPPPPPPPPPPPPPPPPP  " + call);
+
                     }
                 });
     }

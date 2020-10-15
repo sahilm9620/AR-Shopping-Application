@@ -4,6 +4,7 @@ import android.app.Application;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.shopping_point.user_shopping_point.net.RetrofitClient;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
@@ -42,17 +43,19 @@ public class UploadPhotoRepository {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 Log.d(TAG, "onResponse: " + "Image Updated");
-
+                Toast.makeText(application, "SUCESS : IMAGE UPLOADED ", Toast.LENGTH_SHORT).show();
                 ResponseBody responseBody = response.body();
 
                 if (response.body() != null) {
                     mutableLiveData.setValue(responseBody);
+                    Toast.makeText(application, "IN RESPONSE BODY", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 Log.d(TAG, "onFailure: " + t.getMessage());
+                Toast.makeText(application, "FAILED " + t.getMessage() , Toast.LENGTH_SHORT).show();
             }
         });
 

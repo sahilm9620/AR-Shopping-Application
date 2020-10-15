@@ -55,7 +55,7 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         binding.nameOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getName());
         binding.emailOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getEmail());
         binding.emailOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getEmail());
-
+       // binding.profileImage
 
         binding.myOrders.setOnClickListener(this);
         binding.myWishList.setOnClickListener(this);

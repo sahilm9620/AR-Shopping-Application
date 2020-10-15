@@ -4,7 +4,6 @@ import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.annotation.NonNull;
-
 import com.shopping_point.user_shopping_point.model.Favorite;
 import com.shopping_point.user_shopping_point.repository.AddFavoriteRepository;
 import com.shopping_point.user_shopping_point.utils.RequestCallback;

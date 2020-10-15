@@ -146,7 +146,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dimen10dp"
-                    android:text="@string/_5399_egp"
+                    android:text="@string/_5399_rs"
                     android:textColor="@color/black"
                     android:textSize="@dimen/dimen18sp"
                     android:textStyle="bold" />

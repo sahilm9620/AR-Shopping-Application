@@ -48,7 +48,7 @@ public interface Api {
     Call<ResponseBody> deleteAccount(@Query("userId") int userId);
 
     @Multipart
-    @PUT("users/upload")
+    @POST("users/upload.php")
     Call<ResponseBody> uploadPhoto(@Part MultipartBody.Part userPhoto, @Part("id") RequestBody userId);
 
     @GET("users/info.php")
