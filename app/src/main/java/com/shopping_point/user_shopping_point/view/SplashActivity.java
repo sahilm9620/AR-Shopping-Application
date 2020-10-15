@@ -30,7 +30,7 @@ public class SplashActivity extends AppCompatActivity {
                 finish();
                 // If user does not log in before, go to LoginActivity
                 if(!LoginUtils.getInstance(SplashActivity.this).isLoggedIn()) {
-                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                    Intent intent = new Intent(SplashActivity.this, WelcomeActivity.class);
                     startActivity(intent);
                 }
 

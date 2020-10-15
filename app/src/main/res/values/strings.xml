@@ -17,8 +17,8 @@
     <string name="eight_characters">Password must be at least 8 characters</string>
     <string name="create_your_account">Sign up</string>
     <string name="sign_in_already_a_customer">Already a member?<font color='#008CFF'> Sign-in</font></string>
-<!--    <string name="boldText">Sign-in.</string>-->
-<!--    <string name="normalText">" "Already a customer?</string>-->
+    <!--    <string name="boldText">Sign-in.</string>-->
+    <!--    <string name="normalText">" "Already a customer?</string>-->
     <string name="enter_at_least_3_characters">Enter at least 3 characters</string>
     <string name="email_required">Email Required</string>
     <string name="enter_a_valid_email_address">Enter a valid email address</string>
@@ -180,6 +180,22 @@
     <string name="what_are_you_looking_for">What are you looking for?</string>
     <string name="hindi" tools:ignore="MissingTranslation"> Hindi</string>
     <string name="marathi" tools:ignore="MissingTranslation">Marathi</string>
+
+    <string name="next" tools:ignore="MissingTranslation">NEXT</string>
+    <string name="skip" tools:ignore="MissingTranslation">SKIP</string>
+    <string name="start" tools:ignore="MissingTranslation">GOT IT</string>
+
+    <string name="slide_1_title" tools:ignore="MissingTranslation">Hello User</string>
+    <string name="slide_1_desc" tools:ignore="MissingTranslation">The easiest way to order cloths and wearable products!</string>
+
+    <string name="slide_2_title" tools:ignore="MissingTranslation">Fast Delivery</string>
+    <string name="slide_2_desc" tools:ignore="MissingTranslation">Delivering happiness and needs!</string>
+
+    <string name="slide_3_title" tools:ignore="MissingTranslation">Great Discounts</string>
+    <string name="slide_3_desc" tools:ignore="MissingTranslation">Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title" tools:ignore="MissingTranslation">AR based shopping</string>
+    <string name="slide_4_desc" tools:ignore="MissingTranslation">Try out best outfits virtually with AR technology!</string>
 
     <string-array name="categories_array">
         <item>Mobile</item>
