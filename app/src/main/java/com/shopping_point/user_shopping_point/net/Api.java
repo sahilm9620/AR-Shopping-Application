@@ -58,7 +58,7 @@ public interface Api {
     @POST("products/insert")
     Call<ResponseBody> insertProduct(@PartMap Map<String, RequestBody> productInfo, @Part MultipartBody.Part image);
 
-    @GET("users/getImage")
+    @GET("users/getImage.php")
     Call<Image> getUserImage(@Query("id") int userId);
 
     @GET("users/otp.php")

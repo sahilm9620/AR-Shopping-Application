@@ -34,7 +34,7 @@ public class LoginUtils {
         editor.putString("email", response.getEmail());
         editor.putString("password", response.getPassword());
         editor.putString("token", response.getToken());
-        editor.putBoolean("isActive", response.isAdmin());
+        editor.putBoolean("isActive", response.isActive());
         editor.apply();
     }
 

@@ -370,7 +370,8 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         userImageViewModel.getUserImage(LoginUtils.getInstance(this).getUserInfo().getId()).observe(this, response -> {
             if (response != null) {
                 String imageUrl = LOCALHOST + response.getImage().replaceAll("\\\\", "/");
-
+                Toast.makeText(this, imageUrl, Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "GET USER IMAGE : " + imageUrl);
                 RequestOptions options = new RequestOptions()
                         .centerCrop()
                         .placeholder(R.drawable.profile_picture)

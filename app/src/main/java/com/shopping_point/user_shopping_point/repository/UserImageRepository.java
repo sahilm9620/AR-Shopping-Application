@@ -4,6 +4,7 @@ import android.app.Application;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.shopping_point.user_shopping_point.model.Image;
 import com.shopping_point.user_shopping_point.net.RetrofitClient;
@@ -28,7 +29,7 @@ public class UserImageRepository {
             @Override
             public void onResponse(Call<Image> call, Response<Image> response) {
                 Log.d("onResponse", "" + response.code());
-
+                Toast.makeText(application, response.body() + " ", Toast.LENGTH_SHORT).show();
                 Image responseBody = response.body();
 
                 if (response.body() != null) {
