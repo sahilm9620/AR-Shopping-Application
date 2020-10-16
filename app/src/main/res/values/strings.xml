@@ -196,6 +196,8 @@
 
     <string name="slide_4_title" >AR based shopping</string>
     <string name="slide_4_desc">Try out best outfits virtually with AR technology!</string>
+    <string name="contact">contact</string>
+    <string name="confirm_password">Confirm Password</string>
 
     <string-array name="categories_array">
         <item>Mobile</item>

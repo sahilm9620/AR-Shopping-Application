@@ -311,6 +311,8 @@ OTP दर्ज करें</string>
     <string name="what_are_you_looking_for">तुम क्या ढूंढ रहे हो?</string>
     <string name="hindi">हिंदी</string>
     <string name="marathi">मराठी</string>
+    <string name="contact">contact</string>
+    <string name="confirm_password">Confirm Password</string>
 
     <string-array name="categories_array">
         <item>मोबाइल</item>

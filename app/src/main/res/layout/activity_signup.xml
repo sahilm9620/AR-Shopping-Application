@@ -95,6 +95,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen8dp"
                 android:layout_marginBottom="@dimen/dimen8dp"
+                android:hint="@string/contact"
+                android:paddingLeft="@dimen/dimen24dp"
+                android:paddingRight="@dimen/dimen24dp">
+
+                <EditText
+                    android:id="@+id/userContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/custom_border"
+                    android:inputType="phone"
+                    android:padding="@dimen/dimen5dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8dp"
+                android:layout_marginBottom="@dimen/dimen8dp"
                 android:hint="@string/password"
                 android:paddingLeft="@dimen/dimen24dp"
                 android:paddingRight="@dimen/dimen24dp"
@@ -113,6 +132,29 @@
                     android:singleLine="true" />
             </com.google.android.material.textfield.TextInputLayout>
 
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen8dp"
+                android:layout_marginBottom="@dimen/dimen8dp"
+                android:hint="@string/confirm_password"
+                android:paddingLeft="@dimen/dimen24dp"
+                android:paddingRight="@dimen/dimen24dp"
+                app:passwordToggleContentDescription="Confirm Your Password"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/userConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_border"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:padding="@dimen/dimen5dp"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:layout_width="match_parent"
