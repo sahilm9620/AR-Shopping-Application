@@ -28,18 +28,20 @@ import com.shopping_point.user_shopping_point.storage.LoginUtils;
 
 import java.io.IOException;
 
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.getEnglishState;
-import static com.shopping_point.user_shopping_point.storage.LanguageUtils.getHindiState;
+
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.loadLocale;
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.setEnglishState;
-import static com.shopping_point.user_shopping_point.storage.LanguageUtils.setHindiState;
+
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.setLocale;
-import static com.shopping_point.user_shopping_point.storage.LanguageUtils.setMarathiState;
+
 import static com.shopping_point.user_shopping_point.utils.CommunicateUtils.rateAppOnGooglePlay;
 import static com.shopping_point.user_shopping_point.utils.CommunicateUtils.shareApp;
 import static com.shopping_point.user_shopping_point.utils.Constant.LOCALHOST;
+
 
 public class AccountActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -47,7 +49,8 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
     private DeleteUserViewModel deleteUserViewModel;
     private FromHistoryViewModel fromHistoryViewModel;
     public static boolean historyIsDeleted = false;
-
+    private UserImageViewModel userImageViewModel;
+    private CircleImageView circleImageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,10 +62,13 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
 
         deleteUserViewModel = ViewModelProviders.of(this).get(DeleteUserViewModel.class);
         fromHistoryViewModel = ViewModelProviders.of(this).get(FromHistoryViewModel.class);
+        userImageViewModel = ViewModelProviders.of(this).get(UserImageViewModel.class);
 
         binding.nameOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getName());
         binding.emailOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getEmail());
-
+        getUserImage();
+        View headerContainer = binding.profileImageAccount.getRootView();
+        circleImageView = headerContainer.findViewById(R.id.profile_image_account);
         binding.myOrders.setOnClickListener(this);
         binding.myWishList.setOnClickListener(this);
         binding.languages.setOnClickListener(this);
@@ -71,6 +77,28 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         binding.rateUs.setOnClickListener(this);
         binding.changePassword.setOnClickListener(this);
         binding.deleteAccount.setOnClickListener(this);
+    }
+
+    
+    private void getUserImage() {
+        userImageViewModel.getUserImage(LoginUtils.getInstance(this).getUserInfo().getId()).observe(this, response -> {
+            if (response != null) {
+                String imageUrl = LOCALHOST + response.getImage().replaceAll("\\\\", "/");
+
+                RequestOptions options = new RequestOptions()
+                        .centerCrop()
+                        .placeholder(R.drawable.profile_picture)
+                        .diskCacheStrategy(DiskCacheStrategy.ALL)
+                        .priority(Priority.HIGH)
+                        .dontAnimate()
+                        .dontTransform();
+
+                Glide.with(getApplicationContext())
+                        .load(imageUrl)
+                        .apply(options)
+                        .into(circleImageView);
+            }
+        });
     }
 
     @Override
@@ -164,15 +192,15 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         dialog.setContentView(R.layout.custom_language_dialog);
 
         Button english = dialog.findViewById(R.id.txtEnglish);
-        Button arabic = dialog.findViewById(R.id.txtHindi);
+        Button hindi = dialog.findViewById(R.id.txtHindi);
 
         if(getEnglishState(this)){
             english.setEnabled(false);
             english.setAlpha(.5f);
-            arabic.setEnabled(true);
+            hindi.setEnabled(true);
         }else {
-            arabic.setEnabled(false);
-            arabic.setAlpha(.5f);
+            hindi.setEnabled(false);
+            hindi.setAlpha(.5f);
             english.setEnabled(true);
         }
 
@@ -182,8 +210,8 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
             dialog.cancel();
         });
 
-        arabic.setOnClickListener(v -> {
-            arabic.setEnabled(true);
+        hindi.setOnClickListener(v -> {
+            hindi.setEnabled(true);
             chooseHindi();
             dialog.cancel();
         });
@@ -203,5 +231,9 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         recreate();
         Toast.makeText(this, "Hindi", Toast.LENGTH_SHORT).show();
         setEnglishState(this, false);
+    }
+    @Override
+    public void onBackPressed() {
+        return;
     }
 }
