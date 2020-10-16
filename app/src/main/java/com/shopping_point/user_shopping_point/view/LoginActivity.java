@@ -103,23 +103,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
         });
     }
-    private void showMessage(String message) {
 
-
-            AlertDialog dialog = new AlertDialog.Builder(this)
-                    .setMessage(message)
-                    .setPositiveButton(R.string.ok, null).show();
-
-            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.darkGreen));
-
-    }
     private void showMsg(String titel, String message) {
         snack = Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_INDEFINITE);
 
         snack.setAction("Re-Try", new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                snack.dismiss();
             }
         });
         snack.setTextColor(Color.RED);
