@@ -440,7 +440,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         getMenuInflater().inflate(R.menu.search, menu);
 
         MenuItem addMenu = menu.findItem(R.id.action_addProduct);
-        if (LoginUtils.getInstance(this).getUserInfo().isAdmin()) {
+        if (LoginUtils.getInstance(this).getUserInfo().isActive()) {
             addMenu.setVisible(true);
         } else {
             addMenu.setVisible(false);

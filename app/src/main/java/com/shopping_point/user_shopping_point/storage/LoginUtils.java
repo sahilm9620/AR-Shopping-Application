@@ -51,7 +51,7 @@ public class LoginUtils {
         editor.putString("name", user.getName());
         editor.putString("email", user.getEmail());
         editor.putString("password", user.getPassword());
-        editor.putBoolean("isAdmin", user.isAdmin());
+        editor.putBoolean("isActive", user.isActive());
         editor.apply();
     }
 
@@ -62,7 +62,7 @@ public class LoginUtils {
                 sharedPreferences.getString("name", null),
                 sharedPreferences.getString("email", null),
                 sharedPreferences.getString("password", null),
-                sharedPreferences.getBoolean("isAdmin", false)
+                sharedPreferences.getBoolean("isActive", false)
         );
     }
 

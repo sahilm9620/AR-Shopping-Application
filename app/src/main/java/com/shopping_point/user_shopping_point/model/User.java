@@ -6,7 +6,7 @@ public class User {
     private String name;
     private String email;
     private String password;
-    private boolean isAdmin;
+    private boolean isActive;
 
     public User(String name, String email, String password) {
         this.name = name;
@@ -14,12 +14,12 @@ public class User {
         this.password = password;
     }
 
-    public User(int id,String name, String email, String password, boolean isAdmin) {
+    public User(int id,String name, String email, String password, boolean isActive) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.isAdmin = isAdmin;
+        this.isActive = isActive;
     }
 
     public int getId() {
@@ -38,8 +38,8 @@ public class User {
         return password;
     }
 
-    public boolean isAdmin() {
-        return isAdmin;
+    public boolean isActive() {
+        return isActive;
     }
 
 }
