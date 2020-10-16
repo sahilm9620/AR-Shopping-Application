@@ -8,12 +8,15 @@ import androidx.lifecycle.ViewModelProviders;
 import android.content.DialogInterface;
 import android.content.Intent;
 import androidx.databinding.DataBindingUtil;
+
+import android.graphics.Color;
 import android.os.Bundle;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.LoginViewModel;
 import com.shopping_point.user_shopping_point.databinding.ActivityLoginBinding;
@@ -27,6 +30,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private static final String TAG = "LoginActivity";
     private ActivityLoginBinding binding;
     private LoginViewModel loginViewModel;
+    private Snackbar snack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,37 +98,35 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 goToProductActivity();
             }else {
                 progressDialog.cancel();
-                showMessage(loginApiResponse.getMessage());
+                showMsg("ERROR",loginApiResponse.getMessage());
                 Toast.makeText(this, loginApiResponse.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
     private void showMessage(String message) {
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("ERROR");
-        builder.setMessage(message);
-        builder.setIcon(R.drawable.splash_screen_light_logo);
 
-        // builder.setCancelable(false);
+            AlertDialog dialog = new AlertDialog.Builder(this)
+                    .setMessage(message)
+                    .setPositiveButton(R.string.ok, null).show();
 
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                builder.setCancelable(true);
-            }
-        });
-        builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                builder.setCancelable(true);
-            }
-        });
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.darkGreen));
 
-
-        builder.show();
     }
+    private void showMsg(String titel, String message) {
+        snack = Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_INDEFINITE);
 
+        snack.setAction("Re-Try", new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        snack.setTextColor(Color.RED);
+        snack.setBackgroundTint(Color.LTGRAY);
+        snack.setActionTextColor(Color.WHITE);
+        snack.show();
+    }
 
     @Override
     public void onClick(View view) {
