@@ -100,7 +100,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         });
     }
     private void showMessage(String message) {
-        Toast.makeText(this, "IN SHOW MESSAGE FUNCTION ", Toast.LENGTH_SHORT).show();
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("ERROR");
         builder.setMessage(message);
