@@ -54,9 +54,6 @@ public interface Api {
     @GET("users/info.php")
     Call<ResponseBody> updatePassword(@Query("password") String newPassword, @Query("email") String email);
 
-    @Multipart
-    @POST("products/insert")
-    Call<ResponseBody> insertProduct(@PartMap Map<String, RequestBody> productInfo, @Part MultipartBody.Part image);
 
     @GET("users/getImage.php")
     Call<Image> getUserImage(@Query("id") int userId);
@@ -70,25 +67,25 @@ public interface Api {
     @GET("products/getProductsByCategory.php")
     Call<ProductApiResponse> getProductsByCategory(@Query("category") String category, @Query("userId") int userId,@Query("page") int page);
 
-    @GET("products/search")
+    @GET("products/search.php")
     Call<ProductApiResponse> searchForProduct(@Query("q") String keyword, @Query("userId") int userId);
 
-    @POST("favorites/add")
+    @POST("favorites/add.php")
     Call<ResponseBody> addFavorite(@Body Favorite favorite);
 
-    @DELETE("favorites/remove")
+    @DELETE("favorites/remove.php")
     Call<ResponseBody> removeFavorite(@Query("userId") int userId, @Query("productId") int productId);
 
-    @GET("favorites")
+    @GET("favorites/getFavorites.php")
     Call<FavoriteApiResponse> getFavorites(@Query("userId") int userId);
 
-    @POST("carts/add")
+    @POST("carts/add.php")
     Call<ResponseBody> addToCart(@Body Cart cart);
 
-    @DELETE("carts/remove")
+    @DELETE("carts/remove.php")
     Call<ResponseBody> removeFromCart(@Query("userId") int userId, @Query("productId") int productId);
 
-    @GET("carts")
+    @GET("carts/getProductsInCart.php")
     Call<CartApiResponse> getProductsInCart(@Query("userId") int userId);
 
     @POST("history/add.php")
@@ -100,21 +97,21 @@ public interface Api {
     @GET("history/getProductsInHistory.php")
     Call<HistoryApiResponse> getProductsInHistory(@Query("userId") int userId, @Query("page") int page);
 
-    @POST("review/add")
+    @POST("review/add.php")
     Call<ResponseBody> addReview(@Body Review review);
 
-    @GET("review")
+    @GET("review/getAllReviews.php")
     Call<ReviewApiResponse> getAllReviews(@Query("productId") int productId);
 
-    @GET("posters")
+    @GET("posters/getPosters.php")
     Call<NewsFeedResponse> getPosters();
 
-    @GET("orders/get")
+    @GET("orders/get.php")
     Call<OrderApiResponse> getOrders(@Query("userId") int userId);
 
-    @POST("address/add")
+    @POST("address/add.php")
     Call<ResponseBody> addShippingAddress(@Body Shipping shipping);
 
-    @POST("orders/add")
+    @POST("orders/add.php")
     Call<ResponseBody> orderProduct(@Body Ordering ordering);
 }

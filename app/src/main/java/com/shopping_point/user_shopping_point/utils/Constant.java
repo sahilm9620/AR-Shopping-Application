@@ -2,7 +2,7 @@ package com.shopping_point.user_shopping_point.utils;
 
 public class Constant {
 
-    public static String LOCALHOST = "http://myleader.sparsematrix.co.in/vrshop/temp/";
+    public static String LOCALHOST = "http://myleader.sparsematrix.co.in/arshop/backend/";
 
     // Constant Variables
     public static String PRODUCT = "product";
