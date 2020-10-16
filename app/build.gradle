@@ -35,12 +35,13 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    def support_version = "1.0.0"
-    def retrofit_version = "2.4.0"
-    def paging_version = "2.0.0"
-    def glide_version = "4.3.1"
-    def view_model_version = "2.0.0"
+    def support_version = "1.1.0"
+    def retrofit_version = "2.9.0"
+    def paging_version = "2.1.1"
+    def glide_version = "4.11.0"
+    def view_model_version = "2.2.0"
     def CircleImgVersion = "3.1.0"
+    def CardView = "1.0.0"
 
     implementation "androidx.appcompat:appcompat:$support_version"
     // Design Support
@@ -50,7 +51,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     // CardView
-    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation "androidx.cardview:cardview:$CardView"
     // RecyclerView
     implementation "androidx.recyclerview:recyclerview:$support_version"
     // Retrofit
@@ -59,8 +60,8 @@ dependencies {
     // Paging
     implementation "androidx.paging:paging-runtime:$paging_version"
     // Glide
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-extensions:$view_model_version"
     implementation "androidx.lifecycle:lifecycle-viewmodel:$view_model_version"
