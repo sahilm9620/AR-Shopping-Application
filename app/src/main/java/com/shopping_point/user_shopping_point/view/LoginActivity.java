@@ -1,7 +1,11 @@
 package com.shopping_point.user_shopping_point.view;
 
 import android.app.ProgressDialog;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.lifecycle.ViewModelProviders;
+
+import android.content.DialogInterface;
 import android.content.Intent;
 import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -84,15 +88,43 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         loginViewModel.getLoginResponseLiveData(email,password).observe(this, loginApiResponse -> {
             if (!loginApiResponse.isError()) {
                 LoginUtils.getInstance(this).saveUserInfo(loginApiResponse);
+
                 Toast.makeText(this, loginApiResponse.getMessage(), Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();
                 goToProductActivity();
             }else {
                 progressDialog.cancel();
+                showMessage(loginApiResponse.getMessage());
                 Toast.makeText(this, loginApiResponse.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
+    private void showMessage(String message) {
+        Toast.makeText(this, "IN SHOW MESSAGE FUNCTION ", Toast.LENGTH_SHORT).show();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("ERROR");
+        builder.setMessage(message);
+        builder.setIcon(R.drawable.splash_screen_light_logo);
+
+        // builder.setCancelable(false);
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                builder.setCancelable(true);
+            }
+        });
+        builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                builder.setCancelable(true);
+            }
+        });
+
+
+        builder.show();
+    }
+
 
     @Override
     public void onClick(View view) {
