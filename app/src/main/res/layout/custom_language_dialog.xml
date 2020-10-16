@@ -57,15 +57,4 @@
 
     </FrameLayout>
 
-    <Button
-        android:id="@+id/txtMarathi"
-        android:layout_width="126dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|end"
-        android:layout_margin="5dp"
-        android:background="@color/white"
-        android:padding="5dp"
-        android:text="@string/marathi"
-        android:textAllCaps="false"
-        android:textColor="@color/colorPrimary" />
 </LinearLayout>

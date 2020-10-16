@@ -47,8 +47,7 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
     private DeleteUserViewModel deleteUserViewModel;
     private FromHistoryViewModel fromHistoryViewModel;
     public static boolean historyIsDeleted = false;
-    private UserImageViewModel userImageViewModel;
-    private CircleImageView circleImageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,14 +59,10 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
 
         deleteUserViewModel = ViewModelProviders.of(this).get(DeleteUserViewModel.class);
         fromHistoryViewModel = ViewModelProviders.of(this).get(FromHistoryViewModel.class);
-        userImageViewModel = ViewModelProviders.of(this).get(UserImageViewModel.class);
 
         binding.nameOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getName());
         binding.emailOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getEmail());
-        binding.emailOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getEmail());
-        getUserImage();
-        View headerContainer = binding.profileImageAccount.getRootView();
-        circleImageView = headerContainer.findViewById(R.id.profile_image_account);
+
         binding.myOrders.setOnClickListener(this);
         binding.myWishList.setOnClickListener(this);
         binding.languages.setOnClickListener(this);
@@ -76,29 +71,6 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         binding.rateUs.setOnClickListener(this);
         binding.changePassword.setOnClickListener(this);
         binding.deleteAccount.setOnClickListener(this);
-    }
-
-
-
-    private void getUserImage() {
-        userImageViewModel.getUserImage(LoginUtils.getInstance(this).getUserInfo().getId()).observe(this, response -> {
-            if (response != null) {
-                String imageUrl = LOCALHOST + response.getImage().replaceAll("\\\\", "/");
-
-                RequestOptions options = new RequestOptions()
-                        .centerCrop()
-                        .placeholder(R.drawable.profile_picture)
-                        .diskCacheStrategy(DiskCacheStrategy.ALL)
-                        .priority(Priority.HIGH)
-                        .dontAnimate()
-                        .dontTransform();
-
-                Glide.with(getApplicationContext())
-                        .load(imageUrl)
-                        .apply(options)
-                        .into(circleImageView);
-            }
-        });
     }
 
     @Override
@@ -125,10 +97,10 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void deleteAllProductsInHistory() {
-       fromHistoryViewModel.removeAllFromHistory().observe(this, responseBody -> {
-           Log.d(TAG,getString(R.string.all_removed));
-       });
-       historyIsDeleted = true;
+        fromHistoryViewModel.removeAllFromHistory().observe(this, responseBody -> {
+            Log.d(TAG,getString(R.string.all_removed));
+        });
+        historyIsDeleted = true;
     }
 
     @Override
@@ -192,26 +164,16 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         dialog.setContentView(R.layout.custom_language_dialog);
 
         Button english = dialog.findViewById(R.id.txtEnglish);
-        Button hindi = dialog.findViewById(R.id.txtHindi);
-        Button marathi = dialog.findViewById(R.id.txtMarathi);
-
+        Button arabic = dialog.findViewById(R.id.txtHindi);
 
         if(getEnglishState(this)){
             english.setEnabled(false);
             english.setAlpha(.5f);
-            marathi.setEnabled(true);
-            hindi.setEnabled(true);
-        }else if(getHindiState(this)){
-            hindi.setEnabled(false);
-            hindi.setAlpha(.5f);
-            marathi.setEnabled(true);
-            english.setEnabled(true);
+            arabic.setEnabled(true);
         }else {
-            hindi.setEnabled(true);
+            arabic.setEnabled(false);
+            arabic.setAlpha(.5f);
             english.setEnabled(true);
-            marathi.setEnabled(false);
-            marathi.setAlpha(.5f);
-
         }
 
         english.setOnClickListener(v -> {
@@ -220,15 +182,9 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
             dialog.cancel();
         });
 
-        hindi.setOnClickListener(v -> {
-            hindi.setEnabled(true);
+        arabic.setOnClickListener(v -> {
+            arabic.setEnabled(true);
             chooseHindi();
-            dialog.cancel();
-        });
-
-        marathi.setOnClickListener(v -> {
-            marathi.setEnabled(true);
-            chooseMarathi();
             dialog.cancel();
         });
 
@@ -246,20 +202,6 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         setLocale(this,"hi");
         recreate();
         Toast.makeText(this, "Hindi", Toast.LENGTH_SHORT).show();
-        setHindiState(this, false);
-        setEnglishState(this, true);
-
-    }
-    private void chooseMarathi() {
-        setLocale(this,"mr");
-        recreate();
-        Toast.makeText(this, "Marathi", Toast.LENGTH_SHORT).show();
-        setMarathiState(this, false);
-
-    }
-
-    @Override
-    public void onBackPressed() {
-        return;
+        setEnglishState(this, false);
     }
 }
