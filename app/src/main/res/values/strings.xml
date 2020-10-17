@@ -198,6 +198,8 @@
     <string name="slide_4_desc">Try out best outfits virtually with AR technology!</string>
     <string name="contact">contact</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="phone_required">Phone no Required</string>
+    <string name="password_missmatch">Password Mismatch</string>
 
     <string-array name="categories_array">
         <item>Mobile</item>

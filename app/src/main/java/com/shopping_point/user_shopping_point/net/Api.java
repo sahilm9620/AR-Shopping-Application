@@ -54,7 +54,6 @@ public interface Api {
     @GET("users/info.php")
     Call<ResponseBody> updatePassword(@Query("password") String newPassword, @Query("email") String email);
 
-
     @GET("users/getImage.php")
     Call<Image> getUserImage(@Query("id") int userId);
 
@@ -68,7 +67,7 @@ public interface Api {
     Call<ProductApiResponse> getProductsByCategory(@Query("category") String category, @Query("userId") int userId,@Query("page") int page);
 
     @GET("products/search.php")
-    Call<ProductApiResponse> searchForProduct(@Query("q") String keyword, @Query("userId") int userId);
+    Call<ProductApiResponse> searchForProduct(@Query("keyword") String keyword, @Query("userId") int userId);
 
     @POST("favorites/add.php")
     Call<ResponseBody> addFavorite(@Body Favorite favorite);

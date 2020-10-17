@@ -33,6 +33,7 @@ public class LoginUtils {
         editor.putString("name", response.getName());
         editor.putString("email", response.getEmail());
         editor.putString("password", response.getPassword());
+        editor.putString("phone_no",response.getPhone_no());
         editor.putString("token", response.getToken());
         editor.putBoolean("isActive", response.isActive());
         editor.apply();
@@ -51,6 +52,7 @@ public class LoginUtils {
         editor.putString("name", user.getName());
         editor.putString("email", user.getEmail());
         editor.putString("password", user.getPassword());
+        editor.putString("phone_no",user.getPhone_no());
         editor.putBoolean("isActive", user.isActive());
         editor.apply();
     }
@@ -62,6 +64,7 @@ public class LoginUtils {
                 sharedPreferences.getString("name", null),
                 sharedPreferences.getString("email", null),
                 sharedPreferences.getString("password", null),
+                sharedPreferences.getString("phone_no",null),
                 sharedPreferences.getBoolean("isActive", false)
         );
     }

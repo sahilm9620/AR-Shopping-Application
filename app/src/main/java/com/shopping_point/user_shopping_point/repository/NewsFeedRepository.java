@@ -4,6 +4,7 @@ import android.app.Application;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.shopping_point.user_shopping_point.model.NewsFeedResponse;
 import com.shopping_point.user_shopping_point.net.RetrofitClient;
@@ -31,7 +32,7 @@ public class NewsFeedRepository {
                 Log.d("onResponse", "" + response.code());
 
                 NewsFeedResponse responseBody = response.body();
-
+                Toast.makeText(application, response.body() + " ", Toast.LENGTH_SHORT).show();
                 if (response.body() != null) {
                     mutableLiveData.setValue(responseBody);
                 }
@@ -40,6 +41,7 @@ public class NewsFeedRepository {
             @Override
             public void onFailure(Call<NewsFeedResponse> call, Throwable t) {
                 Log.d(TAG, "onFailure: " + t.getMessage());
+                Toast.makeText(application, "POSTER : FAILURE", Toast.LENGTH_SHORT).show();
             }
         });
 

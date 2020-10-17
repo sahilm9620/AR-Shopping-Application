@@ -313,6 +313,8 @@ OTP दर्ज करें</string>
     <string name="marathi">मराठी</string>
     <string name="contact">contact</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="phone_required">Phone no Required</string>
+    <string name="password_missmatch">Password Missmatch</string>
 
     <string-array name="categories_array">
         <item>मोबाइल</item>

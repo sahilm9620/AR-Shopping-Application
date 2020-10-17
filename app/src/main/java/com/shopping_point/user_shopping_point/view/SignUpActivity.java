@@ -54,6 +54,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private void signUpUser() {
         String name = binding.userName.getText().toString();
         String email = binding.userEmail.getText().toString();
+        String phone_no = binding.userContact.getText().toString();
+        String con_password = binding.userConfirmPassword.getText().toString();
         String password = binding.userPassword.getText().toString();
 
         if (name.isEmpty()) {
@@ -79,8 +81,28 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             return;
         }
 
+        if(phone_no.isEmpty())
+        {
+            binding.userContact.setError(getString(R.string.phone_required));
+            binding.userContact.requestFocus();
+            return;
+        }
+
         if (password.isEmpty()) {
             binding.userPassword.setError(getString(R.string.password_required));
+            binding.userPassword.requestFocus();
+            return;
+        }
+
+        if (con_password.isEmpty()) {
+            binding.userConfirmPassword.setError(getString(R.string.password_required));
+            binding.userConfirmPassword.requestFocus();
+            return;
+        }
+
+        if(!password.equals(con_password))
+        {
+            binding.userPassword.setError(getString(R.string.password_missmatch));
             binding.userPassword.requestFocus();
             return;
         }
@@ -96,13 +118,14 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         progressDialog.setCancelable(false);
         progressDialog.show();
 
-        registerViewModel.getRegisterResponseLiveData(new User(name, email, password)).observe(this, registerApiResponse -> {
+        registerViewModel.getRegisterResponseLiveData(new User(name, email, phone_no,password)).observe(this, registerApiResponse -> {
             if (!registerApiResponse.isError()) {
                 Toast.makeText(this, registerApiResponse.getMessage(), Toast.LENGTH_LONG).show();
-               // LoginUtils.getInstance(this).saveUserInfo(registerApiResponse.getUser());
+                //LoginUtils.getInstance(this).saveUserInfo(registerApiResponse.getUser());
                 progressDialog.dismiss();
                 goToLoginActivity();
-            }else {
+            }else
+                {
                 progressDialog.cancel();
                 Toast.makeText(this, registerApiResponse.getMessage(), Toast.LENGTH_SHORT).show();
             }
