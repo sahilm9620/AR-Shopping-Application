@@ -55,6 +55,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         String name = binding.userName.getText().toString();
         String email = binding.userEmail.getText().toString();
         String phone_no = binding.userContact.getText().toString();
+
         String con_password = binding.userConfirmPassword.getText().toString();
         String password = binding.userPassword.getText().toString();
 
@@ -87,7 +88,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             binding.userContact.requestFocus();
             return;
         }
-
+        Toast.makeText(this, phone_no, Toast.LENGTH_SHORT).show();
         if (password.isEmpty()) {
             binding.userPassword.setError(getString(R.string.password_required));
             binding.userPassword.requestFocus();

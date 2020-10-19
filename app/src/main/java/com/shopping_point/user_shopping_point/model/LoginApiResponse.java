@@ -2,19 +2,19 @@ package com.shopping_point.user_shopping_point.model;
 
 public class LoginApiResponse {
 
-    private int id;
-    private String name;
-    private String email;
+    private int user_id;
+    private String user_name;
+    private String user_email;
     private boolean error;
     private String message;
-    private String password;
-    private String phone_no;
+    private String user_password;
+    private String user_contact_no;
     private String token;
     private boolean isActive;
 
 
-    public LoginApiResponse(int id, String token) {
-        this.id = id;
+    public LoginApiResponse(int user_id, String token) {
+        this.user_id = user_id;
         this.token = token;
     }
 
@@ -24,16 +24,16 @@ public class LoginApiResponse {
     }
 
 
-    public int getId() {
-        return id;
+    public int getUser_id() {
+        return user_id;
     }
 
-    public String getName() {
-        return name;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUser_email() {
+        return user_email;
     }
 
     public boolean isError() {
@@ -44,10 +44,10 @@ public class LoginApiResponse {
         return message;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUser_password() {
+        return user_password;
     }
-public String getPhone_no(){return phone_no; }
+    public String getUser_contact_no(){return user_contact_no; }
     public String getToken() {
         return token;
     }

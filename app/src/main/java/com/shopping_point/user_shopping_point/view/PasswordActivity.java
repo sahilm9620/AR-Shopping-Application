@@ -20,17 +20,16 @@ import com.shopping_point.user_shopping_point.utils.Validation;
 
 import java.io.IOException;
 
-import static androidx.core.content.ContextCompat.startActivity;
 import static com.shopping_point.user_shopping_point.view.PasswordAssistantActivity.emailEntered;
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.loadLocale;
 import static com.shopping_point.user_shopping_point.view.AuthenticationActivity.isActivityRunning;
 
-public class PasswordActivity extends AppCompatActivity implements View.OnClickListener{
+public class PasswordActivity extends AppCompatActivity implements View.OnClickListener
+{
 
     private static final String TAG = "PasswordActivity";
     private ActivityPasswordBinding binding;
     private PasswordViewModel passwordViewModel;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +44,9 @@ public class PasswordActivity extends AppCompatActivity implements View.OnClickL
         binding.saveChanges.setOnClickListener(this);
         binding.cancel.setOnClickListener(this);
 
+
         if(isActivityRunning){
+            isActivityRunning=false;
             binding.currentPassword.setVisibility(View.GONE);
 
         }
@@ -64,18 +65,15 @@ public class PasswordActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void updatePassword() {
-
-
-
         String newPassword = binding.newPassword.getText().toString();
         String retypePassword =binding.retypePassword.getText().toString();
 
 
 if(!isActivityRunning) {
 
-    String oldPassword = LoginUtils.getInstance(this).getUserInfo().getPassword().trim();
+    String oldPassword = LoginUtils.getInstance(this).getUserInfo().getUser_password().trim();
     String currentPassword = binding.currentPassword.getText().toString().trim();
-
+    Toast.makeText(this, oldPassword, Toast.LENGTH_SHORT).show();
     if (!oldPassword.equals(currentPassword)) {
 
         binding.currentPassword.setError(getString(R.string.enter_current_password));

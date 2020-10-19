@@ -147,9 +147,9 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         circleImageView = headerContainer.findViewById(R.id.profile_image);
         circleImageView.setOnClickListener(this);
         TextView userName = headerContainer.findViewById(R.id.nameOfUser);
-        userName.setText(LoginUtils.getInstance(this).getUserInfo().getName());
+        userName.setText(LoginUtils.getInstance(this).getUserInfo().getUser_name());
         TextView userEmail = headerContainer.findViewById(R.id.emailOfUser);
-        userEmail.setText(LoginUtils.getInstance(this).getUserInfo().getEmail());
+        userEmail.setText(LoginUtils.getInstance(this).getUserInfo().getUser_email());
 
         binding.included.content.listOfMobiles.setHasFixedSize(true);
         binding.included.content.listOfMobiles.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));

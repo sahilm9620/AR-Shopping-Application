@@ -3,26 +3,26 @@ package com.shopping_point.user_shopping_point.model;
 public class User {
 
     private int id;
-    private String name;
-    private String email;
-    private String password;
-    private String phone_no;
+    private String user_name;
+    private String user_email;
+    private String user_password;
+    private String user_contact_number;
     private boolean isActive;
 
-    public User(String name, String email, String phone_no, String password) {
-        this.name = name;
-        this.email = email;
-        this.phone_no=phone_no;
-        this.password = password;
+    public User(String user_name, String user_email, String user_contact_number, String user_password) {
+        this.user_name = user_name;
+        this.user_email = user_email;
+        this.user_contact_number = user_contact_number;
+        this.user_password = user_password;
 
     }
 
-    public User(int id, String name, String email, String password, String phone_no, boolean isActive) {
+    public User(int id, String user_name, String user_email, String user_password, String user_contact_number, boolean isActive) {
         this.id = id;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.phone_no=phone_no;
+        this.user_name = user_name;
+        this.user_email = user_email;
+        this.user_password = user_password;
+        this.user_contact_number = user_contact_number;
         this.isActive = isActive;
     }
 
@@ -30,19 +30,19 @@ public class User {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUser_email() {
+        return user_email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUser_password() {
+        return user_password;
     }
 
-    public String getPhone_no(){return phone_no;}
+    public String getUser_contact_number(){return user_contact_number;}
 
     public boolean isActive() {
         return isActive;

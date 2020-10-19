@@ -44,7 +44,7 @@ public class WriteReviewActivity extends AppCompatActivity implements View.OnCli
         writeReviewViewModel = ViewModelProviders.of(this).get(WriteReviewViewModel.class);
 
         binding.btnSubmit.setOnClickListener(this);
-        binding.txtName.setText(LoginUtils.getInstance(this).getUserInfo().getName());
+        binding.txtName.setText(LoginUtils.getInstance(this).getUserInfo().getUser_name());
 
         getCurrentTextLength();
 

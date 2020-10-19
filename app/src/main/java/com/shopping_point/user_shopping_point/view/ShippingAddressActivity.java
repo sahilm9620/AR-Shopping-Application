@@ -34,7 +34,7 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
 
         binding.proceed.setOnClickListener(this);
 
-        binding.txtName.setText(LoginUtils.getInstance(this).getUserInfo().getName());
+        binding.txtName.setText(LoginUtils.getInstance(this).getUserInfo().getUser_name());
     }
 
     @Override

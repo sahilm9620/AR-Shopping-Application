@@ -64,8 +64,8 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         fromHistoryViewModel = ViewModelProviders.of(this).get(FromHistoryViewModel.class);
         userImageViewModel = ViewModelProviders.of(this).get(UserImageViewModel.class);
 
-        binding.nameOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getName());
-        binding.emailOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getEmail());
+        binding.nameOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getUser_name());
+        binding.emailOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getUser_email());
         getUserImage();
         View headerContainer = binding.profileImageAccount.getRootView();
         circleImageView = headerContainer.findViewById(R.id.profile_image_account);
@@ -84,7 +84,7 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         userImageViewModel.getUserImage(LoginUtils.getInstance(this).getUserInfo().getId()).observe(this, response -> {
             if (response != null) {
                 String imageUrl = LOCALHOST + response.getImage().replaceAll("\\\\", "/");
-
+                Toast.makeText(this, imageUrl, Toast.LENGTH_SHORT).show();
                 RequestOptions options = new RequestOptions()
                         .centerCrop()
                         .placeholder(R.drawable.profile_picture)
@@ -92,7 +92,7 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
                         .priority(Priority.HIGH)
                         .dontAnimate()
                         .dontTransform();
-
+                Toast.makeText(this, imageUrl, Toast.LENGTH_SHORT).show();
                 Glide.with(getApplicationContext())
                         .load(imageUrl)
                         .apply(options)

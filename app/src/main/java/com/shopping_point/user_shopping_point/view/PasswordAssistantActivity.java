@@ -17,7 +17,7 @@ import static com.shopping_point.user_shopping_point.utils.Constant.OTP;
 
 public class PasswordAssistantActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String TAG = "PasswordAssistantActivi";
+    private static final String TAG = "PasswordAssistantActivity";
     private ActivityPasswordAssistantBinding binding;
     private OtpViewModel otpViewModel;
     private String userEmail;
@@ -26,12 +26,12 @@ public class PasswordAssistantActivity extends AppCompatActivity implements View
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_password_assistant);
-
         otpViewModel = ViewModelProviders.of(this).get(OtpViewModel.class);
-
         binding.proceed.setOnClickListener(this);
+
     }
 
     @Override
