@@ -22,7 +22,7 @@ import com.shopping_point.user_shopping_point.ViewModel.LoginViewModel;
 import com.shopping_point.user_shopping_point.databinding.ActivityLoginBinding;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
 import com.shopping_point.user_shopping_point.utils.Validation;
-
+import static com.shopping_point.user_shopping_point.view.PasswordAssistantActivity.emailEntered;
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.loadLocale;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
@@ -92,7 +92,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         loginViewModel.getLoginResponseLiveData(email,password).observe(this, loginApiResponse -> {
             if (!loginApiResponse.isError()) {
                 LoginUtils.getInstance(this).saveUserInfo(loginApiResponse);
-
+                emailEntered=loginApiResponse.getUser_email();
                 Toast.makeText(this, loginApiResponse.getMessage(), Toast.LENGTH_SHORT).show();
                 progressDialog.dismiss();
                 goToProductActivity();

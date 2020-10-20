@@ -46,7 +46,7 @@ public class PasswordActivity extends AppCompatActivity implements View.OnClickL
 
 
         if(isActivityRunning){
-            isActivityRunning=false;
+
             binding.currentPassword.setVisibility(View.GONE);
 
         }
