@@ -17,6 +17,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".view.WelcomeActivity" android:theme="@style/NoActionBar" />
+
         <activity
             android:name=".view.SplashActivity"
             android:theme="@style/NoActionBar">
@@ -134,6 +135,7 @@
         <activity
             android:name=".view.AuthenticationActivity"
             android:theme="@style/NoActionBar" />
+        <activity android:name=".view.UpdateProfileActivity" />
         <activity
             android:name=".view.NewsFeedActivity"
             android:label="@string/news_feed"

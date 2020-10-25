@@ -10,7 +10,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            tools:context=".view.AccountActivity">
+           >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -88,6 +88,21 @@
                 android:drawableStart="@drawable/ic_language"
                 android:drawablePadding="20dp"
                 android:text="@string/languages"
+                android:gravity="start|center"
+                android:textColor="@color/vDarkGray"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/update_profile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/touch_feedback"
+                android:drawableStart="@drawable/ic_help"
+                android:drawablePadding="20dp"
+                android:text="Update Profile"
                 android:gravity="start|center"
                 android:textColor="@color/vDarkGray"
                 android:textSize="18sp" />

@@ -8,7 +8,7 @@ public class LoginApiResponse {
     private boolean error;
     private String message;
     private String user_password;
-    private String user_contact_no;
+    private String user_contact_number;
     private String token;
     private boolean isActive;
 
@@ -47,7 +47,7 @@ public class LoginApiResponse {
     public String getUser_password() {
         return user_password;
     }
-    public String getUser_contact_no(){return user_contact_no; }
+    public String getUser_contact_number(){return user_contact_number; }
     public String getToken() {
         return token;
     }

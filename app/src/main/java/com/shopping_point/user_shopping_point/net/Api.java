@@ -17,6 +17,8 @@ import com.shopping_point.user_shopping_point.model.RegisterApiResponse;
 import com.shopping_point.user_shopping_point.model.Review;
 import com.shopping_point.user_shopping_point.model.ReviewApiResponse;
 import com.shopping_point.user_shopping_point.model.Shipping;
+import com.shopping_point.user_shopping_point.model.Update;
+import com.shopping_point.user_shopping_point.model.UpdateApiResponse;
 import com.shopping_point.user_shopping_point.model.User;
 
 import java.util.Map;
@@ -113,4 +115,7 @@ public interface Api {
 
     @POST("orders/add.php")
     Call<ResponseBody> orderProduct(@Body Ordering ordering);
+
+    @POST("users/update_profile.php")
+    Call<UpdateApiResponse> updateProfile(@Body Update update);
 }

@@ -72,6 +72,7 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         binding.myOrders.setOnClickListener(this);
         binding.myWishList.setOnClickListener(this);
         binding.languages.setOnClickListener(this);
+        binding.updateProfile.setOnClickListener(this);
         binding.helpCenter.setOnClickListener(this);
         binding.shareWithFriends.setOnClickListener(this);
         binding.rateUs.setOnClickListener(this);
@@ -138,13 +139,21 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
                 Intent ordersIntent = new Intent(this, OrdersActivity.class);
                 startActivity(ordersIntent);
                 break;
+
             case R.id.myWishList:
                 Intent wishListIntent = new Intent(this, WishListActivity.class);
                 startActivity(wishListIntent);
                 break;
+
             case R.id.languages:
                 showCustomAlertDialog();
                 break;
+
+            case R.id.update_profile:
+                Intent updateIntent = new Intent(this, UpdateProfileActivity.class);
+                startActivity(updateIntent);
+                break;
+
             case R.id.helpCenter:
                 Intent helpCenterIntent = new Intent(this, HelpActivity.class);
                 startActivity(helpCenterIntent);
