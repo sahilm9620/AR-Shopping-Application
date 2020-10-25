@@ -57,6 +57,38 @@ public class LoginUtils {
         editor.apply();
     }
 
+
+
+
+    public void saveUserInfo(String name,String email,String contact_no,String gender,String dob) {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+
+        editor.putString("user_name", name);
+        editor.putString("user_email", email);
+        editor.putString("user_contact_number", contact_no);
+        editor.putString("user_gender",gender);
+        editor.putString("user_dob",dob);
+        editor.apply();
+    }
+
+public String getDob()
+{
+    SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+String dob = sharedPreferences.getString("user_dob","09/06/2000");
+    return dob;
+}
+
+    public String getGender()
+    {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        String gender = sharedPreferences.getString("user_gender","male");
+        return gender;
+    }
+
+
+
     public User getUserInfo() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return new User(
@@ -64,6 +96,7 @@ public class LoginUtils {
                 sharedPreferences.getString("name", "USER NAME"),
                 sharedPreferences.getString("email", "user_email@gmail.com"),
                 sharedPreferences.getString("password", null),
+
                 sharedPreferences.getString("user_contact_number",null),
                 sharedPreferences.getBoolean("isActive", false)
         );

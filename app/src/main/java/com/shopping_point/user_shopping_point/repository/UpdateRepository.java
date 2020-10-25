@@ -2,6 +2,7 @@ package com.shopping_point.user_shopping_point.repository;
 
 import android.app.Application;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -9,6 +10,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.shopping_point.user_shopping_point.model.Update;
 import com.shopping_point.user_shopping_point.model.UpdateApiResponse;
 import com.shopping_point.user_shopping_point.net.RetrofitClient;
+import com.shopping_point.user_shopping_point.storage.LoginUtils;
 
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -30,7 +32,7 @@ public class UpdateRepository {
             @Override
             public void onResponse(retrofit2.Call<UpdateApiResponse> call, Response<UpdateApiResponse> response) {
 
-                // Toast.makeText(application, response.message(), Toast.LENGTH_SHORT).show();
+                 Toast.makeText(application, response.message(), Toast.LENGTH_SHORT).show();
 
                // Log.d(TAG, "onResponse: Succeeded" + response.body().getMessage());
 

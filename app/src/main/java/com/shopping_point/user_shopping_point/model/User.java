@@ -7,6 +7,7 @@ public class User {
     private String user_email;
     private String user_password;
     private String user_contact_number;
+
     private boolean isActive;
 
     public User(String user_name, String user_email, String user_contact_number, String user_password) {
@@ -47,5 +48,7 @@ public class User {
     public boolean isActive() {
         return isActive;
     }
+
+
 
 }

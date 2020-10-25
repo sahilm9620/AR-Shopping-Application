@@ -31,7 +31,7 @@ public class ProductDataSource extends PageKeyedDataSource<Integer, Product> {
                 .enqueue(new Callback<ProductApiResponse>() {
                     @Override
                     public void onResponse(Call<ProductApiResponse> call, Response<ProductApiResponse> response) {
-                        Log.v("onResponse", "Succeeded " + response.body().getProducts().size());
+                        Log.v("onResponse", "Succeeded      " + response.body().getProducts().size());
 
                         if (response.body().getProducts() == null) {
                             return;

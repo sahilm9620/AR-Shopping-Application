@@ -17,12 +17,12 @@ public class WriteReviewRepository {
 
     private static final String TAG = WriteReviewRepository.class.getSimpleName();
     private Application application;
-
     public WriteReviewRepository(Application application) {
         this.application = application;
     }
 
     public LiveData<ResponseBody> writeReview(Review review) {
+
         final MutableLiveData<ResponseBody> mutableLiveData = new MutableLiveData<>();
         RetrofitClient.getInstance().getApi().addReview(review).enqueue(new Callback<ResponseBody>() {
             @Override

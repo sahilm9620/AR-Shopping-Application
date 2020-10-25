@@ -2,6 +2,7 @@ package com.shopping_point.user_shopping_point.view;
 
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
@@ -41,7 +42,14 @@ public class UpdateProfileActivity extends AppCompatActivity implements View.OnC
         binding.name.setText(LoginUtils.getInstance(this).getUserInfo().getUser_name());
         binding.email.setText(LoginUtils.getInstance(this).getUserInfo().getUser_email());
         binding.contact.setText(LoginUtils.getInstance(this).getUserInfo().getUser_contact_number());
-
+       binding.dob.setText(LoginUtils.getInstance(this).getDob());
+       if(LoginUtils.getInstance(this).getGender().equals("male"))
+       {
+           binding.male.toggle();
+       }else
+       {
+           binding.female.toggle();
+       }
         binding.proceed.setOnClickListener(this);
         binding.cancleUpdate.setOnClickListener(this);
         binding.dob.setOnClickListener(this);
@@ -105,9 +113,9 @@ public class UpdateProfileActivity extends AppCompatActivity implements View.OnC
         updateProfileViewModel.getUpdateResponseLiveData(new Update(email, name, phone_no,gender,dob)).observe(this, updateApiResponse -> {
             if (!updateApiResponse.isError()) {
                 Toast.makeText(this, updateApiResponse.getMessage(), Toast.LENGTH_LONG).show();
-                // LoginUtils.getInstance(this).saveUserInfo(updateApiResponse.getUser());
+                 LoginUtils.getInstance(this).saveUserInfo(updateApiResponse.getName(),updateApiResponse.getEmail(),updateApiResponse.getPhone_no(),updateApiResponse.getGender(),updateApiResponse.getDob());
                 progressDialog.dismiss();
-                // goToLoginActivity();
+                 goToAccountActivity();
             } else {
               //  Toast.makeText(this, updateApiResponse.getMessage(), Toast.LENGTH_SHORT).show();
                 progressDialog.cancel();
@@ -115,6 +123,11 @@ public class UpdateProfileActivity extends AppCompatActivity implements View.OnC
         });
 
     }
+
+    private void goToAccountActivity() {
+        startActivity(new Intent(UpdateProfileActivity.this,AccountActivity.class));
+    }
+
 
 
     @Override

@@ -74,6 +74,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/custom_border"
             android:clickable="true"
+            android:text="@string/Date_Of_Birth"
             android:paddingStart="@dimen/dimen10dp"
             android:paddingEnd="@dimen/dimen10dp"
             android:rotationY="0"
