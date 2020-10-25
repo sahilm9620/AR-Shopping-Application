@@ -73,10 +73,18 @@ public class LoginUtils {
         editor.apply();
     }
 
+    public String getName()
+    {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        String name= sharedPreferences.getString("user_name","user");
+        return name;
+    }
+
+
 public String getDob()
 {
     SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-String dob = sharedPreferences.getString("user_dob","09/06/2000");
+    String dob = sharedPreferences.getString("user_dob","09/06/2000");
     return dob;
 }
 
