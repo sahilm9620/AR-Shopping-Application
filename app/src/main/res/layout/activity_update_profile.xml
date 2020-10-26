@@ -67,19 +67,21 @@
             android:singleLine="true"
             android:textColorHint="@color/vDarkGray" />
 
-        <TextView
+        <EditText
             android:id="@+id/dob"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="10dp"
             android:background="@drawable/custom_border"
-            android:clickable="true"
-            android:text="@string/Date_Of_Birth"
+            android:hint="DD/MM/YYYY"
             android:paddingStart="@dimen/dimen10dp"
             android:paddingEnd="@dimen/dimen10dp"
-            android:rotationY="0"
-            android:textColorHint="@color/vDarkGray"
-            tools:hint="@string/Date_Of_Birth" />
+            android:singleLine="true"
+            android:clickable="true"
+            android:enabled="true"
+            android:focusable="false"
+            android:text="@string/Date_Of_Birth"
+            android:textColorHint="@color/vDarkGray" />
 
         <RadioGroup
             android:id="@+id/radio_my"

@@ -147,7 +147,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         circleImageView = headerContainer.findViewById(R.id.profile_image);
         circleImageView.setOnClickListener(this);
         TextView userName = headerContainer.findViewById(R.id.nameOfUser);
-        userName.setText(LoginUtils.getInstance(this).getUserInfo().getUser_name());
+        userName.setText(LoginUtils.getInstance(this).getName());
         TextView userEmail = headerContainer.findViewById(R.id.emailOfUser);
         userEmail.setText(LoginUtils.getInstance(this).getUserInfo().getUser_email());
 

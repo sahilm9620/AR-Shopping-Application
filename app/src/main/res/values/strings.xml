@@ -71,7 +71,7 @@
     <string name="languages">Languages</string>
     <string name="share_with_friends">Share with friends</string>
     <string name="rate_us_on_play_store">Rate us on play store</string>
-    <string name="help_center">Help Center</string>
+    <string name="help_center">FAQs</string>
     <string name="delete_my_account">Delete account</string>
     <string name="your_wishlist_is_empty">Your Wishlist is empty</string>
     <string name="an_empty_wishlist_does_not_look_good">An empty wishlist does not look good</string>
@@ -86,7 +86,7 @@
     <string name="select_image">Select Image</string>
     <string name="save">Save</string>
     <string name="required_data">No null values are accepted</string>
-    <string name="hi_how_can_we_help">Hi! How Can We Help?</string>
+    <string name="hi_how_can_we_help">Hi! How Can We Help You?</string>
     <string name="inquiryOne">I was charged extra shipping charges</string>
     <string name="answerOne">Shoping Point does not charge customers any extra shipping charges. All applicable charges are mentioned in the invoice. Please make sure to check the item price plus the shipping charges at the checkout page before completing your purchase.\n\nIf the courier representative demands or has charged you more than the amount mentioned on your order invoice, please contact Customer Service immediately for assistance.</string>
     <string name="inquiryTwo">Where is My Order?</string>

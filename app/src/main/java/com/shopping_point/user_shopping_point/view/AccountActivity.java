@@ -64,7 +64,7 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
         fromHistoryViewModel = ViewModelProviders.of(this).get(FromHistoryViewModel.class);
         userImageViewModel = ViewModelProviders.of(this).get(UserImageViewModel.class);
 
-        binding.nameOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getUser_name());
+        binding.nameOfUser.setText(LoginUtils.getInstance(this).getName());
         binding.emailOfUser.setText(LoginUtils.getInstance(this).getUserInfo().getUser_email());
         getUserImage();
         View headerContainer = binding.profileImageAccount.getRootView();

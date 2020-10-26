@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.UpdateProfileViewModel;
+
 import com.shopping_point.user_shopping_point.databinding.ActivityUpdateProfileBinding;
 import com.shopping_point.user_shopping_point.model.Update;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
@@ -37,12 +38,10 @@ public class UpdateProfileActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         loadLocale(this);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_update_profile);
-
-
         binding.name.setText(LoginUtils.getInstance(this).getName());
         binding.email.setText(LoginUtils.getInstance(this).getUserInfo().getUser_email());
         binding.contact.setText(LoginUtils.getInstance(this).getUserInfo().getUser_contact_number());
-       binding.dob.setText(LoginUtils.getInstance(this).getDob());
+        binding.dob.setText(LoginUtils.getInstance(this).getDob());
        if(LoginUtils.getInstance(this).getGender().equals("Male"))
        {
            binding.male.toggle();
@@ -53,7 +52,6 @@ public class UpdateProfileActivity extends AppCompatActivity implements View.OnC
         binding.proceed.setOnClickListener(this);
         binding.cancleUpdate.setOnClickListener(this);
         binding.dob.setOnClickListener(this);
-
         updateProfileViewModel = ViewModelProviders.of(this).get(UpdateProfileViewModel.class);
         // setBoldStyle();
     }
