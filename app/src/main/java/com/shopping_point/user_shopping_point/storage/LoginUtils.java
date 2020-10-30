@@ -53,8 +53,6 @@ public class LoginUtils {
         editor.putString("email", user.getUser_email());
         editor.putString("password", user.getUser_password());
         editor.putString("user_contact_number",user.getUser_contact_number());
-        editor.putString("gender",getGender());
-        editor.putString("dob", getDob());
         editor.putBoolean("isActive", user.isActive());
         editor.apply();
     }
@@ -65,6 +63,7 @@ public class LoginUtils {
     public void saveUserInfo(String name,String email,String contact_no,String gender,String dob) {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
+
 
         editor.putString("user_name", name);
         editor.putString("user_email", email);
@@ -77,21 +76,22 @@ public class LoginUtils {
     public String getName()
     {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        String name= sharedPreferences.getString("user_name",getUserInfo().getUser_name());
+        String name= sharedPreferences.getString("user_name","user");
         return name;
     }
+
 
 public String getDob()
 {
     SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-    String dob = sharedPreferences.getString("user_dob","00/00/0000");
+    String dob = sharedPreferences.getString("user_dob","09/06/2000");
     return dob;
 }
 
     public String getGender()
     {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        String gender = sharedPreferences.getString("user_gender","undefined");
+        String gender = sharedPreferences.getString("user_gender","male");
         return gender;
     }
 
@@ -104,6 +104,7 @@ public String getDob()
                 sharedPreferences.getString("name", "USER NAME"),
                 sharedPreferences.getString("email", "user_email@gmail.com"),
                 sharedPreferences.getString("password", null),
+
                 sharedPreferences.getString("user_contact_number",null),
                 sharedPreferences.getBoolean("isActive", false)
         );

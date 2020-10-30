@@ -54,7 +54,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private void signUpUser() {
         String name = binding.userName.getText().toString();
         String email = binding.userEmail.getText().toString();
-        String phone_no = binding.userContact.getText().toString();
+        String phone_no = binding.ccp.getSelectedCountryCodeWithPlus() + binding.userContact.getText().toString();
 
         String con_password = binding.userConfirmPassword.getText().toString();
         String password = binding.userPassword.getText().toString();
