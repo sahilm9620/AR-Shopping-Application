@@ -79,24 +79,67 @@
             </com.google.android.material.textfield.TextInputLayout>
 
 
-            <com.google.android.material.textfield.TextInputLayout
+            <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:layout_marginTop="@dimen/dimen8dp"
                 android:layout_marginBottom="@dimen/dimen8dp"
-                android:hint="@string/contact"
                 android:paddingLeft="@dimen/dimen24dp"
-                android:paddingRight="@dimen/dimen24dp">
 
-                <EditText
-                    android:id="@+id/userContact"
+                >
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:maxLength="14"
-                    android:background="@drawable/custom_border"
-                    android:inputType="phone"
-                    android:padding="@dimen/dimen5dp" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    android:weightSum="10">
+
+
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="85dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        app:ccp_autoDetectCountry="true"
+                        app:ccp_showNameCode="true"
+                        android:background="@drawable/custom_border"
+                        app:ccp_textSize="@dimen/dimen16sp"
+
+                        />
+
+
+                    <!--            <com.google.android.material.textfield.TextInputLayout-->
+                    <!--                android:layout_width="match_parent"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:layout_marginTop="@dimen/dimen8dp"-->
+                    <!--                android:layout_marginBottom="@dimen/dimen8dp"-->
+                    <!--                android:hint="@string/contact"-->
+                    <!--                android:paddingLeft="@dimen/dimen24dp"-->
+                    <!--                android:layout_weight="8"-->
+                    <!--                android:paddingRight="@dimen/dimen24dp">-->
+
+
+
+                    <EditText
+                        android:id="@+id/userContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:maxLength="10"
+                        android:digits="1234567890"
+                        android:hint="@string/contact"
+                        android:layout_marginLeft="@dimen/dimen5dp"
+                        android:layout_marginRight="@dimen/dimen5dp"
+                        android:background="@drawable/custom_border"
+                        android:inputType="phone"
+                        android:padding="@dimen/dimen5dp"
+                        android:layout_weight="8"/>
+
+
+
+
+                </TableRow>
+            </TableLayout>
+
 
 
             <com.google.android.material.textfield.TextInputLayout

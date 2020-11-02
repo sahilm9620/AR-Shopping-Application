@@ -38,7 +38,7 @@ public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.NewsFe
         NewsFeed currentNewsFeed = newsFeedList.get(position);
 
         // Load poster into ImageView
-        String posterUrl = LOCALHOST + currentNewsFeed.getImage().replaceAll("\\\\", "/");
+        String posterUrl =  currentNewsFeed.getImage().replaceAll("\\\\", "/");
         Glide.with(mContext)
                 .load(posterUrl)
                 .into(holder.binding.poster);
