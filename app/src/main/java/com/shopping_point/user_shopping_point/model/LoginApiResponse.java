@@ -8,6 +8,8 @@ public class LoginApiResponse {
     private boolean error;
     private String message;
     private String user_password;
+    private String user_gender;
+    private String user_dob;
     private String user_contact_number;
     private String token;
     private boolean isActive;
@@ -34,6 +36,13 @@ public class LoginApiResponse {
 
     public String getUser_email() {
         return user_email;
+    }
+    public String getUser_gender() {
+        return user_gender;
+    }
+
+    public String getUser_dob() {
+        return user_dob;
     }
 
     public boolean isError() {

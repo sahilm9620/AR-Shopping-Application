@@ -92,7 +92,7 @@
                     android:id="@+id/userContact"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:maxLength="10"
+                    android:maxLength="14"
                     android:background="@drawable/custom_border"
                     android:inputType="phone"
                     android:padding="@dimen/dimen5dp" />

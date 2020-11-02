@@ -34,6 +34,8 @@ public class LoginUtils {
         editor.putString("email", response.getUser_email());
         editor.putString("password", response.getUser_password());
         editor.putString("user_contact_number",response.getUser_contact_number());
+        editor.putString("gender",response.getUser_gender());
+        editor.putString("dob",response.getUser_dob());
         editor.putString("token", response.getToken());
         editor.putBoolean("isActive", response.isActive());
         editor.apply();
@@ -69,8 +71,8 @@ public class LoginUtils {
         editor.putString("user_name", name);
         editor.putString("user_email", email);
         editor.putString("user_contact_number", contact_no);
-        editor.putString("user_gender",gender);
-        editor.putString("user_dob",dob);
+        editor.putString("gender",gender);
+        editor.putString("dob",dob);
         editor.apply();
     }
 
@@ -84,14 +86,14 @@ public class LoginUtils {
 public String getDob()
 {
     SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-    String dob = sharedPreferences.getString("user_dob","00/00/0000");
+    String dob = sharedPreferences.getString("dob","00/00/0000");
     return dob;
 }
 
     public String getGender()
     {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        String gender = sharedPreferences.getString("user_gender","undefined");
+        String gender = sharedPreferences.getString("gender","undefined");
         return gender;
     }
 

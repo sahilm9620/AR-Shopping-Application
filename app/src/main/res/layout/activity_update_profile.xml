@@ -60,7 +60,7 @@
             android:background="@drawable/custom_border"
             android:hint="@string/contact"
             android:inputType="phone"
-            android:maxLength="10"
+            android:maxLength="14"
             android:maxLines="1"
             android:paddingStart="@dimen/dimen10dp"
             android:paddingEnd="@dimen/dimen10dp"
