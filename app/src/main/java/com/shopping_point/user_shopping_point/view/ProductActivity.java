@@ -88,7 +88,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
 
     private Snackbar snack;
 
-    private CircleImageView circleImageView;
+    private CircleImageView circleImageView,circleImageView1;
     private Uri selectedImage;
 
     private NetworkChangeReceiver mNetworkReceiver;
@@ -145,7 +145,8 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
 
         View headerContainer = binding.navView.getHeaderView(0);
         circleImageView = headerContainer.findViewById(R.id.profile_image);
-        circleImageView.setOnClickListener(this);
+        circleImageView1 = headerContainer.findViewById(R.id.plus);
+        circleImageView1.setOnClickListener(this);
         TextView userName = headerContainer.findViewById(R.id.nameOfUser);
         userName.setText(LoginUtils.getInstance(this).getName());
         TextView userEmail = headerContainer.findViewById(R.id.emailOfUser);
@@ -252,7 +253,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
                 Intent laptopIntent = new Intent(this, AllLaptopsActivity.class);
                 startActivity(laptopIntent);
                 break;
-            case R.id.profile_image:
+            case R.id.plus:
                 showCustomAlertDialog();
                 break;
             case R.id.txtCash:
