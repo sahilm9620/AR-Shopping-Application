@@ -44,7 +44,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/custom_border"
             android:hint="@string/name"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
             android:inputType="text"
             android:maxLines="1"
             android:paddingStart="@dimen/dimen10dp"
