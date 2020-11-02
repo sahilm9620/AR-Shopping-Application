@@ -104,7 +104,6 @@
                         app:ccp_showNameCode="true"
                         android:background="@drawable/custom_border"
                         app:ccp_textSize="@dimen/dimen16sp"
-
                         />
 
 
@@ -199,7 +198,7 @@
                 android:paddingRight="@dimen/dimen24dp"
                 android:text="@string/eight_characters"
                 android:textColor="#B2000000"
-                 />
+                />
 
 
             <androidx.appcompat.widget.AppCompatButton
