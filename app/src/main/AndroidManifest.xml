@@ -144,6 +144,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
+
+        <activity
+            android:name=".view.NavSettings"
+            android:label="@string/settings"
+            android:parentActivityName=".view.ProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
+        </activity>
+
         <activity android:name=".view.ShippingAddressActivity" />
         <activity android:name=".view.OrderProductActivity" />
         <activity

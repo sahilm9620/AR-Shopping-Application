@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.NavSettings"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dimen10dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/about_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/dimen15sp"
+            android:layout_marginTop="@dimen/dimen10dp"
+            android:textStyle="bold"
+            android:text="@string/about"
+            android:layout_marginBottom="@dimen/dimen20dp"/>
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen18dp"
+            android:textStyle="bold"
+            android:text="@string/about" />
+
+        <TextView
+            android:id="@+id/about_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen15dp"
+            android:text="@string/desc_about"
+            />
+        <TextView
+            android:id="@+id/about_desc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen15dp"
+            android:text="@string/try_amp_buy_at_home"
+            />
+        <TextView
+            android:id="@+id/about_desc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen15dp"
+            android:text="@string/desc3"
+            android:layout_marginBottom="@dimen/dimen20dp"
+            />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginBottom="@dimen/dimen10dp"/>
+
+
+        <TextView
+            android:id="@+id/update_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/dimen15sp"
+            android:layout_marginTop="@dimen/dimen10dp"
+            android:textStyle="bold"
+            android:text="@string/update"
+            android:layout_marginBottom="@dimen/dimen20dp"/>
+
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen18dp"
+            android:textStyle="bold"
+            android:text="@string/version" />
+
+        <TextView
+            android:id="@+id/update_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen15dp"
+            android:text="@string/version_build"
+            android:layout_marginBottom="@dimen/dimen15dp"
+            />
+
+        <TextView
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen18dp"
+            android:textStyle="bold"
+            android:text="@string/check_update" />
+
+        <TextView
+            android:id="@+id/ckeck_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen15dp"
+            android:text="@string/check_updates"
+            android:layout_marginBottom="@dimen/dimen20dp"
+            />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginBottom="@dimen/dimen10dp"
+            />
+
+        <TextView
+            android:id="@+id/help_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/dimen15sp"
+            android:layout_marginTop="@dimen/dimen10dp"
+            android:textStyle="bold"
+            android:text="@string/help"
+            android:layout_marginBottom="@dimen/dimen20dp"/>
+        <TextView
+            android:id="@+id/feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen18dp"
+            android:textStyle="bold"
+            android:text="@string/feedback" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen8dp"
+            android:layout_marginBottom="@dimen/dimen8dp"
+
+            >
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="10">
+
+
+                <TextView
+                    android:id="@+id/feedback_desc_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/dimen15dp"
+                    android:text="@string/desc_feedback_link"
+
+                    />
+
+                <TextView
+                    android:id="@+id/feedback_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen20dp"
+                    android:text="@string/desc_feedback"
+                    android:textSize="@dimen/dimen15dp"
+
+                    />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</layout>
