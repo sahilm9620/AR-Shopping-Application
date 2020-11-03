@@ -14,7 +14,6 @@ import com.shopping_point.user_shopping_point.model.NewsFeed;
 
 import java.util.List;
 
-import static com.shopping_point.user_shopping_point.utils.Constant.LOCALHOST;
 
 public class NewsFeedAdapter extends RecyclerView.Adapter<NewsFeedAdapter.NewsFeedViewHolder>{
 
