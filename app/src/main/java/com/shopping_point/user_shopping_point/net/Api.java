@@ -74,7 +74,7 @@ public interface Api {
     @POST("favorites/add.php")
     Call<ResponseBody> addFavorite(@Body Favorite favorite);
 
-    @DELETE("favorites/remove.php")
+    @GET("favorites/remove.php")
     Call<ResponseBody> removeFavorite(@Query("userId") int userId, @Query("productId") int productId);
 
     @GET("favorites/getFavorites.php")
@@ -83,7 +83,7 @@ public interface Api {
     @POST("carts/add.php")
     Call<ResponseBody> addToCart(@Body Cart cart);
 
-    @DELETE("carts/remove.php")
+    @GET("carts/remove.php")
     Call<ResponseBody> removeFromCart(@Query("userId") int userId, @Query("productId") int productId);
 
     @GET("carts/getProductsInCart.php")
