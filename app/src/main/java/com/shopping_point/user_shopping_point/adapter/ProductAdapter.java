@@ -233,6 +233,7 @@ public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.Pro
         }
 
         private void insertFavoriteProduct(RequestCallback callback) {
+
             Favorite favorite = new Favorite(LoginUtils.getInstance(mContext).getUserInfo().getId(), product.getProductId());
             addFavoriteViewModel.addFavorite(favorite,callback);
         }
