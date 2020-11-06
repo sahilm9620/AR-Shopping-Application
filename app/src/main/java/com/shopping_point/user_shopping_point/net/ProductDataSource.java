@@ -66,7 +66,7 @@ public class ProductDataSource extends PageKeyedDataSource<Integer, Product> {
 
                     @Override
                     public void onFailure(Call<ProductApiResponse> call, Throwable t) {
-                        Log.v("onFailure", "Failed to previous Products");
+                        Log.v("onFailure", "Failed  to previous Products");
                     }
                 });
     }
