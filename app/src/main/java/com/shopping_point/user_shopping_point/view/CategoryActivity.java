@@ -10,6 +10,8 @@ import androidx.databinding.DataBindingUtil;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
+
+
 import androidx.annotation.Nullable;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.core.content.ContextCompat;

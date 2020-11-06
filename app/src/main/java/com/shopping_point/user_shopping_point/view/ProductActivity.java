@@ -37,6 +37,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -369,8 +370,8 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
     private void getUserImage() {
         userImageViewModel.getUserImage(LoginUtils.getInstance(this).getUserInfo().getId()).observe(this, response -> {
             if (response != null) {
-                String imageUrl = LOCALHOST + response.getImage().replaceAll("\\\\", "/");
-                Toast.makeText(this, imageUrl, Toast.LENGTH_SHORT).show();
+                String imageUrl =  response.getImage().replaceAll("\\\\", "/");
+
                 Log.d(TAG, "GET USER IMAGE : " + imageUrl);
                 RequestOptions options = new RequestOptions()
                         .centerCrop()

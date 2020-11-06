@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+
 import com.bumptech.glide.Glide;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.AddFavoriteViewModel;
@@ -91,7 +92,7 @@ public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.Pro
             // Load the Product image into ImageView
             String imageUrl =  product.getProductImage().replaceAll("\\\\", "/");
 
-            Toast.makeText(mContext, imageUrl, Toast.LENGTH_SHORT).show();
+
 
             Glide.with(mContext)
                     .load(imageUrl)

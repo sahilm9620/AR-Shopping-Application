@@ -4,6 +4,7 @@ import android.app.Application;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.shopping_point.user_shopping_point.model.Shipping;
 import com.shopping_point.user_shopping_point.net.RetrofitClient;
@@ -34,6 +35,7 @@ public class ShippingRepository {
 
                 if (response.body() != null) {
                     mutableLiveData.setValue(responseBody);
+                    Toast.makeText(application, "ADDRESS ADDED SUCCESSFULLY ", Toast.LENGTH_SHORT).show();
                 }
             }
 

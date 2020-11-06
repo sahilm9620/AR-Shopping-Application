@@ -53,14 +53,19 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
         int userId = LoginUtils.getInstance(this).getUserInfo().getId();
         Intent intent = getIntent();
         int productId = intent.getIntExtra(PRODUCTID, 0);
-
+if(address.isEmpty())
+{
+    binding.address.setError("address is required");
+}
         Shipping shipping = new Shipping(address, city, country, zip, phone,userId, productId);
 
         shippingViewModel.addShippingAddress(shipping).observe(this, responseBody -> {
             try {
                 Toast.makeText(ShippingAddressActivity.this, responseBody.string()+"", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "SUCESSSSSSSSSSSSSSSSSSSSSSSS", Toast.LENGTH_SHORT).show();
             } catch (IOException e) {
                 e.printStackTrace();
+                Toast.makeText(this, "ERRORRRRRRRRRRRRRRRRRRRRRRRR", Toast.LENGTH_SHORT).show();
             }
             Intent orderProductIntent = new Intent(ShippingAddressActivity.this, OrderProductActivity.class);
             orderProductIntent.putExtra(PRODUCTID,productId);

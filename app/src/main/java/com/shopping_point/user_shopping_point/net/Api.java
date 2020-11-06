@@ -49,9 +49,6 @@ public interface Api {
     @GET("users/deleteuser.php")
     Call<ResponseBody> deleteAccount(@Query("userId") int userId);
 
-    @Multipart
-    @POST("users/upload.php")
-    Call<ResponseBody> uploadPhoto(@Part MultipartBody.Part userPhoto, @Part("id") RequestBody userId);
 
     @GET("users/info.php")
     Call<ResponseBody> updatePassword(@Query("user_password") String newPassword, @Query("user_email") String email);
@@ -116,7 +113,9 @@ public interface Api {
     @POST("orders/add.php")
     Call<ResponseBody> orderProduct(@Body Ordering ordering);
 
-
+    @Multipart
+    @POST("users/upload.php")
+    Call<ResponseBody> uploadPhoto(@Part MultipartBody.Part userPhoto, @Part("id") RequestBody userId);
 
     @POST("users/update_profile.php")
     Call<UpdateApiResponse> updateProfile(@Body Update update);
