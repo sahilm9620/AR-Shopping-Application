@@ -25,8 +25,6 @@ import com.shopping_point.user_shopping_point.utils.RequestCallback;
 import java.text.DecimalFormat;
 import java.util.List;
 
-import static com.shopping_point.user_shopping_point.utils.Constant.LOCALHOST;
-
 public class WishListAdapter extends RecyclerView.Adapter<WishListAdapter.WishListViewHolder> {
 
     private Context mContext;
@@ -72,7 +70,7 @@ public class WishListAdapter extends RecyclerView.Adapter<WishListAdapter.WishLi
 
         DecimalFormat formatter = new DecimalFormat("#,###,###");
         String formattedPrice = formatter.format(currentProduct.getProductPrice());
-        holder.binding.txtProductPrice.setText(formattedPrice + " RS");
+        holder.binding.txtProductPrice.setText(formattedPrice + " EGP");
 
         // Load the Product image into ImageView
         String imageUrl = currentProduct.getProductImage().replaceAll("\\\\", "/");

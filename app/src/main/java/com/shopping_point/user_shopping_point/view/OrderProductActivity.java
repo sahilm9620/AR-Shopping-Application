@@ -49,6 +49,18 @@ public class OrderProductActivity extends AppCompatActivity implements View.OnCl
         int userId = LoginUtils.getInstance(this).getUserInfo().getId();
         Intent intent = getIntent();
         int productId = intent.getIntExtra(PRODUCTID, 0);
+        if (nameOnCard.isEmpty()) {
+            binding.nameOnCard.setError(getString(R.string.name_required));
+            binding.nameOnCard.requestFocus();
+            return;
+        }
+
+        if (cardNumber.isEmpty()) {
+            binding.cardNumber.setError(getString(R.string.cardnumber_required));
+            binding.cardNumber.requestFocus();
+            return;
+        }
+
 
         Ordering ordering = new Ordering(nameOnCard,cardNumber,fullDate,userId,productId);
 

@@ -500,6 +500,9 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         } else if (id == R.id.nav_wishList) {
             Intent wishListIntent = new Intent(this, WishListActivity.class);
             startActivity(wishListIntent);
+        }else if (id == R.id.nav_settings) {
+            Intent SettingsIntent = new Intent(this, NavSettings.class);
+            startActivity(SettingsIntent);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
