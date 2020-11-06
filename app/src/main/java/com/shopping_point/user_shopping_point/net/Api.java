@@ -49,9 +49,6 @@ public interface Api {
     @GET("users/deleteuser.php")
     Call<ResponseBody> deleteAccount(@Query("userId") int userId);
 
-    @Multipart
-    @POST("users/upload.php")
-    Call<ResponseBody> uploadPhoto(@Part MultipartBody.Part userPhoto, @Part("id") RequestBody userId);
 
     @GET("users/info.php")
     Call<ResponseBody> updatePassword(@Query("user_password") String newPassword, @Query("user_email") String email);
@@ -74,7 +71,7 @@ public interface Api {
     @POST("favorites/add.php")
     Call<ResponseBody> addFavorite(@Body Favorite favorite);
 
-    @DELETE("favorites/remove.php")
+    @GET("favorites/remove.php")
     Call<ResponseBody> removeFavorite(@Query("userId") int userId, @Query("productId") int productId);
 
     @GET("favorites/getFavorites.php")
@@ -83,7 +80,7 @@ public interface Api {
     @POST("carts/add.php")
     Call<ResponseBody> addToCart(@Body Cart cart);
 
-    @DELETE("carts/remove.php")
+    @GET("carts/remove.php")
     Call<ResponseBody> removeFromCart(@Query("userId") int userId, @Query("productId") int productId);
 
     @GET("carts/getProductsInCart.php")
@@ -116,7 +113,9 @@ public interface Api {
     @POST("orders/add.php")
     Call<ResponseBody> orderProduct(@Body Ordering ordering);
 
-
+    @Multipart
+    @POST("users/upload.php")
+    Call<ResponseBody> uploadPhoto(@Part MultipartBody.Part userPhoto, @Part("id") RequestBody userId);
 
     @POST("users/update_profile.php")
     Call<UpdateApiResponse> updateProfile(@Body Update update);

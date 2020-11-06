@@ -89,7 +89,7 @@ public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.Pro
             holder.binding.txtProductPrice.setText(formattedPrice + " RS");
 
             // Load the Product image into ImageView
-            String imageUrl = LOCALHOST + product.getProductImage().replaceAll("\\\\", "/");
+            String imageUrl = product.getProductImage().replaceAll("\\\\", "/");
 
             Toast.makeText(mContext, imageUrl, Toast.LENGTH_SHORT).show();
 

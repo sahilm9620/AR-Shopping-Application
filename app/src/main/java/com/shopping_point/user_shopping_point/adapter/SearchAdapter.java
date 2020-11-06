@@ -82,7 +82,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         holder.binding.txtProductPrice.setText(formattedPrice + " EGP");
 
         // Load the Product image into ImageView
-        String imageUrl = LOCALHOST + currentProduct.getProductImage().replaceAll("\\\\", "/");
+        String imageUrl =  currentProduct.getProductImage().replaceAll("\\\\", "/");
         Glide.with(mContext)
                 .load(imageUrl)
                 .into(holder.binding.imgProductImage);

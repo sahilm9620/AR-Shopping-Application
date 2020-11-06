@@ -68,17 +68,17 @@
                 android:textSize="@dimen/dimen16sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dimen10dp"
-                android:layout_marginTop="@dimen/dimen5dp"
-                android:text="@string/fulfilled_by_shopping_point"
-                android:textColor="@color/white"
-                android:background="#1196FE"
-                android:padding="5dp"
-                android:textSize="@dimen/dimen16sp"
-                android:textStyle="italic" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/dimen10dp"-->
+<!--                android:layout_marginTop="@dimen/dimen5dp"-->
+<!--                android:text="@string/fulfilled_by_shopping_point"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:background="#1196FE"-->
+<!--                android:padding="5dp"-->
+<!--                android:textSize="@dimen/dimen16sp"-->
+<!--                android:textStyle="italic" />-->
 
             <LinearLayout
                 android:layout_width="match_parent"
