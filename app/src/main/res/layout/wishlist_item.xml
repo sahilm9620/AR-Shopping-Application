@@ -51,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dimen10dp"
                     android:layout_marginTop="@dimen/dimen20dp"
-                    android:text="@string/_5399_rs"
+                    android:text="@string/price"
                     android:textColor="@color/black"
                     android:textSize="@dimen/dimen18sp"
                     android:textStyle="bold" />

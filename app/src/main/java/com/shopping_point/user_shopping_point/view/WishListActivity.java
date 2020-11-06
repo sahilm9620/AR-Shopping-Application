@@ -78,8 +78,5 @@ public class WishListActivity extends AppCompatActivity {
             binding.emptyWishlist.setText(getString(R.string.no_internet_connection));
         }
     }
-    @Override
-    public void onBackPressed() {
-        return;
-    }
+
 }
