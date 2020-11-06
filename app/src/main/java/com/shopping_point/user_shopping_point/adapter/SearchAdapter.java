@@ -79,7 +79,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
 
         DecimalFormat formatter = new DecimalFormat("#,###,###");
         String formattedPrice = formatter.format(currentProduct.getProductPrice());
-        holder.binding.txtProductPrice.setText(formattedPrice + " EGP");
+        holder.binding.txtProductPrice.setText(formattedPrice + " RS");
 
         // Load the Product image into ImageView
         String imageUrl =  currentProduct.getProductImage().replaceAll("\\\\", "/");
