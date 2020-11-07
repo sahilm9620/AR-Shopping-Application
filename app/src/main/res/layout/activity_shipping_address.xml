@@ -119,6 +119,7 @@
             android:background="@drawable/custom_button_border2"
             android:text="@string/proceed"
             android:textAllCaps="false"
+            android:textColor="@color/white"
             android:textSize="@dimen/dimen18sp" />
     </LinearLayout>
 </layout>
