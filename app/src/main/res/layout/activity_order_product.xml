@@ -133,5 +133,18 @@
             android:text="@string/add_your_card"
             android:textAllCaps="false"
             android:textSize="@dimen/dimen18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen10dp"
+            android:layout_marginTop="@dimen/dimen20dp"
+            android:layout_marginRight="@dimen/dimen10dp"
+            android:layout_marginBottom="@dimen/dimen10dp"
+            android:background="@drawable/custom_button_border2"
+            android:text="Make a Payment"
+            android:textAllCaps="false"
+            android:textSize="@dimen/dimen18sp" />
     </LinearLayout>
 </layout>

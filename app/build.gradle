@@ -72,4 +72,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 
     implementation 'com.hbb20:ccp:2.4.0'
+    implementation 'com.razorpay:checkout:1.5.16'
 }

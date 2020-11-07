@@ -1,27 +1,35 @@
 package com.shopping_point.user_shopping_point.view;
 
 import androidx.lifecycle.ViewModelProviders;
+
+import android.app.Activity;
 import android.content.Intent;
 import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.razorpay.Checkout;
+import com.razorpay.PaymentResultListener;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.OrderingViewModel;
 import com.shopping_point.user_shopping_point.databinding.ActivityOrderProductBinding;
 import com.shopping_point.user_shopping_point.model.Ordering;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
 
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.lang.reflect.Field;
 
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCTID;
 
-public class OrderProductActivity extends AppCompatActivity implements View.OnClickListener{
+public class OrderProductActivity extends AppCompatActivity implements View.OnClickListener, PaymentResultListener {
 
     private ActivityOrderProductBinding binding;
     private OrderingViewModel orderingViewModel;
@@ -36,8 +44,49 @@ public class OrderProductActivity extends AppCompatActivity implements View.OnCl
         binding.addCard.setOnClickListener(this);
 
         populateSpinner();
-    }
 
+        binding.btnPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setUpPayment();
+            }
+        });
+    }
+    private void setUpPayment() {
+
+
+        Checkout checkout = new Checkout();
+
+        /**
+         * Set your logo here
+         */
+        checkout.setImage(R.drawable.rzp_logo);
+
+        /**
+         * Reference to current activity
+         */
+        final Activity activity = this;
+
+        /**
+         * Pass your payment options to the Razorpay Checkout as a JSONObject
+         */
+        try {
+            JSONObject options = new JSONObject();
+
+            options.put("name", "Shopping Point");
+            options.put("description", "Reference No. #123456");
+            options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
+
+            options.put("theme.color", "#3399cc");
+            options.put("currency", "INR");
+            options.put("amount", "50000");//pass amount in currency subunits
+            options.put("prefill.email", "sahilmulla199@gmail.com");
+            options.put("prefill.contact","8329675255");
+            checkout.open(activity, options);
+        } catch(Exception e) {
+            Log.e("ERROR", "Error in starting Razorpay Checkout", e);
+        }
+    }
     private void orderProduct() {
         String nameOnCard = binding.nameOnCard.getText().toString().trim();
         String cardNumber = binding.cardNumber.getText().toString().trim();
@@ -108,5 +157,15 @@ public class OrderProductActivity extends AppCompatActivity implements View.OnCl
         } catch (NoClassDefFoundError | ClassCastException | NoSuchFieldException | IllegalAccessException e) {
             // silently fail...
         }
+    }
+
+    @Override
+    public void onPaymentSuccess(String s) {
+        Toast.makeText(this, "Payment Successfull", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onPaymentError(int i, String s) {
+        Toast.makeText(this, "Payment Failed", Toast.LENGTH_SHORT).show();
     }
 }

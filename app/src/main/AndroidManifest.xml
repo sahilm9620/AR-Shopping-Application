@@ -178,6 +178,9 @@
         <activity android:name=".view.ResultActivity" />
 
         <receiver android:name=".receiver.NetworkChangeReceiver" />
+
+        <meta-data android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_UKTS7x7RsTIGgh"/>
     </application>
 
 </manifest>
