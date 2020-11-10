@@ -4,19 +4,16 @@ import com.google.gson.annotations.SerializedName;
 
 public class Ordering {
 
-    @SerializedName("name_on_card")
-    private String nameOnCard;
-    @SerializedName("card_number")
-    private String cardNumber;
-    @SerializedName("expiration_date")
-    private String fullDate;
+    @SerializedName("orderId")
+    private String orderId;
+    @SerializedName("paymentId")
+    private String paymentId;
     private int userId;
     private int productId;
 
-    public Ordering(String nameOnCard, String cardNumber, String fullDate, int userId, int productId) {
-        this.nameOnCard = nameOnCard;
-        this.cardNumber = cardNumber;
-        this.fullDate = fullDate;
+    public Ordering(String orderId, String paymentId, int userId, int productId) {
+        this.orderId = orderId;
+        this.paymentId = paymentId;
         this.userId = userId;
         this.productId = productId;
     }

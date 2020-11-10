@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
+import com.bumptech.glide.Glide;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.databinding.ActivityStatusBinding;
 import com.shopping_point.user_shopping_point.model.Order;
@@ -34,6 +35,8 @@ public class StatusActivity extends AppCompatActivity implements View.OnClickLis
         binding.userPhone.setText(order.getShippingPhone());
         binding.txtProductName.setText(order.getProductName());
         binding.txtProductPrice.setText(String.valueOf(order.getProductPrice()));
+
+
         String status = getString(R.string.item, order.getOrderDateStatus());
         binding.orderStatus.setText(status);
 

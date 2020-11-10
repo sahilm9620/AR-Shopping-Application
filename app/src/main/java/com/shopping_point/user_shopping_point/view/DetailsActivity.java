@@ -139,6 +139,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         }else if(view.getId() == R.id.buy){
             Intent shippingIntent = new Intent(DetailsActivity.this, ShippingAddressActivity.class);
             shippingIntent.putExtra(PRODUCTID, product.getProductId());
+            shippingIntent.putExtra(PRODUCT, (product));
             startActivity(shippingIntent);
         }
     }

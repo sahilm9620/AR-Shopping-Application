@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        card_view:cardCornerRadius="@dimen/dimen10dp"
+        card_view:cardElevation="@dimen/dimen5dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:elevation="@dimen/dimen1dp">
+
+ <androidx.appcompat.widget.LinearLayoutCompat
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+    >
+<androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/img_Payment_result"
+    android:layout_width="@dimen/dimen150dp"
+    android:layout_height="@dimen/dimen150dp"
+    android:layout_margin="@dimen/dimen24dp"
+    android:layout_gravity="center"
+    android:src="@drawable/payment_logo"
+
+    />
+    <TextView
+        android:id="@+id/paymentStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment Successful"
+        android:textSize="@dimen/dimen28dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/dimen5dp"
+        android:layout_marginBottom="@dimen/dimen15dp"
+
+        />
+
+    <TextView
+        android:id="@+id/txvPaymentProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Product Name"
+        android:gravity="center"
+        android:textColor="@color/dark"
+        android:layout_margin="@dimen/dimen5dp"
+        android:layout_marginBottom="@dimen/dimen15dp"
+        />
+
+    <TextView
+        android:id="@+id/txvPaymentOrderId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Id"
+        android:gravity="center"
+        android:textColor="@color/dark"
+        android:layout_margin="@dimen/dimen5dp"
+        android:layout_marginBottom="@dimen/dimen15dp"
+        />
+
+
+    <TextView
+        android:id="@+id/txvPaymentAmmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Id"
+        android:gravity="center"
+        android:textColor="@color/dark"
+        android:layout_margin="@dimen/dimen5dp"
+        android:layout_marginBottom="@dimen/dimen15dp"
+        />
+     <androidx.appcompat.widget.AppCompatButton
+         android:id="@+id/btn_home"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="@dimen/dimen10dp"
+         android:layout_marginTop="@dimen/dimen20dp"
+         android:layout_marginRight="@dimen/dimen10dp"
+         android:layout_marginBottom="@dimen/dimen20dp"
+         android:background="@drawable/custom_button_border2"
+         android:text="Continue Shopping"
+
+         android:textColor="@color/white"
+         android:textAllCaps="false"
+         android:textSize="@dimen/dimen18sp" />
+ </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+
+</layout>

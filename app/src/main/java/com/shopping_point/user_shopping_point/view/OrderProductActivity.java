@@ -14,44 +14,75 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.razorpay.Checkout;
-import com.razorpay.PaymentResultListener;
+import com.razorpay.PaymentData;
+import com.razorpay.PaymentResultWithDataListener;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.OrderingViewModel;
 import com.shopping_point.user_shopping_point.databinding.ActivityOrderProductBinding;
 import com.shopping_point.user_shopping_point.model.Ordering;
+import com.shopping_point.user_shopping_point.model.Product;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
 
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Random;
 
+import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCTID;
 
-public class OrderProductActivity extends AppCompatActivity implements View.OnClickListener, PaymentResultListener {
+public class OrderProductActivity extends AppCompatActivity implements View.OnClickListener, PaymentResultWithDataListener {
 
     private ActivityOrderProductBinding binding;
     private OrderingViewModel orderingViewModel;
-
+    private Product product;
+    String orderIdString;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_order_product);
-
+        product = getIntent().getParcelableExtra(PRODUCT);
         orderingViewModel = ViewModelProviders.of(this).get(OrderingViewModel.class);
 
-        binding.addCard.setOnClickListener(this);
+binding.txtProductName.setText(product.getProductName());
+        Glide.with(this)
+                .load(product.getProductImage())
+                .into(binding.imgProductImage);
 
-        populateSpinner();
+binding.txtUserName.setText(" Name : " + LoginUtils.getInstance(this).getUserInfo().getUser_name());
+binding.txtUserPhone.setText("Contact : " + LoginUtils.getInstance(this).getUserInfo().getUser_contact_number());
+
+binding.txtProductPrice.setText(product.getProductPrice() + " ₹ ");
 
         binding.btnPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 setUpPayment();
             }
         });
+
+
+
     }
+
+    private String generateOrderId() {
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat df = new SimpleDateFormat("ddMMyyyy");
+        String date = df.format(c.getTime());
+        Random rand = new Random();
+        int min =1000, max= 9999;
+// nextInt as provided by Random is exclusive of the top value so you need to add 1
+        int randomNum = rand.nextInt((max - min) + 1) + min;
+        orderIdString =  date+String.valueOf(randomNum);
+        return orderIdString;
+    }
+
     private void setUpPayment() {
 
 
@@ -60,7 +91,7 @@ public class OrderProductActivity extends AppCompatActivity implements View.OnCl
         /**
          * Set your logo here
          */
-        checkout.setImage(R.drawable.rzp_logo);
+        checkout.setImage(R.drawable.payment_logo);
 
         /**
          * Reference to current activity
@@ -74,98 +105,55 @@ public class OrderProductActivity extends AppCompatActivity implements View.OnCl
             JSONObject options = new JSONObject();
 
             options.put("name", "Shopping Point");
-            options.put("description", "Reference No. #123456");
-            options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png");
-
+            options.put("description", product.getProductName());
+            options.put("image", "http://myleader.sparsematrix.co.in/arshop/backend/vendor/profile_image/mypic.png");
+          //  options.put("order_id", generateOrderId());//from response of step 3.
             options.put("theme.color", "#3399cc");
             options.put("currency", "INR");
-            options.put("amount", "50000");//pass amount in currency subunits
-            options.put("prefill.email", "sahilmulla199@gmail.com");
-            options.put("prefill.contact","8329675255");
+            options.put("amount", product.getProductPrice()*100);//pass amount in currency subunits
+            options.put("prefill.email", LoginUtils.getInstance(this).getEmail());
+            options.put("prefill.contact",LoginUtils.getInstance(this).getPhone());
             checkout.open(activity, options);
         } catch(Exception e) {
             Log.e("ERROR", "Error in starting Razorpay Checkout", e);
         }
     }
-    private void orderProduct() {
-        String nameOnCard = binding.nameOnCard.getText().toString().trim();
-        String cardNumber = binding.cardNumber.getText().toString().trim();
-
-        String year = binding.spinnerYear.getSelectedItem().toString().toLowerCase();
-        String month = binding.spinnerMonth.getSelectedItem().toString().toLowerCase();
-        String fullDate = year + "-" + month + "-00";
-
-        int userId = LoginUtils.getInstance(this).getUserInfo().getId();
-        Intent intent = getIntent();
-        int productId = intent.getIntExtra(PRODUCTID, 0);
-        if (nameOnCard.isEmpty()) {
-            binding.nameOnCard.setError(getString(R.string.name_required));
-            binding.nameOnCard.requestFocus();
-            return;
-        }
-
-        if (cardNumber.isEmpty()) {
-            binding.cardNumber.setError(getString(R.string.cardnumber_required));
-            binding.cardNumber.requestFocus();
-            return;
-        }
 
 
-        Ordering ordering = new Ordering(nameOnCard,cardNumber,fullDate,userId,productId);
 
+    @Override
+    public void onPaymentSuccess(String razorpayPaymentId, PaymentData paymentData) {
+   String orderid = "OD" + generateOrderId();
+
+        Ordering ordering = new Ordering(orderid,paymentData.getPaymentId(),LoginUtils.getInstance(this).getUserInfo().getId(),product.getProductId());
         orderingViewModel.orderProduct(ordering).observe(this, responseBody -> {
             try {
                 Toast.makeText(OrderProductActivity.this, responseBody.string() + "", Toast.LENGTH_SHORT).show();
                 finish();
-                Intent homeIntent = new Intent(OrderProductActivity.this, ProductActivity.class);
-                startActivity(homeIntent);
+                Intent paymentResultIntent = new Intent(OrderProductActivity.this, PaymentResultActivity.class);
+                paymentResultIntent.putExtra("paymentData", (paymentData));
+                paymentResultIntent.putExtra("paymentStatus", "success");
+                startActivity( paymentResultIntent);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         });
+
+
     }
 
     @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.addCard) {
-            orderProduct();
-        }
-    }
+    public void onPaymentError(int i, String s, PaymentData paymentData) {
+        Intent paymentResultIntent = new Intent(OrderProductActivity.this, PaymentResultActivity.class);
 
-    private void populateSpinner() {
-        String[] years = {"2020","2021","2022","2023","2024","2025","2026","2027","2028","2029","2030"};
-        ArrayAdapter<CharSequence> langAdapter = new ArrayAdapter<CharSequence>(this, R.layout.spinner_text, years );
-        langAdapter.setDropDownViewResource(R.layout.simple_spinner_dropdown);
-        binding.spinnerYear.setAdapter(langAdapter);
+        paymentResultIntent.putExtra(PRODUCT, (product));
 
-        String[] months = {"01","02","03","04","05","06","07","08","09","10","11","12"};
-        ArrayAdapter<CharSequence> langAdapter2 = new ArrayAdapter<CharSequence>(this, R.layout.spinner_text, months );
-        langAdapter2.setDropDownViewResource(R.layout.simple_spinner_dropdown);
-        binding.spinnerMonth.setAdapter(langAdapter2);
-
-        try {
-            Field popup = Spinner.class.getDeclaredField("mPopup");
-            popup.setAccessible(true);
-
-            // Get private mPopup member variable and try cast to ListPopupWindow
-            android.widget.ListPopupWindow popupWindowYear = (android.widget.ListPopupWindow) popup.get(binding.spinnerYear);
-            android.widget.ListPopupWindow popupWindowMonth = (android.widget.ListPopupWindow) popup.get(binding.spinnerMonth);
-
-            // Set popupWindow height to 500px
-            popupWindowYear.setHeight(500);
-            popupWindowMonth.setHeight(500);
-        } catch (NoClassDefFoundError | ClassCastException | NoSuchFieldException | IllegalAccessException e) {
-            // silently fail...
-        }
+        paymentResultIntent.putExtra("paymentStatus", "failed");
+        startActivity( paymentResultIntent);
     }
 
     @Override
-    public void onPaymentSuccess(String s) {
-        Toast.makeText(this, "Payment Successfull", Toast.LENGTH_SHORT).show();
-    }
+    public void onClick(View v) {
 
-    @Override
-    public void onPaymentError(int i, String s) {
-        Toast.makeText(this, "Payment Failed", Toast.LENGTH_SHORT).show();
     }
 }

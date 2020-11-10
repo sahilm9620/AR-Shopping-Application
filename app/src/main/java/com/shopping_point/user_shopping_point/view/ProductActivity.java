@@ -275,7 +275,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
                 .setMessage(message)
                 .setPositiveButton(R.string.ok, null).show();
 
-        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.darkGreen));
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(getResources().getColor(R.color.blue));
     }
 
     private void showCustomAlertDialog() {

@@ -98,7 +98,7 @@ public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.Pro
                     .load(imageUrl)
                     .into(holder.binding.imgProductImage);
 
-            Log.d("imageUrl", imageUrl);
+         //   Log.d("imageUrl", imageUrl);
 
 
             holder.binding.imgShare.setOnClickListener(v -> shareProduct(mContext, productName, imageUrl));

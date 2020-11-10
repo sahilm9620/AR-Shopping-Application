@@ -11,19 +11,21 @@ import android.widget.Toast;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.ShippingViewModel;
 import com.shopping_point.user_shopping_point.databinding.ActivityShippingAddressBinding;
+import com.shopping_point.user_shopping_point.model.Product;
 import com.shopping_point.user_shopping_point.model.Shipping;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
 import com.shopping_point.user_shopping_point.utils.Validation;
 
 import java.io.IOException;
 
+import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCTID;
 
 public class ShippingAddressActivity extends AppCompatActivity implements View.OnClickListener{
 
     private static final String TAG = "ShippingAddressActivity";
     private ActivityShippingAddressBinding binding;
-
+    private Product product;
     private ShippingViewModel shippingViewModel;
 
     @Override
@@ -36,6 +38,7 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
         binding.proceed.setOnClickListener(this);
 
         binding.txtName.setText(LoginUtils.getInstance(this).getUserInfo().getUser_name());
+        product= getIntent().getParcelableExtra(PRODUCT);
     }
 
     @Override
@@ -46,6 +49,7 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
     }
 
     private void addShippingAddress() {
+
         String address = binding.address.getText().toString().trim();
         String city = binding.city.getText().toString().trim();
         String country = binding.country.getText().toString().trim();
@@ -95,6 +99,7 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
             }
             Intent orderProductIntent = new Intent(ShippingAddressActivity.this, OrderProductActivity.class);
             orderProductIntent.putExtra(PRODUCTID,productId);
+            orderProductIntent.putExtra(PRODUCT, (product));
             startActivity(orderProductIntent);
         });
     }

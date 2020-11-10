@@ -83,6 +83,24 @@ public class LoginUtils {
         return name;
     }
 
+
+
+    public String getEmail()
+    {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        String email= sharedPreferences.getString("user_email",getUserInfo().getUser_email());
+        return email;
+    }
+
+    public String getPhone()
+    {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        String phone= sharedPreferences.getString("user_contact_number",getUserInfo().getUser_contact_number());
+        return phone;
+    }
+
+
+
 public String getDob()
 {
     SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);

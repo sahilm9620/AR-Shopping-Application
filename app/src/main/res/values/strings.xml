@@ -17,8 +17,8 @@
     <string name="eight_characters">Password must be at least 6 characters</string>
     <string name="create_your_account">Sign up</string>
     <string name="sign_in_already_a_customer">Already a member?<font color='#008CFF'> Sign-in</font></string>
-<!--    <string name="boldText">Sign-in.</string>-->
-<!--    <string name="normalText">" "Already a customer?</string>-->
+    <!--    <string name="boldText">Sign-in.</string>-->
+    <!--    <string name="normalText">" "Already a customer?</string>-->
     <string name="enter_at_least_3_characters">Enter at least 3 characters</string>
     <string name="email_required">Email Required</string>
     <string name="enter_a_valid_email_address">Enter a valid email address</string>
@@ -178,23 +178,23 @@
     <string name="schedule">schedule</string>
     <string name="clear_all">Clear all</string>
     <string name="what_are_you_looking_for">Search for Products, Brands and More</string>
-    <string name="hindi" > Hindi</string>
-    <string name="marathi" >Marathi</string>
+    <string name="hindi"> Hindi</string>
+    <string name="marathi">Marathi</string>
 
-    <string name="next" >NEXT</string>
+    <string name="next">NEXT</string>
     <string name="skip">SKIP</string>
-    <string name="start" >GOT IT</string>
+    <string name="start">GOT IT</string>
 
-    <string name="slide_1_title" >Hello User</string>
-    <string name="slide_1_desc" >The easiest way to order cloths and wearable products!</string>
+    <string name="slide_1_title">Hello User</string>
+    <string name="slide_1_desc">The easiest way to order cloths and wearable products!</string>
 
-    <string name="slide_2_title" >Fast Delivery</string>
-    <string name="slide_2_desc" >Delivering happiness and needs!</string>
+    <string name="slide_2_title">Fast Delivery</string>
+    <string name="slide_2_desc">Delivering happiness and needs!</string>
 
-    <string name="slide_3_title" >Great Discounts</string>
-    <string name="slide_3_desc" >Best discounts on every single service we offer!</string>
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
 
-    <string name="slide_4_title" >AR based shopping</string>
+    <string name="slide_4_title">AR based shopping</string>
     <string name="slide_4_desc">Try out best outfits virtually with AR technology!</string>
     <string name="contact">contact</string>
     <string name="update">Update</string>
