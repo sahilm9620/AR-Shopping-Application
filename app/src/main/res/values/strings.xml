@@ -224,6 +224,7 @@
     <string name="country_required">Country Required</string>
     <string name="zip_required">Zip Required</string>
     <string name="cardnumber_required">Card Number Required</string>
+    <string name="passs_authentication">Password Authentication</string>
 
     <string-array name="categories_array">
         <item>Mobile</item>

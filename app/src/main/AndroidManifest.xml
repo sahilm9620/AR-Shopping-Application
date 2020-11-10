@@ -133,10 +133,20 @@
         </activity>
         <activity
             android:name=".view.PasswordAssistantActivity"
-            android:theme="@style/NoActionBar" />
+            android:label="@string/password_assistance"
+            android:parentActivityName=".view.LoginActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.shopping_point.user_shopping_point.view.LoginActivity" />
+        </activity>
         <activity
             android:name=".view.AuthenticationActivity"
-            android:theme="@style/NoActionBar" />
+            android:label="@string/passs_authentication"
+            android:parentActivityName=".view.PasswordAssistantActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shopping_point.user_shopping_point.view.PasswordAssistantActivity" />
+        </activity>
         <activity android:name=".view.UpdateProfileActivity" />
         <activity
             android:name=".view.NewsFeedActivity"
