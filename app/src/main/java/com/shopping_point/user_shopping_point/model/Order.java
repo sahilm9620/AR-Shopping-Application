@@ -25,10 +25,28 @@ public class Order implements Serializable {
     private String userName;
     @SerializedName("address")
     private String shippingAddress;
+    @SerializedName("city")
+    private String shippingcity;
+    @SerializedName("country")
+    private String shippingcountry;
+    @SerializedName("zip")
+    private String shippingzip;
     @SerializedName("phone")
     private String shippingPhone;
 
     public Order(){}
+
+    public String getShippingcity() {
+        return shippingcity;
+    }
+
+    public String getShippingcountry() {
+        return shippingcountry;
+    }
+
+    public String getShippingzip() {
+        return shippingzip;
+    }
 
     public String getProductImage() {
         return productImage;

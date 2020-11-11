@@ -92,6 +92,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         actionBar.setCustomView(R.layout.action_bar_title_layout);
         ((TextView) findViewById(R.id.action_bar_title)).setText(product.getProductName());
 
+        binding.ProductHighlights.setText("Highlights");
         binding.nameOfProduct.setText(product.getProductName());
         binding.DescofProduct.setText(product.getProductDesc());
         DecimalFormat formatter = new DecimalFormat("#,###,###");

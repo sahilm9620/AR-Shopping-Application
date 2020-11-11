@@ -92,10 +92,10 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
         shippingViewModel.addShippingAddress(shipping).observe(this, responseBody -> {
             try {
                 Toast.makeText(ShippingAddressActivity.this, responseBody.string()+"", Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, "SUCESSSSSSSSSSSSSSSSSSSSSSSS", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(this, "SUCESSSSSSSSSSSSSSSSSSSSSSSS", Toast.LENGTH_SHORT).show();
             } catch (IOException e) {
                 e.printStackTrace();
-                Toast.makeText(this, "ERRORRRRRRRRRRRRRRRRRRRRRRRR", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "ERRORRRRRRRRRRRRRRRRRRRRRRRR", Toast.LENGTH_SHORT).show();
             }
             Intent orderProductIntent = new Intent(ShippingAddressActivity.this, OrderProductActivity.class);
             orderProductIntent.putExtra(PRODUCTID,productId);
