@@ -1,5 +1,6 @@
 package com.shopping_point.user_shopping_point.view;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import androidx.databinding.DataBindingUtil;
@@ -29,6 +30,8 @@ public class PasswordAssistantActivity extends AppCompatActivity implements View
 
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_password_assistant);
+//        ActionBar actionBar = getSupportActionBar();
+//        actionBar.setTitle(getResources().getString(R.string.password_assistance));
         otpViewModel = ViewModelProviders.of(this).get(OtpViewModel.class);
         binding.proceed.setOnClickListener(this);
 

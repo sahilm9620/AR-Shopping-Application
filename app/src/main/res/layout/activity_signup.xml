@@ -102,6 +102,7 @@
                         android:layout_weight="1"
                         app:ccp_autoDetectCountry="true"
                         app:ccp_showNameCode="true"
+                        android:gravity="center"
                         android:background="@drawable/custom_border"
                         app:ccp_textSize="@dimen/dimen16sp"
                         />
