@@ -25,34 +25,29 @@ Product product;
 
         loadLocale(this);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_payment_result);
-        paymentStatus = getIntent().getExtras().getBundle("paymentStatus");
+        Bundle bundle = getIntent().getExtras();
+        product = getIntent().getParcelableExtra(PRODUCT);
 
-       // product = getIntent().getParcelableExtra(PRODUCT);
-
-        if(paymentStatus.equals("success"))
+        if( bundle.getString("paymentStatus").equals("success"))
         {
 
             binding.imgPaymentResult.setImageResource(R.drawable.ic_payment_sucess);
-//            binding.paymentStatus.setText("Payment Successful");
-//            binding.txvPaymentOrderId.setVisibility(View.GONE);
-//            binding.txvPaymentAmmount.setText(product.getProductPrice() + " ₹ ");
-//            binding.txvPaymentProductName.setText(product.getProductName());
+           binding.paymentStatus.setText("Payment Successful");
+            binding.txvPaymentOrderId.setVisibility(View.GONE);
+            binding.txvPaymentAmmount.setText(product.getProductPrice() + " ₹ ");
+            binding.txvPaymentProductName.setText(product.getProductName());
 
         }else
         {
 
-//
+
            binding.imgPaymentResult.setImageResource(R.drawable.ic_payment_failed);
-////            binding.paymentStatus.setText("Payment Failed");
-////            binding.txvPaymentOrderId.setVisibility(View.GONE);
-////            binding.txvPaymentAmmount.setVisibility(View.GONE);;
-////            binding.txvPaymentProductName.setVisibility(View.GONE);;
-//
-//
-//
-//
-//
-        }
+            binding.paymentStatus.setText("Payment Failed");
+            binding.txvPaymentOrderId.setVisibility(View.GONE);
+            binding.txvPaymentAmmount.setVisibility(View.GONE);
+            binding.txvPaymentProductName.setVisibility(View.GONE);
+
+ }
 
         binding.btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
