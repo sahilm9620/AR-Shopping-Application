@@ -51,6 +51,7 @@
         android:textColor="@color/dark"
         android:layout_margin="@dimen/dimen5dp"
         android:layout_marginBottom="@dimen/dimen15dp"
+        android:textSize="@dimen/dimen20dp"
         />
 
     <TextView
@@ -69,7 +70,7 @@
         android:id="@+id/txvPaymentAmmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Order Id"
+        android:text="Payment Amount"
         android:gravity="center"
         android:textColor="@color/dark"
         android:layout_margin="@dimen/dimen5dp"
