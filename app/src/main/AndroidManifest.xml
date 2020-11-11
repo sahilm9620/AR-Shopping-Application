@@ -16,9 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".view.PaymentResultActivity"
-            android:theme="@style/NoActionBar"
-            ></activity>
+        <activity
+            android:name=".view.PaymentResultActivity"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".view.WelcomeActivity"
             android:theme="@style/NoActionBar" />
@@ -72,7 +72,7 @@
         <activity
             android:name=".view.CartActivity"
             android:label="@string/cart"
-            android:parentActivityName=".view.ProductActivity">
+            android:parentActivityName=".view.DetailsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
@@ -166,8 +166,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
-        <activity android:name=".view.ShippingAddressActivity" />
-        <activity android:name=".view.OrderProductActivity" />
+
+
+        <activity android:name=".view.ShippingAddressActivity"
+            android:label="@string/Address"
+            android:parentActivityName=".view.DetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
+        </activity>
+        <activity android:name=".view.OrderProductActivity"
+            android:label="@string/orderdetails"
+            android:parentActivityName=".view.DetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
+        </activity>
         <activity
             android:name=".view.OrdersActivity"
             android:label="@string/orders"
