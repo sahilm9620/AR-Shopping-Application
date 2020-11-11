@@ -227,6 +227,7 @@
     <string name="passs_authentication">Password Authentication</string>
     <string name="Address">Address</string>
     <string name="orderdetails">Order Details</string>
+    <string name="updateprofile">Update Profile</string>
 
     <string-array name="categories_array">
         <item>Mobile</item>

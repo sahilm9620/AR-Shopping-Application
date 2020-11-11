@@ -232,7 +232,7 @@ FREE शिपिंग</string>
 इस श्रेणी में कोई उत्पाद नहीं</string>
     <string name="english">
 अंग्रेज़ी</string>
-    <string name="arabic">Arabic</string>
+
     <string name="choose_language">
 भाषा चुनें</string>
     <string name="shop_online">ऑनलाइन खरीदें</string>
@@ -315,7 +315,35 @@ OTP दर्ज करें</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="phone_required">Phone no Required</string>
     <string name="password_missmatch">Password Missmatch</string>
+    <string name="update">Update</string>
+    <string name="about">About</string>
+    <string name="desc3"><b>Developed by TeamShoppy - Pune, India</b></string>
+    <string name="version">Version</string>
+    <string name="check_update">Check for update</string>
+    <string name="feedback">Feedback</string>
+    <string name="desc_feedback">to report technical issues or suggest new features.</string>
+    <string name="try_amp_buy_at_home"><font color='#008CFF'>Try </font>&amp;<font color='#008CFF'> Buy</font> at home.</string>
+    <string name="desc_about">Shopping point application that gives you the facility of virual trial room.</string>
+    <string name="check_updates">Tap here to check for updates.</string>
+    <string name="version_build">Version 0.0.1 Build 1</string>
+    <string name="help">Help</string>
+    <string name="desc_feedback_link"><font color='#008CFF'>Click here </font></string>
 
+    <string name="update_profile">Update profile</string>
+
+    <string name="gender">Gender</string>
+    <string name="Date_Of_Birth">Date of Birth</string>
+    <string name="Name_Required">Name Required</string>
+    <string name="Phone_Required">Phone Number Required</string>
+    <string name="settings">Settings</string>
+    <string name="city_required">City Required</string>
+    <string name="country_required">Country Required</string>
+    <string name="zip_required">Zip Required</string>
+    <string name="cardnumber_required">Card Number Required</string>
+    <string name="passs_authentication">Password Authentication</string>
+    <string name="Address">Address</string>
+    <string name="orderdetails">Order Details</string>
+    <string name="updateprofile">Update Profile</string>
     <string-array name="categories_array">
         <item>मोबाइल</item>
         <item>लैपटॉप</item>

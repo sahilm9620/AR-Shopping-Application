@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="contact">contact</string>
-    <string name="confirm_password">Confirm Password</string>
-    <string name="phone_required">Phone no Required</string>
-    <string name="password_missmatch">Password Missmatch</string>
-</resources>
