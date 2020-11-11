@@ -146,9 +146,9 @@ binding.txtProductPrice.setText(product.getProductPrice() + " ₹ ");
     public void onPaymentError(int i, String s, PaymentData paymentData) {
         Intent paymentResultIntent = new Intent(OrderProductActivity.this, PaymentResultActivity.class);
 
-        paymentResultIntent.putExtra(PRODUCT, (product));
+       // paymentResultIntent.putExtra(PRODUCT, (product));
 
-        paymentResultIntent.putExtra("paymentStatus", "failed");
+       // paymentResultIntent.putExtra("paymentStatus", "failed");
         startActivity( paymentResultIntent);
     }
 
