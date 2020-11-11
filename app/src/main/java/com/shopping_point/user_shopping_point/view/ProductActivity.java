@@ -54,7 +54,9 @@ import com.shopping_point.user_shopping_point.utils.OnNetworkListener;
 import com.shopping_point.user_shopping_point.utils.Slide;
 
 import java.util.ArrayList;
+
 import de.hdodenhof.circleimageview.CircleImageView;
+
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.loadLocale;
 import static com.shopping_point.user_shopping_point.utils.Constant.CAMERA_PERMISSION_CODE;
 import static com.shopping_point.user_shopping_point.utils.Constant.CAMERA_REQUEST;

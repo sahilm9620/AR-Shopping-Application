@@ -78,9 +78,10 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         holder.binding.txtProductName.setText(currentProduct.getProductName());
 
         DecimalFormat formatter = new DecimalFormat("#,###,###");
-        String formattedPrice = formatter.format(currentProduct.getProductPrice());
-        holder.binding.txtProductPrice.setText(formattedPrice + " RS");
+        String formattedPrice = formatter.format(currentProduct.getProductPrice()) ;
+        holder.binding.txtProductPrice.setText(formattedPrice + " ₹ ");
 
+        holder.binding.DescofProduct.setText(currentProduct.getProductDesc());
         // Load the Product image into ImageView
         String imageUrl =  currentProduct.getProductImage().replaceAll("\\\\", "/");
         Glide.with(mContext)

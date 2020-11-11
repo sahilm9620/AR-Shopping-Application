@@ -6,8 +6,8 @@
         android:id="@+id/card_view"
         android:layout_width="@dimen/dimen175dp"
         android:layout_height="@dimen/dimen370dp"
-        card_view:cardCornerRadius="@dimen/dimen10dp"
-        card_view:cardElevation="@dimen/dimen1dp"
+        card_view:cardCornerRadius="@dimen/dimen5dp"
+        card_view:cardElevation="3dp"
         card_view:cardUseCompatPadding="true"
         card_view:elevation="@dimen/dimen1dp">
 
