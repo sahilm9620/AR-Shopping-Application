@@ -10,7 +10,8 @@ public class Order implements Serializable {
     private int productId;
     @SerializedName("product_name")
     private String productName;
-
+    @SerializedName("product_image")
+    private String productImage;
     @SerializedName("order_number")
     private String orderNumber;
     @SerializedName("order_date")

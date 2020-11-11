@@ -62,7 +62,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         toCartViewModel = ViewModelProviders.of(this).get(ToCartViewModel.class);
 
         binding.txtSeeAllReviews.setOnClickListener(this);
-        binding.writeReview.setOnClickListener(this);
+
         binding.addToCart.setOnClickListener(this);
         binding.buy.setOnClickListener(this);
 
@@ -130,11 +130,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
             Intent allReviewIntent = new Intent(DetailsActivity.this, AllReviewsActivity.class);
             allReviewIntent.putExtra(PRODUCT_ID,product.getProductId());
             startActivity(allReviewIntent);
-        } else if (view.getId() == R.id.writeReview) {
-            Intent allReviewIntent = new Intent(DetailsActivity.this, WriteReviewActivity.class);
-            allReviewIntent.putExtra(PRODUCT_ID,product.getProductId());
-            startActivity(allReviewIntent);
-        }else if(view.getId() == R.id.addToCart){
+        } else  if(view.getId() == R.id.addToCart){
             insertToCart(() -> {
                 product.setIsInCart(true);
             });

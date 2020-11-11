@@ -13,9 +13,10 @@ import com.shopping_point.user_shopping_point.model.Order;
 
 import static com.shopping_point.user_shopping_point.utils.Constant.ORDER;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCTID;
+import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT_ID;
 
 public class StatusActivity extends AppCompatActivity implements View.OnClickListener {
-
+    Order order;
     private int productId;
 
     @Override
@@ -25,7 +26,7 @@ public class StatusActivity extends AppCompatActivity implements View.OnClickLis
 
         // Receive the order object
         Intent intent = getIntent();
-        Order order = (Order) intent.getSerializableExtra(ORDER);
+        order = (Order) intent.getSerializableExtra(ORDER);
 
         productId = order.getProductId();
         binding.orderDate.setText(order.getOrderDate());
@@ -35,7 +36,7 @@ public class StatusActivity extends AppCompatActivity implements View.OnClickLis
         binding.userPhone.setText(order.getShippingPhone());
         binding.txtProductName.setText(order.getProductName());
         binding.txtProductPrice.setText(String.valueOf(order.getProductPrice()));
-
+        binding.writeReview.setOnClickListener(this);
 
         String status = getString(R.string.item, order.getOrderDateStatus());
         binding.orderStatus.setText(status);
@@ -49,6 +50,10 @@ public class StatusActivity extends AppCompatActivity implements View.OnClickLis
             Intent reOrderIntent = new Intent(this, OrderProductActivity.class);
             reOrderIntent.putExtra(PRODUCTID, productId);
             startActivity(reOrderIntent);
+        }if (view.getId() == R.id.writeReview) {
+            Intent allReviewIntent = new Intent(StatusActivity.this, WriteReviewActivity.class);
+            allReviewIntent.putExtra(PRODUCT_ID,order.getProductId());
+            startActivity(allReviewIntent);
         }
     }
 }

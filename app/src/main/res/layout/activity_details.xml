@@ -143,19 +143,7 @@
                 android:background="@color/white"
                 android:visibility="gone" />
 
-            <TextView
-                android:id="@+id/writeReview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/custom_button_border"
-                android:drawableStart="@drawable/ic_review"
-                android:drawablePadding="10dp"
-                android:padding="10dp"
-                android:text="@string/write_review"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+
         </LinearLayout>
     </ScrollView>
 </layout>

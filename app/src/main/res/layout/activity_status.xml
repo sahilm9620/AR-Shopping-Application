@@ -125,7 +125,7 @@
                 android:src="@drawable/ic_shopping_cart_grey" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
@@ -134,12 +134,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dimen10dp"
+                    android:textStyle="bold"
                     android:layout_marginTop="50dp"
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:text="@string/samsung_galaxy_a70"
                     android:textColor="@color/black"
                     android:textSize="@dimen/dimen18sp" />
+
+                <TextView
+                    android:id="@+id/txtProductDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/samsung_galaxy_a70"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen15dp" />
 
                 <TextView
                     android:id="@+id/txtProductPrice"
@@ -150,7 +162,23 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/dimen18sp"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/writeReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/custom_button_border"
+                    android:drawableStart="@drawable/ic_review"
+                    android:drawablePadding="10dp"
+                    android:padding="10dp"
+                    android:text="@string/write_review"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
+
+
         </LinearLayout>
 
         <TextView
@@ -195,5 +223,7 @@
             android:textColor="@color/white"
             android:textSize="@dimen/dimen18sp"
             android:textStyle="bold" />
+
+
     </LinearLayout>
 </layout>
