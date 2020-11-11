@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".view.StatusActivity">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,7 +60,8 @@
             android:paddingEnd="@dimen/dimen10dp"
             android:text="@string/shipping"
             android:textColor="@color/black"
-            android:textSize="@dimen/dimen14sp"
+            android:textSize="@dimen/dimen18sp"
+
             android:textStyle="bold" />
 
         <TextView
@@ -70,7 +74,7 @@
             android:paddingEnd="@dimen/dimen10dp"
             android:text="@string/shopping_point"
             android:textColor="@color/vDarkGray"
-            android:textSize="@dimen/dimen14sp" />
+            android:textSize="@dimen/dimen15sp" />
 
         <TextView
             android:id="@+id/userAddress"
@@ -82,7 +86,7 @@
             android:paddingEnd="@dimen/dimen10dp"
             android:text="@string/user_address"
             android:textColor="@color/vDarkGray"
-            android:textSize="@dimen/dimen14sp" />
+            android:textSize="@dimen/dimen15sp" />
 
         <TextView
             android:id="@+id/userPhone"
@@ -95,7 +99,7 @@
             android:paddingEnd="@dimen/dimen10dp"
             android:text="@string/dummy_phone"
             android:textColor="@color/vDarkGray"
-            android:textSize="@dimen/dimen14sp" />
+            android:textSize="@dimen/dimen15sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -226,4 +230,5 @@
 
 
     </LinearLayout>
+</ScrollView>
 </layout>

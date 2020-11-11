@@ -8,8 +8,11 @@ import android.view.View;
 
 import com.bumptech.glide.Glide;
 import com.shopping_point.user_shopping_point.R;
+
 import com.shopping_point.user_shopping_point.databinding.ActivityStatusBinding;
 import com.shopping_point.user_shopping_point.model.Order;
+
+import java.text.DecimalFormat;
 
 import static com.shopping_point.user_shopping_point.utils.Constant.ORDER;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCTID;
@@ -31,11 +34,17 @@ public class StatusActivity extends AppCompatActivity implements View.OnClickLis
         productId = order.getProductId();
         binding.orderDate.setText(order.getOrderDate());
         binding.orderNumber.setText(order.getOrderNumber());
-        binding.userName.setText(order.getUserName());
-        binding.userAddress.setText(order.getShippingAddress());
-        binding.userPhone.setText(order.getShippingPhone());
+        binding.userName.setText("Name : " + order.getUserName());
+        binding.userAddress.setText("Address : " + order.getShippingAddress());
+        binding.userPhone.setText("Contact No : "+ order.getShippingPhone());
         binding.txtProductName.setText(order.getProductName());
-        binding.txtProductPrice.setText(String.valueOf(order.getProductPrice()));
+
+        Glide.with(this)
+                .load(order.getProductImage())
+                .into(binding.imgProductImage);
+        DecimalFormat formatter = new DecimalFormat("#,###,###");
+        String formattedPrice = formatter.format(order.getProductPrice());
+        binding.txtProductPrice.setText(formattedPrice + " ₹ ");
         binding.writeReview.setOnClickListener(this);
 
         String status = getString(R.string.item, order.getOrderDateStatus());
