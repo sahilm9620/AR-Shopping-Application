@@ -36,8 +36,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -56,15 +54,12 @@ import com.shopping_point.user_shopping_point.utils.OnNetworkListener;
 import com.shopping_point.user_shopping_point.utils.Slide;
 
 import java.util.ArrayList;
-
 import de.hdodenhof.circleimageview.CircleImageView;
-
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.loadLocale;
 import static com.shopping_point.user_shopping_point.utils.Constant.CAMERA_PERMISSION_CODE;
 import static com.shopping_point.user_shopping_point.utils.Constant.CAMERA_REQUEST;
 import static com.shopping_point.user_shopping_point.utils.Constant.CATEGORY;
 import static com.shopping_point.user_shopping_point.utils.Constant.GALLERY_REQUEST;
-import static com.shopping_point.user_shopping_point.utils.Constant.LOCALHOST;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
 import static com.shopping_point.user_shopping_point.utils.Constant.READ_EXTERNAL_STORAGE_CODE;
 import static com.shopping_point.user_shopping_point.utils.ImageUtils.getImageUri;
@@ -77,18 +72,14 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
 
     private static final String TAG = "ProductActivity";
     private ActivityProductBinding binding;
-
     private ProductAdapter mobileAdapter;
     private ProductAdapter laptopAdapter;
     private ProductAdapter historyAdapter;
-
     private ProductViewModel productViewModel;
     private HistoryViewModel historyViewModel;
     private UploadPhotoViewModel uploadPhotoViewModel;
     private UserImageViewModel userImageViewModel;
-
     private Snackbar snack;
-
     private CircleImageView circleImageView,circleImageView1;
     private Uri selectedImage;
 
@@ -459,8 +450,8 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
                 startActivity(cartIntent);
                 return true;
             case R.id.action_addProduct:
-              //  Intent addProductIntent = new Intent(this, AddProductActivity.class);
-              //  startActivity(addProductIntent);
+//                Intent addProductIntent = new Intent(this, AddProductActivity.class);
+//                startActivity(addProductIntent);
                 return true;
         }
         return super.onOptionsItemSelected(item);

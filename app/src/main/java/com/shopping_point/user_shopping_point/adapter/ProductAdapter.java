@@ -84,10 +84,13 @@ public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.Pro
         if (product != null) {
             String productName = product.getProductName();
             holder.binding.txtProductName.setText(productName);
+            String productDesc = product.getProductDesc();
+
+            holder.binding.txtProductDesc.setText(productDesc);
 
             DecimalFormat formatter = new DecimalFormat("#,###,###");
             String formattedPrice = formatter.format(product.getProductPrice());
-            holder.binding.txtProductPrice.setText(formattedPrice + " RS");
+            holder.binding.txtProductPrice.setText(formattedPrice + " ₹ ");
 
             // Load the Product image into ImageView
             String imageUrl =  product.getProductImage().replaceAll("\\\\", "/");

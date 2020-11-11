@@ -28,6 +28,7 @@ import com.shopping_point.user_shopping_point.net.RetrofitClient;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
 import com.shopping_point.user_shopping_point.utils.RequestCallback;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 import retrofit2.Call;
@@ -92,7 +93,10 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         ((TextView) findViewById(R.id.action_bar_title)).setText(product.getProductName());
 
         binding.nameOfProduct.setText(product.getProductName());
-        binding.priceOfProduct.setText(String.valueOf(product.getProductPrice()));
+        binding.DescofProduct.setText(product.getProductDesc());
+        DecimalFormat formatter = new DecimalFormat("#,###,###");
+        String formattedPrice = formatter.format(product.getProductPrice());
+        binding.priceOfProduct.setText(formattedPrice + " ₹ ");
 
         String imageUrl =  product.getProductImage().replaceAll("\\\\", "/");
         Glide.with(this)

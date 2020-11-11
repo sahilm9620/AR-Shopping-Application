@@ -33,6 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen10dp"
                 android:layout_marginTop="@dimen/dimen28dp"
+                android:textStyle="bold"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="@string/samsung_galaxy_a70"
@@ -40,11 +41,23 @@
                 android:textSize="@dimen/dimen18sp" />
 
             <TextView
+                android:id="@+id/txtProductDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen10dp"
+                android:layout_marginTop="@dimen/dimen5dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/samsung_galaxy_a70"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/dimen15sp" />
+
+            <TextView
                 android:id="@+id/txtProductPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen10dp"
-                android:layout_marginTop="@dimen/dimen28dp"
+                android:layout_marginTop="@dimen/dimen5dp"
                 android:text="@string/_5399_rs"
                 android:textColor="@color/black"
                 android:textSize="@dimen/dimen18sp"
@@ -53,7 +66,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen35dp"
+                android:layout_marginTop="@dimen/dimen20dp"
                 android:layout_marginEnd="@dimen/dimen5dp"
                 android:layout_marginBottom="@dimen/dimen10dp"
                 android:gravity="center"

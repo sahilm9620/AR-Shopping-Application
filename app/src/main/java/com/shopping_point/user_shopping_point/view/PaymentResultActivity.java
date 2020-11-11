@@ -17,7 +17,6 @@ Product product;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         loadLocale(this);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_payment_result);
         Bundle bundle = getIntent().getExtras();
@@ -27,19 +26,20 @@ Product product;
         {
 
             binding.imgPaymentResult.setImageResource(R.drawable.ic_payment_sucess);
-           binding.paymentStatus.setText("Payment Successful");
+           binding.paymentStatus.setText(" Payment Successful ");
             binding.txvPaymentOrderId.setVisibility(View.GONE);
             binding.txvPaymentAmmount.setText("Product Price : " + product.getProductPrice() + " ₹ ");
             binding.txvPaymentProductName.setText("Product Name : " + product.getProductName());
+
         }else
         {
            binding.imgPaymentResult.setImageResource(R.drawable.ic_payment_failed);
-            binding.paymentStatus.setText("Payment Failed");
+            binding.paymentStatus.setText(" Payment Failed ");
             binding.txvPaymentOrderId.setVisibility(View.GONE);
             binding.txvPaymentAmmount.setVisibility(View.GONE);
             binding.txvPaymentProductName.setVisibility(View.GONE);
 
- }
+        }
 
         binding.btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,8 +48,6 @@ Product product;
                 startActivity(homeIntent);
             }
         });
-
-
 
     }
 }

@@ -11,6 +11,8 @@ public class Product implements Parcelable {
     private int productId;
     @SerializedName("product_name")
     private String productName;
+    @SerializedName("product_desc")
+    private String productDesc;
     @SerializedName("price")
     private double productPrice;
     @SerializedName("quantity")
@@ -35,6 +37,10 @@ public class Product implements Parcelable {
         this.productQuantity = productQuantity;
         this.productSupplier = productSupplier;
         this.productCategory = productCategory;
+    }
+
+    public String getProductDesc() {
+        return productDesc;
     }
 
     public Product() {
@@ -91,6 +97,7 @@ public class Product implements Parcelable {
     public void writeToParcel(Parcel out, int flags) {
         out.writeInt(productId);
         out.writeString(productName);
+        out.writeString(productDesc);
         out.writeDouble(productPrice);
         out.writeInt(productQuantity);
         out.writeString(productSupplier);
@@ -105,6 +112,7 @@ public class Product implements Parcelable {
     private Product(Parcel in) {
         productId = in.readInt();
         productName = in.readString();
+        productDesc=in.readString();
         productPrice = in.readDouble();
         productQuantity = in.readInt();
         productSupplier = in.readString();
