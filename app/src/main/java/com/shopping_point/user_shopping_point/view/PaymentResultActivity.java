@@ -2,22 +2,17 @@ package com.shopping_point.user_shopping_point.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
-import com.razorpay.PaymentData;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.databinding.ActivityPaymentResultBinding;
 import com.shopping_point.user_shopping_point.model.Product;
-
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.loadLocale;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
-
 public class PaymentResultActivity extends AppCompatActivity {
 private ActivityPaymentResultBinding binding;
-Bundle paymentStatus;
+
 Product product;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +31,8 @@ Product product;
             binding.txvPaymentOrderId.setVisibility(View.GONE);
             binding.txvPaymentAmmount.setText("Product Price : " + product.getProductPrice() + " ₹ ");
             binding.txvPaymentProductName.setText("Product Name : " + product.getProductName());
-
-
         }else
         {
-
-
            binding.imgPaymentResult.setImageResource(R.drawable.ic_payment_failed);
             binding.paymentStatus.setText("Payment Failed");
             binding.txvPaymentOrderId.setVisibility(View.GONE);

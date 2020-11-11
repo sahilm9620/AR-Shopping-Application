@@ -8,6 +8,9 @@
         android:id="@+id/card_view_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_gravity="center"
+        android:padding="@dimen/dimen15dp"
         android:background="@color/white"
         card_view:cardCornerRadius="@dimen/dimen10dp"
         card_view:cardElevation="@dimen/dimen5dp"
@@ -63,6 +66,7 @@
         android:textColor="@color/dark"
         android:layout_margin="@dimen/dimen5dp"
         android:layout_marginBottom="@dimen/dimen15dp"
+        android:textSize="@dimen/dimen20dp"
         />
 
 
@@ -75,18 +79,18 @@
         android:textColor="@color/dark"
         android:layout_margin="@dimen/dimen5dp"
         android:layout_marginBottom="@dimen/dimen15dp"
+        android:textSize="@dimen/dimen20dp"
         />
      <androidx.appcompat.widget.AppCompatButton
          android:id="@+id/btn_home"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:layout_marginLeft="@dimen/dimen10dp"
+         android:layout_marginLeft="@dimen/dimen20dp"
          android:layout_marginTop="@dimen/dimen20dp"
-         android:layout_marginRight="@dimen/dimen10dp"
+         android:layout_marginRight="@dimen/dimen20dp"
          android:layout_marginBottom="@dimen/dimen20dp"
          android:background="@drawable/custom_button_border2"
          android:text="Continue Shopping"
-
          android:textColor="@color/white"
          android:textAllCaps="false"
          android:textSize="@dimen/dimen18sp" />
