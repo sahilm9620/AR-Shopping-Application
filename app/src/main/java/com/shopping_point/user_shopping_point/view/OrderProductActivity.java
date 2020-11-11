@@ -131,7 +131,7 @@ binding.txtProductPrice.setText(product.getProductPrice() + " ₹ ");
                 Toast.makeText(OrderProductActivity.this, responseBody.string() + "", Toast.LENGTH_SHORT).show();
                 finish();
                 Intent paymentResultIntent = new Intent(OrderProductActivity.this, PaymentResultActivity.class);
-                paymentResultIntent.putExtra("paymentData", (paymentData));
+                paymentResultIntent.putExtra(PRODUCT, (product));
                 paymentResultIntent.putExtra("paymentStatus", "success");
                 startActivity( paymentResultIntent);
             } catch (IOException e) {
@@ -146,9 +146,9 @@ binding.txtProductPrice.setText(product.getProductPrice() + " ₹ ");
     public void onPaymentError(int i, String s, PaymentData paymentData) {
         Intent paymentResultIntent = new Intent(OrderProductActivity.this, PaymentResultActivity.class);
 
-        paymentResultIntent.putExtra(PRODUCT, (product));
+       // paymentResultIntent.putExtra(PRODUCT, (product));
 
-        paymentResultIntent.putExtra("paymentStatus", "failed");
+       // paymentResultIntent.putExtra("paymentStatus", "failed");
         startActivity( paymentResultIntent);
     }
 
