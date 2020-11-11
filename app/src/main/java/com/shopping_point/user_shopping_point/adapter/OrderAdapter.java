@@ -8,7 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
 import com.shopping_point.user_shopping_point.R;
+
 import com.shopping_point.user_shopping_point.databinding.OrderListItemBinding;
 import com.shopping_point.user_shopping_point.model.Order;
 
@@ -49,10 +51,17 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
 
         DecimalFormat formatter = new DecimalFormat("#,###,###");
         String formattedPrice = formatter.format(currentOrder.getProductPrice());
-        holder.binding.productPrice.setText(formattedPrice + " RS");
+        holder.binding.orderName.setText(currentOrder.getProductName());
+    holder.binding.orderStatus.setText(currentOrder.getOrderDateStatus());
+        Glide.with(mContext)
+                .load(currentOrder.getProductImage())
+                .into(holder.binding.imgProductImage);
 
-        holder.binding.orderNumber.setText(currentOrder.getOrderNumber());
-        holder.binding.orderDate.setText(currentOrder.getOrderDate());
+
+        holder.binding.orderPrice.setText(formattedPrice+ " ₹ ");
+
+
+        holder.binding.orderDate.setText("Orderd on : " + currentOrder.getOrderDate());
     }
 
     @Override

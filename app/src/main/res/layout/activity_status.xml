@@ -131,6 +131,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="@dimen/dimen10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -141,7 +142,7 @@
                     android:textStyle="bold"
                     android:layout_marginTop="50dp"
                     android:ellipsize="end"
-                    android:maxLines="1"
+                    android:maxLines="2"
                     android:text="@string/samsung_galaxy_a70"
                     android:textColor="@color/black"
                     android:textSize="@dimen/dimen18sp" />
@@ -152,7 +153,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dimen10dp"
                     android:ellipsize="end"
-                    android:maxLines="1"
+                    android:maxLines="2"
                     android:text="@string/samsung_galaxy_a70"
                     android:textColor="@color/black"
                     android:textSize="@dimen/dimen15dp" />
@@ -207,26 +208,10 @@
             android:paddingStart="@dimen/dimen10dp"
             android:paddingEnd="@dimen/dimen10dp"
             android:text="@string/item"
-            android:textColor="@color/vDarkGray"
-            android:textSize="@dimen/dimen16sp"
-            android:textStyle="bold" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/reOrder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginLeft="@dimen/dimen10dp"
-            android:layout_marginTop="@dimen/dimen30dp"
-            android:layout_marginRight="@dimen/dimen10dp"
-            android:layout_marginBottom="@dimen/dimen10dp"
-            android:background="@color/green"
-            android:padding="@dimen/dimen10dp"
-            android:text="@string/reorder"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
+            android:textColor="@color/darkGreen"
             android:textSize="@dimen/dimen18sp"
             android:textStyle="bold" />
+
 
 
     </LinearLayout>
