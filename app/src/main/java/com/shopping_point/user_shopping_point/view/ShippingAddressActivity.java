@@ -5,6 +5,8 @@ import android.content.Intent;
 import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Toast;
 
@@ -20,6 +22,7 @@ import java.io.IOException;
 
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCTID;
+import static com.shopping_point.user_shopping_point.utils.Constant.SHIPPING;
 
 public class ShippingAddressActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -100,6 +103,7 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
             Intent orderProductIntent = new Intent(ShippingAddressActivity.this, OrderProductActivity.class);
             orderProductIntent.putExtra(PRODUCTID,productId);
             orderProductIntent.putExtra(PRODUCT, (product));
+
             startActivity(orderProductIntent);
         });
     }

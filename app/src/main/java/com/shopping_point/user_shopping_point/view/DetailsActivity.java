@@ -1,7 +1,6 @@
 package com.shopping_point.user_shopping_point.view;
 
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
+
 import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import androidx.databinding.DataBindingUtil;
@@ -12,28 +11,27 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import com.bumptech.glide.Glide;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.ReviewViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.ToCartViewModel;
 import com.shopping_point.user_shopping_point.adapter.ReviewAdapter;
+
 import com.shopping_point.user_shopping_point.databinding.ActivityDetailsBinding;
 import com.shopping_point.user_shopping_point.model.Cart;
 import com.shopping_point.user_shopping_point.model.Image;
 import com.shopping_point.user_shopping_point.model.Product;
 import com.shopping_point.user_shopping_point.model.Review;
-import com.shopping_point.user_shopping_point.net.RetrofitClient;
+
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
 import com.shopping_point.user_shopping_point.utils.RequestCallback;
 
 import java.text.DecimalFormat;
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+
 
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.loadLocale;
 import static com.shopping_point.user_shopping_point.utils.Constant.LOCALHOST;

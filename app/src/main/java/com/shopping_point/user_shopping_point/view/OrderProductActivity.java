@@ -10,8 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -28,13 +26,13 @@ import com.shopping_point.user_shopping_point.storage.LoginUtils;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.lang.reflect.Field;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Random;
 
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
-import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCTID;
+
 
 public class OrderProductActivity extends AppCompatActivity implements View.OnClickListener, PaymentResultWithDataListener {
 
@@ -56,8 +54,14 @@ binding.txtProductName.setText(product.getProductName());
 
 binding.txtUserName.setText(" Name : " + LoginUtils.getInstance(this).getUserInfo().getUser_name());
 binding.txtUserPhone.setText("Contact : " + LoginUtils.getInstance(this).getUserInfo().getUser_contact_number());
+        DecimalFormat formatter = new DecimalFormat("#,###,###");
+        String formattedPrice = formatter.format(product.getProductPrice());
+binding.txtProductPrice.setText(formattedPrice + " ₹ ");
+binding.txtProductDesc.setText(product.getProductDesc());
 
-binding.txtProductPrice.setText(product.getProductPrice() + " ₹ ");
+binding.amountAmountPayable.setText(formattedPrice + " ₹ ");
+binding.amountDeliveryCharges.setText("FREE");
+binding.AmountPrice.setText(formattedPrice + " ₹ ");
 
         binding.btnPay.setOnClickListener(new View.OnClickListener() {
             @Override
