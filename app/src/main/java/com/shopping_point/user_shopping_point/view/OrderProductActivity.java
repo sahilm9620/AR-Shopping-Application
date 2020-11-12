@@ -64,6 +64,9 @@ binding.amountAmountPayable.setText(formattedPrice + " ₹ ");
 binding.amountDeliveryCharges.setText("FREE");
 binding.AmountPrice.setText(formattedPrice + " ₹ ");
 
+
+        binding.Rating.setText(product.getProductRating() + " ★ ");
+
         binding.btnPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -96,7 +96,7 @@ public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.Pro
 
 
 
-         //   holder.binding.Rating.setText(product.getProductRating() + " ★ ");
+            holder.binding.Rating.setText(product.getProductRating() + " ★ ");
             // Load the Product image into ImageView
             String imageUrl =  product.getProductImage().replaceAll("\\\\", "/");
 

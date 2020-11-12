@@ -35,6 +35,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/dimen20sp"
                 tools:text="Apple iPhone 7 plus without Facetime - 32GB, 4LTC, Silver" />
+
             <TextView
                 android:id="@+id/Rating"
                 android:layout_width="wrap_content"

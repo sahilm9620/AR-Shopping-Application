@@ -95,6 +95,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         binding.nameOfProduct.setText(product.getProductName());
         binding.DescofProduct.setText(product.getProductDesc());
 
+
         binding.Rating.setText(product.getProductRating() + " ★ ");
         DecimalFormat formatter = new DecimalFormat("#,###,###");
         String formattedPrice = formatter.format(product.getProductPrice());
