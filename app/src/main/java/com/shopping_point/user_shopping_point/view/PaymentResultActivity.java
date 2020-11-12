@@ -25,9 +25,10 @@ Product product;
         if( bundle.getString("paymentStatus").equals("success"))
         {
 
+
             binding.imgPaymentResult.setImageResource(R.drawable.ic_payment_sucess);
            binding.paymentStatus.setText(" Payment Successful ");
-            binding.txvPaymentOrderId.setVisibility(View.GONE);
+            binding.txvPaymentOrderId.setText(bundle.getString("orderId"));
             binding.txvPaymentAmmount.setText("Product Price : " + product.getProductPrice() + " ₹ ");
             binding.txvPaymentProductName.setText("Product Name : " + product.getProductName());
 

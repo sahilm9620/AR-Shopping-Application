@@ -41,6 +41,7 @@ import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 import com.shopping_point.user_shopping_point.R;
+import com.shopping_point.user_shopping_point.ViewModel.FromHistoryViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.HistoryViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.ProductViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.UploadPhotoViewModel;
@@ -78,6 +79,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
     private ProductAdapter laptopAdapter;
     private ProductAdapter historyAdapter;
     private ProductViewModel productViewModel;
+    private FromHistoryViewModel fromHistoryViewModel;
     private HistoryViewModel historyViewModel;
     private UploadPhotoViewModel uploadPhotoViewModel;
     private UserImageViewModel userImageViewModel;
@@ -94,7 +96,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         binding = DataBindingUtil.setContentView(this, R.layout.activity_product);
 
         int userID = LoginUtils.getInstance(this).getUserInfo().getId();
-
+        fromHistoryViewModel = ViewModelProviders.of(this).get(FromHistoryViewModel.class);
         productViewModel = ViewModelProviders.of(this).get(ProductViewModel.class);
         productViewModel.loadMobiles("mobile", userID);
         productViewModel.loadLaptops("laptop",userID);
@@ -468,7 +470,19 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         binding.included.content.txtReturn.setVisibility(view);
 
     }
+    private void signOut() {
+        LoginUtils.getInstance(this).clearAll();
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
 
+    private void deleteAllProductsInHistory() {
+        fromHistoryViewModel.removeAllFromHistory().observe(this, responseBody -> {
+            Log.d(TAG,getString(R.string.all_removed));
+        });
+        historyIsDeleted = true;
+    }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         int id = menuItem.getItemId();
@@ -497,7 +511,11 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
             Intent SettingsIntent = new Intent(this, NavSettings.class);
             startActivity(SettingsIntent);
         }
+        else  if (id == R.id.menu_logout) {
+            signOut();
+            deleteAllProductsInHistory();
 
+        }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

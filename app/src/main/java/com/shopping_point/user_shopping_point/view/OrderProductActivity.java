@@ -138,6 +138,7 @@ binding.AmountPrice.setText(formattedPrice + " ₹ ");
                 Intent paymentResultIntent = new Intent(OrderProductActivity.this, PaymentResultActivity.class);
                 paymentResultIntent.putExtra(PRODUCT, (product));
                 paymentResultIntent.putExtra("paymentStatus", "success");
+                paymentResultIntent.putExtra("orderId", orderid );
                 startActivity( paymentResultIntent);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -153,7 +154,7 @@ binding.AmountPrice.setText(formattedPrice + " ₹ ");
 
        // paymentResultIntent.putExtra(PRODUCT, (product));
 
-       // paymentResultIntent.putExtra("paymentStatus", "failed");
+        paymentResultIntent.putExtra("paymentStatus", "failed");
         startActivity( paymentResultIntent);
     }
 
