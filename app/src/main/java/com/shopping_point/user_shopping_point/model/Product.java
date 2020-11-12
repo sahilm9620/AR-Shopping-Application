@@ -23,12 +23,16 @@ public class Product implements Parcelable {
     private String productCategory;
     @SerializedName("image")
     private String productImage;
+    @SerializedName("rating")
+    private String productRating;
     @SerializedName("isFavourite")
     private int isFavourite;
     @SerializedName("isInCart")
     private int isInCart;
     // Include child Parcelable objects
     private Product mInfo;
+
+
 
 
     public Product(String productName, double productPrice, int productQuantity, String productSupplier, String productCategory) {
@@ -45,6 +49,10 @@ public class Product implements Parcelable {
 
     public Product() {
 
+    }
+
+    public String getProductRating() {
+        return productRating;
     }
 
     public int getProductId() {

@@ -72,7 +72,11 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
 
         DecimalFormat formatter = new DecimalFormat("#,###,###");
         String formattedPrice = formatter.format(currentProduct.getProductPrice());
-        holder.binding.txtProductPrice.setText(formattedPrice + " RS");
+        holder.binding.txtProductPrice.setText(formattedPrice + " ₹ ");
+
+        holder.binding.Rating.setText(currentProduct.getProductRating() + " ★ ");
+
+        holder.binding.txtProductDesc.setText(currentProduct.getProductDesc());
 
         // Load the Product image into ImageView
         String imageUrl =  currentProduct.getProductImage().replaceAll("\\\\", "/");
