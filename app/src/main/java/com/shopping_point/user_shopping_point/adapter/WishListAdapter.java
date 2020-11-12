@@ -1,6 +1,8 @@
 package com.shopping_point.user_shopping_point.adapter;
 
 import androidx.lifecycle.ViewModelProviders;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import androidx.databinding.DataBindingUtil;
 import androidx.annotation.NonNull;
@@ -63,6 +65,7 @@ public class WishListAdapter extends RecyclerView.Adapter<WishListAdapter.WishLi
         return new WishListViewHolder(wishlistItemBinding);
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(@NonNull WishListViewHolder holder, int position) {
         currentProduct = favoriteList.get(position);
@@ -71,6 +74,12 @@ public class WishListAdapter extends RecyclerView.Adapter<WishListAdapter.WishLi
         DecimalFormat formatter = new DecimalFormat("#,###,###");
         String formattedPrice = formatter.format(currentProduct.getProductPrice());
         holder.binding.txtProductPrice.setText(formattedPrice + " ₹ ");
+
+        holder.binding.DescofProduct.setText(currentProduct.getProductDesc());
+
+
+
+        holder.binding.Rating.setText(currentProduct.getProductRating() + " ★ ");
 
         // Load the Product image into ImageView
         String imageUrl = currentProduct.getProductImage().replaceAll("\\\\", "/");

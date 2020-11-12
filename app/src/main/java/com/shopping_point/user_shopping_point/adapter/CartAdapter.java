@@ -1,6 +1,8 @@
 package com.shopping_point.user_shopping_point.adapter;
 
 import androidx.lifecycle.ViewModelProviders;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import androidx.databinding.DataBindingUtil;
 import androidx.annotation.NonNull;
@@ -65,6 +67,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         return new CartViewHolder(cartListItemBinding);
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(@NonNull CartViewHolder holder, int position) {
         currentProduct = productsInCart.get(position);
@@ -73,6 +76,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         DecimalFormat formatter = new DecimalFormat("#,###,###");
         String formattedPrice = formatter.format(currentProduct.getProductPrice());
         holder.binding.txtProductPrice.setText(formattedPrice + " ₹ ");
+
+
 
         holder.binding.Rating.setText(currentProduct.getProductRating() + " ★ ");
 

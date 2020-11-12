@@ -20,6 +20,8 @@ public class Order implements Serializable {
     private double productPrice;
     @SerializedName("image")
     private String productImage;
+    @SerializedName("rating")
+    private String productRating;
     @SerializedName("status")
     private String orderDateStatus;
     @SerializedName("name")
@@ -34,6 +36,10 @@ public class Order implements Serializable {
     private String shippingzip;
     @SerializedName("phone")
     private String shippingPhone;
+
+    public String getProductRating() {
+        return productRating;
+    }
 
     public Order(){}
 

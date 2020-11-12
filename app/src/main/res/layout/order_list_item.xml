@@ -46,6 +46,22 @@
                 android:textSize="@dimen/dimen20sp" />
 
             <TextView
+                android:id="@+id/Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtProductDesc"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/imgProductImage"
+                android:background="#2BCC7C"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="4.7"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                android:textColor="@color/white" />
+
+            <TextView
                 android:id="@+id/orderPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

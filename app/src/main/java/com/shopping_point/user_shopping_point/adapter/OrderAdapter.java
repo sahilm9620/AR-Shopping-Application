@@ -1,5 +1,6 @@
 package com.shopping_point.user_shopping_point.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import androidx.databinding.DataBindingUtil;
 import androidx.annotation.NonNull;
@@ -45,6 +46,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
         return new OrderViewHolder(orderListItemBinding);
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(@NonNull OrderViewHolder holder, int position) {
         currentOrder = orderList.get(position);
@@ -59,6 +61,9 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
 
 
         holder.binding.orderPrice.setText(formattedPrice+ " ₹ ");
+
+      holder.binding.Rating.setText(currentOrder.getProductRating() + " ★ ");
+
 
 
         holder.binding.orderDate.setText("Orderd on : " + currentOrder.getOrderDate());

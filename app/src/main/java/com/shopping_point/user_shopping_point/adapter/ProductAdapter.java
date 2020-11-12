@@ -25,6 +25,7 @@ import com.shopping_point.user_shopping_point.ViewModel.FromCartViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.RemoveFavoriteViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.ToCartViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.ToHistoryViewModel;
+
 import com.shopping_point.user_shopping_point.databinding.ProductListItemBinding;
 import com.shopping_point.user_shopping_point.model.Cart;
 import com.shopping_point.user_shopping_point.model.Favorite;
@@ -76,6 +77,7 @@ public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.Pro
         return new ProductViewHolder(productListItemBinding);
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
         holder.setIsRecyclable(false);
@@ -92,6 +94,10 @@ public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.Pro
             String formattedPrice = formatter.format(product.getProductPrice());
             holder.binding.txtProductPrice.setText(formattedPrice + " ₹ ");
 
+
+
+
+            holder.binding.Rating.setText(product.getProductRating() + " ★ ");
             // Load the Product image into ImageView
             String imageUrl =  product.getProductImage().replaceAll("\\\\", "/");
 

@@ -23,6 +23,9 @@
                 android:src="@drawable/dummy_data"
                 tools:scaleType="fitXY" />
 
+
+
+
             <View
                 android:id="@+id/view"
                 android:layout_width="match_parent"
@@ -39,6 +42,8 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/dimen20sp"
                 tools:text="Apple iPhone 7 plus without Facetime - 32GB, 4LTC, Silver" />
+
+
             <TextView
                 android:id="@+id/ProductHighlights"
                 android:layout_width="match_parent"
@@ -156,6 +161,16 @@
 
         </LinearLayout>
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PRODUCT DETAILS"
+            android:textSize="@dimen/dimen20dp"
+            android:layout_marginTop="@dimen/dimen15dp"
+            android:layout_marginBottom="@dimen/dimen15dp"
+            android:layout_marginLeft="@dimen/dimen10dp"
+            android:textColor="@color/dark"
+            />
 
 
     </ScrollView>

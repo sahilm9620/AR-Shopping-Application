@@ -1,6 +1,8 @@
 package com.shopping_point.user_shopping_point.adapter;
 
 import androidx.lifecycle.ViewModelProviders;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import androidx.databinding.DataBindingUtil;
 import androidx.annotation.NonNull;
@@ -72,6 +74,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         return new SearchViewHolder(searchListItemBinding);
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(@NonNull SearchViewHolder holder, int position) {
         currentProduct = productList.get(position);
@@ -88,6 +91,9 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
                 .load(imageUrl)
                 .into(holder.binding.imgProductImage);
 
+
+
+        holder.binding.Rating.setText(currentProduct.getProductRating() + " ★ ");
         // If product is inserted
         if (currentProduct.isFavourite()==1){
             holder.binding.imgFavourite.setImageResource(R.drawable.ic_favorite_pink);
