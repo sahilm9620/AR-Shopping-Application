@@ -70,7 +70,7 @@ public class WishListAdapter extends RecyclerView.Adapter<WishListAdapter.WishLi
 
         DecimalFormat formatter = new DecimalFormat("#,###,###");
         String formattedPrice = formatter.format(currentProduct.getProductPrice());
-        holder.binding.txtProductPrice.setText(formattedPrice + " EGP");
+        holder.binding.txtProductPrice.setText(formattedPrice + " ₹");
 
         // Load the Product image into ImageView
         String imageUrl = currentProduct.getProductImage().replaceAll("\\\\", "/");

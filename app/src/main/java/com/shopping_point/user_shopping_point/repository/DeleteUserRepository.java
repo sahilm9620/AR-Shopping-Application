@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData;
 import android.util.Log;
 import android.widget.Toast;
 
+
 import com.shopping_point.user_shopping_point.net.RetrofitClient;
 
 import okhttp3.ResponseBody;
@@ -28,7 +29,7 @@ public class DeleteUserRepository{
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 Log.d(TAG, "onResponse Delete User: Succeeded");
-                Toast.makeText(application, "onResponse Delete User: Succeeded", Toast.LENGTH_SHORT).show();
+                Toast.makeText(application, "ACCOUNT Deleted successfully", Toast.LENGTH_SHORT).show();
                 ResponseBody responseBody = response.body();
                 if (response.body() != null) {
                     mutableLiveData.setValue(responseBody);

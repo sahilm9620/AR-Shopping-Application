@@ -4,20 +4,18 @@ import android.app.Application;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import android.content.Intent;
 import android.util.Log;
 import android.widget.Toast;
 
+
 import com.shopping_point.user_shopping_point.net.RetrofitClient;
-import com.shopping_point.user_shopping_point.view.AuthenticationActivity;
-import com.shopping_point.user_shopping_point.view.LoginActivity;
+
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static androidx.core.content.ContextCompat.startActivity;
 
 public class PasswordRepository {
 

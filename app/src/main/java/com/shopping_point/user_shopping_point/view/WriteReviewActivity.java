@@ -18,7 +18,7 @@ import com.shopping_point.user_shopping_point.databinding.ActivityWriteReviewBin
 import com.shopping_point.user_shopping_point.model.Review;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
 
-import java.io.IOException;
+
 
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.loadLocale;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT_ID;
@@ -74,12 +74,10 @@ public class WriteReviewActivity extends AppCompatActivity implements View.OnCli
         Review review = new Review(userId, productId, rate, feedback);
         writeReviewViewModel.writeReview(review).observe(this, responseBody -> {
             if ((responseBody != null)) {
-                try {
-                    Toast.makeText(this, responseBody.string(), Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(this, "Review Added Successfully", Toast.LENGTH_SHORT).show();
                     finish();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+
             }
         });
     }

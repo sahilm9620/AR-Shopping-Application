@@ -28,7 +28,7 @@ Product product;
 
             binding.imgPaymentResult.setImageResource(R.drawable.ic_payment_sucess);
            binding.paymentStatus.setText(" Payment Successful ");
-            binding.txvPaymentOrderId.setText(bundle.getString("orderId"));
+            binding.txvPaymentOrderId.setText("Order Id : "+ bundle.getString("orderId"));
             binding.txvPaymentAmmount.setText("Product Price : " + product.getProductPrice() + " ₹ ");
             binding.txvPaymentProductName.setText("Product Name : " + product.getProductName());
 
@@ -39,6 +39,7 @@ Product product;
             binding.txvPaymentOrderId.setVisibility(View.GONE);
             binding.txvPaymentAmmount.setVisibility(View.GONE);
             binding.txvPaymentProductName.setVisibility(View.GONE);
+            binding.btnHome.setText("RE-TRY");
 
         }
 

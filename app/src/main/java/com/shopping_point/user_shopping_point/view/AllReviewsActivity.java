@@ -55,7 +55,9 @@ public class AllReviewsActivity extends AppCompatActivity {
         reviewViewModel.getReviews(productId).observe(this, reviewApiResponse -> {
             if (reviewApiResponse != null) {
                 binding.rateProduct.setRating(reviewApiResponse.getAverageReview());
+                binding.rateProduct.setIsIndicator(true);
                 binding.rateNumber.setText(reviewApiResponse.getAverageReview() + getString(R.string.highestNumber));
+
                 reviewList = reviewApiResponse.getReviewList();
                 reviewAdapter = new ReviewAdapter(getApplicationContext(), reviewList);
                 binding.allReviewsList.setAdapter(reviewAdapter);

@@ -48,7 +48,7 @@ public class UploadPhotoRepository {
 
                 if (response.body() != null) {
                     mutableLiveData.setValue(responseBody);
-                    Toast.makeText(application, "IN RESPONSE BODY", Toast.LENGTH_SHORT).show();
+
                 }
             }
 

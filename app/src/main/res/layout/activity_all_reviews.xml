@@ -21,6 +21,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen10dp"
                 android:layout_weight="1.5"
+
                 android:gravity="start"
                 android:numStars="5"
                 android:progressTint="@color/orange"

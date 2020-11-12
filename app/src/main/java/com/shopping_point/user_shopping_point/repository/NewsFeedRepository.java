@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData;
 import android.util.Log;
 import android.widget.Toast;
 
+
 import com.shopping_point.user_shopping_point.model.NewsFeedResponse;
 import com.shopping_point.user_shopping_point.net.RetrofitClient;
 
@@ -32,7 +33,7 @@ public class NewsFeedRepository {
                 Log.d("onResponse", "" + response.code());
 
                 NewsFeedResponse responseBody = response.body();
-                Toast.makeText(application, response.body() + " ", Toast.LENGTH_SHORT).show();
+
                 if (response.body() != null) {
                     mutableLiveData.setValue(responseBody);
                 }

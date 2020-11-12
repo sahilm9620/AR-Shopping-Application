@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 import com.bumptech.glide.Glide;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.AddFavoriteViewModel;
@@ -25,7 +26,6 @@ import com.shopping_point.user_shopping_point.utils.RequestCallback;
 import java.text.DecimalFormat;
 import java.util.List;
 
-import static com.shopping_point.user_shopping_point.utils.Constant.LOCALHOST;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder> {
 
@@ -52,6 +52,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         this.mContext = mContext;
         this.productsInCart = productInCart;
         this.clickHandler = clickHandler;
+
         addFavoriteViewModel = ViewModelProviders.of(activity).get(AddFavoriteViewModel.class);
         removeFavoriteViewModel = ViewModelProviders.of(activity).get(RemoveFavoriteViewModel.class);
         fromCartViewModel = ViewModelProviders.of(activity).get(FromCartViewModel.class);

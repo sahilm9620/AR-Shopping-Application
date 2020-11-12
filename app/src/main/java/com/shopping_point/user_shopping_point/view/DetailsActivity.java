@@ -34,7 +34,7 @@ import java.util.List;
 
 
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.loadLocale;
-import static com.shopping_point.user_shopping_point.utils.Constant.LOCALHOST;
+
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCTID;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT_ID;
