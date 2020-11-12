@@ -6,7 +6,8 @@
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/lightGray">
+        android:background="@color/white"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,14 +25,6 @@
                 tools:scaleType="fitXY" />
 
 
-
-
-            <View
-                android:id="@+id/view"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen1dp"
-                android:background="@color/lightGray" />
-
             <TextView
                 android:id="@+id/nameOfProduct"
                 android:layout_width="match_parent"
@@ -42,7 +35,29 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/dimen20sp"
                 tools:text="Apple iPhone 7 plus without Facetime - 32GB, 4LTC, Silver" />
+            <TextView
+                android:id="@+id/Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtProductDesc"
+                android:layout_marginLeft="10dp"
 
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/imgProductImage"
+                android:background="#2BCC7C"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_margin="@dimen/dimen10dp"
+                android:text="4.7"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+                android:textColor="@color/white" />
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen1dp"
+                />
 
             <TextView
                 android:id="@+id/ProductHighlights"
@@ -54,6 +69,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/dimen20sp"
                 tools:text="Highlights" />
+
             <TextView
                 android:id="@+id/DescofProduct"
                 android:layout_width="match_parent"
@@ -161,16 +177,6 @@
 
         </LinearLayout>
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="PRODUCT DETAILS"
-            android:textSize="@dimen/dimen20dp"
-            android:layout_marginTop="@dimen/dimen15dp"
-            android:layout_marginBottom="@dimen/dimen15dp"
-            android:layout_marginLeft="@dimen/dimen10dp"
-            android:textColor="@color/dark"
-            />
 
 
     </ScrollView>

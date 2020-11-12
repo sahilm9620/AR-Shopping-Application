@@ -36,7 +36,6 @@ import com.shopping_point.user_shopping_point.utils.RequestCallback;
 
 import java.text.DecimalFormat;
 
-import static com.shopping_point.user_shopping_point.utils.Constant.LOCALHOST;
 import static com.shopping_point.user_shopping_point.utils.Utils.shareProduct;
 
 public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.ProductViewHolder> {
@@ -97,7 +96,7 @@ public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.Pro
 
 
 
-            holder.binding.Rating.setText(product.getProductRating() + " ★ ");
+         //   holder.binding.Rating.setText(product.getProductRating() + " ★ ");
             // Load the Product image into ImageView
             String imageUrl =  product.getProductImage().replaceAll("\\\\", "/");
 
