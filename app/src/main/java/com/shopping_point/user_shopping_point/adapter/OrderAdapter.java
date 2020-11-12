@@ -5,6 +5,8 @@ import android.content.Context;
 import androidx.databinding.DataBindingUtil;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,9 +64,20 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
 
         holder.binding.orderPrice.setText(formattedPrice+ " ₹ ");
 
-      holder.binding.Rating.setText(currentOrder.getProductRating() + " ★ ");
 
 
+
+        holder.binding.Rating.setText(currentOrder.getProductRating() + " ★ ");
+
+        double rating = Double.parseDouble(currentOrder.getProductRating());
+        if(rating<=3 && rating >=2)
+        {
+            holder.binding.Rating.setBackgroundColor(Color.parseColor("#FFA22C"));
+        }else if(rating<2)
+        {
+            holder.binding.Rating.setBackgroundColor(Color.parseColor("#FE0000"));
+
+        }
 
         holder.binding.orderDate.setText("Orderd on : " + currentOrder.getOrderDate());
     }

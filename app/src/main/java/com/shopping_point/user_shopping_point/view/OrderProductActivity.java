@@ -5,6 +5,8 @@ import androidx.lifecycle.ViewModelProviders;
 import android.app.Activity;
 import android.content.Intent;
 import androidx.databinding.DataBindingUtil;
+
+import android.graphics.Color;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -65,7 +67,21 @@ binding.amountDeliveryCharges.setText("FREE");
 binding.AmountPrice.setText(formattedPrice + " ₹ ");
 
 
+
         binding.Rating.setText(product.getProductRating() + " ★ ");
+
+        double rating = Double.parseDouble(product.getProductRating());
+        if(rating<=3 && rating >=2)
+        {
+            binding.Rating.setBackgroundColor(Color.parseColor("#FFA22C"));
+        }else if(rating<2)
+        {
+            binding.Rating.setBackgroundColor(Color.parseColor("#FE0000"));
+
+        }
+
+
+
 
         binding.btnPay.setOnClickListener(new View.OnClickListener() {
             @Override

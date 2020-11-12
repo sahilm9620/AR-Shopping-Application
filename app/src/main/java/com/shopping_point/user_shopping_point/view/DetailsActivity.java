@@ -4,6 +4,8 @@ package com.shopping_point.user_shopping_point.view;
 import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import androidx.databinding.DataBindingUtil;
+
+import android.graphics.Color;
 import android.os.Bundle;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -96,6 +98,17 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
 
 
         binding.Rating.setText(product.getProductRating() + " ★ ");
+
+        double rating = Double.parseDouble(product.getProductRating());
+        if(rating<=3 && rating >=2)
+        {
+            binding.Rating.setBackgroundColor(Color.parseColor("#FFA22C"));
+        }else if(rating<2)
+        {
+            binding.Rating.setBackgroundColor(Color.parseColor("#FE0000"));
+
+        }
+
         DecimalFormat formatter = new DecimalFormat("#,###,###");
         String formattedPrice = formatter.format(product.getProductPrice());
         binding.priceOfProduct.setText(formattedPrice + " ₹ ");
