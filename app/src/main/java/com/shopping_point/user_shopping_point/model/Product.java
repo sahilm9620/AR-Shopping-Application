@@ -35,12 +35,13 @@ public class Product implements Parcelable {
 
 
 
-    public Product(String productName, double productPrice, int productQuantity, String productSupplier, String productCategory) {
+    public Product(String productName, double productPrice, int productQuantity, String productSupplier, String productCategory,String productRating) {
         this.productName = productName;
         this.productPrice = productPrice;
         this.productQuantity = productQuantity;
         this.productSupplier = productSupplier;
         this.productCategory = productCategory;
+        this.productRating = productRating;
     }
 
     public String getProductDesc() {
@@ -111,6 +112,7 @@ public class Product implements Parcelable {
         out.writeString(productSupplier);
         out.writeString(productCategory);
         out.writeString(productImage);
+        out.writeString(productRating);
         out.writeInt(isFavourite);
         out.writeInt(isInCart);
         out.writeParcelable(mInfo, flags);
@@ -126,6 +128,7 @@ public class Product implements Parcelable {
         productSupplier = in.readString();
         productCategory = in.readString();
         productImage = in.readString();
+        productRating = in.readString();
         isFavourite = in.readInt();
         isInCart = in.readInt();
         mInfo = in.readParcelable(Product.class.getClassLoader());
