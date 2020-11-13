@@ -98,7 +98,7 @@ public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.Pro
 
 
 
-            holder.binding.Rating.setText(product.getProductRating() + " ★ ");
+            holder.binding.Rating.setText(product.getProductRating() + " ★");
 
             double rating = Double.parseDouble(product.getProductRating());
             if(rating<=3 && rating >=2)

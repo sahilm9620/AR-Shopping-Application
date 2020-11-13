@@ -59,6 +59,7 @@ public class CartActivity extends AppCompatActivity {
                         binding.emptyCart.setVisibility(View.VISIBLE);
                     } else {
                         binding.productsInCart.setVisibility(View.VISIBLE);
+
                     }
                     cartAdapter = new CartAdapter(getApplicationContext(), favoriteList, product -> {
                         Intent intent = new Intent(CartActivity.this, DetailsActivity.class);
@@ -70,11 +71,13 @@ public class CartActivity extends AppCompatActivity {
 
                 binding.loadingIndicator.setVisibility(View.GONE);
                 binding.productsInCart.setAdapter(cartAdapter);
+
                 cartAdapter.notifyDataSetChanged();
             });
         } else {
             binding.emptyCart.setVisibility(View.VISIBLE);
             binding.loadingIndicator.setVisibility(View.GONE);
+
             binding.emptyCart.setText(getString(R.string.no_internet_connection));
         }
     }

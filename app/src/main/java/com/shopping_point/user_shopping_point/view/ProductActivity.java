@@ -44,11 +44,14 @@ import com.bumptech.glide.request.RequestOptions;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.FromHistoryViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.HistoryViewModel;
+import com.shopping_point.user_shopping_point.ViewModel.NewsFeedViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.ProductViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.UploadPhotoViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.UserImageViewModel;
+import com.shopping_point.user_shopping_point.adapter.NewsFeedAdapter;
 import com.shopping_point.user_shopping_point.adapter.ProductAdapter;
 import com.shopping_point.user_shopping_point.databinding.ActivityProductBinding;
+import com.shopping_point.user_shopping_point.model.NewsFeed;
 import com.shopping_point.user_shopping_point.model.Product;
 import com.shopping_point.user_shopping_point.receiver.NetworkChangeReceiver;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
@@ -56,6 +59,7 @@ import com.shopping_point.user_shopping_point.utils.OnNetworkListener;
 import com.shopping_point.user_shopping_point.utils.Slide;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -87,16 +91,18 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
     private Snackbar snack;
     private CircleImageView circleImageView,circleImageView1;
     private Uri selectedImage;
-
+    private NewsFeedViewModel newsFeedViewModel;
     private NetworkChangeReceiver mNetworkReceiver;
-
+    public  ArrayList<String> poster;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         loadLocale(this);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_product);
-
+            poster=new ArrayList<>();
         int userID = LoginUtils.getInstance(this).getUserInfo().getId();
+
+        newsFeedViewModel = ViewModelProviders.of(this).get(NewsFeedViewModel.class);
         fromHistoryViewModel = ViewModelProviders.of(this).get(FromHistoryViewModel.class);
         productViewModel = ViewModelProviders.of(this).get(ProductViewModel.class);
         productViewModel.loadMobiles("mobile", userID);
@@ -114,17 +120,55 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         binding.included.content.txtReturn.setOnClickListener(this);
         binding.included.txtSearch.setOnClickListener(this);
 
+
+
+
+
+
+
+
+
+
         setUpViews();
 
         getMobiles();
         getLaptops();
         getHistory();
         getUserImage();
-
-        flipImages(Slide.getSlides());
+        getPosters();
+        flipImages(poster);
 
         mNetworkReceiver = new NetworkChangeReceiver();
         mNetworkReceiver.setOnNetworkListener(this);
+    }
+
+
+    private void getPosters() {
+        newsFeedViewModel.getPosters().observe(this, NewsFeedResponse -> {
+
+            List<NewsFeed> newsFeeds = NewsFeedResponse.getPosters();
+            for(int i=0;i<newsFeeds.size();i++)
+            {
+                NewsFeed currentNewsFeed = newsFeeds.get(i);
+
+                String posterUrl =  currentNewsFeed.getImage().replaceAll("\\\\", "/");
+            //   poster.add(posterUrl);
+
+
+                ImageView imageView = new ImageView(this);
+
+                Glide.with(this)
+                        .load(posterUrl)
+                        .into(imageView);
+
+
+                binding.included.content.imageSlider.addView(imageView);
+            }
+
+
+
+
+        });
     }
 
     private void setUpViews() {
@@ -223,10 +267,15 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
 
     }
 
-    private void flipImages(ArrayList<Integer> images) {
-        for (int image : images) {
+    private void flipImages(ArrayList<String> images) {
+        for (String image : images) {
             ImageView imageView = new ImageView(this);
-            imageView.setBackgroundResource(image);
+
+            Glide.with(this)
+                    .load(image)
+                    .into(imageView);
+
+
             binding.included.content.imageSlider.addView(imageView);
         }
 
