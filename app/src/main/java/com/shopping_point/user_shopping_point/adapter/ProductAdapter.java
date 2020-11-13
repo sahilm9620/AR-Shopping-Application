@@ -11,6 +11,8 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -97,6 +99,17 @@ public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.Pro
 
 
             holder.binding.Rating.setText(product.getProductRating() + " ★ ");
+
+            double rating = Double.parseDouble(product.getProductRating());
+            if(rating<=3 && rating >=2)
+            {
+                holder.binding.Rating.setBackgroundColor(Color.parseColor("#FFA22C"));
+            }else if(rating<2)
+            {
+                holder.binding.Rating.setBackgroundColor(Color.parseColor("#FE0000"));
+
+            }
+
             // Load the Product image into ImageView
             String imageUrl =  product.getProductImage().replaceAll("\\\\", "/");
 

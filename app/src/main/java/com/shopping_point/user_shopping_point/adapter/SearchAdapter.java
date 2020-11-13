@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -94,6 +96,16 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
 
 
         holder.binding.Rating.setText(currentProduct.getProductRating() + " ★ ");
+
+        double rating = Double.parseDouble(currentProduct.getProductRating());
+        if(rating<=3 && rating >=2)
+        {
+            holder.binding.Rating.setBackgroundColor(Color.parseColor("#FFA22C"));
+        }else if(rating<2)
+        {
+            holder.binding.Rating.setBackgroundColor(Color.parseColor("#FE0000"));
+
+        }
         // If product is inserted
         if (currentProduct.isFavourite()==1){
             holder.binding.imgFavourite.setImageResource(R.drawable.ic_favorite_pink);
