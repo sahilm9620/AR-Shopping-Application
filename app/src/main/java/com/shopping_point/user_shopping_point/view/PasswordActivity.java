@@ -26,7 +26,6 @@ import static com.shopping_point.user_shopping_point.view.AuthenticationActivity
 
 public class PasswordActivity extends AppCompatActivity implements View.OnClickListener
 {
-
     private static final String TAG = "PasswordActivity";
     private ActivityPasswordBinding binding;
     private PasswordViewModel passwordViewModel;
@@ -48,6 +47,8 @@ public class PasswordActivity extends AppCompatActivity implements View.OnClickL
         if(isActivityRunning){
 
             binding.currentPassword.setVisibility(View.GONE);
+            binding.txtCurrentPassword.setVisibility(View.GONE);
+            binding.txtCurrentPassInputLayout.setVisibility(View.GONE);
 
         }
     }
@@ -95,7 +96,6 @@ if(!isActivityRunning) {
         }
 
         passwordViewModel.updatePassword(newPassword,emailEntered).observe(this, responseBody -> {
-
 
             try {
                 Log.d(TAG, "onSucceed: " +responseBody.string());
