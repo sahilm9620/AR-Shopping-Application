@@ -14,7 +14,7 @@
     <string name="sign_in">Sign In</string>
     <string name="new_customer_create_your_account">New Customer? <font color='#008CFF'>Create Your Account</font></string>
     <string name="_2020_shoppingpoint" />
-    <string name="eight_characters">Password must be at least 8 characters</string>
+    <string name="eight_characters">Password must be eight characters.</string>
     <string name="create_your_account">Sign up</string>
     <string name="sign_in_already_a_customer">Already a member?<font color='#008CFF'> Sign-in</font></string>
     <!--    <string name="boldText">Sign-in.</string>-->

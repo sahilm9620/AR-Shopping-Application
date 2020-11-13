@@ -8,222 +8,255 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-
         tools:context=".view.SignUpActivity">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
 
-            android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="@dimen/dimen20dp"
-                android:textColor="@color/white"
-                android:text="@string/app_name"
-                android:textStyle="bold"
-                android:background="@color/blue"
-                android:textSize="@dimen/dimen35sp" />
+                android:layout_height="@dimen/dimen160dp"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="@dimen/dimen24dp"
-                android:paddingEnd="@dimen/dimen24dp"
-                android:layout_marginTop="@dimen/dimen20dp"
-                android:text="Become a Member"
-                android:textColor="@color/black"
-                android:textSize="@dimen/dimen30sp"
-                android:textStyle="bold" />
-
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen10dp"
-                android:layout_marginBottom="@dimen/dimen8dp"
-                android:hint="@string/name"
-                android:paddingLeft="@dimen/dimen24dp"
-                android:paddingRight="@dimen/dimen24dp">
-
-                <EditText
-                    android:id="@+id/userName"
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/custom_border"
-                    android:inputType="textPersonName"
-                    android:padding="@dimen/dimen5dp" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="@dimen/dimen160dp"
+                    android:background="@drawable/custom_back" />
+            </LinearLayout>
 
-
-            <com.google.android.material.textfield.TextInputLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen8dp"
-                android:layout_marginBottom="@dimen/dimen8dp"
-                android:hint="@string/email"
-                android:paddingLeft="@dimen/dimen24dp"
-                android:paddingRight="@dimen/dimen24dp">
+                android:orientation="vertical"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="@dimen/dimen20dp"
+                android:layout_marginLeft="@dimen/dimen20dp">
 
-                <EditText
-                    android:id="@+id/userEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/custom_border"
-                    android:inputType="textEmailAddress"
-                    android:padding="@dimen/dimen5dp" />
-            </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Become A Member"
+                    android:textStyle="bold"
+                    android:textColor="#ffff"
+                    android:textSize="26sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="Just one more step!!"
+                    android:textColor="#ffff"
+                    android:textSize="16sp"
+                    />
 
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="@dimen/dimen8dp"
-                android:layout_marginBottom="@dimen/dimen8dp"
-                android:paddingLeft="@dimen/dimen24dp"
-
-                >
-                <TableRow
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="10">
-
-
-
-                    <com.hbb20.CountryCodePicker
-                        android:id="@+id/ccp"
-                        android:layout_width="85dp"
-                        android:layout_height="50dp"
-                        android:layout_weight="1"
-                        app:ccp_autoDetectCountry="true"
-                        app:ccp_showNameCode="true"
-                        android:gravity="center"
-                        android:background="@drawable/custom_border"
-                        app:ccp_textSize="@dimen/dimen16sp"
-                        />
-
-
-                    <!--            <com.google.android.material.textfield.TextInputLayout-->
-                    <!--                android:layout_width="match_parent"-->
-                    <!--                android:layout_height="wrap_content"-->
-                    <!--                android:layout_marginTop="@dimen/dimen8dp"-->
-                    <!--                android:layout_marginBottom="@dimen/dimen8dp"-->
-                    <!--                android:hint="@string/contact"-->
-                    <!--                android:paddingLeft="@dimen/dimen24dp"-->
-                    <!--                android:layout_weight="8"-->
-                    <!--                android:paddingRight="@dimen/dimen24dp">-->
-
-
-
-                    <EditText
-                        android:id="@+id/userContact"
+                    android:layout_marginTop="@dimen/dimen20dp"
+                    android:layout_marginBottom="@dimen/dimen20dp"
+                    android:elevation="@dimen/dimen5dp"
+                    app:cardCornerRadius="@dimen/dimen20dp"
+                    >
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:maxLength="10"
-                        android:digits="1234567890"
-                        android:hint="@string/contact"
-                        android:layout_marginLeft="@dimen/dimen5dp"
-                        android:layout_marginRight="@dimen/dimen5dp"
-                        android:background="@drawable/custom_border"
-                        android:inputType="phone"
-                        android:padding="@dimen/dimen5dp"
-                        android:layout_weight="8"/>
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dimen20dp"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:textColor="#00a5ff"
+                            android:layout_marginTop="@dimen/dimen20dp"
+                            />
+
+                        <EditText
+                            android:id="@+id/userName"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                            android:inputType="textPersonName"
+                            android:hint="@string/name"
+                            android:padding="@dimen/dimen5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email"
+                            android:textColor="#00a5ff"
+                            android:layout_marginTop="@dimen/dimen20dp"
+                            />
+                        <EditText
+                            android:id="@+id/userEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/dimen5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact Number"
+                            android:textColor="#00a5ff"
+                            android:layout_marginTop="@dimen/dimen20dp"
+                            />
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen8dp"
+                            android:layout_marginBottom="@dimen/dimen8dp"
+
+                            >
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="10">
+
+                                <com.hbb20.CountryCodePicker
+                                    android:id="@+id/ccp"
+                                    android:layout_width="95dp"
+                                    android:layout_height="40dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    app:ccp_autoDetectCountry="true"
+                                    app:ccp_showNameCode="true"
+                                    app:ccp_textSize="@dimen/dimen16sp"
+
+                                    />
 
 
+                                <!--            <com.google.android.material.textfield.TextInputLayout-->
+                                <!--                android:layout_width="match_parent"-->
+                                <!--                android:layout_height="wrap_content"-->
+                                <!--                android:layout_marginTop="@dimen/dimen8dp"-->
+                                <!--                android:layout_marginBottom="@dimen/dimen8dp"-->
+                                <!--                android:hint="@string/contact"-->
+                                <!--                android:paddingLeft="@dimen/dimen24dp"-->
+                                <!--                android:layout_weight="8"-->
+                                <!--                android:paddingRight="@dimen/dimen24dp">-->
 
 
-                </TableRow>
-            </TableLayout>
+                                <EditText
+                                    android:id="@+id/userContact"
+                                    android:layout_width="222dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginLeft="@dimen/dimen5dp"
+                                    android:layout_marginRight="@dimen/dimen5dp"
+                                    android:layout_weight="8"
+                                    android:digits="1234567890"
+                                    android:hint="Contact Number"
+                                    android:inputType="phone"
+
+                                    android:maxLength="10"
+                                    android:padding="@dimen/dimen5dp" />
 
 
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen8dp"
-                android:layout_marginBottom="@dimen/dimen8dp"
-                android:hint="@string/password"
-                android:paddingLeft="@dimen/dimen24dp"
-                android:paddingRight="@dimen/dimen24dp"
-                app:passwordToggleContentDescription="Enter Your Password"
-                app:passwordToggleEnabled="true">
-
-                <EditText
-                    android:id="@+id/userPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/custom_border"
-                    android:imeOptions="actionUnspecified"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:padding="@dimen/dimen5dp"
-                    android:singleLine="true" />
-            </com.google.android.material.textfield.TextInputLayout>
+                            </TableRow>
+                        </TableLayout>
 
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen8dp"
-                android:layout_marginBottom="@dimen/dimen8dp"
-                android:hint="@string/confirm_password"
-                android:paddingLeft="@dimen/dimen24dp"
-                android:paddingRight="@dimen/dimen24dp"
-                app:passwordToggleContentDescription="Confirm Your Password"
-                app:passwordToggleEnabled="true">
-
-                <EditText
-                    android:id="@+id/userConfirmPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/custom_border"
-                    android:imeOptions="actionUnspecified"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:padding="@dimen/dimen5dp"
-                    android:singleLine="true" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dimen24dp"
-                android:drawableStart="@drawable/ic_info"
-                android:drawablePadding="@dimen/dimen10dp"
-                android:paddingLeft="@dimen/dimen24dp"
-                android:paddingRight="@dimen/dimen24dp"
-                android:text="@string/eight_characters"
-                android:textColor="#B2000000"
-                />
+                        <!--            </com.google.android.material.textfield.TextInputLayout>-->
 
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/buttonSignUp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dimen24dp"
-                android:layout_marginRight="@dimen/dimen24dp"
-                android:layout_marginBottom="@dimen/dimen24dp"
-                android:background="@drawable/custom_button_border2"
-                android:padding="@dimen/dimen12dp"
-                android:text="@string/create_your_account"
-                android:textColor="@color/white"
-                android:textAllCaps="false"
-                android:textSize="@dimen/dimen18sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen10dp"
+                            android:text="Password"
+                            android:textColor="#00a5ff" />
 
-            <TextView
-                android:id="@+id/textViewLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dimen24dp"
-                android:gravity="center"
-                android:textSize="@dimen/dimen16sp"
-                android:text="@string/sign_in_already_a_customer" />
-        </LinearLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            app:passwordToggleEnabled="true"
+                            android:layout_marginTop="@dimen/dimen10dp"
+                            android:layout_marginBottom="@dimen/dimen5dp"
+                            app:hintEnabled="false">
+
+
+                            <EditText
+                                android:id="@+id/userPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:hint="@string/password"
+                                android:padding="@dimen/dimen5dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen10dp"
+                            android:text="Confirm Password"
+                            android:textColor="#00a5ff" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            app:passwordToggleEnabled="true"
+                            android:layout_marginTop="@dimen/dimen10dp"
+                            android:layout_marginBottom="@dimen/dimen5dp"
+                            app:hintEnabled="false">
+
+
+                            <EditText
+                                android:hint="@string/confirm_password"
+                                android:id="@+id/userConfirmPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:padding="@dimen/dimen5dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen24dp"
+                            android:drawableStart="@drawable/ic_info"
+                            android:drawablePadding="@dimen/dimen10dp"
+                            android:paddingTop="@dimen/dimen5dp"
+                            android:text="@string/eight_characters"
+                            app:ccp_defaultNameCode="INR"
+                            android:textColor="#B2000000"
+                            android:layout_marginTop="@dimen/dimen10dp"
+                            />
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/buttonSignUp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen24dp"
+                            android:layout_marginRight="@dimen/dimen24dp"
+                            android:layout_marginBottom="@dimen/dimen24dp"
+                            android:background="@drawable/custom_button_border2"
+                            android:padding="@dimen/dimen12dp"
+                            android:text="@string/create_your_account"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/dimen18sp" />
+
+                        <TextView
+                            android:id="@+id/textViewLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen24dp"
+                            android:gravity="center"
+                            android:textSize="@dimen/dimen16sp"
+                            android:text="@string/sign_in_already_a_customer" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </RelativeLayout>
     </ScrollView>
 </layout>

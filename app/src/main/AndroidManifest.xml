@@ -41,7 +41,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".view.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/NoActionBar"/>
         <activity
             android:name=".view.SignUpActivity"
             android:theme="@style/NoActionBar" />
