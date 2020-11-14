@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/address_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        card_view:cardCornerRadius="@dimen/dimen5dp"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:elevation="@dimen/dimen1dp">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen15dp"
+
+                />
+
+
+            <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                  android:layout_marginLeft="@dimen/dimen20dp"
+                  android:layout_marginRight="@dimen/dimen20dp"
+                    android:layout_marginStart="@dimen/dimen10dp"
+                    android:layout_marginTop="@dimen/dimen20dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+
+                    android:text="Sahil Mulla"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/home"
+                android:layout_width="50dp"
+                android:layout_height="@dimen/dimen28dp"
+                android:layout_gravity="center"
+               android:layout_marginLeft="@dimen/dimen20dp"
+                android:layout_marginTop="@dimen/dimen10dp"
+                android:background="#EAE6E6"
+                android:gravity="center"
+                android:text="HOME"
+                android:textSize="10sp"
+                android:textColor="#676565" />
+
+
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="@dimen/dimen70dp"
+                android:layout_marginTop="@dimen/dimen15dp"
+                android:textColor="@color/darkBlue"
+               android:layout_marginLeft="@dimen/dimen70dp"
+                android:layout_height="32dp"
+                android:background="@drawable/custom_button_border"
+                android:text="Edit" />
+
+
+        </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen20dp"
+                    android:layout_marginStart="@dimen/dimen10dp"
+                    android:background="@color/white"
+
+                    android:layout_marginLeft="@dimen/dimen35dp"
+                    android:layout_marginRight="@dimen/dimen35dp"
+                    android:maxLines="2"
+                    android:textColor="@color/dark"
+                    tools:text="2088 B Kazi Colony Raviwar Peth " />
+
+                <TextView
+                    android:id="@+id/txvAddress2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen5dp"
+                    android:layout_marginStart="@dimen/dimen10dp"
+                    android:background="@color/white"
+
+                    android:layout_marginLeft="@dimen/dimen35dp"
+                    android:layout_marginRight="@dimen/dimen35dp"
+                    android:maxLines="2"
+                    android:textColor="@color/dark"
+                    tools:text="Wai Satara Pin- 412803" />
+
+                <TextView
+                    android:id="@+id/phoneNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/dimen5dp"
+                    android:layout_marginStart="@dimen/dimen10dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="@dimen/dimen30dp"
+                    android:layout_marginLeft="@dimen/dimen35dp"
+                    android:layout_marginRight="@dimen/dimen35dp"
+                    android:maxLines="2"
+                    android:textColor="@color/dark"
+                    tools:text="9604078826" />
+
+
+            </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

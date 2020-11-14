@@ -16,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".view.AddressActivity"></activity>
         <activity
             android:name=".view.PaymentResultActivity"
             android:theme="@style/NoActionBar" />
@@ -41,7 +42,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".view.LoginActivity"
-            android:theme="@style/NoActionBar"/>
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".view.SignUpActivity"
             android:theme="@style/NoActionBar" />
@@ -137,29 +138,26 @@
             android:name=".view.PasswordAssistantActivity"
             android:label="@string/password_assistance"
             android:parentActivityName=".view.LoginActivity">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.shopping_point.user_shopping_point.view.LoginActivity" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shopping_point.user_shopping_point.view.LoginActivity" />
         </activity>
         <activity
             android:name=".view.AuthenticationActivity"
             android:label="@string/passs_authentication"
-            android:parentActivityName=".view.PasswordAssistantActivity" >
+            android:parentActivityName=".view.PasswordAssistantActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.shopping_point.user_shopping_point.view.PasswordAssistantActivity" />
         </activity>
-
-
-        <activity android:name=".view.UpdateProfileActivity"
+        <activity
+            android:name=".view.UpdateProfileActivity"
             android:label="@string/updateprofile"
             android:parentActivityName=".view.AccountActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.shopping_point.user_shopping_point.view.AccountActivity" />
         </activity>
-
-
         <activity
             android:name=".view.NewsFeedActivity"
             android:label="@string/news_feed"
@@ -176,16 +174,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
-
-
-        <activity android:name=".view.ShippingAddressActivity"
+        <activity
+            android:name=".view.ShippingAddressActivity"
             android:label="@string/Address"
             android:parentActivityName=".view.DetailsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.shopping_point.user_shopping_point.view.ProductActivity" />
         </activity>
-        <activity android:name=".view.OrderProductActivity"
+        <activity
+            android:name=".view.OrderProductActivity"
             android:label="@string/orderdetails"
             android:parentActivityName=".view.DetailsActivity">
             <meta-data
@@ -210,20 +208,20 @@
         </activity>
         <activity
             android:name=".view.SearchActivity"
-            android:theme="@style/noAnimTheme"
+            android:parentActivityName=".view.AccountActivity"
+            android:theme="@style/noAnimTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shopping_point.user_shopping_point.view.AccountActivity" />
+        </activity>
+        <activity
+            android:name=".view.ResultActivity"
             android:parentActivityName=".view.AccountActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.shopping_point.user_shopping_point.view.AccountActivity" />
         </activity>
 
-
-        <activity android:name=".view.ResultActivity"
-            android:parentActivityName=".view.AccountActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.shopping_point.user_shopping_point.view.AccountActivity" />
-        </activity>
         <receiver android:name=".receiver.NetworkChangeReceiver" />
 
         <meta-data

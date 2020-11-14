@@ -1,5 +1,7 @@
 package com.shopping_point.user_shopping_point.net;
 
+import com.shopping_point.user_shopping_point.model.Address;
+import com.shopping_point.user_shopping_point.model.AddressList;
 import com.shopping_point.user_shopping_point.model.Cart;
 import com.shopping_point.user_shopping_point.model.CartApiResponse;
 import com.shopping_point.user_shopping_point.model.Favorite;
@@ -113,4 +115,9 @@ public interface Api {
 
     @POST("users/update_profile.php")
     Call<UpdateApiResponse> updateProfile(@Body Update update);
+
+
+    @GET("address/getAddress.php")
+    Call<AddressList> getAddress(@Query("userId") int userId);
+
 }

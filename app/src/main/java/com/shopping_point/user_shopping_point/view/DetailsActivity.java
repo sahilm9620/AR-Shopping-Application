@@ -210,7 +210,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
             Intent cartIntent = new Intent(DetailsActivity.this, CartActivity.class);
             startActivity(cartIntent);
         }else if(view.getId() == R.id.buy){
-            Intent shippingIntent = new Intent(DetailsActivity.this, ShippingAddressActivity.class);
+            Intent shippingIntent = new Intent(DetailsActivity.this, AddressActivity.class);
             shippingIntent.putExtra(PRODUCTID, product.getProductId());
             shippingIntent.putExtra(PRODUCT, (product));
             startActivity(shippingIntent);
