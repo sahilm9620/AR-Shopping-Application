@@ -7,6 +7,7 @@
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dimen10dp"
         android:background="@color/white"
         >
 
@@ -14,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+
             android:layout_marginBottom="@dimen/dimen15dp"
             tools:context=".view.DetailsActivity">
 
@@ -197,7 +199,7 @@
                 android:layout_height="wrap_content"
                 android:minHeight="370dp"
                 android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
+                android:layout_marginEnd="10dp"
                 tools:listitem="@layout/product_list_item"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
