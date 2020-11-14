@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
         android:id="@+id/scroll"
@@ -13,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginBottom="@dimen/dimen15dp"
             tools:context=".view.DetailsActivity">
 
             <ImageView
@@ -175,6 +177,31 @@
                 android:background="@color/white"
                 android:visibility="gone" />
 
+
+
+            <TextView
+                android:id="@+id/textViewMobiles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="@dimen/dimen10dp"
+                android:text="Similar Products"
+                android:textSize="@dimen/dimen20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtFirst" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listOfMobiles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="370dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                tools:listitem="@layout/product_list_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMobiles" />
 
         </LinearLayout>
 

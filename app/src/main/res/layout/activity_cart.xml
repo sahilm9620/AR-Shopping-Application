@@ -45,5 +45,19 @@
             android:layout_height="match_parent"
             android:visibility="gone"/>
 
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:id="@+id/buttonSignUp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="@dimen/dimen24dp"-->
+<!--            android:layout_marginRight="@dimen/dimen24dp"-->
+<!--            android:foregroundGravity="bottom"-->
+<!--            android:background="#FB6D01"-->
+<!--            android:padding="@dimen/dimen12dp"-->
+<!--            android:text="CheckOut"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textSize="@dimen/dimen18sp" />-->
     </LinearLayout>
 </layout>

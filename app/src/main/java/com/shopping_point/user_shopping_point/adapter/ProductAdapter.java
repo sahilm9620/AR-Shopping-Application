@@ -35,6 +35,7 @@ import com.shopping_point.user_shopping_point.model.History;
 import com.shopping_point.user_shopping_point.model.Product;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
 import com.shopping_point.user_shopping_point.utils.RequestCallback;
+import com.shopping_point.user_shopping_point.view.DetailsActivity;
 
 import java.text.DecimalFormat;
 
@@ -52,6 +53,7 @@ public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.Pro
 
     // Create a final private MovieAdapterOnClickHandler called mClickHandler
     private ProductAdapterOnClickHandler clickHandler;
+
 
     /**
      * The interface that receives onClick messages.
