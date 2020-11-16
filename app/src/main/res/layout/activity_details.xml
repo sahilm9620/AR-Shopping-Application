@@ -19,7 +19,7 @@
             android:layout_marginBottom="@dimen/dimen15dp"
             tools:context=".view.DetailsActivity">
 
-            <ImageView
+            <com.github.chrisbanes.photoview.PhotoView
                 android:id="@+id/imageOfProduct"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"

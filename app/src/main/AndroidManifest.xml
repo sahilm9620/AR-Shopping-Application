@@ -16,7 +16,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".view.AddressActivity"></activity>
+        <activity android:name=".view.FullImageActivity"
+            android:theme="@style/NoActionBar"
+            android:parentActivityName=".view.DetailsActivity"
+            >
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shopping_point.user_shopping_point.view.DetailsActivity" />
+
+        </activity>
+        <activity android:name=".view.AddressActivity" />
         <activity
             android:name=".view.PaymentResultActivity"
             android:theme="@style/NoActionBar" />

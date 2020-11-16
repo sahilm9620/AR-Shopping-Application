@@ -2,10 +2,7 @@ package com.shopping_point.user_shopping_point.view;
 
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
+
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
@@ -18,9 +15,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.paging.PagedList;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 
 import com.bumptech.glide.Glide;
@@ -51,7 +50,7 @@ import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCTID;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT_ID;
 import static com.shopping_point.user_shopping_point.utils.InternetUtils.isNetworkConnected;
-import static com.shopping_point.user_shopping_point.view.AccountActivity.historyIsDeleted;
+
 
 public class DetailsActivity extends AppCompatActivity implements View.OnClickListener, ProductAdapter.ProductAdapterOnClickHandler {
 
@@ -63,12 +62,17 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
     private ProductViewModel productViewModel;
     private ReviewAdapter reviewAdapter;
     private List<Review> reviewList;
+
     private Product product;
     private ProductAdapter mobileAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         loadLocale(this);
+
+
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_details);
 
         reviewViewModel = ViewModelProviders.of(this).get(ReviewViewModel.class);
@@ -84,7 +88,6 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         setUpViews();
 
 
-
         binding.txtSeeAllReviews.setOnClickListener(this);
 
         binding.addToCart.setOnClickListener(this);
@@ -95,11 +98,22 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         setUpRecycleView();
 
         getReviewsOfProduct();
+
+        binding.imageOfProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailsActivity.this, FullImageActivity.class);
+                intent.putExtra(PRODUCT, (product));
+                startActivity(intent);
+
+            }
+        });
+
+
     }
 
 
     private void setUpViews() {
-
 
 
         binding.listOfMobiles.setHasFixedSize(true);
@@ -107,8 +121,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         binding.listOfMobiles.setItemAnimator(null);
 
 
-
-        mobileAdapter = new ProductAdapter(this,this );
+        mobileAdapter = new ProductAdapter(this, this);
 
 
     }
@@ -141,7 +154,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         // Receive the product object
         product = getIntent().getParcelableExtra(PRODUCT);
 
-        Log.d(TAG,"isFavourite " + product.isFavourite() + " isInCart " + product.isInCart());
+        Log.d(TAG, "isFavourite " + product.isFavourite() + " isInCart " + product.isInCart());
 
         // Set Custom ActionBar Layout
         ActionBar actionBar = getSupportActionBar();
@@ -158,11 +171,9 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         binding.Rating.setText(product.getProductRating() + " ★ ");
 
         double rating = Double.parseDouble(product.getProductRating());
-        if(rating<=3 && rating >=2)
-        {
+        if (rating <= 3 && rating >= 2) {
             binding.Rating.setBackgroundColor(Color.parseColor("#FFA22C"));
-        }else if(rating<2)
-        {
+        } else if (rating < 2) {
             binding.Rating.setBackgroundColor(Color.parseColor("#FE0000"));
 
         }
@@ -171,11 +182,15 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         String formattedPrice = formatter.format(product.getProductPrice());
         binding.priceOfProduct.setText(formattedPrice + " ₹ ");
 
-        String imageUrl =  product.getProductImage().replaceAll("\\\\", "/");
+        String imageUrl = product.getProductImage().replaceAll("\\\\", "/");
         Glide.with(this)
                 .load(imageUrl)
                 .into(binding.imageOfProduct);
+
     }
+
+
+
 
     private void getReviewsOfProduct() {
         reviewViewModel.getReviews(product.getProductId()).observe(this, reviewApiResponse -> {
