@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.bumptech.glide.Glide;
 import com.shopping_point.user_shopping_point.R;
@@ -36,7 +37,12 @@ public class FullImageActivity extends AppCompatActivity {
                 .load(imageUrl)
                 .into(binding.imageOfProduct);
 
-
+binding.canceImg.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        finish();
+    }
+});
 
 
 
