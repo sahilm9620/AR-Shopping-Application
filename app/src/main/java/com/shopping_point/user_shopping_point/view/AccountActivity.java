@@ -84,7 +84,7 @@ public class AccountActivity extends AppCompatActivity implements View.OnClickLi
     private void getUserImage() {
         userImageViewModel.getUserImage(LoginUtils.getInstance(this).getUserInfo().getId()).observe(this, response -> {
             if (response != null) {
-                String imageUrl = LOCALHOST + response.getImage().replaceAll("\\\\", "/");
+                String imageUrl =  response.getImage().replaceAll("\\\\", "/");
                 Toast.makeText(this, imageUrl, Toast.LENGTH_SHORT).show();
                 RequestOptions options = new RequestOptions()
                         .centerCrop()

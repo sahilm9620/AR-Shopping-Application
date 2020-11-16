@@ -225,7 +225,7 @@
     <string name="zip_required">Zip Required</string>
     <string name="cardnumber_required">Card Number Required</string>
     <string name="passs_authentication">Password Authentication</string>
-    <string name="Address">Address</string>
+    <string name="Address">Add Address</string>
     <string name="orderdetails">Order Details</string>
     <string name="updateprofile">Update Profile</string>
 

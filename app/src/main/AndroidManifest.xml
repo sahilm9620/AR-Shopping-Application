@@ -26,7 +26,13 @@
                 android:value="com.shopping_point.user_shopping_point.view.DetailsActivity" />
 
         </activity>
-        <activity android:name=".view.AddressActivity" />
+        <activity android:name=".view.AddressActivity"
+            android:label="Select Address"
+            android:parentActivityName=".view.DetailsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shopping_point.user_shopping_point.view.AddressActivity" />
+        </activity>
         <activity
             android:name=".view.PaymentResultActivity"
             android:theme="@style/NoActionBar" />

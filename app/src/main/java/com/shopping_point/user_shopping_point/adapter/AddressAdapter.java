@@ -62,7 +62,7 @@ if(address!=null){
 
     holder.binding.txtName.setText(LoginUtils.getInstance(mContext).getUserInfo().getUser_name());
     holder.binding.phoneNo.setText(address.getPhone());
-    holder.binding.txvAddress.setText(address.getAddress() + address.getCity());
+    holder.binding.txvAddress.setText(address.getAddress() + ", " + address.getCity() + ", ");
     holder.binding.txvAddress2.setText(address.getCountry() + " Pin - " + address.getZip());
 }
 
