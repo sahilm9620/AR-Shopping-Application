@@ -59,12 +59,12 @@ binding.txtProductName.setText(product.getProductName());
                 .load(product.getProductImage())
                 .into(binding.imgProductImage);
 
-        binding.txtUserName.setText("Name : " + address.getName());
+
         binding.txtUserPhone.setText("Contact No : " + address.getPhone());
 
         binding.txtUserAddress.setText("Address : " + address.getAddress() + " " + address.getCity() + " " + address.getCountry() + " - " + address.getZip());
 
-binding.txtUserName.setText(" Name : " + LoginUtils.getInstance(this).getUserInfo().getUser_name());
+binding.txtUserName.setText(" Name : " +address.getName());
 binding.txtUserPhone.setText("Contact : " + LoginUtils.getInstance(this).getUserInfo().getUser_contact_number());
         DecimalFormat formatter = new DecimalFormat("#,###,###");
         String formattedPrice = formatter.format(product.getProductPrice());
@@ -89,7 +89,15 @@ binding.AmountPrice.setText(formattedPrice + " ₹ ");
 
         }
 
-
+        binding.btnChangeAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OrderProductActivity.this, AddressActivity.class);
+                intent.putExtra(PRODUCT, (product));
+                intent.putExtra(ADDRESS, (address));
+                startActivity(intent);
+            }
+        });
 
 
         binding.btnPay.setOnClickListener(new View.OnClickListener() {

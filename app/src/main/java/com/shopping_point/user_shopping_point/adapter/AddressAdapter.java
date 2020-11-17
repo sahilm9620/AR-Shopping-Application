@@ -15,8 +15,6 @@ import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.AddressViewModel;
 import com.shopping_point.user_shopping_point.databinding.AddressListBinding;
 import com.shopping_point.user_shopping_point.model.Address;
-import com.shopping_point.user_shopping_point.model.Product;
-import com.shopping_point.user_shopping_point.storage.LoginUtils;
 import com.shopping_point.user_shopping_point.view.AddressActivity;
 
 import java.util.List;
@@ -114,7 +112,7 @@ holder.binding.addressList.setOnClickListener(new View.OnClickListener() {
             switch (v.getId()) {
                 case R.id.address_list:
                     // Send product through click
-                    clickHandler.onClick(address);
+                   // clickHandler.onClick(address);
 
                     break;
                 case R.id.radioButton:

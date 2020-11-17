@@ -111,8 +111,8 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
 
 
             Intent orderProductIntent = new Intent(ShippingAddressActivity.this, AddressActivity.class);
-//            orderProductIntent.putExtra(PRODUCTID,productId);
-//            orderProductIntent.putExtra(PRODUCT, (product));
+           orderProductIntent.putExtra(PRODUCTID,productId);
+            orderProductIntent.putExtra(PRODUCT, (product));
 
             startActivity(orderProductIntent);
         });

@@ -14,13 +14,12 @@ import android.view.View;
 import com.google.android.material.snackbar.Snackbar;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.AddressViewModel;
-import com.shopping_point.user_shopping_point.ViewModel.ReviewViewModel;
+
 import com.shopping_point.user_shopping_point.adapter.AddressAdapter;
-import com.shopping_point.user_shopping_point.adapter.ProductAdapter;
+
 import com.shopping_point.user_shopping_point.databinding.ActivityAddressBinding;
 import com.shopping_point.user_shopping_point.model.Address;
-import com.shopping_point.user_shopping_point.model.AddressList;
-import com.shopping_point.user_shopping_point.model.Order;
+
 import com.shopping_point.user_shopping_point.model.Product;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
 import com.shopping_point.user_shopping_point.utils.OnNetworkListener;
@@ -30,7 +29,7 @@ import static com.shopping_point.user_shopping_point.utils.Constant.ADDRESS;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
 
 public class AddressActivity extends AppCompatActivity implements  OnNetworkListener, AddressAdapter.AddressAdapterOnClickHandler {
- private  ActivityAddressBinding binding;
+ private ActivityAddressBinding binding;
     private  AddressViewModel addressViewModel;
     private AddressAdapter addressAdapter;
     private Snackbar snack;
@@ -52,12 +51,13 @@ binding.AddAddress.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         Intent newaddress = new Intent(AddressActivity.this, ShippingAddressActivity.class);
+        newaddress.putExtra(PRODUCT, (product));
         startActivity(newaddress);
     }
 });
         setUpRecyclerView();
 
-        getVendors();
+        getAddress();
 
 
 
@@ -68,7 +68,6 @@ binding.AddAddress.setOnClickListener(new View.OnClickListener() {
     private void setUpRecyclerView() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
-
         binding.included.addressRecyclerView.setLayoutManager(layoutManager);
         binding.included.addressRecyclerView.setHasFixedSize(true);
 
@@ -76,7 +75,7 @@ binding.AddAddress.setOnClickListener(new View.OnClickListener() {
         binding.included.addressRecyclerView.addItemDecoration(dividerItemDecoration);
     }
 
-    private void getVendors() {
+    private void getAddress() {
         addressViewModel.getAddress(LoginUtils.getInstance(this).getUserInfo().getId()).observe(this, address -> {
             addressAdapter = new AddressAdapter(getApplicationContext(),address.getAddressList(),this,this::onClick);
             binding.included.addressRecyclerView.setAdapter(addressAdapter);
