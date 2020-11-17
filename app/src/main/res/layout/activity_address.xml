@@ -46,13 +46,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#F66F27"
-        android:textColor="@color/white"
-        android:textSize="@dimen/dimen15sp"
-
         android:text="Deliver Here"
+        android:textColor="@color/white"
+android:layout_marginBottom="@dimen/dimen10dp"
+        android:textSize="@dimen/dimen15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/included" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
