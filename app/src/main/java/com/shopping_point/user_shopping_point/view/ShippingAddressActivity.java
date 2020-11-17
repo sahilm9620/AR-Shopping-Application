@@ -18,16 +18,11 @@ import com.shopping_point.user_shopping_point.model.Address;
 import com.shopping_point.user_shopping_point.model.Product;
 
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
-import com.shopping_point.user_shopping_point.utils.Validation;
 
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Random;
 
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCTID;
-import static com.shopping_point.user_shopping_point.utils.Constant.SHIPPING;
+
 
 public class ShippingAddressActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -101,9 +96,9 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
             return;
         }
 
-        String id =  generateAddress_id();
+
        // Toast.makeText(this, id, Toast.LENGTH_SHORT).show();
-        Address shipping = new Address(id,name,address, city, country, zip,userId,phone);
+        Address shipping = new Address(name,address, city, country, zip,userId,phone);
 
         shippingViewModel.addShippingAddress(shipping).observe(this, responseBody -> {
 
@@ -119,15 +114,5 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
     }
 
 
-    private String generateAddress_id() {
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat df = new SimpleDateFormat("ddMMyyyy");
-        String date = df.format(c.getTime());
-        Random rand = new Random();
-        int min =1000, max= 9999;
-// nextInt as provided by Random is exclusive of the top value so you need to add 1
-        int randomNum = rand.nextInt((max - min) + 1) + min;
-       String Address_id = "ADR" +  date+String.valueOf(randomNum);
-        return Address_id;
-    }
+
 }

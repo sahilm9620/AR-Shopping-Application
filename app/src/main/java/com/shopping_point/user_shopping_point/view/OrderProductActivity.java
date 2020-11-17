@@ -166,7 +166,7 @@ binding.AmountPrice.setText(formattedPrice + " ₹ ");
     public void onPaymentSuccess(String razorpayPaymentId, PaymentData paymentData) {
    String orderid = "OD" + generateOrderId();
 
-        Ordering ordering = new Ordering(orderid,paymentData.getPaymentId(),LoginUtils.getInstance(this).getUserInfo().getId(),product.getProductId());
+        Ordering ordering = new Ordering(orderid,paymentData.getPaymentId(),LoginUtils.getInstance(this).getUserInfo().getId(),product.getProductId(),address.getAddress_id());
         orderingViewModel.orderProduct(ordering).observe(this, responseBody -> {
             try {
                 Toast.makeText(OrderProductActivity.this, responseBody.string() + "", Toast.LENGTH_SHORT).show();

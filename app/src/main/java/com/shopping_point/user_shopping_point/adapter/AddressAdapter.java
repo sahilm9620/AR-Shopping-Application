@@ -66,16 +66,19 @@ if(address!=null){
     holder.binding.txvAddress2.setText(address.getCountry() + " Pin - " + address.getZip());
 }
 
-holder.binding.addressList.setOnClickListener(new View.OnClickListener() {
+holder.binding.radioButton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         Toast.makeText(mContext, address.getAddress_id(), Toast.LENGTH_SHORT).show();
         holder.binding.button.setVisibility(View.VISIBLE);
+
+
         clickHandler.onClick(address);
 
 
     }
 });
+
 
 
 

@@ -28,8 +28,8 @@ public class Address implements Parcelable {
 
     private Address mInfo;
 
-    public Address(String id, String name, String address, String city, String country, String zip, int userId,String phone) {
-        this.address_id=id;
+    public Address( String name, String address, String city, String country, String zip, int userId,String phone) {
+
         this.name=name;
         this.address = address;
         this.city = city;

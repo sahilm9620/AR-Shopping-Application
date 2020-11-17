@@ -2,7 +2,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/addressRecyclerView"
         android:layout_width="match_parent"
@@ -14,6 +17,6 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
-
+    </RadioGroup>
 
 </layout>
