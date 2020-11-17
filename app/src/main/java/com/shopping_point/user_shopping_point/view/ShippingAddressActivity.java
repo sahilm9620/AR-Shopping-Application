@@ -62,6 +62,8 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
         int userId = LoginUtils.getInstance(this).getUserInfo().getId();
         Intent intent = getIntent();
         int productId = intent.getIntExtra(PRODUCTID, 0);
+        String type = null;
+
 
         if (name.isEmpty()) {
             binding.txtName.setError("Name Required");
@@ -95,10 +97,24 @@ public class ShippingAddressActivity extends AppCompatActivity implements View.O
             binding.phone.requestFocus();
             return;
         }
+if(binding.radioGroup.getCheckedRadioButtonId()==-1)
+{
+    Toast.makeText(this, "Select type of address ", Toast.LENGTH_SHORT).show();
+    return;
+}
 
+   if(binding.work.isChecked())
+   {
+       type="WORK";
+   }else if(binding.home.isChecked())
+   {
+       type="HOME";
+   }
 
        // Toast.makeText(this, id, Toast.LENGTH_SHORT).show();
-        Address shipping = new Address(name,address, city, country, zip,userId,phone);
+        Address shipping = new Address(name,address, city, country, zip,userId,phone,type);
+
+        Toast.makeText(this,shipping.getName() , Toast.LENGTH_SHORT).show();
 
         shippingViewModel.addShippingAddress(shipping).observe(this, responseBody -> {
 

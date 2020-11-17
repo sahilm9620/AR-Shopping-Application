@@ -187,6 +187,9 @@
             android:textColor="@color/vDarkGray"
             android:layout_marginTop="@dimen/dimen5dp"
             />
+
+
+
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -194,14 +197,19 @@
             android:layout_marginBottom="@dimen/dimen8dp"
 
             >
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="10">
 
-
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/home"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dimen5dp"
@@ -216,6 +224,7 @@
 
 
                 <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/work"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/dimen5dp"
@@ -227,8 +236,9 @@
                     android:gravity="center"
                     android:padding="@dimen/dimen5dp"
                     android:text="WORK" />
-
+            </RadioGroup>
         </TableRow>
+
         </TableLayout>
 
 
