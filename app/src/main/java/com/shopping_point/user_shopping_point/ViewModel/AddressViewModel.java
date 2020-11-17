@@ -6,7 +6,6 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.shopping_point.user_shopping_point.model.Address;
 import com.shopping_point.user_shopping_point.model.AddressList;
 import com.shopping_point.user_shopping_point.repository.AddressRepository;
 

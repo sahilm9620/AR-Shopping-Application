@@ -48,4 +48,8 @@
         <item name="colorAccent">@color/colorPrimary</item>
         <item name="android:windowAnimationStyle">@null</item>
     </style>
+
+    <style name="MyHintStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/red</item>
+    </style>
 </resources>

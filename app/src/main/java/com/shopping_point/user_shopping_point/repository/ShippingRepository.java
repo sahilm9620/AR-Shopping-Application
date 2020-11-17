@@ -7,7 +7,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 
-import com.shopping_point.user_shopping_point.model.Shipping;
+import com.shopping_point.user_shopping_point.model.Address;
 import com.shopping_point.user_shopping_point.net.RetrofitClient;
 
 import okhttp3.ResponseBody;
@@ -24,10 +24,10 @@ public class ShippingRepository {
         this.application = application;
     }
 
-    public LiveData<ResponseBody> addShippingAddress(Shipping shipping) {
+    public LiveData<ResponseBody> addShippingAddress(Address address) {
         final MutableLiveData<ResponseBody> mutableLiveData = new MutableLiveData<>();
 
-        RetrofitClient.getInstance().getApi().addShippingAddress(shipping).enqueue(new Callback<ResponseBody>() {
+        RetrofitClient.getInstance().getApi().addShippingAddress(address).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 Log.d(TAG, "onResponse: " + response.body());

@@ -22,6 +22,7 @@ import com.razorpay.PaymentResultWithDataListener;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.OrderingViewModel;
 import com.shopping_point.user_shopping_point.databinding.ActivityOrderProductBinding;
+import com.shopping_point.user_shopping_point.model.Address;
 import com.shopping_point.user_shopping_point.model.Ordering;
 import com.shopping_point.user_shopping_point.model.Product;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
@@ -34,6 +35,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Random;
 
+import static com.shopping_point.user_shopping_point.utils.Constant.ADDRESS;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
 
 
@@ -42,18 +44,25 @@ public class OrderProductActivity extends AppCompatActivity implements View.OnCl
     private ActivityOrderProductBinding binding;
     private OrderingViewModel orderingViewModel;
     private Product product;
+    private Address address;
     String orderIdString;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_order_product);
         product = getIntent().getParcelableExtra(PRODUCT);
+        address = getIntent().getParcelableExtra(ADDRESS);
         orderingViewModel = ViewModelProviders.of(this).get(OrderingViewModel.class);
 
 binding.txtProductName.setText(product.getProductName());
         Glide.with(this)
                 .load(product.getProductImage())
                 .into(binding.imgProductImage);
+
+        binding.txtUserName.setText("Name : " + address.getName());
+        binding.txtUserPhone.setText("Contact No : " + address.getPhone());
+
+        binding.txtUserAddress.setText("Address : " + address.getAddress() + " " + address.getCity() + " " + address.getCountry() + " - " + address.getZip());
 
 binding.txtUserName.setText(" Name : " + LoginUtils.getInstance(this).getUserInfo().getUser_name());
 binding.txtUserPhone.setText("Contact : " + LoginUtils.getInstance(this).getUserInfo().getUser_contact_number());

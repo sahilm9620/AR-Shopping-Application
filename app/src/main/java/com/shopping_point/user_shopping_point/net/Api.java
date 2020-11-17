@@ -18,7 +18,7 @@ import com.shopping_point.user_shopping_point.model.ProductApiResponse;
 import com.shopping_point.user_shopping_point.model.RegisterApiResponse;
 import com.shopping_point.user_shopping_point.model.Review;
 import com.shopping_point.user_shopping_point.model.ReviewApiResponse;
-import com.shopping_point.user_shopping_point.model.Shipping;
+
 import com.shopping_point.user_shopping_point.model.Update;
 import com.shopping_point.user_shopping_point.model.UpdateApiResponse;
 import com.shopping_point.user_shopping_point.model.User;
@@ -104,7 +104,7 @@ public interface Api {
     Call<OrderApiResponse> getOrders(@Query("userId") int userId);
 
     @POST("address/add.php")
-    Call<ResponseBody> addShippingAddress(@Body Shipping shipping);
+    Call<ResponseBody> addShippingAddress(@Body Address address);
 
     @POST("orders/add.php")
     Call<ResponseBody> orderProduct(@Body Ordering ordering);

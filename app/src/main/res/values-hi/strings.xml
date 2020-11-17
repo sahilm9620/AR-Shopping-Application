@@ -344,6 +344,8 @@ OTP दर्ज करें</string>
     <string name="Address">Address</string>
     <string name="orderdetails">Order Details</string>
     <string name="updateprofile">Update Profile</string>
+    <string name="full_name">Full Name</string>
+    <string name="contact_number">Contact Number</string>
     <string-array name="categories_array">
         <item>मोबाइल</item>
         <item>लैपटॉप</item>

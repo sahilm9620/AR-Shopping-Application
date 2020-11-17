@@ -5,8 +5,6 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import android.util.Log;
 
-import com.shopping_point.user_shopping_point.model.Address;
-
 import com.shopping_point.user_shopping_point.model.AddressList;
 import com.shopping_point.user_shopping_point.net.RetrofitClient;
 

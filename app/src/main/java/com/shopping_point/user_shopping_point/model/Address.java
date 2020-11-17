@@ -1,75 +1,136 @@
 package com.shopping_point.user_shopping_point.model;
 
-import com.google.gson.annotations.Expose;
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.view.View;
+
 import com.google.gson.annotations.SerializedName;
+import com.shopping_point.user_shopping_point.R;
 
-public class Address {
+public class Address implements Parcelable {
 
-    @SerializedName("shipping_id")
-    @Expose
-    private Integer shippingId;
+    @SerializedName("address_id")
+    private String address_id;
+    @SerializedName("name")
+    private String name;
     @SerializedName("address")
-    @Expose
     private String address;
     @SerializedName("city")
-    @Expose
     private String city;
     @SerializedName("country")
-    @Expose
     private String country;
     @SerializedName("zip")
-    @Expose
     private String zip;
     @SerializedName("phone")
-    @Expose
     private String phone;
 
-    public Integer getShippingId() {
-        return shippingId;
-    }
+    private int userId;
 
-    public void setShippingId(Integer shippingId) {
-        this.shippingId = shippingId;
-    }
+    private Address mInfo;
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
+    public Address(String id, String name, String address, String city, String country, String zip, int userId,String phone) {
+        this.address_id=id;
+        this.name=name;
         this.address = address;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
         this.city = city;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
         this.country = country;
-    }
-
-    public String getZip() {
-        return zip;
-    }
-
-    public void setZip(String zip) {
         this.zip = zip;
+        this.phone = phone;
+        this.userId = userId;
+
     }
 
     public String getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public String getAddress_id() {
+        return address_id;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+
+    public int getUserId() {
+        return userId;
+    }
+
+
+
+
+    @Override
+    public void writeToParcel(Parcel out, int flags) {
+        out.writeString(address_id);
+        out.writeString(name);
+        out.writeString(address);
+        out.writeString(city);
+        out.writeString(country);
+        out.writeString(zip);
+        out.writeString(phone);
+
+        out.writeInt(userId);
+
+        out.writeParcelable(mInfo, flags);
+    }
+
+    // Retrieve the values written into the `Parcel`.
+    private Address(Parcel in) {
+
+        address_id = in.readString();
+        name=in.readString();
+
+        address = in.readString();
+        city = in.readString();
+        country = in.readString();
+        zip = in.readString();
+        phone = in.readString();
+        userId = in.readInt();
+
+        mInfo = in.readParcelable(Address.class.getClassLoader());
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    // Create the Parcelable.Creator<Product> CREATOR` constant for our class;
+    public static final Parcelable.Creator<Address> CREATOR
+            = new Parcelable.Creator<Address>() {
+
+        // This simply calls our new constructor and
+        // passes along `Parcel`, and then returns the new object!
+        @Override
+        public Address createFromParcel(Parcel in) {
+            return new Address(in);
+        }
+
+        @Override
+        public Address[] newArray(int size) {
+            return new Address[size];
+        }
+    };
+
+
+
+
 
 }

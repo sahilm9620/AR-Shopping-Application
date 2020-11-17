@@ -70,6 +70,7 @@
                 android:textColor="@color/darkBlue"
                android:layout_marginLeft="90dp"
                 android:layout_height="30dp"
+                android:visibility="gone"
                 android:background="@color/white"
                 android:text="Edit" />
 

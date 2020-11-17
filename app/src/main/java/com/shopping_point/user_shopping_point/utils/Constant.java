@@ -6,6 +6,7 @@ public class Constant {
 
     // Constant Variables
     public static String PRODUCT = "product";
+    public static String ADDRESS = "address";
     public static String SHIPPING = "shipping";
     public  static String ORDER = "order";
 

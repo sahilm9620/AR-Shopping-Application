@@ -48,9 +48,10 @@
         android:background="#F66F27"
         android:textColor="@color/white"
         android:textSize="@dimen/dimen15sp"
+
         android:text="Deliver Here"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/content"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 
