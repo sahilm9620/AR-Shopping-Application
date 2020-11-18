@@ -60,22 +60,27 @@ private AddressViewModel addressViewModel;
         Address address = addressList.get(position);
 if(address!=null){
 
-    holder.binding.txtName.setText(address.getName());
+    holder.binding.home.setText(address.getType());
+    holder.binding.txtName.setText( address.getName());
     holder.binding.phoneNo.setText(address.getPhone());
     holder.binding.txvAddress.setText(address.getAddress() + ", " + address.getCity() + ", ");
     holder.binding.txvAddress2.setText(address.getCountry() + " Pin - " + address.getZip());
+
 }
 
-holder.binding.addressList.setOnClickListener(new View.OnClickListener() {
+holder.binding.radioButton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Toast.makeText(mContext, address.getAddress_id(), Toast.LENGTH_SHORT).show();
+
         holder.binding.button.setVisibility(View.VISIBLE);
+
+
         clickHandler.onClick(address);
 
 
     }
 });
+
 
 
 

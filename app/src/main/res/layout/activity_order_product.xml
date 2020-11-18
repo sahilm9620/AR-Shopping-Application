@@ -357,26 +357,43 @@
                         android:textSize="@dimen/dimen20sp" />
                 </TableRow>
 
-
-
             </TableLayout>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </androidx.cardview.widget.CardView>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/cod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen5dp"
+                android:layout_marginLeft="@dimen/dimen15dp"
+                android:layout_marginTop="@dimen/dimen20dp"
+                android:layout_marginRight="@dimen/dimen5dp"
+                android:gravity="center"
+                android:background="@drawable/custom_edittext_border"
+                android:padding="@dimen/dimen5dp"
+                android:text="Cash On Delivery" />
+
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/ol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen5dp"
+                android:layout_marginLeft="@dimen/dimen20dp"
+                android:layout_marginTop="@dimen/dimen20dp"
+                android:background="@drawable/custom_edittext_border"
+                android:gravity="center"
+                android:padding="@dimen/dimen5dp"
+                android:text="Online Payment" />
+        </RadioGroup>
+
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_pay"

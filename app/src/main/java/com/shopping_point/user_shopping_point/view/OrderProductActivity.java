@@ -103,11 +103,45 @@ binding.AmountPrice.setText(formattedPrice + " ₹ ");
         binding.btnPay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(binding.radioGroup.getCheckedRadioButtonId()==-1)
+                {
+                    Toast.makeText(OrderProductActivity.this, "Please Select Payment Mode", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
-                setUpPayment();
+                if(binding.cod.isChecked())
+                {
+                    cod();
+                }else if(binding.ol.isChecked())
+                {
+                    setUpPayment();
+                }
+
+
             }
         });
 
+
+
+    }
+
+    private void cod() {
+        String orderid = "COD" + generateOrderId();
+        String payment = "COD_PAY" + generateOrderId();
+        Ordering ordering = new Ordering(orderid,payment,LoginUtils.getInstance(this).getUserInfo().getId(),product.getProductId(),address.getAddress_id());
+        orderingViewModel.orderProduct(ordering).observe(this, responseBody -> {
+            try {
+                Toast.makeText(OrderProductActivity.this, responseBody.string() + "", Toast.LENGTH_SHORT).show();
+                finish();
+                Intent paymentResultIntent = new Intent(OrderProductActivity.this, PaymentResultActivity.class);
+                paymentResultIntent.putExtra(PRODUCT, (product));
+                paymentResultIntent.putExtra("paymentStatus", "success");
+                paymentResultIntent.putExtra("orderId", orderid );
+                startActivity( paymentResultIntent);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
 
     }
@@ -166,7 +200,7 @@ binding.AmountPrice.setText(formattedPrice + " ₹ ");
     public void onPaymentSuccess(String razorpayPaymentId, PaymentData paymentData) {
    String orderid = "OD" + generateOrderId();
 
-        Ordering ordering = new Ordering(orderid,paymentData.getPaymentId(),LoginUtils.getInstance(this).getUserInfo().getId(),product.getProductId());
+        Ordering ordering = new Ordering(orderid,paymentData.getPaymentId(),LoginUtils.getInstance(this).getUserInfo().getId(),product.getProductId(),address.getAddress_id());
         orderingViewModel.orderProduct(ordering).observe(this, responseBody -> {
             try {
                 Toast.makeText(OrderProductActivity.this, responseBody.string() + "", Toast.LENGTH_SHORT).show();

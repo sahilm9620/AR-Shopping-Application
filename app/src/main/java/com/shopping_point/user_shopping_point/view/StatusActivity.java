@@ -5,13 +5,18 @@ import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
+
 import com.bumptech.glide.Glide;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.databinding.ActivityStatusBinding;
 import com.shopping_point.user_shopping_point.model.Order;
+import com.shopping_point.user_shopping_point.model.Product;
+
 import java.text.DecimalFormat;
 import static com.shopping_point.user_shopping_point.utils.Constant.ORDER;
 
+import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT_ID;
 
 public class StatusActivity extends AppCompatActivity implements View.OnClickListener {
@@ -57,5 +62,6 @@ public class StatusActivity extends AppCompatActivity implements View.OnClickLis
             allReviewIntent.putExtra(PRODUCT_ID,order.getProductId());
             startActivity(allReviewIntent);
         }
+
     }
 }

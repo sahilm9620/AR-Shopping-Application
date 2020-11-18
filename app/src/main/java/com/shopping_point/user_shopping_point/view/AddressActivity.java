@@ -104,10 +104,16 @@ binding.AddAddress.setOnClickListener(new View.OnClickListener() {
     }
     @Override
     public void onClick(Address address) {
-        Intent intent = new Intent(AddressActivity.this, OrderProductActivity.class);
-        // Pass an object of product class
-        intent.putExtra(ADDRESS, (address));
-        intent.putExtra(PRODUCT, (product));
-        startActivity(intent);
+        binding.deliverHere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddressActivity.this, OrderProductActivity.class);
+                // Pass an object of product class
+                intent.putExtra(ADDRESS, (address));
+                intent.putExtra(PRODUCT, (product));
+                startActivity(intent);
+            }
+        });
+
     }
 }

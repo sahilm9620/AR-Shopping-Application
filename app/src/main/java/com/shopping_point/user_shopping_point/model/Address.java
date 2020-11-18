@@ -23,21 +23,27 @@ public class Address implements Parcelable {
     private String zip;
     @SerializedName("phone")
     private String phone;
-
+    @SerializedName("type")
+    private String type;
     private int userId;
 
     private Address mInfo;
 
-    public Address(String id, String name, String address, String city, String country, String zip, int userId,String phone) {
-        this.address_id=id;
+    public Address( String name, String address, String city, String country, String zip, int userId,String phone,String type) {
+
         this.name=name;
         this.address = address;
         this.city = city;
         this.country = country;
         this.zip = zip;
         this.phone = phone;
+        this.type=type;
         this.userId = userId;
 
+    }
+
+    public String getType() {
+        return type;
     }
 
     public String getPhone() {
@@ -85,7 +91,7 @@ public class Address implements Parcelable {
         out.writeString(country);
         out.writeString(zip);
         out.writeString(phone);
-
+        out.writeString(type);
         out.writeInt(userId);
 
         out.writeParcelable(mInfo, flags);
@@ -96,12 +102,12 @@ public class Address implements Parcelable {
 
         address_id = in.readString();
         name=in.readString();
-
         address = in.readString();
         city = in.readString();
         country = in.readString();
         zip = in.readString();
         phone = in.readString();
+        type = in.readString();
         userId = in.readInt();
 
         mInfo = in.readParcelable(Address.class.getClassLoader());
