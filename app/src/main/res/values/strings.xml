@@ -225,7 +225,7 @@
     <string name="zip_required">Zip Required<font fgcolor = '#FE0000'>*</font></string>
     <string name="cardnumber_required">Card Number Required</string>
     <string name="passs_authentication">Password Authentication</string>
-    <string name="Address">Add Address</string>
+    <string name="Address">Add a new address</string>
     <string name="orderdetails">Order Details</string>
     <string name="updateprofile">Update Profile</string>
     <string name="full_name">Full Name  <font fgcolor = '#FE0000'>*</font></string>

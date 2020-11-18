@@ -21,6 +21,8 @@ import com.shopping_point.user_shopping_point.model.ReviewApiResponse;
 
 import com.shopping_point.user_shopping_point.model.Update;
 import com.shopping_point.user_shopping_point.model.UpdateApiResponse;
+import com.shopping_point.user_shopping_point.model.Upload;
+import com.shopping_point.user_shopping_point.model.UploadProfileApiResponse;
 import com.shopping_point.user_shopping_point.model.User;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -119,5 +121,9 @@ public interface Api {
 
     @GET("address/getAddress.php")
     Call<AddressList> getAddress(@Query("userId") int userId);
+
+
+    @POST("users/upload.php")
+    Call<UploadProfileApiResponse> upload_profile_image(@Body Upload upload);
 
 }

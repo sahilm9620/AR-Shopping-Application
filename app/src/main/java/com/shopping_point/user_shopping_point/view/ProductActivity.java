@@ -5,6 +5,8 @@ import android.app.Dialog;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.paging.PagedList;
+
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
@@ -27,6 +29,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.appcompat.widget.Toolbar;
+
+import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -46,18 +50,19 @@ import com.shopping_point.user_shopping_point.ViewModel.FromHistoryViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.HistoryViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.NewsFeedViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.ProductViewModel;
-import com.shopping_point.user_shopping_point.ViewModel.UploadPhotoViewModel;
+import com.shopping_point.user_shopping_point.ViewModel.UploadProfileViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.UserImageViewModel;
-import com.shopping_point.user_shopping_point.adapter.NewsFeedAdapter;
 import com.shopping_point.user_shopping_point.adapter.ProductAdapter;
 import com.shopping_point.user_shopping_point.databinding.ActivityProductBinding;
 import com.shopping_point.user_shopping_point.model.NewsFeed;
 import com.shopping_point.user_shopping_point.model.Product;
+import com.shopping_point.user_shopping_point.model.Upload;
 import com.shopping_point.user_shopping_point.receiver.NetworkChangeReceiver;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
 import com.shopping_point.user_shopping_point.utils.OnNetworkListener;
-import com.shopping_point.user_shopping_point.utils.Slide;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -86,11 +91,13 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
     private ProductViewModel productViewModel;
     private FromHistoryViewModel fromHistoryViewModel;
     private HistoryViewModel historyViewModel;
-    private UploadPhotoViewModel uploadPhotoViewModel;
+    private UploadProfileViewModel uploadProfileViewModel;
     private UserImageViewModel userImageViewModel;
     private Snackbar snack;
     private CircleImageView circleImageView,circleImageView1;
     private Uri selectedImage;
+    private Bitmap bitmap;
+    String encode_image;
     private NewsFeedViewModel newsFeedViewModel;
     private NetworkChangeReceiver mNetworkReceiver;
     public  ArrayList<String> poster;
@@ -109,7 +116,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         productViewModel.loadLaptops("laptop",userID);
         historyViewModel = ViewModelProviders.of(this).get(HistoryViewModel.class);
         historyViewModel.loadHistory(userID);
-        uploadPhotoViewModel = ViewModelProviders.of(this).get(UploadPhotoViewModel.class);
+        uploadProfileViewModel = ViewModelProviders.of(this).get(UploadProfileViewModel.class);
         userImageViewModel = ViewModelProviders.of(this).get(UserImageViewModel.class);
 
         snack = Snackbar.make(findViewById(android.R.id.content), getResources().getString(R.string.no_internet_connection), Snackbar.LENGTH_INDEFINITE);
@@ -357,7 +364,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
                     Intent getIntent = new Intent(Intent.ACTION_GET_CONTENT);
                     getIntent.setType("image/*");
 
-                    Intent pickIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    Intent pickIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 
                     Intent chooserIntent = Intent.createChooser(getIntent, "Select Image");
                     chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[]{pickIntent});
@@ -369,6 +376,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
             }
         }
     }
+
 
     private void launchCamera() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -386,32 +394,59 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == GALLERY_REQUEST && resultCode == RESULT_OK) {
+
+            Uri path = data.getData();
+
+            try {
+                bitmap = MediaStore.Images.Media.getBitmap(getApplication().getContentResolver(), path);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
             selectedImage = data.getData();
             circleImageView.setImageURI(selectedImage);
+            encode_image=imageToString(bitmap);
 
-            String filePath = getRealPathFromURI(this, selectedImage);
-            Log.d(TAG, "onActivityResult: " + filePath);
+            uploadPhoto(encode_image);
 
-            uploadPhoto(String.valueOf(filePath));
         } else if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
             Bitmap photo = (Bitmap) data.getExtras().get("data");
             circleImageView.setImageBitmap(photo);
 
-            Uri uriForImage = getImageUri(this, photo);
-            String filePath = getRealPathFromURI(this, uriForImage);
-            Log.d(TAG, "onActivityResult: Camera" + filePath);
 
-            uploadPhoto(String.valueOf(filePath));
+            encode_image=imageToString(photo);
+            uploadPhoto(encode_image);
+
 
         }
     }
-
-    private void uploadPhoto(String pathname) {
-        uploadPhotoViewModel.uploadPhoto(pathname).observe(this, responseBody -> {
-            Toast.makeText(this, "Image Uploaded", Toast.LENGTH_SHORT).show();
-        });
+    private String imageToString(Bitmap bitmap)
+    {
+        ByteArrayOutputStream byteArrayOutputStream=new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
+        byte[] imgByte = byteArrayOutputStream.toByteArray();
+        return Base64.encodeToString(imgByte, Base64.DEFAULT);
     }
+    private void uploadPhoto(String encode_image) {
+        Toast.makeText(this, "IN UPLOADPHOTO FUNC", Toast.LENGTH_SHORT).show();
+        ProgressDialog progressDialog = new ProgressDialog(this, R.style.AppTheme_Dialog);
+        progressDialog.setMessage("Uploading...");
+        progressDialog.setCancelable(false);
+        progressDialog.show();
+        int adminId= LoginUtils.getInstance(this).getUserInfo().getId();
+        uploadProfileViewModel.getAddBannerResponseLiveData(new Upload(encode_image,adminId)).observe(this, uploadProfileApiResponse -> {
+            if (!uploadProfileApiResponse.isError()) {
+                Toast.makeText(this, uploadProfileApiResponse.getMessage(), Toast.LENGTH_LONG).show();
+                //LoginUtils.getInstance(this).saveUserInfo(addBannerApiResponse.getUser());
+                progressDialog.dismiss();
+            }else
+            {
+                progressDialog.cancel();
+                Toast.makeText(this, uploadProfileApiResponse.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
+    }
     private void getUserImage() {
         userImageViewModel.getUserImage(LoginUtils.getInstance(this).getUserInfo().getId()).observe(this, response -> {
             if (response != null) {
