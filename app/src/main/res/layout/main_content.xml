@@ -29,28 +29,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:background="@drawable/slide1" />
 
-            <TextView
-                android:id="@+id/textViewMobiles"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="25dp"
-                android:text="@string/mobile"
-                android:textSize="@dimen/dimen20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageSlider" />
 
-            <TextView
-                android:id="@+id/txtSeeAllMobiles"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="25dp"
-                android:text="@string/see_all"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/dimen20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageSlider" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listOfMobiles"
@@ -59,45 +38,11 @@
                 android:minHeight="370dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                tools:listitem="@layout/product_list_item"
+                tools:listitem="@layout/vertical_recyclerview"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewMobiles" />
+                app:layout_constraintTop_toBottomOf="@+id/imageSlider" />
 
-            <TextView
-                android:id="@+id/textViewLaptops"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="25dp"
-                android:text="@string/laptop"
-                android:textSize="@dimen/dimen20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/listOfMobiles" />
-
-            <TextView
-                android:id="@+id/txtSeeAllLaptops"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="25dp"
-                android:text="@string/see_all"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/dimen20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/listOfMobiles" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/listOfLaptops"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="370dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                tools:listitem="@layout/product_list_item"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtSeeAllLaptops" />
 
             <TextView
                 android:id="@+id/textViewHistory"
@@ -109,7 +54,7 @@
                 android:textSize="@dimen/dimen20sp"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/listOfLaptops" />
+                app:layout_constraintTop_toBottomOf="@+id/historyList" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/historyList"
