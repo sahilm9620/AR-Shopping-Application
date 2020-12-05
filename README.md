@@ -5,6 +5,67 @@ Smart shopping using augmented reality developed in android for shopaholics who 
 Shopping is an interesting process in which a customer selects the available materials or services provided by one or more retail merchant with the intention to buy a suitable selection of them
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 MIT License
 
 Copyright (c) 2020 sahilm9620
