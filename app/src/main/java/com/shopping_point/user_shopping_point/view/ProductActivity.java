@@ -27,7 +27,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.appcompat.widget.Toolbar;
 
@@ -50,11 +49,9 @@ import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.FromHistoryViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.HistoryViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.NewsFeedViewModel;
-import com.shopping_point.user_shopping_point.ViewModel.ProductCategoryViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.ProductViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.UploadProfileViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.UserImageViewModel;
-import com.shopping_point.user_shopping_point.adapter.CategoryAdapter;
 import com.shopping_point.user_shopping_point.adapter.ProductAdapter;
 import com.shopping_point.user_shopping_point.databinding.ActivityProductBinding;
 import com.shopping_point.user_shopping_point.model.NewsFeed;
@@ -103,8 +100,6 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
     String encode_image;
     private NewsFeedViewModel newsFeedViewModel;
     private NetworkChangeReceiver mNetworkReceiver;
-    private ProductCategoryViewModel categoryViewModel;
-    private CategoryAdapter categoryAdapter;
     public  ArrayList<String> poster;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,10 +118,11 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         historyViewModel.loadHistory(userID);
         uploadProfileViewModel = ViewModelProviders.of(this).get(UploadProfileViewModel.class);
         userImageViewModel = ViewModelProviders.of(this).get(UserImageViewModel.class);
-        categoryViewModel = ViewModelProviders.of(this).get(ProductCategoryViewModel.class);
+
         snack = Snackbar.make(findViewById(android.R.id.content), getResources().getString(R.string.no_internet_connection), Snackbar.LENGTH_INDEFINITE);
 
-
+        binding.included.content.txtSeeAllMobiles.setOnClickListener(this);
+        binding.included.content.txtSeeAllLaptops.setOnClickListener(this);
         binding.included.content.txtCash.setOnClickListener(this);
         binding.included.content.txtReturn.setOnClickListener(this);
         binding.included.txtSearch.setOnClickListener(this);
@@ -135,9 +131,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
 
 
 
-        setUpRecyclerView();
 
-        getCategories();
 
 
 
@@ -154,24 +148,6 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         mNetworkReceiver = new NetworkChangeReceiver();
         mNetworkReceiver.setOnNetworkListener(this);
     }
-
-    private void setUpRecyclerView() {
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        binding.included.content.listOfMobiles.setLayoutManager(layoutManager);
-        binding.included.content.listOfMobiles.setHasFixedSize(true);
-
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, layoutManager.getOrientation());
-        binding.included.content.listOfMobiles.addItemDecoration(dividerItemDecoration);
-    }
-
-    private void getCategories() {
-        categoryViewModel.getCategory().observe(this, CategoryResponse -> {
-            categoryAdapter = new CategoryAdapter(getApplicationContext(), CategoryResponse.getCategory());
-            binding.included.content.listOfMobiles.setAdapter(categoryAdapter);
-            categoryAdapter.notifyDataSetChanged();
-        });
-    }
-
 
 
     private void getPosters() {
@@ -225,15 +201,15 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         userEmail.setText(LoginUtils.getInstance(this).getUserInfo().getUser_email());
 
         binding.included.content.listOfMobiles.setHasFixedSize(true);
-        binding.included.content.listOfMobiles.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        binding.included.content.listOfMobiles.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         binding.included.content.listOfMobiles.setItemAnimator(null);
 
-//        binding.included.content.listOfLaptops.setHasFixedSize(true);
-//        binding.included.content.listOfLaptops.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-//        binding.included.content.listOfLaptops.setItemAnimator(null);
+        binding.included.content.listOfLaptops.setHasFixedSize(true);
+        binding.included.content.listOfLaptops.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        binding.included.content.listOfLaptops.setItemAnimator(null);
 
         binding.included.content.historyList.setHasFixedSize(true);
-        binding.included.content.historyList.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        binding.included.content.historyList.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         binding.included.content.historyList.setItemAnimator(null);
 
         mobileAdapter = new ProductAdapter(this, this);
@@ -247,15 +223,15 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
 
     private void getMobiles() {
         if (isNetworkConnected(this)) {
-//            productViewModel.productPagedList.observe(this, new Observer<PagedList<Product>>() {
-//                @Override
-//                public void onChanged(@Nullable PagedList<Product> products) {
-//                    mobileAdapter.submitList(products);
-//                }
-//            });
-//
-//            binding.included.content.listOfMobiles.setAdapter(mobileAdapter);
-//            mobileAdapter.notifyDataSetChanged();
+            productViewModel.productPagedList.observe(this, new Observer<PagedList<Product>>() {
+                @Override
+                public void onChanged(@Nullable PagedList<Product> products) {
+                    mobileAdapter.submitList(products);
+                }
+            });
+
+            binding.included.content.listOfMobiles.setAdapter(mobileAdapter);
+            mobileAdapter.notifyDataSetChanged();
         } else {
             showOrHideViews(View.INVISIBLE);
             showSnackBar();
@@ -271,7 +247,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
                 }
             });
 
-//            binding.included.content.listOfLaptops.setAdapter(laptopAdapter);
+            binding.included.content.listOfLaptops.setAdapter(laptopAdapter);
             laptopAdapter.notifyDataSetChanged();
         } else {
             showOrHideViews(View.INVISIBLE);
@@ -326,10 +302,10 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
                 Intent mobileIntent = new Intent(this, AllMobilesActivity.class);
                 startActivity(mobileIntent);
                 break;
-//            case R.id.txtSeeAllLaptops:
-//                Intent laptopIntent = new Intent(this, AllLaptopsActivity.class);
-//                startActivity(laptopIntent);
-//                break;
+            case R.id.txtSeeAllLaptops:
+                Intent laptopIntent = new Intent(this, AllLaptopsActivity.class);
+                startActivity(laptopIntent);
+                break;
             case R.id.plus:
                 showCustomAlertDialog();
                 break;
@@ -571,10 +547,10 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void showOrHideViews(int view) {
-//        binding.included.content.textViewMobiles.setVisibility(view);
-//        binding.included.content.txtSeeAllMobiles.setVisibility(view);
-//        binding.included.content.textViewLaptops.setVisibility(view);
-//        binding.included.content.txtSeeAllLaptops.setVisibility(view);
+        binding.included.content.textViewMobiles.setVisibility(view);
+        binding.included.content.txtSeeAllMobiles.setVisibility(view);
+        binding.included.content.textViewLaptops.setVisibility(view);
+        binding.included.content.txtSeeAllLaptops.setVisibility(view);
         binding.included.content.txtCash.setVisibility(view);
         binding.included.content.txtReturn.setVisibility(view);
 
