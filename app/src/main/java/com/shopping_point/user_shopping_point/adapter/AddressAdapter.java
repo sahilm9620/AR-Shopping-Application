@@ -22,6 +22,8 @@ import java.util.List;
 
 public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.AddressViewHolder>{
 
+
+
     private Context mContext;
     private List<Address> addressList;
 private AddressActivity addressActivity;
