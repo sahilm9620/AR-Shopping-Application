@@ -4,7 +4,6 @@ import com.shopping_point.user_shopping_point.model.Address;
 import com.shopping_point.user_shopping_point.model.AddressList;
 import com.shopping_point.user_shopping_point.model.Cart;
 import com.shopping_point.user_shopping_point.model.CartApiResponse;
-import com.shopping_point.user_shopping_point.model.CategoryResponse;
 import com.shopping_point.user_shopping_point.model.Favorite;
 import com.shopping_point.user_shopping_point.model.FavoriteApiResponse;
 import com.shopping_point.user_shopping_point.model.History;
@@ -126,8 +125,5 @@ public interface Api {
 
     @POST("users/upload.php")
     Call<UploadProfileApiResponse> upload_profile_image(@Body Upload upload);
-
-    @GET("admin/get_category.php")
-    Call<CategoryResponse> getCategory();
 
 }
