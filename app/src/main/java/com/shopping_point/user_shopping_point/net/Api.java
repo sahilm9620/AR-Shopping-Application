@@ -47,7 +47,6 @@ public interface Api {
     @GET("users/deleteuser.php")
     Call<ResponseBody> deleteAccount(@Query("userId") int userId);
 
-
     @GET("users/info.php")
     Call<ResponseBody> updatePassword(@Query("user_password") String newPassword, @Query("user_email") String email);
 
@@ -118,10 +117,8 @@ public interface Api {
     @POST("users/update_profile.php")
     Call<UpdateApiResponse> updateProfile(@Body Update update);
 
-
     @GET("address/getAddress.php")
     Call<AddressList> getAddress(@Query("userId") int userId);
-
 
     @POST("users/upload.php")
     Call<UploadProfileApiResponse> upload_profile_image(@Body Upload upload);

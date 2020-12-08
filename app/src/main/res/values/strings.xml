@@ -230,6 +230,7 @@
     <string name="updateprofile">Update Profile</string>
     <string name="full_name">Full Name  <font fgcolor = '#FE0000'>*</font></string>
     <string name="contact_number">Contact Number <font fgcolor = '#FE0000'>*</font> </string>
+    <string name="type_of_address">Type of address<font fgcolor = '#FE0000'>*</font> </string>
 
     <string-array name="categories_array">
         <item>Mobile</item>
