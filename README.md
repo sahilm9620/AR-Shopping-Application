@@ -126,15 +126,11 @@ Change Language      |  My order
 :-------------------------:|:-------------------------:
 ![](images/15.jpeg)  |  ![](images/5.jpeg)
 
-<br><br>
+Q<br><br>
 Order Status     |  Write a review
 :-------------------------:|:-------------------------:
 ![](images/8.jpeg)  |  ![](images/18.jpeg)
 
-<br><br>
-Order Status     |  Write a review
-:-------------------------:|:-------------------------:
-![](images/8.jpeg)  |  ![](images/18.jpeg)
 <br><br>
 
 Select Address     |  Add new Address
