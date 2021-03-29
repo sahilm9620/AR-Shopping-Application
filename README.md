@@ -29,8 +29,8 @@ Shopping is an interesting process in which a customer selects the available mat
 
 ##  application is divided into three module
 <b>1] User module <br>
-2] Vendor module [ https://github.com/Pooja0504/Vendor-Shopping-Point ] <br>
-3] Super Admin Module  [ https://github.com/Harry2915/Admin-Shopping-Point ] <br>
+2] <a href="https://github.com/Pooja0504/Vendor-Shopping-Point">Vendor module </a><br>
+3] <a href="https://github.com/Harry2915/Admin-Shopping-Point">Super Admin Module </a>  <br>
 </b>
 ## Features: 
 
