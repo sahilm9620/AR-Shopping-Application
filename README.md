@@ -91,7 +91,7 @@ Single category of product        |   Product details
 ![](images/6.jpeg)  |  ![](images/10.jpeg)
 <br><br>
 
-Product review        |   Product image with zoomin-zoomout functionality
+Product review        |   Product image 
 :-------------------------:|:-------------------------:
 ![](images/23.jpeg)  |  ![](images/14.jpeg)
 <br><br>
