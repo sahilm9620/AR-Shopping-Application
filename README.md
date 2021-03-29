@@ -112,10 +112,6 @@ Search History        |  Drawer
 ![](images/4.jpeg)  |  ![](images/21.jpeg)
 <br><br>
 
-Change profile picture       |  My Account
-:-------------------------:|:-------------------------:
-![](images/3.jpeg)  |  ![](images/24.jpeg)
-<br><br>
 
 Change profile picture       |  My Account
 :-------------------------:|:-------------------------:
