@@ -6,18 +6,29 @@ Shopping is an interesting process in which a customer selects the available mat
 
 
 <br><br>
-
-<br><br> ![](images/1.jpeg) <br><br>  ![](images/2.jpeg) 
-<br><br> ![](images/3.jpeg) <br><br>  ![](images/4.jpeg) 
-<br><br> ![](images/5.jpeg) <br><br>  ![](images/6.jpeg) 
-<br><br> ![](images/7.jpeg) <br><br>  ![](images/8.jpeg) 
-<br><br> ![](images/9.jpeg) <br><br>  ![](images/10.jpeg) 
-<br><br> ![](images/11.jpeg) <br><br>  ![](images/12.jpeg) 
-<br><br> ![](images/13.jpeg) <br><br>  ![](images/14.jpeg) 
-<br><br> ![](images/15.jpeg) <br><br>  ![](images/16.jpeg) 
-<br><br> ![](images/17.jpeg) <br><br>  ![](images/18.jpeg) 
-<br><br> ![](images/19.jpeg) <br><br>  ![](images/20.jpeg) 
-<br><br> ![](images/21.jpeg) <br><br>  ![](images/22.jpeg) 
-<br><br> ![](images/23.jpeg) <br><br>  ![](images/24.jpeg) 
-<br><br> ![](images/25.jpeg) <br><br>  ![](images/26.jpeg) 
-<br><br> ![](images/27.jpeg) <br><br>  ![](images/28.jpeg) 
+<image src="images/7.jpeg" height='100' width='50'>
+<br><br> 
+<image src="images/26.jpeg" height='100' width='50'>  
+<br><br> <image src="images/19.jpeg" height='100' width='50'> <br><br> <image src="images/28.jpeg" height='100' width='50'> 
+  <br><br><image src="images/22.jpeg" height='100' width='50'>
+  
+<br><br> <image src="images/25.jpeg" height='100' width='50'>  <br><br>  <image src="images/2.jpeg" height='100' width='50'> 
+  
+<br><br> <image src="images/9.jpeg" height='100' width='50'>  <br><br>  <image src="images/6.jpeg" height='100' width='50'> 
+  
+<br><br> <image src="images/10.jpeg" height='100' width='50'>  <br><br>  <image src="images/1.jpeg" height='100' width='50'> 
+<br><br> <image src="images/14.jpeg" height='100' width='50'> ) <br><br> <image src="images/13.jpeg" height='100' width='50'> 
+  
+  
+<br><br> <image src="images/17.jpeg" height='100' width='50'>  <br><br>  <image src="images/20.jpeg" height='100' width='50'> 
+  
+  
+  <br><br>  <image src="images/11.jpeg" height='100' width='50'> 
+<br><br> <image src="images/27.jpeg" height='100' width='50'>  <br><br>  <image src="images/12.jpeg" height='100' width='50'> 
+  
+<br><br> <image src="images/4.jpeg" height='100' width='50'> ) <br><br>  <image src="images/5.jpeg" height='100' width='50'> 
+  
+<br><br> <image src="images/8.jpeg" height='100' width='50'>  <br><br>  <image src="images/18.jpeg" height='100' width='50'> 
+<br><br> <image src="images/23.jpeg" height='100' width='50'>  <br><br>  <image src="images/21.jpeg" height='100' width='50'> 
+<br><br> <image src="images/3.jpeg" height='100' width='50'>  <br><br>  <image src="images/24.jpeg" height='100' width='50'> 
+<br><br> <image src="images/15.jpeg" height='100' width='50'>  <br><br>  <image src="images/16.jpeg" height='100' width='50'> 
