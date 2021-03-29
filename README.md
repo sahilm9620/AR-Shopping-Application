@@ -93,19 +93,18 @@ Similar products        |   items in cart
 :-------------------------:|:-------------------------:
 ![](images/1.jpeg)  |  ![](images/27.jpeg)
 <br><br>
+
 wish list        |   Searched product
 :-------------------------:|:-------------------------:
 ![](images/11.jpeg)  |  ![](images/12.jpeg)
-<br><br>
-wish list        |   Searched product
-:-------------------------:|:-------------------------:
-![](images/11.jpeg)  |  ![](images/12.jpeg)
+
 <br><br>
 
 Search History        |  Drawer
 :-------------------------:|:-------------------------:
 ![](images/4.jpeg)  |  ![](images/21.jpeg)
 <br><br>
+
 Change profile picture       |  My Account
 :-------------------------:|:-------------------------:
 ![](images/3.jpeg)  |  ![](images/24.jpeg)
