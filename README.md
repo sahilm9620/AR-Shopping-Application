@@ -20,10 +20,10 @@ Now days, a mobile application has bought a lot of changes in shopping. Speciall
 Smart shopping using augmented reality developed in android for shopaholics who have crazy about shopping. The shoppers use this application (app) while shopping to reduce their bucks and time. 
 Shopping is an interesting process in which a customer selects the available materials or services provided by one or more retail merchant with the intention to buy a suitable selection of them
 
-## we have divided this application into three module and this is the first module of application i.e user module
-1] User module
-2] Vendor module [ https://github.com/Pooja0504/Vendor-Shopping-Point ]
-3] Super Admin Module  [ https://github.com/Harry2915/Admin-Shopping-Point ]
+##  application is divided into three module
+1] User module <br>
+2] Vendor module [ https://github.com/Pooja0504/Vendor-Shopping-Point ] <br>
+3] Super Admin Module  [ https://github.com/Harry2915/Admin-Shopping-Point ] <br>
 
 ## Features: 
 
