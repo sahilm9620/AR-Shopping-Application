@@ -28,10 +28,10 @@ Shopping is an interesting process in which a customer selects the available mat
 
 
 ##  application is divided into three module
-1] User module <br>
+<b>1] User module <br>
 2] Vendor module [ https://github.com/Pooja0504/Vendor-Shopping-Point ] <br>
 3] Super Admin Module  [ https://github.com/Harry2915/Admin-Shopping-Point ] <br>
-
+</b>
 ## Features: 
 
 - Register an new account, and log in as an existing user.
@@ -122,7 +122,7 @@ Change Language      |  My order
 :-------------------------:|:-------------------------:
 ![](images/15.jpeg)  |  ![](images/5.jpeg)
 
-Q<br><br>
+<br><br>
 Order Status     |  Write a review
 :-------------------------:|:-------------------------:
 ![](images/8.jpeg)  |  ![](images/18.jpeg)
