@@ -79,22 +79,22 @@ User Dashboard         |   Category wise products
 
 <br><br>
 
-single category of product        |   product details
+Single category of product        |   Product details
 :-------------------------:|:-------------------------:
 ![](images/6.jpeg)  |  ![](images/10.jpeg)
 <br><br>
 
-product review        |   product image with zoomin-zoomout functionality
+Product review        |   Product image with zoomin-zoomout functionality
 :-------------------------:|:-------------------------:
 ![](images/23.jpeg)  |  ![](images/14.jpeg)
 <br><br>
 
-Similar products        |   items in cart
+Similar products        |   Items in cart
 :-------------------------:|:-------------------------:
 ![](images/1.jpeg)  |  ![](images/27.jpeg)
 <br><br>
 
-wish list        |   Searched product
+Wish list        |   Searched product
 :-------------------------:|:-------------------------:
 ![](images/11.jpeg)  |  ![](images/12.jpeg)
 
