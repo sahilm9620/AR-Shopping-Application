@@ -5,30 +5,81 @@ Smart shopping using augmented reality developed in android for shopaholics who 
 Shopping is an interesting process in which a customer selects the available materials or services provided by one or more retail merchant with the intention to buy a suitable selection of them
 
 
-<br><br>
-<image src="images/7.jpeg" height='100' width='50'>
-<br><br> 
-<image src="images/26.jpeg" height='100' width='50'>  
-<br><br> <image src="images/19.jpeg" height='100' width='50'> <br><br> <image src="images/28.jpeg" height='100' width='50'> 
-  <br><br><image src="images/22.jpeg" height='100' width='50'>
-  
-<br><br> <image src="images/25.jpeg" height='100' width='50'>  <br><br>  <image src="images/2.jpeg" height='100' width='50'> 
-  
-<br><br> <image src="images/9.jpeg" height='100' width='50'>  <br><br>  <image src="images/6.jpeg" height='100' width='50'> 
-  
-<br><br> <image src="images/10.jpeg" height='100' width='50'>  <br><br>  <image src="images/1.jpeg" height='100' width='50'> 
-<br><br> <image src="images/14.jpeg" height='100' width='50'> ) <br><br> <image src="images/13.jpeg" height='100' width='50'> 
-  
-  
-<br><br> <image src="images/17.jpeg" height='100' width='50'>  <br><br>  <image src="images/20.jpeg" height='100' width='50'> 
-  
-  
-  <br><br>  <image src="images/11.jpeg" height='100' width='50'> 
-<br><br> <image src="images/27.jpeg" height='100' width='50'>  <br><br>  <image src="images/12.jpeg" height='100' width='50'> 
-  
-<br><br> <image src="images/4.jpeg" height='100' width='50'> ) <br><br>  <image src="images/5.jpeg" height='100' width='50'> 
-  
-<br><br> <image src="images/8.jpeg" height='100' width='50'>  <br><br>  <image src="images/18.jpeg" height='100' width='50'> 
-<br><br> <image src="images/23.jpeg" height='100' width='50'>  <br><br>  <image src="images/21.jpeg" height='100' width='50'> 
-<br><br> <image src="images/3.jpeg" height='100' width='50'>  <br><br>  <image src="images/24.jpeg" height='100' width='50'> 
-<br><br> <image src="images/15.jpeg" height='100' width='50'>  <br><br>  <image src="images/16.jpeg" height='100' width='50'> 
+
+Login Page            |  Registration Page
+:-------------------------:|:-------------------------:
+![](images/7.jpeg)  |  ![](images/26.jpeg)
+
+Forgot Password            |  OTP Verification
+:-------------------------:|:-------------------------:
+![](images/19.jpeg)  |  ![](images/22.jpeg)
+
+Forgot Password Email          |  Change Password
+:-------------------------:|:-------------------------:
+![](images/25.jpeg)  |  ![](images/28.jpeg)
+
+
+User Dashboard         |   Category wise products
+:-------------------------:|:-------------------------:
+![](images/2.jpeg)  |  ![](images/9.jpeg)
+
+single category of product        |   product details
+:-------------------------:|:-------------------------:
+![](images/6.jpeg)  |  ![](images/10.jpeg)
+
+product review        |   product image with zoomin-zoomout functionality
+:-------------------------:|:-------------------------:
+![](images/23.jpeg)  |  ![](images/14.jpeg)
+
+
+Similar products        |   items in cart
+:-------------------------:|:-------------------------:
+![](images/1.jpeg)  |  ![](images/27.jpeg)
+
+wish list        |   Searched product
+:-------------------------:|:-------------------------:
+![](images/11.jpeg)  |  ![](images/12.jpeg)
+
+wish list        |   Searched product
+:-------------------------:|:-------------------------:
+![](images/11.jpeg)  |  ![](images/12.jpeg)
+
+
+Search History        |  Drawer
+:-------------------------:|:-------------------------:
+![](images/4.jpeg)  |  ![](images/21.jpeg)
+
+Change profile picture       |  My Account
+:-------------------------:|:-------------------------:
+![](images/3.jpeg)  |  ![](images/24.jpeg)
+
+Change profile picture       |  My Account
+:-------------------------:|:-------------------------:
+![](images/3.jpeg)  |  ![](images/24.jpeg)
+
+
+Change Language      |  My order
+:-------------------------:|:-------------------------:
+![](images/15.jpeg)  |  ![](images/5.jpeg)
+
+
+Order Status     |  Write a review
+:-------------------------:|:-------------------------:
+![](images/8.jpeg)  |  ![](images/18.jpeg)
+
+
+Order Status     |  Write a review
+:-------------------------:|:-------------------------:
+![](images/8.jpeg)  |  ![](images/18.jpeg)
+
+
+Select Address     |  Add new Address
+:-------------------------:|:-------------------------:
+![](images/13.jpeg)  |  ![](images/17.jpeg)
+
+
+Order Details  | Payment Gateway
+:-------------------------:|:-------------------------:
+![](images/20.jpeg)  |  ![](images/16.jpeg)
+
+
