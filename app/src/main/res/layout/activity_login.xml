@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:text="Welcome Back"
+                android:text="@string/welcome_back"
                 android:textColor="#ffff"
                 android:textSize="26sp"
                 android:textStyle="bold" />
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:text="We missed you! Login to get started"
+                android:text="@string/we_missed_you_login_to_get_started"
                 android:textColor="#ffff"
                 android:textSize="16sp" />
 
@@ -76,7 +76,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dimen20dp"
-                        android:text="Email"
+                        android:text="@string/email"
                         android:textColor="#00a5ff" />
 
                     <EditText
@@ -91,7 +91,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dimen20dp"
-                        android:text="Password"
+                        android:text="@string/password"
                         android:textColor="#00a5ff" />
 
                     <com.google.android.material.textfield.TextInputLayout

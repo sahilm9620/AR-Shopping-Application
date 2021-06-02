@@ -44,7 +44,7 @@
                     android:ellipsize="end"
                     android:maxLines="1"
 
-                    android:text="Sahil Mulla"
+                    android:text="@string/name"
                     android:textColor="@color/black"
                     android:textSize="18sp" />
 
@@ -57,7 +57,7 @@
                 android:layout_marginTop="4dp"
                 android:background="#EAE6E6"
                 android:gravity="center"
-                android:text="HOME"
+                android:text="@string/home"
                 android:padding="2dp"
                 android:textSize="10sp"
                 android:textColor="#676565" />
@@ -73,7 +73,7 @@
                 android:layout_height="30dp"
                 android:visibility="gone"
                 android:background="@color/white"
-                android:text="Edit" />
+                android:text="@string/edit" />
 
 
         </LinearLayout>

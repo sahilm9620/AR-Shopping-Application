@@ -66,7 +66,7 @@
                             android:layout_margin="10dp"
                             tool:hintTextAppearance="@style/MyHintStyle"
                             android:layout_marginTop="@dimen/dimen20dp"
-                            android:hint="Full Name"
+                            android:hint="@string/full_name"
                             android:inputType="text"
                             android:maxLines="1"
                             android:paddingStart="@dimen/dimen10dp"
@@ -85,7 +85,7 @@
                             android:layout_height="40dp"
                             android:layout_margin="10dp"
                             android:background="@drawable/custom_edittext_border"
-                            android:hint="Street Address"
+                            android:hint="@string/street_address"
                             android:inputType="text"
                             android:maxLines="1"
                             android:paddingStart="@dimen/dimen10dp"
@@ -108,7 +108,7 @@
                             android:layout_height="40dp"
                             android:layout_margin="10dp"
                             android:background="@drawable/custom_edittext_border"
-                            android:hint="City"
+                            android:hint="@string/city"
                             android:inputType="text"
                             android:maxLines="1"
                             android:paddingStart="@dimen/dimen10dp"
@@ -128,7 +128,7 @@
                             android:layout_height="40dp"
                             android:layout_margin="10dp"
                             android:background="@drawable/custom_edittext_border"
-                            android:hint="Country"
+                            android:hint="@string/country"
                             android:inputType="text"
                             android:maxLines="1"
                             android:paddingStart="@dimen/dimen10dp"
@@ -146,7 +146,7 @@
                             android:layout_height="40dp"
                             android:layout_margin="10dp"
                             android:background="@drawable/custom_edittext_border"
-                            android:hint="Zip"
+                            android:hint="@string/zip"
                             android:inputType="number"
                             android:maxLines="1"
                             android:paddingStart="@dimen/dimen10dp"
@@ -201,7 +201,7 @@
                                     android:layout_weight="8"
                                     android:background="@drawable/custom_edittext_border"
                                     android:digits="1234567890"
-                                    android:hint="Contact Number"
+                                    android:hint="@string/contact_number"
                                     android:inputType="phone"
                                     android:maxLength="10"
                                     android:padding="@dimen/dimen5dp"
@@ -253,7 +253,7 @@
                                         android:drawableLeft="@drawable/ic_baseline_home_24"
                                         android:gravity="center"
                                         android:padding="@dimen/dimen5dp"
-                                        android:text="HOME" />
+                                        android:text="@string/home" />
 
 
                                     <com.google.android.material.radiobutton.MaterialRadioButton
@@ -267,7 +267,7 @@
                                         android:drawableLeft="@drawable/ic_baseline_apartment_24"
                                         android:gravity="center"
                                         android:padding="@dimen/dimen5dp"
-                                        android:text="WORK" />
+                                        android:text="@string/work" />
                                 </RadioGroup>
                             </TableRow>
 
@@ -283,7 +283,7 @@
                             android:layout_marginRight="@dimen/dimen10dp"
                             android:layout_marginBottom="@dimen/dimen10dp"
                             android:background="@drawable/custom_button_border2"
-                            android:text="Save Address"
+                            android:text="@string/save_address"
                             android:textAllCaps="false"
                             android:textColor="@color/white"
                             android:textSize="@dimen/dimen18sp" />

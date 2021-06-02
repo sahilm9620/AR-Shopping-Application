@@ -305,31 +305,12 @@ OTP दर्ज करें</string>
     <string name="item">आपका आइटम रहा है %1$s</string>
     <string name="reorder">पुन: व्यवस्थित</string>
     <string name="status_bar">स्थिति:</string>
-    <string name="recent_searches">हाल की खोजें</string>
-    <string name="schedule">अनुसूची</string>
-    <string name="clear_all">सभी साफ करें</string>
-    <string name="what_are_you_looking_for">तुम क्या ढूंढ रहे हो?</string>
-    <string name="hindi">हिंदी</string>
+
     <string name="marathi">मराठी</string>
-    <string name="contact">contact</string>
-    <string name="confirm_password">Confirm Password</string>
+
     <string name="phone_required">Phone no Required</string>
     <string name="password_missmatch">Password Missmatch</string>
-    <string name="update">Update</string>
-    <string name="about">About</string>
-    <string name="desc3"><b>Developed by TeamShoppy - Pune, India</b></string>
-    <string name="version">Version</string>
-    <string name="check_update">Check for update</string>
-    <string name="feedback">Feedback</string>
-    <string name="desc_feedback">to report technical issues or suggest new features.</string>
-    <string name="try_amp_buy_at_home"><font color='#008CFF'>Try </font>&amp;<font color='#008CFF'> Buy</font> at home.</string>
-    <string name="desc_about">Shopping point application that gives you the facility of virual trial room.</string>
-    <string name="check_updates">Tap here to check for updates.</string>
-    <string name="version_build">Version 0.0.1 Build 1</string>
-    <string name="help">Help</string>
-    <string name="desc_feedback_link"><font color='#008CFF'>Click here </font></string>
 
-    <string name="update_profile">Update profile</string>
 
     <string name="gender">Gender</string>
     <string name="Date_Of_Birth">Date of Birth</string>
@@ -353,4 +334,60 @@ OTP दर्ज करें</string>
         <item>खिलौना</item>
     </string-array>
 
+
+
+    <string name="recent_searches">हाल की खोजें</string>
+    <string name="schedule">अनुसूची</string>
+    <string name="clear_all">सभी साफ करें</string>
+    <string name="what_are_you_looking_for">तुम क्या ढूंढ रहे हो?</string>
+    <string name="hindi">हिंदी</string>
+
+    <string name="contact">संपर्क</string>
+    <string name="confirm_password">पासवर्ड की पुष्टि करें</string>
+
+    <string name="update">आधुनिकीकरणअ</string>
+    <string name="about">करीबन</string>
+    <string name="desc3"><b>टीमशॉप्पी द्वारा विकसित - पुणे, भारत</b></string>
+    <string name="version">विवरण</string>
+    <string name="check_update">अपडेट के लिए देखेंअपडेट के लिए देखें</string>
+    <string name="feedback">प्रतिपुष्टि</string>
+    <string name="desc_feedback">तकनीकी मुद्दों की रिपोर्ट करना या नई सुविधाओं का सुझाव देना।</string>
+    <string name="try_amp_buy_at_home"><font color='#008CFF'>कोशिश करना </font> और <font color='#008CFF'> खरीद</font> घर पर</string>
+    <string name="desc_about">शॉपिंग प्वाइंट एप्लीकेशन जो आपको वर्जिन ट्रायल रूम की सुविधा देता है।</string>
+    <string name="check_updates">अपडेट की जांच करने के लिए यहां टैप करें।</string>
+    <string name="version_build">वर्जन 0.0.1 बिल्ड 1</string>
+    <string name="help">मदद</string>
+    <string name="desc_feedback_link"><font color='#008CFF'>यहां क्लिक करें </font></string>
+
+    <string name="update_profile">प्रोफाइल अपडेट करें</string>
+    <string name="add_a_new_address">Add a new address</string>
+    <string name="deliver_here">Deliver Here</string>
+    <string name="similar_products">Similar Products</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="we_missed_you_login_to_get_started">We missed you! Login to get started</string>
+    <string name="address_details">ADDRESS DETAILS</string>
+    <string name="please_check_if_the_address_is_suitable_for_collecting_delivery">Please Check if the address is suitable for collecting delivery</string>
+    <string name="change_or_add_address">Change or Add Address</string>
+    <string name="product_details">PRODUCT DETAILS</string>
+    <string name="price_details">PRICE DETAILS</string>
+    <string name="delivery_charges">Delivery Charges</string>
+    <string name="free">FREE</string>
+    <string name="amount_payable">Amount Payable</string>
+    <string name="online_payment">Online Payment</string>
+    <string name="make_a_payment">Make a Payment</string>
+    <string name="keep_your_password_safe">Keep your password safe!</string>
+    <string name="payment_successful">Payment Successful</string>
+    <string name="product_name">Product Name</string>
+    <string name="order_id">Order Id</string>
+    <string name="payment_amount">Payment Amount</string>
+    <string name="continue_shopping">Continue Shopping</string>
+    <string name="type_of_address">Type of address<font fgcolor = '#FE0000'>*</font> </string>
+    <string name="home">HOME</string>
+    <string name="work">WORK</string>
+    <string name="save_address">Save Address</string>
+    <string name="become_a_member">Become A Member</string>
+    <string name="just_one_more_step">Just one more step!!</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="edit">Edit</string>
 </resources>

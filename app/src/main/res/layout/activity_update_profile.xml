@@ -97,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen20dp"
                 android:onClick="onRadioButtonClicked"
-                android:text="Male" />
+                android:text="@string/male" />
 
             <RadioButton
                 android:id="@+id/female"
@@ -105,7 +105,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:onClick="onRadioButtonClicked"
-                android:text="Female" />
+                android:text="@string/female" />
         </RadioGroup>
 
 

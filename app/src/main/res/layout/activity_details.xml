@@ -188,7 +188,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="@dimen/dimen10dp"
-                android:text="Similar Products"
+                android:text="@string/similar_products"
                 android:textSize="@dimen/dimen20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtFirst" />

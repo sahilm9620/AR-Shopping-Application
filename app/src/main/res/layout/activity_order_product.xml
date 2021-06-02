@@ -15,7 +15,7 @@
     <androidx.appcompat.widget.AppCompatTextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="ADDRESS DETAILS"
+    android:text="@string/address_details"
     android:textSize="@dimen/dimen20dp"
     android:layout_marginTop="@dimen/dimen15dp"
     android:layout_marginBottom="@dimen/dimen15dp"
@@ -87,7 +87,7 @@
                     android:paddingLeft="@dimen/dimen24dp"
                     android:paddingRight="@dimen/dimen24dp"
 
-                    android:text="Please Check if the address is suitable for collecting delivery"
+                    android:text="@string/please_check_if_the_address_is_suitable_for_collecting_delivery"
                     android:textColor="#B2000000"
                     />
                 <androidx.appcompat.widget.AppCompatButton
@@ -99,7 +99,7 @@
                     android:layout_marginLeft="@dimen/dimen5dp"
                     android:layout_marginRight="@dimen/dimen5dp"
 
-                    android:text="Change or Add Address"
+                    android:text="@string/change_or_add_address"
                     android:textColor="@color/white"
                     android:textAllCaps="false"
                    />
@@ -109,7 +109,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PRODUCT DETAILS"
+            android:text="@string/product_details"
             android:textSize="@dimen/dimen20dp"
             android:layout_marginTop="@dimen/dimen15dp"
             android:layout_marginBottom="@dimen/dimen15dp"
@@ -209,7 +209,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/dimen10dp"
                         android:layout_marginTop="@dimen/dimen10dp"
-                        android:text="FREE Shipping"
+                        android:text="@string/free_shipping"
                         android:drawableStart="@drawable/ic_check_green"
                         android:drawablePadding="@dimen/dimen5dp"
                         android:textColor="@color/black"
@@ -225,7 +225,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PRICE DETAILS"
+            android:text="@string/price_details"
             android:textSize="@dimen/dimen20dp"
             android:layout_marginTop="@dimen/dimen15dp"
             android:layout_marginBottom="@dimen/dimen15dp"
@@ -262,7 +262,7 @@
                     android:gravity="start|center"
                     android:paddingStart="@dimen/dimen10dp"
                     android:paddingEnd="@dimen/dimen10dp"
-                    android:text="Price"
+                    android:text="@string/price"
                     android:textColor="@color/dark"
                     android:textSize="@dimen/dimen18sp" />
 
@@ -296,7 +296,7 @@
                         android:gravity="start|center"
                         android:paddingStart="@dimen/dimen10dp"
                         android:paddingEnd="@dimen/dimen10dp"
-                        android:text="Delivery Charges"
+                        android:text="@string/delivery_charges"
                         android:textColor="@color/dark"
                         android:textSize="@dimen/dimen18sp" />
 
@@ -309,7 +309,7 @@
                         android:layout_gravity="end"
                         android:paddingStart="@dimen/dimen10dp"
                         android:paddingEnd="@dimen/dimen10dp"
-                        android:text="FREE"
+                        android:text="@string/free"
                         android:textColor="@color/darkGreen"
                         android:textSize="@dimen/dimen20sp" />
                 </TableRow>
@@ -337,7 +337,7 @@
                         android:gravity="start|center"
                         android:paddingStart="@dimen/dimen10dp"
                         android:paddingEnd="@dimen/dimen10dp"
-                        android:text="Amount Payable"
+                        android:text="@string/amount_payable"
                         android:textStyle="bold"
                         android:textColor="@color/black"
                         android:textSize="@dimen/dimen18sp" />
@@ -377,7 +377,7 @@
                 android:gravity="center"
                 android:background="@drawable/custom_edittext_border"
                 android:padding="@dimen/dimen5dp"
-                android:text="Cash On Delivery" />
+                android:text="@string/cash_on_delivery" />
 
 
             <com.google.android.material.radiobutton.MaterialRadioButton
@@ -390,7 +390,7 @@
                 android:background="@drawable/custom_edittext_border"
                 android:gravity="center"
                 android:padding="@dimen/dimen5dp"
-                android:text="Online Payment" />
+                android:text="@string/online_payment" />
         </RadioGroup>
 
 
@@ -404,7 +404,7 @@
             android:layout_marginRight="@dimen/dimen10dp"
             android:layout_marginBottom="@dimen/dimen10dp"
             android:background="@drawable/custom_button_border2"
-            android:text="Make a Payment"
+            android:text="@string/make_a_payment"
             android:textColor="@color/white"
             android:textAllCaps="false"
             android:textSize="@dimen/dimen18sp" />

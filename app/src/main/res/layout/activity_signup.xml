@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:text="Become A Member"
+                    android:text="@string/become_a_member"
                     android:textStyle="bold"
                     android:textColor="#ffff"
                     android:textSize="26sp"
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
-                    android:text="Just one more step!!"
+                    android:text="@string/just_one_more_step"
                     android:textColor="#ffff"
                     android:textSize="16sp"
                     />
@@ -74,7 +74,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Name"
+                            android:text="@string/name"
                             android:textColor="#00a5ff"
                             android:layout_marginTop="@dimen/dimen20dp"
                             />
@@ -91,7 +91,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Email"
+                            android:text="@string/email"
                             android:textColor="#00a5ff"
                             android:layout_marginTop="@dimen/dimen20dp"
                             />
@@ -106,7 +106,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Contact Number"
+                            android:text="@string/contact_number"
                             android:textColor="#00a5ff"
                             android:layout_marginTop="@dimen/dimen20dp"
                             />
@@ -147,7 +147,7 @@
                                     android:layout_marginRight="@dimen/dimen5dp"
                                     android:layout_weight="8"
                                     android:digits="1234567890"
-                                    android:hint="Contact Number"
+                                    android:hint="@string/contact_number"
                                     android:inputType="phone"
 
                                     android:maxLength="10"
@@ -165,7 +165,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dimen10dp"
-                            android:text="Password"
+                            android:text="@string/password"
                             android:textColor="#00a5ff" />
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -190,7 +190,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="@dimen/dimen10dp"
-                            android:text="Confirm Password"
+                            android:text="@string/contact_number"
                             android:textColor="#00a5ff" />
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"

@@ -231,6 +231,36 @@
     <string name="full_name">Full Name  <font fgcolor = '#FE0000'>*</font></string>
     <string name="contact_number">Contact Number <font fgcolor = '#FE0000'>*</font> </string>
     <string name="type_of_address">Type of address<font fgcolor = '#FE0000'>*</font> </string>
+    <string name="add_a_new_address">Add a new address</string>
+    <string name="deliver_here">Deliver Here</string>
+    <string name="similar_products">Similar Products</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="we_missed_you_login_to_get_started">We missed you! Login to get started</string>
+    <string name="address_details">ADDRESS DETAILS</string>
+    <string name="please_check_if_the_address_is_suitable_for_collecting_delivery">Please Check if the address is suitable for collecting delivery</string>
+    <string name="change_or_add_address">Change or Add Address</string>
+    <string name="product_details">PRODUCT DETAILS</string>
+    <string name="price_details">PRICE DETAILS</string>
+    <string name="delivery_charges">Delivery Charges</string>
+    <string name="free">FREE</string>
+    <string name="amount_payable">Amount Payable</string>
+    <string name="online_payment">Online Payment</string>
+    <string name="make_a_payment">Make a Payment</string>
+    <string name="keep_your_password_safe">Keep your password safe!</string>
+    <string name="payment_successful">Payment Successful</string>
+    <string name="product_name">Product Name</string>
+    <string name="order_id">Order Id</string>
+    <string name="payment_amount">Payment Amount</string>
+    <string name="continue_shopping">Continue Shopping</string>
+
+    <string name="home">HOME</string>
+    <string name="work">WORK</string>
+    <string name="save_address">Save Address</string>
+    <string name="become_a_member">Become A Member</string>
+    <string name="just_one_more_step">Just one more step!!</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="edit">Edit</string>
 
     <string-array name="categories_array">
         <item>Mobile</item>
