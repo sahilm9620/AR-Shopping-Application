@@ -4,11 +4,8 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
-
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-
-
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.assets.RenderableSource;
@@ -19,9 +16,14 @@ import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.shopping_point.user_shopping_point.R;
+import com.shopping_point.user_shopping_point.model.Product;
 
 import java.io.File;
 import java.io.IOException;
+
+import static com.shopping_point.user_shopping_point.utils.Constant.MODELNAME;
+import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
+
 
 public class ARActivity extends AppCompatActivity {
 
@@ -29,16 +31,18 @@ public class ARActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a_r);
+    Product product = getIntent().getParcelableExtra(PRODUCT);
 
         FirebaseApp.initializeApp(this);
 
         FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference modelRef = storage.getReference().child("model.glb");
-       // Toast.makeText(this, modelRef.toString(), Toast.LENGTH_SHORT).show();
-        System.out.println("LINK::: " + modelRef.toString());
+        StorageReference modelRef = storage.getReference().child(product.getModelName());
+        Toast.makeText(this, "Model Name : " + product.getModelName(), Toast.LENGTH_SHORT).show();
+
         ArFragment arFragment = (ArFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.arFragment);
 
+        ///Toast.makeText(this, "Model Name : " + modelName, Toast.LENGTH_SHORT).show();
         findViewById(R.id.downloadBtn)
                 .setOnClickListener(v -> {
 

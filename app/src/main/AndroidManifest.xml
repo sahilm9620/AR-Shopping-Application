@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.shopping_point.user_shopping_point">
-<uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:name="android.hardware.Camera.ar" android:required="true"/>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.Camera.ar"
+        android:required="true" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -17,11 +22,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".view.ARActivity"
-            android:parentActivityName=".view.DetailsActivity"
-
-            >
+        <activity android:name=".view.AR_Test"></activity>
+        <activity
+            android:name=".view.ARActivity"
+            android:parentActivityName=".view.DetailsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.shopping_point.user_shopping_point.view.DetailsActivity" />
@@ -51,7 +55,6 @@
         <activity
             android:name=".view.SplashActivity"
             android:theme="@style/NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -253,8 +256,9 @@
         <meta-data
             android:name="com.razorpay.ApiKey"
             android:value="rzp_test_UKTS7x7RsTIGgh" />
-        <meta-data android:name="com.google.ar.core" android:value="required"/>
-
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
     </application>
 
 </manifest>

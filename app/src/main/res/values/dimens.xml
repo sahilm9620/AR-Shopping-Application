@@ -37,4 +37,10 @@
     <dimen name="dimen170dp">170dp</dimen>
     <dimen name="dimen300dp">300dp</dimen>
     <dimen name="dimen250dp">250dp</dimen>
+    <dimen name="margin_padding_size_small">8dp</dimen>
+    <dimen name="margin_padding_size_medium">16dp</dimen>
+    <dimen name="margin_padding_size_large">24dp</dimen>
+    <dimen name="fab_size_ar">48dp</dimen>
+    <dimen name="margin_padding_bottom_fabs">40dp</dimen>
+    <dimen name="margin_padding_bottom_button">40dp</dimen>
 </resources>

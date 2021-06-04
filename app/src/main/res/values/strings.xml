@@ -24,6 +24,7 @@
     <string name="enter_a_valid_email_address">Enter a valid email address</string>
     <string name="password_required">Password Required</string>
     <string name="password__at_least_8_characters">Password should be at least 8 characters</string>
+    <string name="hm_coaching_motion_text">Move your device slowly in a circular fashion</string>
 
     <!--Server Information-->
     <string name="see_all">See All</string>

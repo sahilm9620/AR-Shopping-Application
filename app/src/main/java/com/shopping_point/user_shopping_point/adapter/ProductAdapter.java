@@ -97,7 +97,7 @@ public class ProductAdapter extends PagedListAdapter<Product, ProductAdapter.Pro
             String formattedPrice = formatter.format(product.getProductPrice());
             holder.binding.txtProductPrice.setText(formattedPrice + " ₹ ");
 
-
+            //Toast.makeText(mContext, "MODEL NAME : " + product.getModelName(), Toast.LENGTH_SHORT).show();
 
 
             holder.binding.Rating.setText(product.getProductRating() + " ★");

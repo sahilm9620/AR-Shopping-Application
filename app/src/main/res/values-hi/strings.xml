@@ -31,6 +31,7 @@
     <string name="sign_in_already_a_customer">
 पहले से सदस्य हैं?<font color='#008CFF'>
 साइन इन करें</font></string>
+    <string name="hm_coaching_motion_text">अपने डिवाइस को गोलाकार तरीके से धीरे-धीरे घुमाएं</string>
     <!--    <string name="boldText">Sign-in.</string>-->
     <!--    <string name="normalText">" "Already a customer?</string>-->
     <string name="enter_at_least_3_characters">

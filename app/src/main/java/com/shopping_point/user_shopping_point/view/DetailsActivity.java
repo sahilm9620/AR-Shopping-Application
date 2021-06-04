@@ -46,6 +46,7 @@ import java.util.List;
 
 import static com.shopping_point.user_shopping_point.storage.LanguageUtils.loadLocale;
 
+import static com.shopping_point.user_shopping_point.utils.Constant.MODELNAME;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCTID;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT_ID;
@@ -92,7 +93,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
 
         binding.addToCart.setOnClickListener(this);
         binding.buy.setOnClickListener(this);
-
+        binding.ARbutton.setOnClickListener(this);
         getProductDetails();
         getMobiles();
         setUpRecycleView();
@@ -166,14 +167,14 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         binding.ProductHighlights.setText("Highlights");
         binding.nameOfProduct.setText(product.getProductName());
         binding.DescofProduct.setText(product.getProductDesc());
-        binding.ARbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(DetailsActivity.this,ARActivity.class);
-                startActivity(intent);
-            }
-        });
+//        binding.ARbutton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Intent intent = new Intent(DetailsActivity.this,ARActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
         binding.Rating.setText(product.getProductRating() + " ★ ");
@@ -237,6 +238,12 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
             shippingIntent.putExtra(PRODUCTID, product.getProductId());
             shippingIntent.putExtra(PRODUCT, (product));
             startActivity(shippingIntent);
+        }else if (view.getId()==R.id.ARbutton)
+        {
+            Intent arintent = new Intent(DetailsActivity.this, ARActivity.class);
+            arintent.putExtra(PRODUCT, (product));
+            startActivity(arintent);
+
         }
     }
 
