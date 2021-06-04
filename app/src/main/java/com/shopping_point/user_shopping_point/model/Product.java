@@ -29,19 +29,30 @@ public class Product implements Parcelable {
     private int isFavourite;
     @SerializedName("isInCart")
     private int isInCart;
+    @SerializedName("modelName")
+    private String modelName;
     // Include child Parcelable objects
     private Product mInfo;
 
 
 
 
-    public Product(String productName, double productPrice, int productQuantity, String productSupplier, String productCategory,String productRating) {
+    public Product(String productName, double productPrice, int productQuantity, String productSupplier, String productCategory,String productRating , String modelName) {
         this.productName = productName;
         this.productPrice = productPrice;
         this.productQuantity = productQuantity;
         this.productSupplier = productSupplier;
         this.productCategory = productCategory;
         this.productRating = productRating;
+        this.modelName = modelName;
+    }
+
+    public String getModelName() {
+        return modelName;
+    }
+
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
     }
 
     public String getProductDesc() {
@@ -115,6 +126,7 @@ public class Product implements Parcelable {
         out.writeString(productRating);
         out.writeInt(isFavourite);
         out.writeInt(isInCart);
+        out.writeString(modelName);
         out.writeParcelable(mInfo, flags);
     }
 
@@ -131,6 +143,7 @@ public class Product implements Parcelable {
         productRating = in.readString();
         isFavourite = in.readInt();
         isInCart = in.readInt();
+        modelName = in.readString();
         mInfo = in.readParcelable(Product.class.getClassLoader());
     }
 
