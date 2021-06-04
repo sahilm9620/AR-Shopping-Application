@@ -261,6 +261,10 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="edit">Edit</string>
+    <string name="update_profile_photo">Update Profile Photo</string>
+    <string name="it_s_time_to_update_your_information">It\'s time to update your information!</string>
+    <string name="hm_coaching_motion_text">Hm coaching motion text</string>
+    <string name="ar">Ar</string>
 
     <string-array name="categories_array">
         <item>Mobile</item>
