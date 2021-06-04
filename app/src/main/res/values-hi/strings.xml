@@ -390,4 +390,7 @@ OTP दर्ज करें</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="edit">Edit</string>
+    <string name="it_s_time_to_update_your_profile_information">It\'s time to update your profile information!</string>
+    <string name="update_profile_photo">Update profile photo</string>
+
 </resources>
