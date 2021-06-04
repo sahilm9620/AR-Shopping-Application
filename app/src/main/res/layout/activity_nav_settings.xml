@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/dimen10dp"
+android:padding="10dp"
         android:orientation="vertical"
         >
 
@@ -138,10 +139,7 @@
             android:layout_marginBottom="@dimen/dimen8dp"
 
             >
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="10">
+
 
 
                 <TextView
@@ -162,7 +160,7 @@
                     android:textSize="@dimen/dimen15dp"
 
                     />
-            </TableRow>
+
         </TableLayout>
     </LinearLayout>
 </layout>
