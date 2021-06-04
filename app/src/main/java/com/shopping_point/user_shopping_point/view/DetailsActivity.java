@@ -166,6 +166,14 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         binding.ProductHighlights.setText("Highlights");
         binding.nameOfProduct.setText(product.getProductName());
         binding.DescofProduct.setText(product.getProductDesc());
+        binding.ARbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(DetailsActivity.this,ARActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         binding.Rating.setText(product.getProductRating() + " ★ ");

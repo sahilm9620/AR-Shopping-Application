@@ -390,4 +390,5 @@ OTP दर्ज करें</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="edit">Edit</string>
+    <string name="ar">AR View</string>
 </resources>

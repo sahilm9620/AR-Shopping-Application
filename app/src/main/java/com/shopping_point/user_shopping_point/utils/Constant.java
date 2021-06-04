@@ -28,5 +28,6 @@ public class Constant {
 
     public static String PRODUCTID = "Product_id";
 
+    public static String MODELNAME = "Model_Name";
     public static String KEYWORD = "keyword";
 }
