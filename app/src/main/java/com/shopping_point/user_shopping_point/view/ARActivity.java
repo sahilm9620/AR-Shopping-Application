@@ -7,10 +7,12 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.ar.core.Anchor;
 import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.assets.RenderableSource;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
+import com.google.ar.sceneform.ux.TransformableNode;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
@@ -26,7 +28,7 @@ import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
 
 
 public class ARActivity extends AppCompatActivity {
-
+    private ArFragment arFragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +41,7 @@ public class ARActivity extends AppCompatActivity {
         StorageReference modelRef = storage.getReference().child(product.getModelName());
         Toast.makeText(this, "Model Name : " + product.getModelName(), Toast.LENGTH_SHORT).show();
 
-        ArFragment arFragment = (ArFragment) getSupportFragmentManager()
+        arFragment = (ArFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.arFragment);
 
         ///Toast.makeText(this, "Model Name : " + modelName, Toast.LENGTH_SHORT).show();
@@ -70,7 +72,11 @@ public class ARActivity extends AppCompatActivity {
             AnchorNode anchorNode = new AnchorNode(hitResult.createAnchor());
             anchorNode.setRenderable(renderable);
             arFragment.getArSceneView().getScene().addChild(anchorNode);
-
+            TransformableNode transformableNode = new TransformableNode(arFragment.getTransformationSystem());
+            transformableNode.setParent(anchorNode);
+            transformableNode.setRenderable(renderable);
+            arFragment.getArSceneView().getScene().addChild(anchorNode);
+            transformableNode.select();
         });
     }
 
@@ -91,9 +97,11 @@ public class ARActivity extends AppCompatActivity {
                 .setRegistryId(file.getPath())
                 .build()
                 .thenAccept(modelRenderable -> {
-                    Toast.makeText(this, "Model built", Toast.LENGTH_SHORT).show();;
+                    Toast.makeText(this, "Model built", Toast.LENGTH_SHORT).show();
+
                     renderable = modelRenderable;
                 });
 
     }
+
 }
