@@ -25,6 +25,7 @@
         <activity android:name=".view.AR_Test"></activity>
         <activity
             android:name=".view.ARActivity"
+            android:label="AR View of Product"
             android:parentActivityName=".view.DetailsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

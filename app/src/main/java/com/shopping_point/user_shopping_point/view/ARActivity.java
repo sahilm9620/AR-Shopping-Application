@@ -10,6 +10,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.ar.core.Anchor;
 import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.assets.RenderableSource;
+import com.google.ar.sceneform.math.Vector3;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
@@ -19,11 +20,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.model.Product;
-
 import java.io.File;
 import java.io.IOException;
-
-import static com.shopping_point.user_shopping_point.utils.Constant.MODELNAME;
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
 
 
@@ -69,14 +67,27 @@ public class ARActivity extends AppCompatActivity {
 
         arFragment.setOnTapArPlaneListener((hitResult, plane, motionEvent) -> {
 
-            AnchorNode anchorNode = new AnchorNode(hitResult.createAnchor());
-            anchorNode.setRenderable(renderable);
-            arFragment.getArSceneView().getScene().addChild(anchorNode);
-            TransformableNode transformableNode = new TransformableNode(arFragment.getTransformationSystem());
-            transformableNode.setParent(anchorNode);
-            transformableNode.setRenderable(renderable);
-            arFragment.getArSceneView().getScene().addChild(anchorNode);
-            transformableNode.select();
+//                AnchorNode anchorNode = new AnchorNode(hitResult.createAnchor());
+//                anchorNode.setRenderable(renderable);
+//                arFragment.getArSceneView().getScene().addChild(anchorNode);
+//                TransformableNode transformableNode = new TransformableNode(arFragment.getTransformationSystem());
+//                transformableNode.setLocalScale(new Vector3(0.25f,0.25f,0.25f));
+//                transformableNode.setParent(anchorNode);
+//                transformableNode.setRenderable(renderable);
+//
+//                arFragment.getArSceneView().getScene().addChild(anchorNode);
+//                transformableNode.select();
+
+            Anchor anchor = hitResult.createAnchor();
+            AnchorNode anchorNode = new AnchorNode(anchor);
+            anchorNode.setParent(arFragment.getArSceneView().getScene());
+            TransformableNode node = new TransformableNode(arFragment.getTransformationSystem());
+            node.getScaleController().setMaxScale(1.00f);
+            node.getScaleController().setMinScale(0.40f);
+            node.setParent(anchorNode);
+            node.setRenderable(renderable);
+            node.select();
+
         });
     }
 
