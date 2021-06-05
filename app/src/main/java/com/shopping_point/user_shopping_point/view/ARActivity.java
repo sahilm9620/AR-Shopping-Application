@@ -3,25 +3,34 @@ package com.shopping_point.user_shopping_point.view;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.ar.core.Anchor;
 import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.assets.RenderableSource;
-import com.google.ar.sceneform.math.Vector3;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.storage.FileDownloadTask;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.model.Product;
+
+import org.w3c.dom.Text;
+
 import java.io.File;
 import java.io.IOException;
+import java.text.DecimalFormat;
+
 import static com.shopping_point.user_shopping_point.utils.Constant.PRODUCT;
 
 
@@ -32,8 +41,29 @@ public class ARActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_a_r);
     Product product = getIntent().getParcelableExtra(PRODUCT);
+        ProgressBar progressBar = findViewById(R.id.progress_mode) ;
+        TextView textView = findViewById(R.id.model_text);
+        ImageView imgProductImage =  findViewById(R.id.imgProductImage);
+        TextView txtProductName = findViewById(R.id.txtProductName);
+        TextView txtProductDesc =  findViewById(R.id.txtProductDesc);
+        TextView txtProductPrice = findViewById(R.id.txtProductPrice);
 
-        FirebaseApp.initializeApp(this);
+        String imageUrl =  product.getProductImage().replaceAll("\\\\", "/");
+
+
+        Glide.with(this)
+                .load(imageUrl)
+                .into(imgProductImage);
+        String productName = product.getProductName();
+        txtProductName.setText(productName);
+        String productDesc = product.getProductDesc();
+
+       txtProductDesc.setText(productDesc);
+
+        DecimalFormat formatter = new DecimalFormat("#,###,###");
+        String formattedPrice = formatter.format(product.getProductPrice());
+        txtProductPrice.setText(formattedPrice + " ₹ ");
+
 
         FirebaseStorage storage = FirebaseStorage.getInstance();
         StorageReference modelRef = storage.getReference().child(product.getModelName());
@@ -45,6 +75,8 @@ public class ARActivity extends AppCompatActivity {
         ///Toast.makeText(this, "Model Name : " + modelName, Toast.LENGTH_SHORT).show();
         findViewById(R.id.downloadBtn)
                 .setOnClickListener(v -> {
+                    progressBar.setVisibility(View.VISIBLE);
+                    textView.setVisibility(View.VISIBLE);
 
                     try {
                         File file = File.createTempFile("model", "glb");
@@ -54,7 +86,7 @@ public class ARActivity extends AppCompatActivity {
                             @Override
                             public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
 
-                                buildModel(file);
+                                buildModel(file,progressBar,textView);
                                // Toast.makeText(ARActivity.this, "FILE : " + file.toString(), Toast.LENGTH_SHORT).show();
                             }
                         });
@@ -78,6 +110,8 @@ public class ARActivity extends AppCompatActivity {
 //                arFragment.getArSceneView().getScene().addChild(anchorNode);
 //                transformableNode.select();
 
+
+
             Anchor anchor = hitResult.createAnchor();
             AnchorNode anchorNode = new AnchorNode(anchor);
             anchorNode.setParent(arFragment.getArSceneView().getScene());
@@ -94,7 +128,7 @@ public class ARActivity extends AppCompatActivity {
     private ModelRenderable renderable;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    private void buildModel(File file) {
+    private void buildModel(File file,ProgressBar progressBar,TextView textView) {
 
         RenderableSource renderableSource = RenderableSource
                 .builder()
@@ -109,7 +143,8 @@ public class ARActivity extends AppCompatActivity {
                 .build()
                 .thenAccept(modelRenderable -> {
                     Toast.makeText(this, "Model built", Toast.LENGTH_SHORT).show();
-
+                    progressBar.setVisibility(View.GONE);
+                    textView.setVisibility(View.GONE);
                     renderable = modelRenderable;
                 });
 
