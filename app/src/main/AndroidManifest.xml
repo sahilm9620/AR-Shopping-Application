@@ -22,7 +22,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".view.AR_Test"></activity>
         <activity
             android:name=".view.ARActivity"
             android:label="AR View of Product"
