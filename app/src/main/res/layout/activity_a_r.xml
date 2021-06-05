@@ -69,7 +69,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="@string/samsung_galaxy_a70"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20sp" />
 
 
@@ -83,7 +83,7 @@
                 android:maxLines="2"
                 android:layout_marginTop="@dimen/dimen10dp"
                 android:text="@string/samsung_galaxy_a70"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/dimen15dp" />
 
 
@@ -96,7 +96,7 @@
                 android:layout_marginStart="@dimen/dimen10dp"
                 android:layout_marginTop="@dimen/dimen10dp"
                 android:text="@string/_5399_rs"
-                android:textColor="@color/green"
+                android:textColor="@color/white"
                 android:textSize="@dimen/dimen18sp"
                 android:textStyle="bold" />
 
