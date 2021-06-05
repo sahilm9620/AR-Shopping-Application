@@ -27,19 +27,19 @@ Product product;
 
 
             binding.imgPaymentResult.setImageResource(R.drawable.ic_payment_sucess);
-           binding.paymentStatus.setText(" Payment Successful ");
-            binding.txvPaymentOrderId.setText("Order Id : "+ bundle.getString("orderId"));
-            binding.txvPaymentAmmount.setText("Product Price : " + product.getProductPrice() + " ₹ ");
-            binding.txvPaymentProductName.setText("Product Name : " + product.getProductName());
+           binding.paymentStatus.setText(R.string.paymentsuccess);
+            binding.txvPaymentOrderId.setText(getString(R.string.orderid)+ bundle.getString("orderId"));
+            binding.txvPaymentAmmount.setText(getString(R.string.productprice) + product.getProductPrice() + " ₹ ");
+            binding.txvPaymentProductName.setText(getString(R.string.productname) + product.getProductName());
 
         }else
         {
            binding.imgPaymentResult.setImageResource(R.drawable.ic_payment_failed);
-            binding.paymentStatus.setText(" Payment Failed ");
+            binding.paymentStatus.setText(R.string.paymentfailed);
             binding.txvPaymentOrderId.setVisibility(View.GONE);
             binding.txvPaymentAmmount.setVisibility(View.GONE);
             binding.txvPaymentProductName.setVisibility(View.GONE);
-            binding.btnHome.setText("RE-TRY");
+            binding.btnHome.setText(R.string.retry);
 
         }
 

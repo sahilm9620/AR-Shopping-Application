@@ -60,19 +60,19 @@ binding.txtProductName.setText(product.getProductName());
                 .into(binding.imgProductImage);
 
 
-        binding.txtUserPhone.setText("Contact No : " + address.getPhone());
+        binding.txtUserPhone.setText(getString(R.string.contact_no) + address.getPhone());
 
-        binding.txtUserAddress.setText("Address : " + address.getAddress() + " " + address.getCity() + " " + address.getCountry() + " - " + address.getZip());
+        binding.txtUserAddress.setText(getString(R.string.address_) + address.getAddress() + " " + address.getCity() + " " + address.getCountry() + " - " + address.getZip());
 
-binding.txtUserName.setText(" Name : " +address.getName());
-binding.txtUserPhone.setText("Contact : " + LoginUtils.getInstance(this).getUserInfo().getUser_contact_number());
+binding.txtUserName.setText(getString(R.string.name_) +address.getName());
+binding.txtUserPhone.setText(getString(R.string.contact_no) + LoginUtils.getInstance(this).getUserInfo().getUser_contact_number());
         DecimalFormat formatter = new DecimalFormat("#,###,###");
         String formattedPrice = formatter.format(product.getProductPrice());
 binding.txtProductPrice.setText(formattedPrice + " ₹ ");
 binding.txtProductDesc.setText(product.getProductDesc());
 
 binding.amountAmountPayable.setText(formattedPrice + " ₹ ");
-binding.amountDeliveryCharges.setText("FREE");
+binding.amountDeliveryCharges.setText(getString(R.string.free));
 binding.AmountPrice.setText(formattedPrice + " ₹ ");
 
 

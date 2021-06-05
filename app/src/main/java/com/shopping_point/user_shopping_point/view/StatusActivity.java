@@ -35,9 +35,9 @@ public class StatusActivity extends AppCompatActivity implements View.OnClickLis
         productId = order.getProductId();
         binding.orderDate.setText(order.getOrderDate());
         binding.orderNumber.setText(order.getOrderNumber());
-        binding.userName.setText("Name : " + order.getUserName());
-        binding.userAddress.setText("Address : " + order.getShippingAddress() + " " + order.getShippingcity() + " " + order.getShippingcountry() + " - " + order.getShippingzip());
-        binding.userPhone.setText("Contact No : "+ order.getShippingPhone());
+        binding.userName.setText(getString(R.string.name_) + order.getUserName());
+        binding.userAddress.setText(getString(R.string.address_) + order.getShippingAddress() + " " + order.getShippingcity() + " " + order.getShippingcountry() + " - " + order.getShippingzip());
+        binding.userPhone.setText(getString(R.string.contact_no)+ order.getShippingPhone());
         binding.txtProductName.setText(order.getProductName());
         binding.txtProductDesc.setText(order.getProductDesc());
 
