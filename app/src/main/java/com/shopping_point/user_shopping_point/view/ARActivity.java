@@ -73,30 +73,30 @@ public class ARActivity extends AppCompatActivity {
                 .findFragmentById(R.id.arFragment);
 
         ///Toast.makeText(this, "Model Name : " + modelName, Toast.LENGTH_SHORT).show();
-        findViewById(R.id.downloadBtn)
-                .setOnClickListener(v -> {
-                    progressBar.setVisibility(View.VISIBLE);
-                    textView.setVisibility(View.VISIBLE);
+//        findViewById(R.id.downloadBtn)
+//                .setOnClickListener(v -> {
+//
+//
+//                });
+        progressBar.setVisibility(View.VISIBLE);
+        textView.setVisibility(View.VISIBLE);
 
-                    try {
-                        File file = File.createTempFile("model", "glb");
+        try {
+            File file = File.createTempFile("model", "glb");
 
-                        modelRef.getFile(file).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-                            @RequiresApi(api = Build.VERSION_CODES.N)
-                            @Override
-                            public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+            modelRef.getFile(file).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                @RequiresApi(api = Build.VERSION_CODES.N)
+                @Override
+                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
 
-                                buildModel(file,progressBar,textView);
-                               // Toast.makeText(ARActivity.this, "FILE : " + file.toString(), Toast.LENGTH_SHORT).show();
-                            }
-                        });
+                    buildModel(file,progressBar,textView);
+                    // Toast.makeText(ARActivity.this, "FILE : " + file.toString(), Toast.LENGTH_SHORT).show();
+                }
+            });
 
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                });
-
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         arFragment.setOnTapArPlaneListener((hitResult, plane, motionEvent) -> {
 
 //                AnchorNode anchorNode = new AnchorNode(hitResult.createAnchor());
@@ -142,7 +142,7 @@ public class ARActivity extends AppCompatActivity {
                 .setRegistryId(file.getPath())
                 .build()
                 .thenAccept(modelRenderable -> {
-                    Toast.makeText(this, "Model built", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Tap on plane surface", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                     textView.setVisibility(View.GONE);
                     renderable = modelRenderable;

@@ -11,15 +11,11 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.graphics.Color;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
-
 import com.bumptech.glide.Glide;
 import com.shopping_point.user_shopping_point.R;
 import com.shopping_point.user_shopping_point.ViewModel.AddFavoriteViewModel;
@@ -27,7 +23,6 @@ import com.shopping_point.user_shopping_point.ViewModel.FromCartViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.RemoveFavoriteViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.ToCartViewModel;
 import com.shopping_point.user_shopping_point.ViewModel.ToHistoryViewModel;
-
 import com.shopping_point.user_shopping_point.databinding.ProductListItemBinding;
 import com.shopping_point.user_shopping_point.model.Cart;
 import com.shopping_point.user_shopping_point.model.Favorite;
@@ -35,8 +30,6 @@ import com.shopping_point.user_shopping_point.model.History;
 import com.shopping_point.user_shopping_point.model.Product;
 import com.shopping_point.user_shopping_point.storage.LoginUtils;
 import com.shopping_point.user_shopping_point.utils.RequestCallback;
-import com.shopping_point.user_shopping_point.view.DetailsActivity;
-
 import java.text.DecimalFormat;
 
 import static com.shopping_point.user_shopping_point.utils.Utils.shareProduct;

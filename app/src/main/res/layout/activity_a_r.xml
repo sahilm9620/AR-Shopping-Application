@@ -100,24 +100,21 @@
                 android:textSize="@dimen/dimen18sp"
                 android:textStyle="bold" />
 
-
-
-
         </LinearLayout>
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/downloadBtn"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="24dp"
-        android:textColor="@color/white"
-        android:layout_margin="@dimen/dimen10dp"
-        android:paddingLeft="@dimen/dimen10dp"
-        android:paddingRight="@dimen/dimen10dp"
-        android:background="@drawable/custom_button"
-        android:text="Build Model" />
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/downloadBtn"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="24dp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:layout_margin="@dimen/dimen10dp"-->
+<!--        android:paddingLeft="@dimen/dimen10dp"-->
+<!--        android:paddingRight="@dimen/dimen10dp"-->
+<!--        android:background="@drawable/custom_button"-->
+<!--        android:text="Build Model" />-->
 
 </RelativeLayout>
