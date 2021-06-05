@@ -10,10 +10,12 @@
         android:layout_marginBottom="@dimen/dimen10dp"
         android:background="@color/white"
         >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+
             android:layout_marginBottom="@dimen/dimen15dp"
             tools:context=".view.DetailsActivity">
 
@@ -25,6 +27,7 @@
                 android:contentDescription="@string/product_image"
                 android:src="@drawable/dummy_data"
                 tools:scaleType="fitXY" />
+
 
             <TextView
                 android:id="@+id/nameOfProduct"
@@ -43,6 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtProductDesc"
                 android:layout_marginLeft="10dp"
+
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@id/imgProductImage"
                 android:background="#2BCC7C"
@@ -52,6 +56,8 @@
                 android:text="4.7"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
                 android:textColor="@color/white" />
+
+
             <View
                 android:id="@+id/view"
                 android:layout_width="match_parent"
@@ -78,6 +84,7 @@
                 android:textColor="@color/black"
                 android:textSize="@dimen/dimen20sp"
                 tools:text="Apple iPhone 7 plus without Facetime - 32GB, 4LTC, Silver" />
+
 
             <TextView
                 android:id="@+id/priceOfProduct"
@@ -212,5 +219,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/textViewMobiles" />
 
         </LinearLayout>
+
+
+
     </ScrollView>
 </layout>

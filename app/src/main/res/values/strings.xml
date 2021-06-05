@@ -265,6 +265,13 @@
     <string name="it_s_time_to_update_your_information">It\'s time to update your information!</string>
     <string name="hm_coaching_motion_text">Hm coaching motion text</string>
     <string name="ar"> AR View </string>
+    <string name="loading_your_model">Loading your model...</string>
+    <string name="selected_sofa_large_text">Selected sofa large text</string>
+    <string name="tap_on_the_surface_to_add">Tap on the surface to add</string>
+    <string name="login">Login</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="furniture">Furniture</string>
+
 
     <string-array name="categories_array">
         <item>Mobile</item>

@@ -33,7 +33,7 @@
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             android:textAlignment="center"
             android:visibility="gone"
-            android:text="Loading your model..."/>
+            android:text="@string/loading_your_model"/>
     </LinearLayout>
 
 

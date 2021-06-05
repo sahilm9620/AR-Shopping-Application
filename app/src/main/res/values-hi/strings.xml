@@ -360,8 +360,8 @@ OTP दर्ज करें</string>
     <string name="desc_feedback_link"><font color='#008CFF'>यहां क्लिक करें </font></string>
 
     <string name="update_profile">प्रोफाइल अपडेट करें</string>
-    <string name="add_a_new_address">Add a new address</string>
-    <string name="deliver_here">Deliver Here</string>
+    <string name="add_a_new_address">एक नया पता जोड़ें</string>
+    <string name="deliver_here">यहां उद्धार</string>
     <string name="similar_products">Similar Products</string>
     <string name="welcome_back">Welcome Back</string>
     <string name="we_missed_you_login_to_get_started">We missed you! Login to get started</string>
@@ -394,4 +394,11 @@ OTP दर्ज करें</string>
     <string name="it_s_time_to_update_your_information">It\'s time to update your information!</string>
     <string name="hm_coaching_motion_text">Hm coaching motion text</string>
     <string name="ar">Ar</string>
+    <string name="loading_your_model">Loading your model...</string>
+    <string name="selected_sofa_large_text">Selected sofa large text</string>
+    <string name="tap_on_the_surface_to_add">Tap on the surface to add</string>
+    <string name="login">Login</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="furniture">Furniture</string>
+
 </resources>

@@ -162,7 +162,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/dimen20dp"
-                                android:text="Date of birth"
+                                android:text="@string/date_of_birth"
                                 android:textColor="#00a5ff" />
                             <EditText
                                 android:id="@+id/dob"

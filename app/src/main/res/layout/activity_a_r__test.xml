@@ -63,7 +63,7 @@
                 android:textColor="@color/white"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 android:textAlignment="center"
-                android:text="Loading your model..."/>
+                android:text="@string/loading_your_model"/>
         </LinearLayout>
     </RelativeLayout>
 
@@ -267,7 +267,7 @@
                 android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:textAlignment="center"
-                android:text="Selected sofa large text"
+                android:text="@string/selected_sofa_large_text"
                 android:textAppearance="?attr/textAppearanceCaption"/>
         </LinearLayout>
         <TextView
@@ -277,7 +277,7 @@
             android:textColor="@color/white"
             android:layout_gravity="center_vertical"
             android:textAlignment="center"
-            android:text="Tap on the surface to add"
+            android:text="@string/tap_on_the_surface_to_add"
             android:layout_toRightOf="@id/selected_product_card"
             android:paddingBottom="@dimen/margin_padding_size_large"
             android:layout_centerVertical="true"

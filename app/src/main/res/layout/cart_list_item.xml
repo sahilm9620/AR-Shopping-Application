@@ -90,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dimen10dp"
                     android:layout_marginTop="@dimen/dimen10dp"
-                    android:text="FREE Shipping"
+                    android:text="@string/free_shipping"
                     android:drawableStart="@drawable/ic_check_green"
                     android:drawablePadding="@dimen/dimen5dp"
                     android:textColor="@color/black"
