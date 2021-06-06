@@ -280,6 +280,7 @@
     <string name="productname">\"Product Name : \"</string>
     <string name="paymentfailed">\" Payment Failed \"</string>
     <string name="retry">RE-TRY</string>
+    <string name="logout">Logout</string>
 
 
     <string-array name="categories_array">

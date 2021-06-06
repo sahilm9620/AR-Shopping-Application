@@ -409,5 +409,6 @@ OTP दर्ज करें</string>
     <string name="productname">\"Product Name : \"</string>
     <string name="paymentfailed">\" Payment Failed \"</string>
     <string name="retry">RE-TRY</string>
+    <string name="logout">Logout</string>
 
 </resources>
