@@ -85,7 +85,7 @@
         </activity>
         <activity
             android:name=".view.AllLaptopsActivity"
-            android:label="@string/appliance"
+            android:label="@string/Appliances"
             android:parentActivityName=".view.ProductActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

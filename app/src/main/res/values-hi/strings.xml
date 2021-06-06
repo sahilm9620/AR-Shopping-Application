@@ -412,5 +412,6 @@ OTP दर्ज करें</string>
     <string name="Furniture">Furniture</string>
     <string name="Appliances">Appliances</string>
     <string name="Sports">Sports</string>
+    <string name="logout">Logout</string>
 
 </resources>
