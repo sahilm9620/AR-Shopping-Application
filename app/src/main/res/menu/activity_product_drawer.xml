@@ -7,17 +7,17 @@
            android:id="@+id/group1">
         <item
             android:id="@+id/nav_mobiles"
-            android:icon="@drawable/ic_mobile"
-            android:title="@string/mobiles" />
+            android:icon="@drawable/furniture"
+            android:title="@string/furniture" />
         <item
             android:id="@+id/nav_laptops"
             android:icon="@drawable/ic_laptop"
-            android:title="@string/laptops" />
+            android:title="@string/appliance" />
 
         <item
             android:id="@+id/nav_babies"
-            android:icon="@drawable/ic_baby"
-            android:title="@string/babies" />
+            android:icon="@drawable/ic_baseline_sports_cricket_24"
+            android:title="@string/Sports" />
 
         <item
             android:id="@+id/nav_toys"
@@ -30,7 +30,7 @@
             <item
                 android:id="@+id/nav_trackOrder"
                 android:icon="@drawable/ic_tracking"
-                android:title="@string/track_orders" />
+                android:title="@string/my_orders" />
 
             <item
                 android:id="@+id/nav_myAccount"
