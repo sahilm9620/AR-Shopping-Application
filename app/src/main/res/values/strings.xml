@@ -281,6 +281,8 @@
     <string name="paymentfailed">\" Payment Failed \"</string>
     <string name="retry">RE-TRY</string>
     <string name="logout">Logout</string>
+    <string name="appliance">Appliances</string>
+    <string name="Sports">Sports</string>
 
 
     <string-array name="categories_array">
