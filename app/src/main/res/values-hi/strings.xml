@@ -409,7 +409,5 @@ OTP दर्ज करें</string>
     <string name="productname">\"Product Name : \"</string>
     <string name="paymentfailed">\" Payment Failed \"</string>
     <string name="retry">RE-TRY</string>
-    <string name="appliance">Appliances</string>
-    <string name="Sports">Sports</string>
 
 </resources>
