@@ -283,6 +283,9 @@
     <string name="logout">Logout</string>
     <string name="appliance">Appliances</string>
     <string name="Sports">Sports</string>
+    <string name="Furniture">Furniture</string>
+    <string name="Appliances">Appliances</string>
+    <string name="Sports">Sports</string>
 
 
     <string-array name="categories_array">

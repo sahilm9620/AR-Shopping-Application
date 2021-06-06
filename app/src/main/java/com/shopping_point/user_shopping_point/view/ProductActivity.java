@@ -84,7 +84,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "ProductActivity";
-    private ActivityProductBinding binding;
+   private ActivityProductBinding binding;
     private ProductAdapter mobileAdapter;
     private ProductAdapter laptopAdapter;
     private ProductAdapter historyAdapter;
@@ -573,11 +573,11 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         int id = menuItem.getItemId();
 
         if (id == R.id.nav_mobiles) {
-            goToCategoryActivity("Mobile");
+            goToCategoryActivity(getString(R.string.Furniture));
         } else if (id == R.id.nav_laptops) {
-            goToCategoryActivity("Laptop");
+            goToCategoryActivity(getString(R.string.Appliances));
         } else if (id == R.id.nav_babies) {
-            goToCategoryActivity("Baby");
+            goToCategoryActivity(getString(R.string.Sports));
         } else if (id == R.id.nav_toys) {
             goToCategoryActivity("Toy");
         } else if (id == R.id.nav_trackOrder) {
