@@ -378,21 +378,21 @@ OTP दर्ज करें</string>
     <string name="keep_your_password_safe">Keep your password safe!</string>
     <string name="payment_successful">भुगतान सफल</string>
     <string name="product_name">उत्पाद का नाम</string>
-    <string name="order_id">Order Id</string>
-    <string name="payment_amount">Payment Amount</string>
-    <string name="continue_shopping">Continue Shopping</string>
-    <string name="type_of_address">Type of address<font fgcolor = '#FE0000'>*</font> </string>
-    <string name="home">HOME</string>
-    <string name="work">WORK</string>
-    <string name="save_address">Save Address</string>
-    <string name="become_a_member">Become A Member</string>
-    <string name="just_one_more_step">Just one more step!!</string>
-    <string name="male">Male</string>
-    <string name="female">Female</string>
-    <string name="edit">Edit</string>
-    <string name="update_profile_photo">Update Profile Photo</string>
-    <string name="it_s_time_to_update_your_information">It\'s time to update your information!</string>
-    <string name="hm_coaching_motion_text">Hm coaching motion text</string>
+    <string name="order_id">ऑर्डर आईडी</string>
+    <string name="payment_amount">भुगतान राशि</string>
+    <string name="continue_shopping">खरीदारी जारी रखें</string>
+    <string name="type_of_address">पते का प्रकार<font fgcolor = '#FE0000'>*</font> </string>
+    <string name="home">घर</string>
+    <string name="work">काम</string>
+    <string name="save_address">पता बचाओ</string>
+    <string name="become_a_member">सदस्य बनें</string>
+    <string name="just_one_more_step">बस एक और कदम!</string>
+    <string name="male">पुरुष</string>
+    <string name="female">मादा</string>
+    <string name="edit">संपादन करना</string>
+    <string name="update_profile_photo">प्रोफाइल फोटो अपडेट करें</string>
+    <string name="it_s_time_to_update_your_information">यह आपकी जानकारी को अपडेट करने का समय है!</string>
+    <string name="hm_coaching_motion_text">एचएम कोचिंग मोशन टेक्स्ट</string>
     <string name="ar">Ar</string>
     <string name="loading_your_model">अपने मॉडल लोड हो रहा है ...</string>
     <string name="selected_sofa_large_text">Selected sofa large text</string>
